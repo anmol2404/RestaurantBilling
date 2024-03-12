@@ -1,0 +1,2023 @@
+﻿namespace WindowsFormsApp1
+{
+    partial class Billing
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.ItemNamecombobox = new System.Windows.Forms.ComboBox();
+            this.Table1Groupbox = new System.Windows.Forms.GroupBox();
+            this.SavePrintButton = new System.Windows.Forms.Button();
+            this.TotalTextBox = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.RemoveItembutton = new System.Windows.Forms.Button();
+            this.ClearButton = new System.Windows.Forms.Button();
+            this.TableOneDatagrid = new System.Windows.Forms.DataGridView();
+            this.Sno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Qtytextbox = new System.Windows.Forms.NumericUpDown();
+            this.HalfPlatePriceButton = new System.Windows.Forms.Button();
+            this.FullPlatePriceButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Table2Groupbox = new System.Windows.Forms.GroupBox();
+            this.Table2Savebutton = new System.Windows.Forms.Button();
+            this.Table2TotalTextBox = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.Table2RemoveButton = new System.Windows.Forms.Button();
+            this.Table2ClearRefreshbutton = new System.Windows.Forms.Button();
+            this.Table2DataGrid = new System.Windows.Forms.DataGridView();
+            this.label5 = new System.Windows.Forms.Label();
+            this.Table2QuantityTextbox = new System.Windows.Forms.NumericUpDown();
+            this.Table2HalfPlateButton = new System.Windows.Forms.Button();
+            this.Table2FullPlateButton = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.Table2Combobox = new System.Windows.Forms.ComboBox();
+            this.Table3Groupbox = new System.Windows.Forms.GroupBox();
+            this.Table3SaveButton = new System.Windows.Forms.Button();
+            this.Table3TotalTextBox = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.Table3RemoveButton = new System.Windows.Forms.Button();
+            this.Table3ClearRefreshbutton = new System.Windows.Forms.Button();
+            this.Table3Datagrid = new System.Windows.Forms.DataGridView();
+            this.label8 = new System.Windows.Forms.Label();
+            this.Table3QuantityTextBox = new System.Windows.Forms.NumericUpDown();
+            this.Table3HalfPlatePriceButton = new System.Windows.Forms.Button();
+            this.Table3FullPlatePriceButton = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.Table3Combobox = new System.Windows.Forms.ComboBox();
+            this.Table4GroupBox = new System.Windows.Forms.GroupBox();
+            this.Table4SaveButton = new System.Windows.Forms.Button();
+            this.Table4TotalTextBox = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.Table4RemoveButton = new System.Windows.Forms.Button();
+            this.Table4ClearRefreshButton = new System.Windows.Forms.Button();
+            this.Table4DataGrid = new System.Windows.Forms.DataGridView();
+            this.label11 = new System.Windows.Forms.Label();
+            this.Table4QuantityTextBox = new System.Windows.Forms.NumericUpDown();
+            this.Table4HalfPlatePriceButton = new System.Windows.Forms.Button();
+            this.Table4FullPlatePriceButton = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.Table4Combobox = new System.Windows.Forms.ComboBox();
+            this.Table8GroupBox = new System.Windows.Forms.GroupBox();
+            this.Table8SaveButton = new System.Windows.Forms.Button();
+            this.Table8TotalTextBox = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.Table8RemoveButton = new System.Windows.Forms.Button();
+            this.Table8ClearRefreshButton = new System.Windows.Forms.Button();
+            this.Table8Datagrid = new System.Windows.Forms.DataGridView();
+            this.label14 = new System.Windows.Forms.Label();
+            this.Table8QuantityTextBox = new System.Windows.Forms.NumericUpDown();
+            this.Table8HalfPlatePriceButton = new System.Windows.Forms.Button();
+            this.Table8FullPlatePriceButton = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.Table8Combobox = new System.Windows.Forms.ComboBox();
+            this.Table7GroupBox = new System.Windows.Forms.GroupBox();
+            this.Table7SaveButton = new System.Windows.Forms.Button();
+            this.Table7TotalTextBox = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.Table7RemoveButton = new System.Windows.Forms.Button();
+            this.Table7ClearRefreshButton = new System.Windows.Forms.Button();
+            this.Table7Datagrid = new System.Windows.Forms.DataGridView();
+            this.label17 = new System.Windows.Forms.Label();
+            this.Table7QuantityTextBox = new System.Windows.Forms.NumericUpDown();
+            this.Table7HalfPlatePriceButton = new System.Windows.Forms.Button();
+            this.Table7FullPlatePriceButton = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
+            this.Table7Combobox = new System.Windows.Forms.ComboBox();
+            this.Table6groupbox = new System.Windows.Forms.GroupBox();
+            this.Table6SaveButton = new System.Windows.Forms.Button();
+            this.Table6TotalTextBox = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.Table6RemoveButton = new System.Windows.Forms.Button();
+            this.Table6ClearRefreshButton = new System.Windows.Forms.Button();
+            this.Table6Datagrid = new System.Windows.Forms.DataGridView();
+            this.label20 = new System.Windows.Forms.Label();
+            this.Table6QuantityTextBox = new System.Windows.Forms.NumericUpDown();
+            this.Table6HalfPlatePriceButton = new System.Windows.Forms.Button();
+            this.Table6FullPlatePriceButton = new System.Windows.Forms.Button();
+            this.label21 = new System.Windows.Forms.Label();
+            this.Table6Combobox = new System.Windows.Forms.ComboBox();
+            this.Table5GroupBox = new System.Windows.Forms.GroupBox();
+            this.Table5SaveButton = new System.Windows.Forms.Button();
+            this.label22 = new System.Windows.Forms.Label();
+            this.Table5RemoveButton = new System.Windows.Forms.Button();
+            this.Table5ClearRefreshButton = new System.Windows.Forms.Button();
+            this.Table5Datagrid = new System.Windows.Forms.DataGridView();
+            this.label23 = new System.Windows.Forms.Label();
+            this.Table5QuantityTextbox = new System.Windows.Forms.NumericUpDown();
+            this.Table5HalfPlatePriceButton = new System.Windows.Forms.Button();
+            this.Table5FullPlatePriceButton = new System.Windows.Forms.Button();
+            this.label24 = new System.Windows.Forms.Label();
+            this.Table5Combobox = new System.Windows.Forms.ComboBox();
+            this.Table2Sno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table2Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table2name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table2Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table2ItemPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table2Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table3Sno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table3Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table3name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table3Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table3ItemPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table3Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table4Sno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table4Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table4name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table4Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table4ItemPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table4Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table5TotalTextBox = new System.Windows.Forms.TextBox();
+            this.Table5Sno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table5Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table5name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table5Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table5ItemPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table5Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table6Sno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table6Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table6name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table6Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table6ItemPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table6Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table7Sno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table7Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table7name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table7Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table7ItemPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table7Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table8Sno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table8Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table8name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table8Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table8ItemPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table8Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AddUpdateOpenForm = new System.Windows.Forms.Button();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
+            this.Table1Groupbox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TableOneDatagrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Qtytextbox)).BeginInit();
+            this.Table2Groupbox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Table2DataGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Table2QuantityTextbox)).BeginInit();
+            this.Table3Groupbox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Table3Datagrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Table3QuantityTextBox)).BeginInit();
+            this.Table4GroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Table4DataGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Table4QuantityTextBox)).BeginInit();
+            this.Table8GroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Table8Datagrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Table8QuantityTextBox)).BeginInit();
+            this.Table7GroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Table7Datagrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Table7QuantityTextBox)).BeginInit();
+            this.Table6groupbox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Table6Datagrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Table6QuantityTextBox)).BeginInit();
+            this.Table5GroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Table5Datagrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Table5QuantityTextbox)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // ItemNamecombobox
+            // 
+            this.ItemNamecombobox.FormattingEnabled = true;
+            this.ItemNamecombobox.Location = new System.Drawing.Point(68, 26);
+            this.ItemNamecombobox.Name = "ItemNamecombobox";
+            this.ItemNamecombobox.Size = new System.Drawing.Size(179, 21);
+            this.ItemNamecombobox.TabIndex = 2;
+            this.ItemNamecombobox.SelectedIndexChanged += new System.EventHandler(this.ItemNamecombobox_SelectedIndexChanged);
+            // 
+            // Table1Groupbox
+            // 
+            this.Table1Groupbox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.Table1Groupbox.Controls.Add(this.SavePrintButton);
+            this.Table1Groupbox.Controls.Add(this.TotalTextBox);
+            this.Table1Groupbox.Controls.Add(this.label3);
+            this.Table1Groupbox.Controls.Add(this.RemoveItembutton);
+            this.Table1Groupbox.Controls.Add(this.ClearButton);
+            this.Table1Groupbox.Controls.Add(this.TableOneDatagrid);
+            this.Table1Groupbox.Controls.Add(this.label2);
+            this.Table1Groupbox.Controls.Add(this.Qtytextbox);
+            this.Table1Groupbox.Controls.Add(this.HalfPlatePriceButton);
+            this.Table1Groupbox.Controls.Add(this.FullPlatePriceButton);
+            this.Table1Groupbox.Controls.Add(this.label1);
+            this.Table1Groupbox.Controls.Add(this.ItemNamecombobox);
+            this.Table1Groupbox.Location = new System.Drawing.Point(12, 45);
+            this.Table1Groupbox.Name = "Table1Groupbox";
+            this.Table1Groupbox.Size = new System.Drawing.Size(369, 353);
+            this.Table1Groupbox.TabIndex = 0;
+            this.Table1Groupbox.TabStop = false;
+            this.Table1Groupbox.Text = "Table 1";
+            // 
+            // SavePrintButton
+            // 
+            this.SavePrintButton.BackColor = System.Drawing.Color.PaleGreen;
+            this.SavePrintButton.Location = new System.Drawing.Point(9, 308);
+            this.SavePrintButton.Name = "SavePrintButton";
+            this.SavePrintButton.Size = new System.Drawing.Size(350, 39);
+            this.SavePrintButton.TabIndex = 13;
+            this.SavePrintButton.Text = "Save / Print";
+            this.SavePrintButton.UseVisualStyleBackColor = false;
+            this.SavePrintButton.Click += new System.EventHandler(this.SavePrintButton_Click);
+            // 
+            // TotalTextBox
+            // 
+            this.TotalTextBox.Location = new System.Drawing.Point(275, 276);
+            this.TotalTextBox.Name = "TotalTextBox";
+            this.TotalTextBox.Size = new System.Drawing.Size(84, 20);
+            this.TotalTextBox.TabIndex = 12;
+            this.TotalTextBox.TextChanged += new System.EventHandler(this.TotalTextBox_TextChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(232, 278);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(34, 13);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Total ";
+            // 
+            // RemoveItembutton
+            // 
+            this.RemoveItembutton.BackColor = System.Drawing.Color.OrangeRed;
+            this.RemoveItembutton.Location = new System.Drawing.Point(124, 268);
+            this.RemoveItembutton.Name = "RemoveItembutton";
+            this.RemoveItembutton.Size = new System.Drawing.Size(87, 34);
+            this.RemoveItembutton.TabIndex = 10;
+            this.RemoveItembutton.Text = "Remove Item";
+            this.RemoveItembutton.UseVisualStyleBackColor = false;
+            this.RemoveItembutton.Click += new System.EventHandler(this.RemoveItembutton_Click);
+            // 
+            // ClearButton
+            // 
+            this.ClearButton.BackColor = System.Drawing.Color.Gold;
+            this.ClearButton.Location = new System.Drawing.Point(9, 268);
+            this.ClearButton.Name = "ClearButton";
+            this.ClearButton.Size = new System.Drawing.Size(95, 34);
+            this.ClearButton.TabIndex = 9;
+            this.ClearButton.Text = "Clear / Refresh";
+            this.ClearButton.UseVisualStyleBackColor = false;
+            this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
+            // 
+            // TableOneDatagrid
+            // 
+            this.TableOneDatagrid.AllowUserToAddRows = false;
+            this.TableOneDatagrid.AllowUserToDeleteRows = false;
+            this.TableOneDatagrid.BackgroundColor = System.Drawing.SystemColors.InactiveCaption;
+            this.TableOneDatagrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.TableOneDatagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TableOneDatagrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Sno,
+            this.Id,
+            this.name,
+            this.Quantity,
+            this.ItemPrice,
+            this.Amount});
+            this.TableOneDatagrid.Location = new System.Drawing.Point(9, 109);
+            this.TableOneDatagrid.Name = "TableOneDatagrid";
+            this.TableOneDatagrid.ReadOnly = true;
+            this.TableOneDatagrid.RowHeadersVisible = false;
+            this.TableOneDatagrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.TableOneDatagrid.Size = new System.Drawing.Size(350, 150);
+            this.TableOneDatagrid.TabIndex = 8;
+            this.TableOneDatagrid.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.TableOneDatagrid_RowsAdded);
+            // 
+            // Sno
+            // 
+            this.Sno.HeaderText = "S.no.";
+            this.Sno.Name = "Sno";
+            this.Sno.ReadOnly = true;
+            this.Sno.Width = 46;
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "Item ID";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Visible = false;
+            // 
+            // name
+            // 
+            this.name.HeaderText = "Particular(s)";
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            this.name.Width = 150;
+            // 
+            // Quantity
+            // 
+            this.Quantity.HeaderText = "Qty";
+            this.Quantity.Name = "Quantity";
+            this.Quantity.ReadOnly = true;
+            this.Quantity.Width = 50;
+            // 
+            // ItemPrice
+            // 
+            this.ItemPrice.HeaderText = "Item Price";
+            this.ItemPrice.Name = "ItemPrice";
+            this.ItemPrice.ReadOnly = true;
+            this.ItemPrice.Width = 50;
+            // 
+            // Amount
+            // 
+            this.Amount.HeaderText = "Amount";
+            this.Amount.Name = "Amount";
+            this.Amount.ReadOnly = true;
+            this.Amount.Width = 50;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(279, 29);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(23, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Qty";
+            // 
+            // Qtytextbox
+            // 
+            this.Qtytextbox.Location = new System.Drawing.Point(320, 27);
+            this.Qtytextbox.Name = "Qtytextbox";
+            this.Qtytextbox.Size = new System.Drawing.Size(39, 20);
+            this.Qtytextbox.TabIndex = 6;
+            this.Qtytextbox.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // HalfPlatePriceButton
+            // 
+            this.HalfPlatePriceButton.BackColor = System.Drawing.Color.NavajoWhite;
+            this.HalfPlatePriceButton.Location = new System.Drawing.Point(9, 64);
+            this.HalfPlatePriceButton.Name = "HalfPlatePriceButton";
+            this.HalfPlatePriceButton.Size = new System.Drawing.Size(136, 29);
+            this.HalfPlatePriceButton.TabIndex = 5;
+            this.HalfPlatePriceButton.Text = "Half Plate Price";
+            this.HalfPlatePriceButton.UseVisualStyleBackColor = false;
+            this.HalfPlatePriceButton.Click += new System.EventHandler(this.HalfPlatePriceButton_Click);
+            // 
+            // FullPlatePriceButton
+            // 
+            this.FullPlatePriceButton.BackColor = System.Drawing.Color.DarkKhaki;
+            this.FullPlatePriceButton.Location = new System.Drawing.Point(223, 64);
+            this.FullPlatePriceButton.Name = "FullPlatePriceButton";
+            this.FullPlatePriceButton.Size = new System.Drawing.Size(136, 29);
+            this.FullPlatePriceButton.TabIndex = 4;
+            this.FullPlatePriceButton.Text = "FullPlatePrice";
+            this.FullPlatePriceButton.UseVisualStyleBackColor = false;
+            this.FullPlatePriceButton.Click += new System.EventHandler(this.FullPlatePriceButton_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(56, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Item name";
+            // 
+            // Table2Groupbox
+            // 
+            this.Table2Groupbox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.Table2Groupbox.Controls.Add(this.Table2Savebutton);
+            this.Table2Groupbox.Controls.Add(this.Table2TotalTextBox);
+            this.Table2Groupbox.Controls.Add(this.label4);
+            this.Table2Groupbox.Controls.Add(this.Table2RemoveButton);
+            this.Table2Groupbox.Controls.Add(this.Table2ClearRefreshbutton);
+            this.Table2Groupbox.Controls.Add(this.Table2DataGrid);
+            this.Table2Groupbox.Controls.Add(this.label5);
+            this.Table2Groupbox.Controls.Add(this.Table2QuantityTextbox);
+            this.Table2Groupbox.Controls.Add(this.Table2HalfPlateButton);
+            this.Table2Groupbox.Controls.Add(this.Table2FullPlateButton);
+            this.Table2Groupbox.Controls.Add(this.label6);
+            this.Table2Groupbox.Controls.Add(this.Table2Combobox);
+            this.Table2Groupbox.Location = new System.Drawing.Point(387, 45);
+            this.Table2Groupbox.Name = "Table2Groupbox";
+            this.Table2Groupbox.Size = new System.Drawing.Size(369, 353);
+            this.Table2Groupbox.TabIndex = 1;
+            this.Table2Groupbox.TabStop = false;
+            this.Table2Groupbox.Text = "Table 2";
+            // 
+            // Table2Savebutton
+            // 
+            this.Table2Savebutton.BackColor = System.Drawing.Color.PaleGreen;
+            this.Table2Savebutton.Location = new System.Drawing.Point(9, 308);
+            this.Table2Savebutton.Name = "Table2Savebutton";
+            this.Table2Savebutton.Size = new System.Drawing.Size(350, 39);
+            this.Table2Savebutton.TabIndex = 13;
+            this.Table2Savebutton.Text = "Save / Print";
+            this.Table2Savebutton.UseVisualStyleBackColor = false;
+            this.Table2Savebutton.Click += new System.EventHandler(this.Table2Savebutton_Click);
+            // 
+            // Table2TotalTextBox
+            // 
+            this.Table2TotalTextBox.Location = new System.Drawing.Point(275, 276);
+            this.Table2TotalTextBox.Name = "Table2TotalTextBox";
+            this.Table2TotalTextBox.Size = new System.Drawing.Size(84, 20);
+            this.Table2TotalTextBox.TabIndex = 12;
+            this.Table2TotalTextBox.TextChanged += new System.EventHandler(this.Table2TotalTextBox_TextChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(232, 278);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(34, 13);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Total ";
+            // 
+            // Table2RemoveButton
+            // 
+            this.Table2RemoveButton.BackColor = System.Drawing.Color.OrangeRed;
+            this.Table2RemoveButton.Location = new System.Drawing.Point(124, 268);
+            this.Table2RemoveButton.Name = "Table2RemoveButton";
+            this.Table2RemoveButton.Size = new System.Drawing.Size(87, 34);
+            this.Table2RemoveButton.TabIndex = 10;
+            this.Table2RemoveButton.Text = "Remove Item";
+            this.Table2RemoveButton.UseVisualStyleBackColor = false;
+            this.Table2RemoveButton.Click += new System.EventHandler(this.Table2RemoveButton_Click);
+            // 
+            // Table2ClearRefreshbutton
+            // 
+            this.Table2ClearRefreshbutton.BackColor = System.Drawing.Color.Gold;
+            this.Table2ClearRefreshbutton.Location = new System.Drawing.Point(9, 268);
+            this.Table2ClearRefreshbutton.Name = "Table2ClearRefreshbutton";
+            this.Table2ClearRefreshbutton.Size = new System.Drawing.Size(95, 34);
+            this.Table2ClearRefreshbutton.TabIndex = 9;
+            this.Table2ClearRefreshbutton.Text = "Clear / Refresh";
+            this.Table2ClearRefreshbutton.UseVisualStyleBackColor = false;
+            this.Table2ClearRefreshbutton.Click += new System.EventHandler(this.Table2ClearRefreshbutton_Click);
+            // 
+            // Table2DataGrid
+            // 
+            this.Table2DataGrid.AllowUserToAddRows = false;
+            this.Table2DataGrid.AllowUserToDeleteRows = false;
+            this.Table2DataGrid.BackgroundColor = System.Drawing.SystemColors.InactiveCaption;
+            this.Table2DataGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Table2DataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Table2DataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Table2Sno,
+            this.Table2Id,
+            this.Table2name,
+            this.Table2Quantity,
+            this.Table2ItemPrice,
+            this.Table2Amount});
+            this.Table2DataGrid.Location = new System.Drawing.Point(9, 109);
+            this.Table2DataGrid.Name = "Table2DataGrid";
+            this.Table2DataGrid.ReadOnly = true;
+            this.Table2DataGrid.RowHeadersVisible = false;
+            this.Table2DataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Table2DataGrid.Size = new System.Drawing.Size(350, 150);
+            this.Table2DataGrid.TabIndex = 8;
+            this.Table2DataGrid.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.Table2DataGrid_RowsAdded);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(279, 29);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(23, 13);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Qty";
+            // 
+            // Table2QuantityTextbox
+            // 
+            this.Table2QuantityTextbox.Location = new System.Drawing.Point(320, 27);
+            this.Table2QuantityTextbox.Name = "Table2QuantityTextbox";
+            this.Table2QuantityTextbox.Size = new System.Drawing.Size(39, 20);
+            this.Table2QuantityTextbox.TabIndex = 6;
+            this.Table2QuantityTextbox.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // Table2HalfPlateButton
+            // 
+            this.Table2HalfPlateButton.BackColor = System.Drawing.Color.NavajoWhite;
+            this.Table2HalfPlateButton.Location = new System.Drawing.Point(9, 64);
+            this.Table2HalfPlateButton.Name = "Table2HalfPlateButton";
+            this.Table2HalfPlateButton.Size = new System.Drawing.Size(136, 29);
+            this.Table2HalfPlateButton.TabIndex = 5;
+            this.Table2HalfPlateButton.Text = "Half Plate Price";
+            this.Table2HalfPlateButton.UseVisualStyleBackColor = false;
+            this.Table2HalfPlateButton.Click += new System.EventHandler(this.Table2HalfPlateButton_Click);
+            // 
+            // Table2FullPlateButton
+            // 
+            this.Table2FullPlateButton.BackColor = System.Drawing.Color.DarkKhaki;
+            this.Table2FullPlateButton.Location = new System.Drawing.Point(223, 64);
+            this.Table2FullPlateButton.Name = "Table2FullPlateButton";
+            this.Table2FullPlateButton.Size = new System.Drawing.Size(136, 29);
+            this.Table2FullPlateButton.TabIndex = 4;
+            this.Table2FullPlateButton.Text = "FullPlatePrice";
+            this.Table2FullPlateButton.UseVisualStyleBackColor = false;
+            this.Table2FullPlateButton.Click += new System.EventHandler(this.Table2FullPlateButton_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 29);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(56, 13);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Item name";
+            // 
+            // Table2Combobox
+            // 
+            this.Table2Combobox.FormattingEnabled = true;
+            this.Table2Combobox.Location = new System.Drawing.Point(68, 26);
+            this.Table2Combobox.Name = "Table2Combobox";
+            this.Table2Combobox.Size = new System.Drawing.Size(179, 21);
+            this.Table2Combobox.TabIndex = 2;
+            this.Table2Combobox.SelectedIndexChanged += new System.EventHandler(this.Table2Combobox_SelectedIndexChanged);
+            // 
+            // Table3Groupbox
+            // 
+            this.Table3Groupbox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.Table3Groupbox.Controls.Add(this.Table3SaveButton);
+            this.Table3Groupbox.Controls.Add(this.Table3TotalTextBox);
+            this.Table3Groupbox.Controls.Add(this.label7);
+            this.Table3Groupbox.Controls.Add(this.Table3RemoveButton);
+            this.Table3Groupbox.Controls.Add(this.Table3ClearRefreshbutton);
+            this.Table3Groupbox.Controls.Add(this.Table3Datagrid);
+            this.Table3Groupbox.Controls.Add(this.label8);
+            this.Table3Groupbox.Controls.Add(this.Table3QuantityTextBox);
+            this.Table3Groupbox.Controls.Add(this.Table3HalfPlatePriceButton);
+            this.Table3Groupbox.Controls.Add(this.Table3FullPlatePriceButton);
+            this.Table3Groupbox.Controls.Add(this.label9);
+            this.Table3Groupbox.Controls.Add(this.Table3Combobox);
+            this.Table3Groupbox.Location = new System.Drawing.Point(762, 45);
+            this.Table3Groupbox.Name = "Table3Groupbox";
+            this.Table3Groupbox.Size = new System.Drawing.Size(369, 353);
+            this.Table3Groupbox.TabIndex = 2;
+            this.Table3Groupbox.TabStop = false;
+            this.Table3Groupbox.Text = "Table 3";
+            // 
+            // Table3SaveButton
+            // 
+            this.Table3SaveButton.BackColor = System.Drawing.Color.PaleGreen;
+            this.Table3SaveButton.Location = new System.Drawing.Point(9, 308);
+            this.Table3SaveButton.Name = "Table3SaveButton";
+            this.Table3SaveButton.Size = new System.Drawing.Size(350, 39);
+            this.Table3SaveButton.TabIndex = 13;
+            this.Table3SaveButton.Text = "Save / Print";
+            this.Table3SaveButton.UseVisualStyleBackColor = false;
+            this.Table3SaveButton.Click += new System.EventHandler(this.Table3SaveButton_Click);
+            // 
+            // Table3TotalTextBox
+            // 
+            this.Table3TotalTextBox.Location = new System.Drawing.Point(275, 276);
+            this.Table3TotalTextBox.Name = "Table3TotalTextBox";
+            this.Table3TotalTextBox.Size = new System.Drawing.Size(84, 20);
+            this.Table3TotalTextBox.TabIndex = 12;
+            this.Table3TotalTextBox.TextChanged += new System.EventHandler(this.Table3TotalTextBox_TextChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(232, 278);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(34, 13);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Total ";
+            // 
+            // Table3RemoveButton
+            // 
+            this.Table3RemoveButton.BackColor = System.Drawing.Color.OrangeRed;
+            this.Table3RemoveButton.Location = new System.Drawing.Point(124, 268);
+            this.Table3RemoveButton.Name = "Table3RemoveButton";
+            this.Table3RemoveButton.Size = new System.Drawing.Size(87, 34);
+            this.Table3RemoveButton.TabIndex = 10;
+            this.Table3RemoveButton.Text = "Remove Item";
+            this.Table3RemoveButton.UseVisualStyleBackColor = false;
+            this.Table3RemoveButton.Click += new System.EventHandler(this.Table3RemoveButton_Click);
+            // 
+            // Table3ClearRefreshbutton
+            // 
+            this.Table3ClearRefreshbutton.BackColor = System.Drawing.Color.Gold;
+            this.Table3ClearRefreshbutton.Location = new System.Drawing.Point(9, 268);
+            this.Table3ClearRefreshbutton.Name = "Table3ClearRefreshbutton";
+            this.Table3ClearRefreshbutton.Size = new System.Drawing.Size(95, 34);
+            this.Table3ClearRefreshbutton.TabIndex = 9;
+            this.Table3ClearRefreshbutton.Text = "Clear / Refresh";
+            this.Table3ClearRefreshbutton.UseVisualStyleBackColor = false;
+            this.Table3ClearRefreshbutton.Click += new System.EventHandler(this.Table3ClearRefreshbutton_Click);
+            // 
+            // Table3Datagrid
+            // 
+            this.Table3Datagrid.AllowUserToAddRows = false;
+            this.Table3Datagrid.AllowUserToDeleteRows = false;
+            this.Table3Datagrid.BackgroundColor = System.Drawing.SystemColors.InactiveCaption;
+            this.Table3Datagrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Table3Datagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Table3Datagrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Table3Sno,
+            this.Table3Id,
+            this.Table3name,
+            this.Table3Quantity,
+            this.Table3ItemPrice,
+            this.Table3Amount});
+            this.Table3Datagrid.Location = new System.Drawing.Point(9, 109);
+            this.Table3Datagrid.Name = "Table3Datagrid";
+            this.Table3Datagrid.ReadOnly = true;
+            this.Table3Datagrid.RowHeadersVisible = false;
+            this.Table3Datagrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Table3Datagrid.Size = new System.Drawing.Size(350, 150);
+            this.Table3Datagrid.TabIndex = 8;
+            this.Table3Datagrid.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.Table3Datagrid_RowsAdded);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(279, 29);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(23, 13);
+            this.label8.TabIndex = 7;
+            this.label8.Text = "Qty";
+            // 
+            // Table3QuantityTextBox
+            // 
+            this.Table3QuantityTextBox.Location = new System.Drawing.Point(320, 27);
+            this.Table3QuantityTextBox.Name = "Table3QuantityTextBox";
+            this.Table3QuantityTextBox.Size = new System.Drawing.Size(39, 20);
+            this.Table3QuantityTextBox.TabIndex = 6;
+            this.Table3QuantityTextBox.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // Table3HalfPlatePriceButton
+            // 
+            this.Table3HalfPlatePriceButton.BackColor = System.Drawing.Color.NavajoWhite;
+            this.Table3HalfPlatePriceButton.Location = new System.Drawing.Point(9, 64);
+            this.Table3HalfPlatePriceButton.Name = "Table3HalfPlatePriceButton";
+            this.Table3HalfPlatePriceButton.Size = new System.Drawing.Size(136, 29);
+            this.Table3HalfPlatePriceButton.TabIndex = 5;
+            this.Table3HalfPlatePriceButton.Text = "Half Plate Price";
+            this.Table3HalfPlatePriceButton.UseVisualStyleBackColor = false;
+            this.Table3HalfPlatePriceButton.Click += new System.EventHandler(this.Table3HalfPlatePriceButton_Click);
+            // 
+            // Table3FullPlatePriceButton
+            // 
+            this.Table3FullPlatePriceButton.BackColor = System.Drawing.Color.DarkKhaki;
+            this.Table3FullPlatePriceButton.Location = new System.Drawing.Point(223, 64);
+            this.Table3FullPlatePriceButton.Name = "Table3FullPlatePriceButton";
+            this.Table3FullPlatePriceButton.Size = new System.Drawing.Size(136, 29);
+            this.Table3FullPlatePriceButton.TabIndex = 4;
+            this.Table3FullPlatePriceButton.Text = "FullPlatePrice";
+            this.Table3FullPlatePriceButton.UseVisualStyleBackColor = false;
+            this.Table3FullPlatePriceButton.Click += new System.EventHandler(this.Table3FullPlatePriceButton_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(6, 29);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(56, 13);
+            this.label9.TabIndex = 3;
+            this.label9.Text = "Item name";
+            // 
+            // Table3Combobox
+            // 
+            this.Table3Combobox.FormattingEnabled = true;
+            this.Table3Combobox.Location = new System.Drawing.Point(68, 26);
+            this.Table3Combobox.Name = "Table3Combobox";
+            this.Table3Combobox.Size = new System.Drawing.Size(179, 21);
+            this.Table3Combobox.TabIndex = 2;
+            this.Table3Combobox.SelectedIndexChanged += new System.EventHandler(this.Table3Combobox_SelectedIndexChanged);
+            // 
+            // Table4GroupBox
+            // 
+            this.Table4GroupBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.Table4GroupBox.Controls.Add(this.Table4SaveButton);
+            this.Table4GroupBox.Controls.Add(this.Table4TotalTextBox);
+            this.Table4GroupBox.Controls.Add(this.label10);
+            this.Table4GroupBox.Controls.Add(this.Table4RemoveButton);
+            this.Table4GroupBox.Controls.Add(this.Table4ClearRefreshButton);
+            this.Table4GroupBox.Controls.Add(this.Table4DataGrid);
+            this.Table4GroupBox.Controls.Add(this.label11);
+            this.Table4GroupBox.Controls.Add(this.Table4QuantityTextBox);
+            this.Table4GroupBox.Controls.Add(this.Table4HalfPlatePriceButton);
+            this.Table4GroupBox.Controls.Add(this.Table4FullPlatePriceButton);
+            this.Table4GroupBox.Controls.Add(this.label12);
+            this.Table4GroupBox.Controls.Add(this.Table4Combobox);
+            this.Table4GroupBox.Location = new System.Drawing.Point(1137, 45);
+            this.Table4GroupBox.Name = "Table4GroupBox";
+            this.Table4GroupBox.Size = new System.Drawing.Size(369, 353);
+            this.Table4GroupBox.TabIndex = 3;
+            this.Table4GroupBox.TabStop = false;
+            this.Table4GroupBox.Text = "Table 4";
+            // 
+            // Table4SaveButton
+            // 
+            this.Table4SaveButton.BackColor = System.Drawing.Color.PaleGreen;
+            this.Table4SaveButton.Location = new System.Drawing.Point(9, 308);
+            this.Table4SaveButton.Name = "Table4SaveButton";
+            this.Table4SaveButton.Size = new System.Drawing.Size(350, 39);
+            this.Table4SaveButton.TabIndex = 13;
+            this.Table4SaveButton.Text = "Save / Print";
+            this.Table4SaveButton.UseVisualStyleBackColor = false;
+            this.Table4SaveButton.Click += new System.EventHandler(this.Table4SaveButton_Click);
+            // 
+            // Table4TotalTextBox
+            // 
+            this.Table4TotalTextBox.Location = new System.Drawing.Point(275, 276);
+            this.Table4TotalTextBox.Name = "Table4TotalTextBox";
+            this.Table4TotalTextBox.Size = new System.Drawing.Size(84, 20);
+            this.Table4TotalTextBox.TabIndex = 12;
+            this.Table4TotalTextBox.TextChanged += new System.EventHandler(this.Table4TotalTextBox_TextChanged);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(232, 278);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(34, 13);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "Total ";
+            // 
+            // Table4RemoveButton
+            // 
+            this.Table4RemoveButton.BackColor = System.Drawing.Color.OrangeRed;
+            this.Table4RemoveButton.Location = new System.Drawing.Point(124, 268);
+            this.Table4RemoveButton.Name = "Table4RemoveButton";
+            this.Table4RemoveButton.Size = new System.Drawing.Size(87, 34);
+            this.Table4RemoveButton.TabIndex = 10;
+            this.Table4RemoveButton.Text = "Remove Item";
+            this.Table4RemoveButton.UseVisualStyleBackColor = false;
+            this.Table4RemoveButton.Click += new System.EventHandler(this.Table4RemoveButton_Click);
+            // 
+            // Table4ClearRefreshButton
+            // 
+            this.Table4ClearRefreshButton.BackColor = System.Drawing.Color.Gold;
+            this.Table4ClearRefreshButton.Location = new System.Drawing.Point(9, 268);
+            this.Table4ClearRefreshButton.Name = "Table4ClearRefreshButton";
+            this.Table4ClearRefreshButton.Size = new System.Drawing.Size(95, 34);
+            this.Table4ClearRefreshButton.TabIndex = 9;
+            this.Table4ClearRefreshButton.Text = "Clear / Refresh";
+            this.Table4ClearRefreshButton.UseVisualStyleBackColor = false;
+            this.Table4ClearRefreshButton.Click += new System.EventHandler(this.Table4ClearRefreshButton_Click);
+            // 
+            // Table4DataGrid
+            // 
+            this.Table4DataGrid.AllowUserToAddRows = false;
+            this.Table4DataGrid.AllowUserToDeleteRows = false;
+            this.Table4DataGrid.BackgroundColor = System.Drawing.SystemColors.InactiveCaption;
+            this.Table4DataGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Table4DataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Table4DataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Table4Sno,
+            this.Table4Id,
+            this.Table4name,
+            this.Table4Quantity,
+            this.Table4ItemPrice,
+            this.Table4Amount});
+            this.Table4DataGrid.Location = new System.Drawing.Point(9, 109);
+            this.Table4DataGrid.Name = "Table4DataGrid";
+            this.Table4DataGrid.ReadOnly = true;
+            this.Table4DataGrid.RowHeadersVisible = false;
+            this.Table4DataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Table4DataGrid.Size = new System.Drawing.Size(350, 150);
+            this.Table4DataGrid.TabIndex = 8;
+            this.Table4DataGrid.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.Table4DataGrid_RowsAdded);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(279, 29);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(23, 13);
+            this.label11.TabIndex = 7;
+            this.label11.Text = "Qty";
+            // 
+            // Table4QuantityTextBox
+            // 
+            this.Table4QuantityTextBox.Location = new System.Drawing.Point(320, 27);
+            this.Table4QuantityTextBox.Name = "Table4QuantityTextBox";
+            this.Table4QuantityTextBox.Size = new System.Drawing.Size(39, 20);
+            this.Table4QuantityTextBox.TabIndex = 6;
+            this.Table4QuantityTextBox.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // Table4HalfPlatePriceButton
+            // 
+            this.Table4HalfPlatePriceButton.BackColor = System.Drawing.Color.NavajoWhite;
+            this.Table4HalfPlatePriceButton.Location = new System.Drawing.Point(9, 64);
+            this.Table4HalfPlatePriceButton.Name = "Table4HalfPlatePriceButton";
+            this.Table4HalfPlatePriceButton.Size = new System.Drawing.Size(136, 29);
+            this.Table4HalfPlatePriceButton.TabIndex = 5;
+            this.Table4HalfPlatePriceButton.Text = "Half Plate Price";
+            this.Table4HalfPlatePriceButton.UseVisualStyleBackColor = false;
+            this.Table4HalfPlatePriceButton.Click += new System.EventHandler(this.Table4HalfPlatePriceButton_Click);
+            // 
+            // Table4FullPlatePriceButton
+            // 
+            this.Table4FullPlatePriceButton.BackColor = System.Drawing.Color.DarkKhaki;
+            this.Table4FullPlatePriceButton.Location = new System.Drawing.Point(223, 64);
+            this.Table4FullPlatePriceButton.Name = "Table4FullPlatePriceButton";
+            this.Table4FullPlatePriceButton.Size = new System.Drawing.Size(136, 29);
+            this.Table4FullPlatePriceButton.TabIndex = 4;
+            this.Table4FullPlatePriceButton.Text = "FullPlatePrice";
+            this.Table4FullPlatePriceButton.UseVisualStyleBackColor = false;
+            this.Table4FullPlatePriceButton.Click += new System.EventHandler(this.Table4FullPlatePriceButton_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(6, 29);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(56, 13);
+            this.label12.TabIndex = 3;
+            this.label12.Text = "Item name";
+            // 
+            // Table4Combobox
+            // 
+            this.Table4Combobox.FormattingEnabled = true;
+            this.Table4Combobox.Location = new System.Drawing.Point(68, 26);
+            this.Table4Combobox.Name = "Table4Combobox";
+            this.Table4Combobox.Size = new System.Drawing.Size(179, 21);
+            this.Table4Combobox.TabIndex = 2;
+            this.Table4Combobox.SelectedIndexChanged += new System.EventHandler(this.Table4Combobox_SelectedIndexChanged);
+            // 
+            // Table8GroupBox
+            // 
+            this.Table8GroupBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.Table8GroupBox.Controls.Add(this.Table8SaveButton);
+            this.Table8GroupBox.Controls.Add(this.Table8TotalTextBox);
+            this.Table8GroupBox.Controls.Add(this.label13);
+            this.Table8GroupBox.Controls.Add(this.Table8RemoveButton);
+            this.Table8GroupBox.Controls.Add(this.Table8ClearRefreshButton);
+            this.Table8GroupBox.Controls.Add(this.Table8Datagrid);
+            this.Table8GroupBox.Controls.Add(this.label14);
+            this.Table8GroupBox.Controls.Add(this.Table8QuantityTextBox);
+            this.Table8GroupBox.Controls.Add(this.Table8HalfPlatePriceButton);
+            this.Table8GroupBox.Controls.Add(this.Table8FullPlatePriceButton);
+            this.Table8GroupBox.Controls.Add(this.label15);
+            this.Table8GroupBox.Controls.Add(this.Table8Combobox);
+            this.Table8GroupBox.Location = new System.Drawing.Point(1137, 415);
+            this.Table8GroupBox.Name = "Table8GroupBox";
+            this.Table8GroupBox.Size = new System.Drawing.Size(369, 353);
+            this.Table8GroupBox.TabIndex = 7;
+            this.Table8GroupBox.TabStop = false;
+            this.Table8GroupBox.Text = "Table 8";
+            // 
+            // Table8SaveButton
+            // 
+            this.Table8SaveButton.BackColor = System.Drawing.Color.PaleGreen;
+            this.Table8SaveButton.Location = new System.Drawing.Point(9, 308);
+            this.Table8SaveButton.Name = "Table8SaveButton";
+            this.Table8SaveButton.Size = new System.Drawing.Size(350, 39);
+            this.Table8SaveButton.TabIndex = 13;
+            this.Table8SaveButton.Text = "Save / Print";
+            this.Table8SaveButton.UseVisualStyleBackColor = false;
+            this.Table8SaveButton.Click += new System.EventHandler(this.Table8SaveButton_Click);
+            // 
+            // Table8TotalTextBox
+            // 
+            this.Table8TotalTextBox.Location = new System.Drawing.Point(275, 276);
+            this.Table8TotalTextBox.Name = "Table8TotalTextBox";
+            this.Table8TotalTextBox.Size = new System.Drawing.Size(84, 20);
+            this.Table8TotalTextBox.TabIndex = 12;
+            this.Table8TotalTextBox.TextChanged += new System.EventHandler(this.Table8TotalTextBox_TextChanged);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(232, 278);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(34, 13);
+            this.label13.TabIndex = 11;
+            this.label13.Text = "Total ";
+            // 
+            // Table8RemoveButton
+            // 
+            this.Table8RemoveButton.BackColor = System.Drawing.Color.OrangeRed;
+            this.Table8RemoveButton.Location = new System.Drawing.Point(124, 268);
+            this.Table8RemoveButton.Name = "Table8RemoveButton";
+            this.Table8RemoveButton.Size = new System.Drawing.Size(87, 34);
+            this.Table8RemoveButton.TabIndex = 10;
+            this.Table8RemoveButton.Text = "Remove Item";
+            this.Table8RemoveButton.UseVisualStyleBackColor = false;
+            this.Table8RemoveButton.Click += new System.EventHandler(this.Table8RemoveButton_Click);
+            // 
+            // Table8ClearRefreshButton
+            // 
+            this.Table8ClearRefreshButton.BackColor = System.Drawing.Color.Gold;
+            this.Table8ClearRefreshButton.Location = new System.Drawing.Point(9, 268);
+            this.Table8ClearRefreshButton.Name = "Table8ClearRefreshButton";
+            this.Table8ClearRefreshButton.Size = new System.Drawing.Size(95, 34);
+            this.Table8ClearRefreshButton.TabIndex = 9;
+            this.Table8ClearRefreshButton.Text = "Clear / Refresh";
+            this.Table8ClearRefreshButton.UseVisualStyleBackColor = false;
+            this.Table8ClearRefreshButton.Click += new System.EventHandler(this.Table8ClearRefreshButton_Click);
+            // 
+            // Table8Datagrid
+            // 
+            this.Table8Datagrid.AllowUserToAddRows = false;
+            this.Table8Datagrid.AllowUserToDeleteRows = false;
+            this.Table8Datagrid.BackgroundColor = System.Drawing.SystemColors.InactiveCaption;
+            this.Table8Datagrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Table8Datagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Table8Datagrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Table8Sno,
+            this.Table8Id,
+            this.Table8name,
+            this.Table8Quantity,
+            this.Table8ItemPrice,
+            this.Table8Amount});
+            this.Table8Datagrid.Location = new System.Drawing.Point(9, 109);
+            this.Table8Datagrid.Name = "Table8Datagrid";
+            this.Table8Datagrid.ReadOnly = true;
+            this.Table8Datagrid.RowHeadersVisible = false;
+            this.Table8Datagrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Table8Datagrid.Size = new System.Drawing.Size(350, 150);
+            this.Table8Datagrid.TabIndex = 8;
+            this.Table8Datagrid.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.Table8Datagrid_RowsAdded);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(279, 29);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(23, 13);
+            this.label14.TabIndex = 7;
+            this.label14.Text = "Qty";
+            // 
+            // Table8QuantityTextBox
+            // 
+            this.Table8QuantityTextBox.Location = new System.Drawing.Point(320, 27);
+            this.Table8QuantityTextBox.Name = "Table8QuantityTextBox";
+            this.Table8QuantityTextBox.Size = new System.Drawing.Size(39, 20);
+            this.Table8QuantityTextBox.TabIndex = 6;
+            this.Table8QuantityTextBox.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // Table8HalfPlatePriceButton
+            // 
+            this.Table8HalfPlatePriceButton.BackColor = System.Drawing.Color.NavajoWhite;
+            this.Table8HalfPlatePriceButton.Location = new System.Drawing.Point(9, 64);
+            this.Table8HalfPlatePriceButton.Name = "Table8HalfPlatePriceButton";
+            this.Table8HalfPlatePriceButton.Size = new System.Drawing.Size(136, 29);
+            this.Table8HalfPlatePriceButton.TabIndex = 5;
+            this.Table8HalfPlatePriceButton.Text = "Half Plate Price";
+            this.Table8HalfPlatePriceButton.UseVisualStyleBackColor = false;
+            this.Table8HalfPlatePriceButton.Click += new System.EventHandler(this.Table8HalfPlatePriceButton_Click);
+            // 
+            // Table8FullPlatePriceButton
+            // 
+            this.Table8FullPlatePriceButton.BackColor = System.Drawing.Color.DarkKhaki;
+            this.Table8FullPlatePriceButton.Location = new System.Drawing.Point(223, 64);
+            this.Table8FullPlatePriceButton.Name = "Table8FullPlatePriceButton";
+            this.Table8FullPlatePriceButton.Size = new System.Drawing.Size(136, 29);
+            this.Table8FullPlatePriceButton.TabIndex = 4;
+            this.Table8FullPlatePriceButton.Text = "FullPlatePrice";
+            this.Table8FullPlatePriceButton.UseVisualStyleBackColor = false;
+            this.Table8FullPlatePriceButton.Click += new System.EventHandler(this.Table8FullPlatePriceButton_Click);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(6, 29);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(56, 13);
+            this.label15.TabIndex = 3;
+            this.label15.Text = "Item name";
+            // 
+            // Table8Combobox
+            // 
+            this.Table8Combobox.FormattingEnabled = true;
+            this.Table8Combobox.Location = new System.Drawing.Point(68, 26);
+            this.Table8Combobox.Name = "Table8Combobox";
+            this.Table8Combobox.Size = new System.Drawing.Size(179, 21);
+            this.Table8Combobox.TabIndex = 2;
+            this.Table8Combobox.SelectedIndexChanged += new System.EventHandler(this.Table8Combobox_SelectedIndexChanged);
+            // 
+            // Table7GroupBox
+            // 
+            this.Table7GroupBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.Table7GroupBox.Controls.Add(this.Table7SaveButton);
+            this.Table7GroupBox.Controls.Add(this.Table7TotalTextBox);
+            this.Table7GroupBox.Controls.Add(this.label16);
+            this.Table7GroupBox.Controls.Add(this.Table7RemoveButton);
+            this.Table7GroupBox.Controls.Add(this.Table7ClearRefreshButton);
+            this.Table7GroupBox.Controls.Add(this.Table7Datagrid);
+            this.Table7GroupBox.Controls.Add(this.label17);
+            this.Table7GroupBox.Controls.Add(this.Table7QuantityTextBox);
+            this.Table7GroupBox.Controls.Add(this.Table7HalfPlatePriceButton);
+            this.Table7GroupBox.Controls.Add(this.Table7FullPlatePriceButton);
+            this.Table7GroupBox.Controls.Add(this.label18);
+            this.Table7GroupBox.Controls.Add(this.Table7Combobox);
+            this.Table7GroupBox.Location = new System.Drawing.Point(762, 415);
+            this.Table7GroupBox.Name = "Table7GroupBox";
+            this.Table7GroupBox.Size = new System.Drawing.Size(369, 353);
+            this.Table7GroupBox.TabIndex = 6;
+            this.Table7GroupBox.TabStop = false;
+            this.Table7GroupBox.Text = "Table 7";
+            // 
+            // Table7SaveButton
+            // 
+            this.Table7SaveButton.BackColor = System.Drawing.Color.PaleGreen;
+            this.Table7SaveButton.Location = new System.Drawing.Point(9, 308);
+            this.Table7SaveButton.Name = "Table7SaveButton";
+            this.Table7SaveButton.Size = new System.Drawing.Size(350, 39);
+            this.Table7SaveButton.TabIndex = 13;
+            this.Table7SaveButton.Text = "Save / Print";
+            this.Table7SaveButton.UseVisualStyleBackColor = false;
+            this.Table7SaveButton.Click += new System.EventHandler(this.Table7SaveButton_Click);
+            // 
+            // Table7TotalTextBox
+            // 
+            this.Table7TotalTextBox.Location = new System.Drawing.Point(275, 276);
+            this.Table7TotalTextBox.Name = "Table7TotalTextBox";
+            this.Table7TotalTextBox.Size = new System.Drawing.Size(84, 20);
+            this.Table7TotalTextBox.TabIndex = 12;
+            this.Table7TotalTextBox.TextChanged += new System.EventHandler(this.Table7TotalTextBox_TextChanged);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(232, 278);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(34, 13);
+            this.label16.TabIndex = 11;
+            this.label16.Text = "Total ";
+            // 
+            // Table7RemoveButton
+            // 
+            this.Table7RemoveButton.BackColor = System.Drawing.Color.OrangeRed;
+            this.Table7RemoveButton.Location = new System.Drawing.Point(124, 268);
+            this.Table7RemoveButton.Name = "Table7RemoveButton";
+            this.Table7RemoveButton.Size = new System.Drawing.Size(87, 34);
+            this.Table7RemoveButton.TabIndex = 10;
+            this.Table7RemoveButton.Text = "Remove Item";
+            this.Table7RemoveButton.UseVisualStyleBackColor = false;
+            this.Table7RemoveButton.Click += new System.EventHandler(this.Table7RemoveButton_Click);
+            // 
+            // Table7ClearRefreshButton
+            // 
+            this.Table7ClearRefreshButton.BackColor = System.Drawing.Color.Gold;
+            this.Table7ClearRefreshButton.Location = new System.Drawing.Point(9, 268);
+            this.Table7ClearRefreshButton.Name = "Table7ClearRefreshButton";
+            this.Table7ClearRefreshButton.Size = new System.Drawing.Size(95, 34);
+            this.Table7ClearRefreshButton.TabIndex = 9;
+            this.Table7ClearRefreshButton.Text = "Clear / Refresh";
+            this.Table7ClearRefreshButton.UseVisualStyleBackColor = false;
+            this.Table7ClearRefreshButton.Click += new System.EventHandler(this.Table7ClearRefreshButton_Click);
+            // 
+            // Table7Datagrid
+            // 
+            this.Table7Datagrid.AllowUserToAddRows = false;
+            this.Table7Datagrid.AllowUserToDeleteRows = false;
+            this.Table7Datagrid.BackgroundColor = System.Drawing.SystemColors.InactiveCaption;
+            this.Table7Datagrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Table7Datagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Table7Datagrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Table7Sno,
+            this.Table7Id,
+            this.Table7name,
+            this.Table7Quantity,
+            this.Table7ItemPrice,
+            this.Table7Amount});
+            this.Table7Datagrid.Location = new System.Drawing.Point(9, 109);
+            this.Table7Datagrid.Name = "Table7Datagrid";
+            this.Table7Datagrid.ReadOnly = true;
+            this.Table7Datagrid.RowHeadersVisible = false;
+            this.Table7Datagrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Table7Datagrid.Size = new System.Drawing.Size(350, 150);
+            this.Table7Datagrid.TabIndex = 8;
+            this.Table7Datagrid.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.Table7Datagrid_RowsAdded);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(279, 29);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(23, 13);
+            this.label17.TabIndex = 7;
+            this.label17.Text = "Qty";
+            // 
+            // Table7QuantityTextBox
+            // 
+            this.Table7QuantityTextBox.Location = new System.Drawing.Point(320, 27);
+            this.Table7QuantityTextBox.Name = "Table7QuantityTextBox";
+            this.Table7QuantityTextBox.Size = new System.Drawing.Size(39, 20);
+            this.Table7QuantityTextBox.TabIndex = 6;
+            this.Table7QuantityTextBox.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // Table7HalfPlatePriceButton
+            // 
+            this.Table7HalfPlatePriceButton.BackColor = System.Drawing.Color.NavajoWhite;
+            this.Table7HalfPlatePriceButton.Location = new System.Drawing.Point(9, 64);
+            this.Table7HalfPlatePriceButton.Name = "Table7HalfPlatePriceButton";
+            this.Table7HalfPlatePriceButton.Size = new System.Drawing.Size(136, 29);
+            this.Table7HalfPlatePriceButton.TabIndex = 5;
+            this.Table7HalfPlatePriceButton.Text = "Half Plate Price";
+            this.Table7HalfPlatePriceButton.UseVisualStyleBackColor = false;
+            this.Table7HalfPlatePriceButton.Click += new System.EventHandler(this.Table7HalfPlatePriceButton_Click);
+            // 
+            // Table7FullPlatePriceButton
+            // 
+            this.Table7FullPlatePriceButton.BackColor = System.Drawing.Color.DarkKhaki;
+            this.Table7FullPlatePriceButton.Location = new System.Drawing.Point(223, 64);
+            this.Table7FullPlatePriceButton.Name = "Table7FullPlatePriceButton";
+            this.Table7FullPlatePriceButton.Size = new System.Drawing.Size(136, 29);
+            this.Table7FullPlatePriceButton.TabIndex = 4;
+            this.Table7FullPlatePriceButton.Text = "FullPlatePrice";
+            this.Table7FullPlatePriceButton.UseVisualStyleBackColor = false;
+            this.Table7FullPlatePriceButton.Click += new System.EventHandler(this.Table7FullPlatePriceButton_Click);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(6, 29);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(56, 13);
+            this.label18.TabIndex = 3;
+            this.label18.Text = "Item name";
+            // 
+            // Table7Combobox
+            // 
+            this.Table7Combobox.FormattingEnabled = true;
+            this.Table7Combobox.Location = new System.Drawing.Point(68, 26);
+            this.Table7Combobox.Name = "Table7Combobox";
+            this.Table7Combobox.Size = new System.Drawing.Size(179, 21);
+            this.Table7Combobox.TabIndex = 2;
+            this.Table7Combobox.SelectedIndexChanged += new System.EventHandler(this.Table7Combobox_SelectedIndexChanged);
+            // 
+            // Table6groupbox
+            // 
+            this.Table6groupbox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.Table6groupbox.Controls.Add(this.Table6SaveButton);
+            this.Table6groupbox.Controls.Add(this.Table6TotalTextBox);
+            this.Table6groupbox.Controls.Add(this.label19);
+            this.Table6groupbox.Controls.Add(this.Table6RemoveButton);
+            this.Table6groupbox.Controls.Add(this.Table6ClearRefreshButton);
+            this.Table6groupbox.Controls.Add(this.Table6Datagrid);
+            this.Table6groupbox.Controls.Add(this.label20);
+            this.Table6groupbox.Controls.Add(this.Table6QuantityTextBox);
+            this.Table6groupbox.Controls.Add(this.Table6HalfPlatePriceButton);
+            this.Table6groupbox.Controls.Add(this.Table6FullPlatePriceButton);
+            this.Table6groupbox.Controls.Add(this.label21);
+            this.Table6groupbox.Controls.Add(this.Table6Combobox);
+            this.Table6groupbox.Location = new System.Drawing.Point(387, 415);
+            this.Table6groupbox.Name = "Table6groupbox";
+            this.Table6groupbox.Size = new System.Drawing.Size(369, 353);
+            this.Table6groupbox.TabIndex = 5;
+            this.Table6groupbox.TabStop = false;
+            this.Table6groupbox.Text = "Table 6";
+            // 
+            // Table6SaveButton
+            // 
+            this.Table6SaveButton.BackColor = System.Drawing.Color.PaleGreen;
+            this.Table6SaveButton.Location = new System.Drawing.Point(9, 308);
+            this.Table6SaveButton.Name = "Table6SaveButton";
+            this.Table6SaveButton.Size = new System.Drawing.Size(350, 39);
+            this.Table6SaveButton.TabIndex = 13;
+            this.Table6SaveButton.Text = "Save / Print";
+            this.Table6SaveButton.UseVisualStyleBackColor = false;
+            this.Table6SaveButton.Click += new System.EventHandler(this.Table6SaveButton_Click);
+            // 
+            // Table6TotalTextBox
+            // 
+            this.Table6TotalTextBox.Location = new System.Drawing.Point(275, 276);
+            this.Table6TotalTextBox.Name = "Table6TotalTextBox";
+            this.Table6TotalTextBox.Size = new System.Drawing.Size(84, 20);
+            this.Table6TotalTextBox.TabIndex = 12;
+            this.Table6TotalTextBox.TextChanged += new System.EventHandler(this.Table6TotalTextBox_TextChanged);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(232, 278);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(34, 13);
+            this.label19.TabIndex = 11;
+            this.label19.Text = "Total ";
+            // 
+            // Table6RemoveButton
+            // 
+            this.Table6RemoveButton.BackColor = System.Drawing.Color.OrangeRed;
+            this.Table6RemoveButton.Location = new System.Drawing.Point(124, 268);
+            this.Table6RemoveButton.Name = "Table6RemoveButton";
+            this.Table6RemoveButton.Size = new System.Drawing.Size(87, 34);
+            this.Table6RemoveButton.TabIndex = 10;
+            this.Table6RemoveButton.Text = "Remove Item";
+            this.Table6RemoveButton.UseVisualStyleBackColor = false;
+            this.Table6RemoveButton.Click += new System.EventHandler(this.Table6RemoveButton_Click);
+            // 
+            // Table6ClearRefreshButton
+            // 
+            this.Table6ClearRefreshButton.BackColor = System.Drawing.Color.Gold;
+            this.Table6ClearRefreshButton.Location = new System.Drawing.Point(9, 268);
+            this.Table6ClearRefreshButton.Name = "Table6ClearRefreshButton";
+            this.Table6ClearRefreshButton.Size = new System.Drawing.Size(95, 34);
+            this.Table6ClearRefreshButton.TabIndex = 9;
+            this.Table6ClearRefreshButton.Text = "Clear / Refresh";
+            this.Table6ClearRefreshButton.UseVisualStyleBackColor = false;
+            this.Table6ClearRefreshButton.Click += new System.EventHandler(this.Table6ClearRefreshButton_Click);
+            // 
+            // Table6Datagrid
+            // 
+            this.Table6Datagrid.AllowUserToAddRows = false;
+            this.Table6Datagrid.AllowUserToDeleteRows = false;
+            this.Table6Datagrid.BackgroundColor = System.Drawing.SystemColors.InactiveCaption;
+            this.Table6Datagrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Table6Datagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Table6Datagrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Table6Sno,
+            this.Table6Id,
+            this.Table6name,
+            this.Table6Quantity,
+            this.Table6ItemPrice,
+            this.Table6Amount});
+            this.Table6Datagrid.Location = new System.Drawing.Point(9, 109);
+            this.Table6Datagrid.Name = "Table6Datagrid";
+            this.Table6Datagrid.ReadOnly = true;
+            this.Table6Datagrid.RowHeadersVisible = false;
+            this.Table6Datagrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Table6Datagrid.Size = new System.Drawing.Size(350, 150);
+            this.Table6Datagrid.TabIndex = 8;
+            this.Table6Datagrid.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.Table6Datagrid_RowsAdded);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(279, 29);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(23, 13);
+            this.label20.TabIndex = 7;
+            this.label20.Text = "Qty";
+            // 
+            // Table6QuantityTextBox
+            // 
+            this.Table6QuantityTextBox.Location = new System.Drawing.Point(320, 27);
+            this.Table6QuantityTextBox.Name = "Table6QuantityTextBox";
+            this.Table6QuantityTextBox.Size = new System.Drawing.Size(39, 20);
+            this.Table6QuantityTextBox.TabIndex = 6;
+            this.Table6QuantityTextBox.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // Table6HalfPlatePriceButton
+            // 
+            this.Table6HalfPlatePriceButton.BackColor = System.Drawing.Color.NavajoWhite;
+            this.Table6HalfPlatePriceButton.Location = new System.Drawing.Point(9, 64);
+            this.Table6HalfPlatePriceButton.Name = "Table6HalfPlatePriceButton";
+            this.Table6HalfPlatePriceButton.Size = new System.Drawing.Size(136, 29);
+            this.Table6HalfPlatePriceButton.TabIndex = 5;
+            this.Table6HalfPlatePriceButton.Text = "Half Plate Price";
+            this.Table6HalfPlatePriceButton.UseVisualStyleBackColor = false;
+            this.Table6HalfPlatePriceButton.Click += new System.EventHandler(this.Table6HalfPlatePriceButton_Click);
+            // 
+            // Table6FullPlatePriceButton
+            // 
+            this.Table6FullPlatePriceButton.BackColor = System.Drawing.Color.DarkKhaki;
+            this.Table6FullPlatePriceButton.Location = new System.Drawing.Point(223, 64);
+            this.Table6FullPlatePriceButton.Name = "Table6FullPlatePriceButton";
+            this.Table6FullPlatePriceButton.Size = new System.Drawing.Size(136, 29);
+            this.Table6FullPlatePriceButton.TabIndex = 4;
+            this.Table6FullPlatePriceButton.Text = "FullPlatePrice";
+            this.Table6FullPlatePriceButton.UseVisualStyleBackColor = false;
+            this.Table6FullPlatePriceButton.Click += new System.EventHandler(this.Table6FullPlatePriceButton_Click);
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(6, 29);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(56, 13);
+            this.label21.TabIndex = 3;
+            this.label21.Text = "Item name";
+            // 
+            // Table6Combobox
+            // 
+            this.Table6Combobox.FormattingEnabled = true;
+            this.Table6Combobox.Location = new System.Drawing.Point(68, 26);
+            this.Table6Combobox.Name = "Table6Combobox";
+            this.Table6Combobox.Size = new System.Drawing.Size(179, 21);
+            this.Table6Combobox.TabIndex = 2;
+            this.Table6Combobox.SelectedIndexChanged += new System.EventHandler(this.Table6Combobox_SelectedIndexChanged);
+            // 
+            // Table5GroupBox
+            // 
+            this.Table5GroupBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.Table5GroupBox.Controls.Add(this.Table5SaveButton);
+            this.Table5GroupBox.Controls.Add(this.Table5TotalTextBox);
+            this.Table5GroupBox.Controls.Add(this.label22);
+            this.Table5GroupBox.Controls.Add(this.Table5RemoveButton);
+            this.Table5GroupBox.Controls.Add(this.Table5ClearRefreshButton);
+            this.Table5GroupBox.Controls.Add(this.Table5Datagrid);
+            this.Table5GroupBox.Controls.Add(this.label23);
+            this.Table5GroupBox.Controls.Add(this.Table5QuantityTextbox);
+            this.Table5GroupBox.Controls.Add(this.Table5HalfPlatePriceButton);
+            this.Table5GroupBox.Controls.Add(this.Table5FullPlatePriceButton);
+            this.Table5GroupBox.Controls.Add(this.label24);
+            this.Table5GroupBox.Controls.Add(this.Table5Combobox);
+            this.Table5GroupBox.Location = new System.Drawing.Point(12, 415);
+            this.Table5GroupBox.Name = "Table5GroupBox";
+            this.Table5GroupBox.Size = new System.Drawing.Size(369, 353);
+            this.Table5GroupBox.TabIndex = 4;
+            this.Table5GroupBox.TabStop = false;
+            this.Table5GroupBox.Text = "Table 5";
+            // 
+            // Table5SaveButton
+            // 
+            this.Table5SaveButton.BackColor = System.Drawing.Color.PaleGreen;
+            this.Table5SaveButton.Location = new System.Drawing.Point(9, 308);
+            this.Table5SaveButton.Name = "Table5SaveButton";
+            this.Table5SaveButton.Size = new System.Drawing.Size(350, 39);
+            this.Table5SaveButton.TabIndex = 13;
+            this.Table5SaveButton.Text = "Save / Print";
+            this.Table5SaveButton.UseVisualStyleBackColor = false;
+            this.Table5SaveButton.Click += new System.EventHandler(this.Table5SaveButton_Click);
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(232, 278);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(34, 13);
+            this.label22.TabIndex = 11;
+            this.label22.Text = "Total ";
+            // 
+            // Table5RemoveButton
+            // 
+            this.Table5RemoveButton.BackColor = System.Drawing.Color.OrangeRed;
+            this.Table5RemoveButton.Location = new System.Drawing.Point(124, 268);
+            this.Table5RemoveButton.Name = "Table5RemoveButton";
+            this.Table5RemoveButton.Size = new System.Drawing.Size(87, 34);
+            this.Table5RemoveButton.TabIndex = 10;
+            this.Table5RemoveButton.Text = "Remove Item";
+            this.Table5RemoveButton.UseVisualStyleBackColor = false;
+            this.Table5RemoveButton.Click += new System.EventHandler(this.Table5RemoveButton_Click);
+            // 
+            // Table5ClearRefreshButton
+            // 
+            this.Table5ClearRefreshButton.BackColor = System.Drawing.Color.Gold;
+            this.Table5ClearRefreshButton.Location = new System.Drawing.Point(9, 268);
+            this.Table5ClearRefreshButton.Name = "Table5ClearRefreshButton";
+            this.Table5ClearRefreshButton.Size = new System.Drawing.Size(95, 34);
+            this.Table5ClearRefreshButton.TabIndex = 9;
+            this.Table5ClearRefreshButton.Text = "Clear / Refresh";
+            this.Table5ClearRefreshButton.UseVisualStyleBackColor = false;
+            this.Table5ClearRefreshButton.Click += new System.EventHandler(this.Table5ClearRefreshButton_Click);
+            // 
+            // Table5Datagrid
+            // 
+            this.Table5Datagrid.AllowUserToAddRows = false;
+            this.Table5Datagrid.AllowUserToDeleteRows = false;
+            this.Table5Datagrid.BackgroundColor = System.Drawing.SystemColors.InactiveCaption;
+            this.Table5Datagrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Table5Datagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Table5Datagrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Table5Sno,
+            this.Table5Id,
+            this.Table5name,
+            this.Table5Quantity,
+            this.Table5ItemPrice,
+            this.Table5Amount});
+            this.Table5Datagrid.Location = new System.Drawing.Point(9, 109);
+            this.Table5Datagrid.Name = "Table5Datagrid";
+            this.Table5Datagrid.ReadOnly = true;
+            this.Table5Datagrid.RowHeadersVisible = false;
+            this.Table5Datagrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Table5Datagrid.Size = new System.Drawing.Size(350, 150);
+            this.Table5Datagrid.TabIndex = 8;
+            this.Table5Datagrid.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.Table5Datagrid_RowsAdded);
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(279, 29);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(23, 13);
+            this.label23.TabIndex = 7;
+            this.label23.Text = "Qty";
+            // 
+            // Table5QuantityTextbox
+            // 
+            this.Table5QuantityTextbox.Location = new System.Drawing.Point(320, 27);
+            this.Table5QuantityTextbox.Name = "Table5QuantityTextbox";
+            this.Table5QuantityTextbox.Size = new System.Drawing.Size(39, 20);
+            this.Table5QuantityTextbox.TabIndex = 6;
+            this.Table5QuantityTextbox.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // Table5HalfPlatePriceButton
+            // 
+            this.Table5HalfPlatePriceButton.BackColor = System.Drawing.Color.NavajoWhite;
+            this.Table5HalfPlatePriceButton.Location = new System.Drawing.Point(9, 64);
+            this.Table5HalfPlatePriceButton.Name = "Table5HalfPlatePriceButton";
+            this.Table5HalfPlatePriceButton.Size = new System.Drawing.Size(136, 29);
+            this.Table5HalfPlatePriceButton.TabIndex = 5;
+            this.Table5HalfPlatePriceButton.Text = "Half Plate Price";
+            this.Table5HalfPlatePriceButton.UseVisualStyleBackColor = false;
+            this.Table5HalfPlatePriceButton.Click += new System.EventHandler(this.Table5HalfPlatePriceButton_Click);
+            // 
+            // Table5FullPlatePriceButton
+            // 
+            this.Table5FullPlatePriceButton.BackColor = System.Drawing.Color.DarkKhaki;
+            this.Table5FullPlatePriceButton.Location = new System.Drawing.Point(223, 64);
+            this.Table5FullPlatePriceButton.Name = "Table5FullPlatePriceButton";
+            this.Table5FullPlatePriceButton.Size = new System.Drawing.Size(136, 29);
+            this.Table5FullPlatePriceButton.TabIndex = 4;
+            this.Table5FullPlatePriceButton.Text = "FullPlatePrice";
+            this.Table5FullPlatePriceButton.UseVisualStyleBackColor = false;
+            this.Table5FullPlatePriceButton.Click += new System.EventHandler(this.Table5FullPlatePriceButton_Click);
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(6, 29);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(56, 13);
+            this.label24.TabIndex = 3;
+            this.label24.Text = "Item name";
+            // 
+            // Table5Combobox
+            // 
+            this.Table5Combobox.FormattingEnabled = true;
+            this.Table5Combobox.Location = new System.Drawing.Point(68, 26);
+            this.Table5Combobox.Name = "Table5Combobox";
+            this.Table5Combobox.Size = new System.Drawing.Size(179, 21);
+            this.Table5Combobox.TabIndex = 2;
+            this.Table5Combobox.SelectedIndexChanged += new System.EventHandler(this.Table5Combobox_SelectedIndexChanged);
+            // 
+            // Table2Sno
+            // 
+            this.Table2Sno.HeaderText = "S.no.";
+            this.Table2Sno.Name = "Table2Sno";
+            this.Table2Sno.ReadOnly = true;
+            this.Table2Sno.Width = 46;
+            // 
+            // Table2Id
+            // 
+            this.Table2Id.HeaderText = "Item ID";
+            this.Table2Id.Name = "Table2Id";
+            this.Table2Id.ReadOnly = true;
+            this.Table2Id.Visible = false;
+            // 
+            // Table2name
+            // 
+            this.Table2name.HeaderText = "Particular(s)";
+            this.Table2name.Name = "Table2name";
+            this.Table2name.ReadOnly = true;
+            this.Table2name.Width = 150;
+            // 
+            // Table2Quantity
+            // 
+            this.Table2Quantity.HeaderText = "Qty";
+            this.Table2Quantity.Name = "Table2Quantity";
+            this.Table2Quantity.ReadOnly = true;
+            this.Table2Quantity.Width = 50;
+            // 
+            // Table2ItemPrice
+            // 
+            this.Table2ItemPrice.HeaderText = "Item Price";
+            this.Table2ItemPrice.Name = "Table2ItemPrice";
+            this.Table2ItemPrice.ReadOnly = true;
+            this.Table2ItemPrice.Width = 50;
+            // 
+            // Table2Amount
+            // 
+            this.Table2Amount.HeaderText = "Amount";
+            this.Table2Amount.Name = "Table2Amount";
+            this.Table2Amount.ReadOnly = true;
+            this.Table2Amount.Width = 50;
+            // 
+            // Table3Sno
+            // 
+            this.Table3Sno.HeaderText = "S.no.";
+            this.Table3Sno.Name = "Table3Sno";
+            this.Table3Sno.ReadOnly = true;
+            this.Table3Sno.Width = 46;
+            // 
+            // Table3Id
+            // 
+            this.Table3Id.HeaderText = "Item ID";
+            this.Table3Id.Name = "Table3Id";
+            this.Table3Id.ReadOnly = true;
+            this.Table3Id.Visible = false;
+            // 
+            // Table3name
+            // 
+            this.Table3name.HeaderText = "Particular(s)";
+            this.Table3name.Name = "Table3name";
+            this.Table3name.ReadOnly = true;
+            this.Table3name.Width = 150;
+            // 
+            // Table3Quantity
+            // 
+            this.Table3Quantity.HeaderText = "Qty";
+            this.Table3Quantity.Name = "Table3Quantity";
+            this.Table3Quantity.ReadOnly = true;
+            this.Table3Quantity.Width = 50;
+            // 
+            // Table3ItemPrice
+            // 
+            this.Table3ItemPrice.HeaderText = "Item Price";
+            this.Table3ItemPrice.Name = "Table3ItemPrice";
+            this.Table3ItemPrice.ReadOnly = true;
+            this.Table3ItemPrice.Width = 50;
+            // 
+            // Table3Amount
+            // 
+            this.Table3Amount.HeaderText = "Amount";
+            this.Table3Amount.Name = "Table3Amount";
+            this.Table3Amount.ReadOnly = true;
+            this.Table3Amount.Width = 50;
+            // 
+            // Table4Sno
+            // 
+            this.Table4Sno.HeaderText = "S.no.";
+            this.Table4Sno.Name = "Table4Sno";
+            this.Table4Sno.ReadOnly = true;
+            this.Table4Sno.Width = 46;
+            // 
+            // Table4Id
+            // 
+            this.Table4Id.HeaderText = "Item ID";
+            this.Table4Id.Name = "Table4Id";
+            this.Table4Id.ReadOnly = true;
+            this.Table4Id.Visible = false;
+            // 
+            // Table4name
+            // 
+            this.Table4name.HeaderText = "Particular(s)";
+            this.Table4name.Name = "Table4name";
+            this.Table4name.ReadOnly = true;
+            this.Table4name.Width = 150;
+            // 
+            // Table4Quantity
+            // 
+            this.Table4Quantity.HeaderText = "Qty";
+            this.Table4Quantity.Name = "Table4Quantity";
+            this.Table4Quantity.ReadOnly = true;
+            this.Table4Quantity.Width = 50;
+            // 
+            // Table4ItemPrice
+            // 
+            this.Table4ItemPrice.HeaderText = "Item Price";
+            this.Table4ItemPrice.Name = "Table4ItemPrice";
+            this.Table4ItemPrice.ReadOnly = true;
+            this.Table4ItemPrice.Width = 50;
+            // 
+            // Table4Amount
+            // 
+            this.Table4Amount.HeaderText = "Amount";
+            this.Table4Amount.Name = "Table4Amount";
+            this.Table4Amount.ReadOnly = true;
+            this.Table4Amount.Width = 50;
+            // 
+            // Table5TotalTextBox
+            // 
+            this.Table5TotalTextBox.Location = new System.Drawing.Point(275, 276);
+            this.Table5TotalTextBox.Name = "Table5TotalTextBox";
+            this.Table5TotalTextBox.Size = new System.Drawing.Size(84, 20);
+            this.Table5TotalTextBox.TabIndex = 12;
+            this.Table5TotalTextBox.TextChanged += new System.EventHandler(this.Table5TotalTextBox_TextChanged);
+            // 
+            // Table5Sno
+            // 
+            this.Table5Sno.HeaderText = "S.no.";
+            this.Table5Sno.Name = "Table5Sno";
+            this.Table5Sno.ReadOnly = true;
+            this.Table5Sno.Width = 46;
+            // 
+            // Table5Id
+            // 
+            this.Table5Id.HeaderText = "Item ID";
+            this.Table5Id.Name = "Table5Id";
+            this.Table5Id.ReadOnly = true;
+            this.Table5Id.Visible = false;
+            // 
+            // Table5name
+            // 
+            this.Table5name.HeaderText = "Particular(s)";
+            this.Table5name.Name = "Table5name";
+            this.Table5name.ReadOnly = true;
+            this.Table5name.Width = 150;
+            // 
+            // Table5Quantity
+            // 
+            this.Table5Quantity.HeaderText = "Qty";
+            this.Table5Quantity.Name = "Table5Quantity";
+            this.Table5Quantity.ReadOnly = true;
+            this.Table5Quantity.Width = 50;
+            // 
+            // Table5ItemPrice
+            // 
+            this.Table5ItemPrice.HeaderText = "Item Price";
+            this.Table5ItemPrice.Name = "Table5ItemPrice";
+            this.Table5ItemPrice.ReadOnly = true;
+            this.Table5ItemPrice.Width = 50;
+            // 
+            // Table5Amount
+            // 
+            this.Table5Amount.HeaderText = "Amount";
+            this.Table5Amount.Name = "Table5Amount";
+            this.Table5Amount.ReadOnly = true;
+            this.Table5Amount.Width = 50;
+            // 
+            // Table6Sno
+            // 
+            this.Table6Sno.HeaderText = "S.no.";
+            this.Table6Sno.Name = "Table6Sno";
+            this.Table6Sno.ReadOnly = true;
+            this.Table6Sno.Width = 46;
+            // 
+            // Table6Id
+            // 
+            this.Table6Id.HeaderText = "Item ID";
+            this.Table6Id.Name = "Table6Id";
+            this.Table6Id.ReadOnly = true;
+            this.Table6Id.Visible = false;
+            // 
+            // Table6name
+            // 
+            this.Table6name.HeaderText = "Particular(s)";
+            this.Table6name.Name = "Table6name";
+            this.Table6name.ReadOnly = true;
+            this.Table6name.Width = 150;
+            // 
+            // Table6Quantity
+            // 
+            this.Table6Quantity.HeaderText = "Qty";
+            this.Table6Quantity.Name = "Table6Quantity";
+            this.Table6Quantity.ReadOnly = true;
+            this.Table6Quantity.Width = 50;
+            // 
+            // Table6ItemPrice
+            // 
+            this.Table6ItemPrice.HeaderText = "Item Price";
+            this.Table6ItemPrice.Name = "Table6ItemPrice";
+            this.Table6ItemPrice.ReadOnly = true;
+            this.Table6ItemPrice.Width = 50;
+            // 
+            // Table6Amount
+            // 
+            this.Table6Amount.HeaderText = "Amount";
+            this.Table6Amount.Name = "Table6Amount";
+            this.Table6Amount.ReadOnly = true;
+            this.Table6Amount.Width = 50;
+            // 
+            // Table7Sno
+            // 
+            this.Table7Sno.HeaderText = "S.no.";
+            this.Table7Sno.Name = "Table7Sno";
+            this.Table7Sno.ReadOnly = true;
+            this.Table7Sno.Width = 46;
+            // 
+            // Table7Id
+            // 
+            this.Table7Id.HeaderText = "Item ID";
+            this.Table7Id.Name = "Table7Id";
+            this.Table7Id.ReadOnly = true;
+            this.Table7Id.Visible = false;
+            // 
+            // Table7name
+            // 
+            this.Table7name.HeaderText = "Particular(s)";
+            this.Table7name.Name = "Table7name";
+            this.Table7name.ReadOnly = true;
+            this.Table7name.Width = 150;
+            // 
+            // Table7Quantity
+            // 
+            this.Table7Quantity.HeaderText = "Qty";
+            this.Table7Quantity.Name = "Table7Quantity";
+            this.Table7Quantity.ReadOnly = true;
+            this.Table7Quantity.Width = 50;
+            // 
+            // Table7ItemPrice
+            // 
+            this.Table7ItemPrice.HeaderText = "Item Price";
+            this.Table7ItemPrice.Name = "Table7ItemPrice";
+            this.Table7ItemPrice.ReadOnly = true;
+            this.Table7ItemPrice.Width = 50;
+            // 
+            // Table7Amount
+            // 
+            this.Table7Amount.HeaderText = "Amount";
+            this.Table7Amount.Name = "Table7Amount";
+            this.Table7Amount.ReadOnly = true;
+            this.Table7Amount.Width = 50;
+            // 
+            // Table8Sno
+            // 
+            this.Table8Sno.HeaderText = "S.no.";
+            this.Table8Sno.Name = "Table8Sno";
+            this.Table8Sno.ReadOnly = true;
+            this.Table8Sno.Width = 46;
+            // 
+            // Table8Id
+            // 
+            this.Table8Id.HeaderText = "Item ID";
+            this.Table8Id.Name = "Table8Id";
+            this.Table8Id.ReadOnly = true;
+            this.Table8Id.Visible = false;
+            // 
+            // Table8name
+            // 
+            this.Table8name.HeaderText = "Particular(s)";
+            this.Table8name.Name = "Table8name";
+            this.Table8name.ReadOnly = true;
+            this.Table8name.Width = 150;
+            // 
+            // Table8Quantity
+            // 
+            this.Table8Quantity.HeaderText = "Qty";
+            this.Table8Quantity.Name = "Table8Quantity";
+            this.Table8Quantity.ReadOnly = true;
+            this.Table8Quantity.Width = 50;
+            // 
+            // Table8ItemPrice
+            // 
+            this.Table8ItemPrice.HeaderText = "Item Price";
+            this.Table8ItemPrice.Name = "Table8ItemPrice";
+            this.Table8ItemPrice.ReadOnly = true;
+            this.Table8ItemPrice.Width = 50;
+            // 
+            // Table8Amount
+            // 
+            this.Table8Amount.HeaderText = "Amount";
+            this.Table8Amount.Name = "Table8Amount";
+            this.Table8Amount.ReadOnly = true;
+            this.Table8Amount.Width = 50;
+            // 
+            // AddUpdateOpenForm
+            // 
+            this.AddUpdateOpenForm.BackColor = System.Drawing.Color.Tan;
+            this.AddUpdateOpenForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddUpdateOpenForm.Location = new System.Drawing.Point(1318, 4);
+            this.AddUpdateOpenForm.Name = "AddUpdateOpenForm";
+            this.AddUpdateOpenForm.Size = new System.Drawing.Size(188, 35);
+            this.AddUpdateOpenForm.TabIndex = 8;
+            this.AddUpdateOpenForm.Text = "Add / Update Items";
+            this.AddUpdateOpenForm.UseVisualStyleBackColor = false;
+            this.AddUpdateOpenForm.Click += new System.EventHandler(this.AddUpdateOpenForm_Click);
+            // 
+            // printDialog1
+            // 
+            this.printDialog1.UseEXDialog = true;
+            // 
+            // Billing
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(1531, 785);
+            this.Controls.Add(this.Table8GroupBox);
+            this.Controls.Add(this.Table7GroupBox);
+            this.Controls.Add(this.Table6groupbox);
+            this.Controls.Add(this.Table5GroupBox);
+            this.Controls.Add(this.Table4GroupBox);
+            this.Controls.Add(this.Table3Groupbox);
+            this.Controls.Add(this.Table2Groupbox);
+            this.Controls.Add(this.Table1Groupbox);
+            this.Controls.Add(this.AddUpdateOpenForm);
+            this.Name = "Billing";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Billing";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Table1Groupbox.ResumeLayout(false);
+            this.Table1Groupbox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TableOneDatagrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Qtytextbox)).EndInit();
+            this.Table2Groupbox.ResumeLayout(false);
+            this.Table2Groupbox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Table2DataGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Table2QuantityTextbox)).EndInit();
+            this.Table3Groupbox.ResumeLayout(false);
+            this.Table3Groupbox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Table3Datagrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Table3QuantityTextBox)).EndInit();
+            this.Table4GroupBox.ResumeLayout(false);
+            this.Table4GroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Table4DataGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Table4QuantityTextBox)).EndInit();
+            this.Table8GroupBox.ResumeLayout(false);
+            this.Table8GroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Table8Datagrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Table8QuantityTextBox)).EndInit();
+            this.Table7GroupBox.ResumeLayout(false);
+            this.Table7GroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Table7Datagrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Table7QuantityTextBox)).EndInit();
+            this.Table6groupbox.ResumeLayout(false);
+            this.Table6groupbox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Table6Datagrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Table6QuantityTextBox)).EndInit();
+            this.Table5GroupBox.ResumeLayout(false);
+            this.Table5GroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Table5Datagrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Table5QuantityTextbox)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.ComboBox ItemNamecombobox;
+        private System.Windows.Forms.GroupBox Table1Groupbox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox TotalTextBox;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button RemoveItembutton;
+        private System.Windows.Forms.Button ClearButton;
+        private System.Windows.Forms.DataGridView TableOneDatagrid;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.NumericUpDown Qtytextbox;
+        private System.Windows.Forms.Button HalfPlatePriceButton;
+        private System.Windows.Forms.Button FullPlatePriceButton;
+        private System.Windows.Forms.Button SavePrintButton;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Sno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ItemPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Amount;
+        private System.Windows.Forms.GroupBox Table2Groupbox;
+        private System.Windows.Forms.Button Table2Savebutton;
+        private System.Windows.Forms.TextBox Table2TotalTextBox;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button Table2RemoveButton;
+        private System.Windows.Forms.Button Table2ClearRefreshbutton;
+        private System.Windows.Forms.DataGridView Table2DataGrid;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.NumericUpDown Table2QuantityTextbox;
+        private System.Windows.Forms.Button Table2HalfPlateButton;
+        private System.Windows.Forms.Button Table2FullPlateButton;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox Table2Combobox;
+        private System.Windows.Forms.GroupBox Table3Groupbox;
+        private System.Windows.Forms.Button Table3SaveButton;
+        private System.Windows.Forms.TextBox Table3TotalTextBox;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button Table3RemoveButton;
+        private System.Windows.Forms.Button Table3ClearRefreshbutton;
+        private System.Windows.Forms.DataGridView Table3Datagrid;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.NumericUpDown Table3QuantityTextBox;
+        private System.Windows.Forms.Button Table3HalfPlatePriceButton;
+        private System.Windows.Forms.Button Table3FullPlatePriceButton;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox Table3Combobox;
+        private System.Windows.Forms.GroupBox Table4GroupBox;
+        private System.Windows.Forms.Button Table4SaveButton;
+        private System.Windows.Forms.TextBox Table4TotalTextBox;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button Table4RemoveButton;
+        private System.Windows.Forms.Button Table4ClearRefreshButton;
+        private System.Windows.Forms.DataGridView Table4DataGrid;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.NumericUpDown Table4QuantityTextBox;
+        private System.Windows.Forms.Button Table4HalfPlatePriceButton;
+        private System.Windows.Forms.Button Table4FullPlatePriceButton;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox Table4Combobox;
+        private System.Windows.Forms.GroupBox Table8GroupBox;
+        private System.Windows.Forms.Button Table8SaveButton;
+        private System.Windows.Forms.TextBox Table8TotalTextBox;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button Table8RemoveButton;
+        private System.Windows.Forms.Button Table8ClearRefreshButton;
+        private System.Windows.Forms.DataGridView Table8Datagrid;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.NumericUpDown Table8QuantityTextBox;
+        private System.Windows.Forms.Button Table8HalfPlatePriceButton;
+        private System.Windows.Forms.Button Table8FullPlatePriceButton;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ComboBox Table8Combobox;
+        private System.Windows.Forms.GroupBox Table7GroupBox;
+        private System.Windows.Forms.Button Table7SaveButton;
+        private System.Windows.Forms.TextBox Table7TotalTextBox;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button Table7RemoveButton;
+        private System.Windows.Forms.Button Table7ClearRefreshButton;
+        private System.Windows.Forms.DataGridView Table7Datagrid;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.NumericUpDown Table7QuantityTextBox;
+        private System.Windows.Forms.Button Table7HalfPlatePriceButton;
+        private System.Windows.Forms.Button Table7FullPlatePriceButton;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.ComboBox Table7Combobox;
+        private System.Windows.Forms.GroupBox Table6groupbox;
+        private System.Windows.Forms.Button Table6SaveButton;
+        private System.Windows.Forms.TextBox Table6TotalTextBox;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Button Table6RemoveButton;
+        private System.Windows.Forms.Button Table6ClearRefreshButton;
+        private System.Windows.Forms.DataGridView Table6Datagrid;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.NumericUpDown Table6QuantityTextBox;
+        private System.Windows.Forms.Button Table6HalfPlatePriceButton;
+        private System.Windows.Forms.Button Table6FullPlatePriceButton;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.ComboBox Table6Combobox;
+        private System.Windows.Forms.GroupBox Table5GroupBox;
+        private System.Windows.Forms.Button Table5SaveButton;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Button Table5RemoveButton;
+        private System.Windows.Forms.Button Table5ClearRefreshButton;
+        private System.Windows.Forms.DataGridView Table5Datagrid;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.NumericUpDown Table5QuantityTextbox;
+        private System.Windows.Forms.Button Table5HalfPlatePriceButton;
+        private System.Windows.Forms.Button Table5FullPlatePriceButton;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.ComboBox Table5Combobox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table2Sno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table2Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table2name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table2Quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table2ItemPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table2Amount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table3Sno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table3Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table3name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table3Quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table3ItemPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table3Amount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table4Sno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table4Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table4name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table4Quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table4ItemPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table4Amount;
+        private System.Windows.Forms.TextBox Table5TotalTextBox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table5Sno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table5Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table5name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table5Quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table5ItemPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table5Amount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table6Sno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table6Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table6name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table6Quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table6ItemPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table6Amount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table7Sno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table7Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table7name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table7Quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table7ItemPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table7Amount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table8Sno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table8Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table8name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table8Quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table8ItemPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table8Amount;
+        private System.Windows.Forms.Button AddUpdateOpenForm;
+        private System.Windows.Forms.PrintDialog printDialog1;
+    }
+}

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Billing));
             this.ItemNamecombobox = new System.Windows.Forms.ComboBox();
             this.Table1Groupbox = new System.Windows.Forms.GroupBox();
             this.SavePrintButton = new System.Windows.Forms.Button();
@@ -54,6 +55,12 @@
             this.Table2RemoveButton = new System.Windows.Forms.Button();
             this.Table2ClearRefreshbutton = new System.Windows.Forms.Button();
             this.Table2DataGrid = new System.Windows.Forms.DataGridView();
+            this.Table2Sno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table2Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table2name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table2Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table2ItemPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table2Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label5 = new System.Windows.Forms.Label();
             this.Table2QuantityTextbox = new System.Windows.Forms.NumericUpDown();
             this.Table2HalfPlateButton = new System.Windows.Forms.Button();
@@ -67,6 +74,12 @@
             this.Table3RemoveButton = new System.Windows.Forms.Button();
             this.Table3ClearRefreshbutton = new System.Windows.Forms.Button();
             this.Table3Datagrid = new System.Windows.Forms.DataGridView();
+            this.Table3Sno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table3Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table3name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table3Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table3ItemPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table3Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label8 = new System.Windows.Forms.Label();
             this.Table3QuantityTextBox = new System.Windows.Forms.NumericUpDown();
             this.Table3HalfPlatePriceButton = new System.Windows.Forms.Button();
@@ -80,6 +93,12 @@
             this.Table4RemoveButton = new System.Windows.Forms.Button();
             this.Table4ClearRefreshButton = new System.Windows.Forms.Button();
             this.Table4DataGrid = new System.Windows.Forms.DataGridView();
+            this.Table4Sno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table4Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table4name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table4Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table4ItemPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table4Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label11 = new System.Windows.Forms.Label();
             this.Table4QuantityTextBox = new System.Windows.Forms.NumericUpDown();
             this.Table4HalfPlatePriceButton = new System.Windows.Forms.Button();
@@ -93,6 +112,12 @@
             this.Table8RemoveButton = new System.Windows.Forms.Button();
             this.Table8ClearRefreshButton = new System.Windows.Forms.Button();
             this.Table8Datagrid = new System.Windows.Forms.DataGridView();
+            this.Table8Sno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table8Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table8name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table8Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table8ItemPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table8Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label14 = new System.Windows.Forms.Label();
             this.Table8QuantityTextBox = new System.Windows.Forms.NumericUpDown();
             this.Table8HalfPlatePriceButton = new System.Windows.Forms.Button();
@@ -106,6 +131,12 @@
             this.Table7RemoveButton = new System.Windows.Forms.Button();
             this.Table7ClearRefreshButton = new System.Windows.Forms.Button();
             this.Table7Datagrid = new System.Windows.Forms.DataGridView();
+            this.Table7Sno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table7Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table7name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table7Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table7ItemPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table7Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label17 = new System.Windows.Forms.Label();
             this.Table7QuantityTextBox = new System.Windows.Forms.NumericUpDown();
             this.Table7HalfPlatePriceButton = new System.Windows.Forms.Button();
@@ -119,6 +150,12 @@
             this.Table6RemoveButton = new System.Windows.Forms.Button();
             this.Table6ClearRefreshButton = new System.Windows.Forms.Button();
             this.Table6Datagrid = new System.Windows.Forms.DataGridView();
+            this.Table6Sno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table6Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table6name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table6Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table6ItemPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table6Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label20 = new System.Windows.Forms.Label();
             this.Table6QuantityTextBox = new System.Windows.Forms.NumericUpDown();
             this.Table6HalfPlatePriceButton = new System.Windows.Forms.Button();
@@ -127,61 +164,28 @@
             this.Table6Combobox = new System.Windows.Forms.ComboBox();
             this.Table5GroupBox = new System.Windows.Forms.GroupBox();
             this.Table5SaveButton = new System.Windows.Forms.Button();
+            this.Table5TotalTextBox = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.Table5RemoveButton = new System.Windows.Forms.Button();
             this.Table5ClearRefreshButton = new System.Windows.Forms.Button();
             this.Table5Datagrid = new System.Windows.Forms.DataGridView();
-            this.label23 = new System.Windows.Forms.Label();
-            this.Table5QuantityTextbox = new System.Windows.Forms.NumericUpDown();
-            this.Table5HalfPlatePriceButton = new System.Windows.Forms.Button();
-            this.Table5FullPlatePriceButton = new System.Windows.Forms.Button();
-            this.label24 = new System.Windows.Forms.Label();
-            this.Table5Combobox = new System.Windows.Forms.ComboBox();
-            this.Table2Sno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Table2Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Table2name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Table2Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Table2ItemPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Table2Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Table3Sno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Table3Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Table3name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Table3Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Table3ItemPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Table3Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Table4Sno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Table4Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Table4name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Table4Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Table4ItemPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Table4Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Table5TotalTextBox = new System.Windows.Forms.TextBox();
             this.Table5Sno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Table5Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Table5name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Table5Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Table5ItemPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Table5Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Table6Sno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Table6Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Table6name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Table6Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Table6ItemPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Table6Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Table7Sno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Table7Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Table7name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Table7Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Table7ItemPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Table7Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Table8Sno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Table8Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Table8name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Table8Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Table8ItemPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Table8Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label23 = new System.Windows.Forms.Label();
+            this.Table5QuantityTextbox = new System.Windows.Forms.NumericUpDown();
+            this.Table5HalfPlatePriceButton = new System.Windows.Forms.Button();
+            this.Table5FullPlatePriceButton = new System.Windows.Forms.Button();
+            this.label24 = new System.Windows.Forms.Label();
+            this.Table5Combobox = new System.Windows.Forms.ComboBox();
             this.AddUpdateOpenForm = new System.Windows.Forms.Button();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewControl1 = new System.Windows.Forms.PrintPreviewControl();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.Table1Groupbox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TableOneDatagrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Qtytextbox)).BeginInit();
@@ -211,9 +215,10 @@
             // ItemNamecombobox
             // 
             this.ItemNamecombobox.FormattingEnabled = true;
-            this.ItemNamecombobox.Location = new System.Drawing.Point(68, 26);
+            this.ItemNamecombobox.Location = new System.Drawing.Point(91, 32);
+            this.ItemNamecombobox.Margin = new System.Windows.Forms.Padding(4);
             this.ItemNamecombobox.Name = "ItemNamecombobox";
-            this.ItemNamecombobox.Size = new System.Drawing.Size(179, 21);
+            this.ItemNamecombobox.Size = new System.Drawing.Size(237, 24);
             this.ItemNamecombobox.TabIndex = 2;
             this.ItemNamecombobox.SelectedIndexChanged += new System.EventHandler(this.ItemNamecombobox_SelectedIndexChanged);
             // 
@@ -232,9 +237,11 @@
             this.Table1Groupbox.Controls.Add(this.FullPlatePriceButton);
             this.Table1Groupbox.Controls.Add(this.label1);
             this.Table1Groupbox.Controls.Add(this.ItemNamecombobox);
-            this.Table1Groupbox.Location = new System.Drawing.Point(12, 45);
+            this.Table1Groupbox.Location = new System.Drawing.Point(16, 55);
+            this.Table1Groupbox.Margin = new System.Windows.Forms.Padding(4);
             this.Table1Groupbox.Name = "Table1Groupbox";
-            this.Table1Groupbox.Size = new System.Drawing.Size(369, 353);
+            this.Table1Groupbox.Padding = new System.Windows.Forms.Padding(4);
+            this.Table1Groupbox.Size = new System.Drawing.Size(492, 434);
             this.Table1Groupbox.TabIndex = 0;
             this.Table1Groupbox.TabStop = false;
             this.Table1Groupbox.Text = "Table 1";
@@ -242,9 +249,10 @@
             // SavePrintButton
             // 
             this.SavePrintButton.BackColor = System.Drawing.Color.PaleGreen;
-            this.SavePrintButton.Location = new System.Drawing.Point(9, 308);
+            this.SavePrintButton.Location = new System.Drawing.Point(12, 379);
+            this.SavePrintButton.Margin = new System.Windows.Forms.Padding(4);
             this.SavePrintButton.Name = "SavePrintButton";
-            this.SavePrintButton.Size = new System.Drawing.Size(350, 39);
+            this.SavePrintButton.Size = new System.Drawing.Size(467, 48);
             this.SavePrintButton.TabIndex = 13;
             this.SavePrintButton.Text = "Save / Print";
             this.SavePrintButton.UseVisualStyleBackColor = false;
@@ -252,27 +260,30 @@
             // 
             // TotalTextBox
             // 
-            this.TotalTextBox.Location = new System.Drawing.Point(275, 276);
+            this.TotalTextBox.Location = new System.Drawing.Point(367, 340);
+            this.TotalTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.TotalTextBox.Name = "TotalTextBox";
-            this.TotalTextBox.Size = new System.Drawing.Size(84, 20);
+            this.TotalTextBox.Size = new System.Drawing.Size(111, 22);
             this.TotalTextBox.TabIndex = 12;
             this.TotalTextBox.TextChanged += new System.EventHandler(this.TotalTextBox_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(232, 278);
+            this.label3.Location = new System.Drawing.Point(309, 342);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(34, 13);
+            this.label3.Size = new System.Drawing.Size(41, 16);
             this.label3.TabIndex = 11;
             this.label3.Text = "Total ";
             // 
             // RemoveItembutton
             // 
             this.RemoveItembutton.BackColor = System.Drawing.Color.OrangeRed;
-            this.RemoveItembutton.Location = new System.Drawing.Point(124, 268);
+            this.RemoveItembutton.Location = new System.Drawing.Point(165, 330);
+            this.RemoveItembutton.Margin = new System.Windows.Forms.Padding(4);
             this.RemoveItembutton.Name = "RemoveItembutton";
-            this.RemoveItembutton.Size = new System.Drawing.Size(87, 34);
+            this.RemoveItembutton.Size = new System.Drawing.Size(116, 42);
             this.RemoveItembutton.TabIndex = 10;
             this.RemoveItembutton.Text = "Remove Item";
             this.RemoveItembutton.UseVisualStyleBackColor = false;
@@ -281,9 +292,10 @@
             // ClearButton
             // 
             this.ClearButton.BackColor = System.Drawing.Color.Gold;
-            this.ClearButton.Location = new System.Drawing.Point(9, 268);
+            this.ClearButton.Location = new System.Drawing.Point(12, 330);
+            this.ClearButton.Margin = new System.Windows.Forms.Padding(4);
             this.ClearButton.Name = "ClearButton";
-            this.ClearButton.Size = new System.Drawing.Size(95, 34);
+            this.ClearButton.Size = new System.Drawing.Size(127, 42);
             this.ClearButton.TabIndex = 9;
             this.ClearButton.Text = "Clear / Refresh";
             this.ClearButton.UseVisualStyleBackColor = false;
@@ -303,18 +315,21 @@
             this.Quantity,
             this.ItemPrice,
             this.Amount});
-            this.TableOneDatagrid.Location = new System.Drawing.Point(9, 109);
+            this.TableOneDatagrid.Location = new System.Drawing.Point(12, 134);
+            this.TableOneDatagrid.Margin = new System.Windows.Forms.Padding(4);
             this.TableOneDatagrid.Name = "TableOneDatagrid";
             this.TableOneDatagrid.ReadOnly = true;
             this.TableOneDatagrid.RowHeadersVisible = false;
+            this.TableOneDatagrid.RowHeadersWidth = 51;
             this.TableOneDatagrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.TableOneDatagrid.Size = new System.Drawing.Size(350, 150);
+            this.TableOneDatagrid.Size = new System.Drawing.Size(467, 185);
             this.TableOneDatagrid.TabIndex = 8;
             this.TableOneDatagrid.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.TableOneDatagrid_RowsAdded);
             // 
             // Sno
             // 
             this.Sno.HeaderText = "S.no.";
+            this.Sno.MinimumWidth = 6;
             this.Sno.Name = "Sno";
             this.Sno.ReadOnly = true;
             this.Sno.Width = 46;
@@ -322,13 +337,16 @@
             // Id
             // 
             this.Id.HeaderText = "Item ID";
+            this.Id.MinimumWidth = 6;
             this.Id.Name = "Id";
             this.Id.ReadOnly = true;
             this.Id.Visible = false;
+            this.Id.Width = 125;
             // 
             // name
             // 
             this.name.HeaderText = "Particular(s)";
+            this.name.MinimumWidth = 6;
             this.name.Name = "name";
             this.name.ReadOnly = true;
             this.name.Width = 150;
@@ -336,6 +354,7 @@
             // Quantity
             // 
             this.Quantity.HeaderText = "Qty";
+            this.Quantity.MinimumWidth = 6;
             this.Quantity.Name = "Quantity";
             this.Quantity.ReadOnly = true;
             this.Quantity.Width = 50;
@@ -343,6 +362,7 @@
             // ItemPrice
             // 
             this.ItemPrice.HeaderText = "Item Price";
+            this.ItemPrice.MinimumWidth = 6;
             this.ItemPrice.Name = "ItemPrice";
             this.ItemPrice.ReadOnly = true;
             this.ItemPrice.Width = 50;
@@ -350,6 +370,7 @@
             // Amount
             // 
             this.Amount.HeaderText = "Amount";
+            this.Amount.MinimumWidth = 6;
             this.Amount.Name = "Amount";
             this.Amount.ReadOnly = true;
             this.Amount.Width = 50;
@@ -357,17 +378,19 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(279, 29);
+            this.label2.Location = new System.Drawing.Point(372, 36);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(23, 13);
+            this.label2.Size = new System.Drawing.Size(27, 16);
             this.label2.TabIndex = 7;
             this.label2.Text = "Qty";
             // 
             // Qtytextbox
             // 
-            this.Qtytextbox.Location = new System.Drawing.Point(320, 27);
+            this.Qtytextbox.Location = new System.Drawing.Point(427, 33);
+            this.Qtytextbox.Margin = new System.Windows.Forms.Padding(4);
             this.Qtytextbox.Name = "Qtytextbox";
-            this.Qtytextbox.Size = new System.Drawing.Size(39, 20);
+            this.Qtytextbox.Size = new System.Drawing.Size(52, 22);
             this.Qtytextbox.TabIndex = 6;
             this.Qtytextbox.Value = new decimal(new int[] {
             1,
@@ -378,9 +401,10 @@
             // HalfPlatePriceButton
             // 
             this.HalfPlatePriceButton.BackColor = System.Drawing.Color.NavajoWhite;
-            this.HalfPlatePriceButton.Location = new System.Drawing.Point(9, 64);
+            this.HalfPlatePriceButton.Location = new System.Drawing.Point(12, 79);
+            this.HalfPlatePriceButton.Margin = new System.Windows.Forms.Padding(4);
             this.HalfPlatePriceButton.Name = "HalfPlatePriceButton";
-            this.HalfPlatePriceButton.Size = new System.Drawing.Size(136, 29);
+            this.HalfPlatePriceButton.Size = new System.Drawing.Size(181, 36);
             this.HalfPlatePriceButton.TabIndex = 5;
             this.HalfPlatePriceButton.Text = "Half Plate Price";
             this.HalfPlatePriceButton.UseVisualStyleBackColor = false;
@@ -389,9 +413,10 @@
             // FullPlatePriceButton
             // 
             this.FullPlatePriceButton.BackColor = System.Drawing.Color.DarkKhaki;
-            this.FullPlatePriceButton.Location = new System.Drawing.Point(223, 64);
+            this.FullPlatePriceButton.Location = new System.Drawing.Point(297, 79);
+            this.FullPlatePriceButton.Margin = new System.Windows.Forms.Padding(4);
             this.FullPlatePriceButton.Name = "FullPlatePriceButton";
-            this.FullPlatePriceButton.Size = new System.Drawing.Size(136, 29);
+            this.FullPlatePriceButton.Size = new System.Drawing.Size(181, 36);
             this.FullPlatePriceButton.TabIndex = 4;
             this.FullPlatePriceButton.Text = "FullPlatePrice";
             this.FullPlatePriceButton.UseVisualStyleBackColor = false;
@@ -400,9 +425,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 29);
+            this.label1.Location = new System.Drawing.Point(8, 36);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 13);
+            this.label1.Size = new System.Drawing.Size(69, 16);
             this.label1.TabIndex = 3;
             this.label1.Text = "Item name";
             // 
@@ -421,9 +447,11 @@
             this.Table2Groupbox.Controls.Add(this.Table2FullPlateButton);
             this.Table2Groupbox.Controls.Add(this.label6);
             this.Table2Groupbox.Controls.Add(this.Table2Combobox);
-            this.Table2Groupbox.Location = new System.Drawing.Point(387, 45);
+            this.Table2Groupbox.Location = new System.Drawing.Point(516, 55);
+            this.Table2Groupbox.Margin = new System.Windows.Forms.Padding(4);
             this.Table2Groupbox.Name = "Table2Groupbox";
-            this.Table2Groupbox.Size = new System.Drawing.Size(369, 353);
+            this.Table2Groupbox.Padding = new System.Windows.Forms.Padding(4);
+            this.Table2Groupbox.Size = new System.Drawing.Size(492, 434);
             this.Table2Groupbox.TabIndex = 1;
             this.Table2Groupbox.TabStop = false;
             this.Table2Groupbox.Text = "Table 2";
@@ -431,9 +459,10 @@
             // Table2Savebutton
             // 
             this.Table2Savebutton.BackColor = System.Drawing.Color.PaleGreen;
-            this.Table2Savebutton.Location = new System.Drawing.Point(9, 308);
+            this.Table2Savebutton.Location = new System.Drawing.Point(12, 379);
+            this.Table2Savebutton.Margin = new System.Windows.Forms.Padding(4);
             this.Table2Savebutton.Name = "Table2Savebutton";
-            this.Table2Savebutton.Size = new System.Drawing.Size(350, 39);
+            this.Table2Savebutton.Size = new System.Drawing.Size(467, 48);
             this.Table2Savebutton.TabIndex = 13;
             this.Table2Savebutton.Text = "Save / Print";
             this.Table2Savebutton.UseVisualStyleBackColor = false;
@@ -441,27 +470,30 @@
             // 
             // Table2TotalTextBox
             // 
-            this.Table2TotalTextBox.Location = new System.Drawing.Point(275, 276);
+            this.Table2TotalTextBox.Location = new System.Drawing.Point(367, 340);
+            this.Table2TotalTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.Table2TotalTextBox.Name = "Table2TotalTextBox";
-            this.Table2TotalTextBox.Size = new System.Drawing.Size(84, 20);
+            this.Table2TotalTextBox.Size = new System.Drawing.Size(111, 22);
             this.Table2TotalTextBox.TabIndex = 12;
             this.Table2TotalTextBox.TextChanged += new System.EventHandler(this.Table2TotalTextBox_TextChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(232, 278);
+            this.label4.Location = new System.Drawing.Point(309, 342);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(34, 13);
+            this.label4.Size = new System.Drawing.Size(41, 16);
             this.label4.TabIndex = 11;
             this.label4.Text = "Total ";
             // 
             // Table2RemoveButton
             // 
             this.Table2RemoveButton.BackColor = System.Drawing.Color.OrangeRed;
-            this.Table2RemoveButton.Location = new System.Drawing.Point(124, 268);
+            this.Table2RemoveButton.Location = new System.Drawing.Point(165, 330);
+            this.Table2RemoveButton.Margin = new System.Windows.Forms.Padding(4);
             this.Table2RemoveButton.Name = "Table2RemoveButton";
-            this.Table2RemoveButton.Size = new System.Drawing.Size(87, 34);
+            this.Table2RemoveButton.Size = new System.Drawing.Size(116, 42);
             this.Table2RemoveButton.TabIndex = 10;
             this.Table2RemoveButton.Text = "Remove Item";
             this.Table2RemoveButton.UseVisualStyleBackColor = false;
@@ -470,9 +502,10 @@
             // Table2ClearRefreshbutton
             // 
             this.Table2ClearRefreshbutton.BackColor = System.Drawing.Color.Gold;
-            this.Table2ClearRefreshbutton.Location = new System.Drawing.Point(9, 268);
+            this.Table2ClearRefreshbutton.Location = new System.Drawing.Point(12, 330);
+            this.Table2ClearRefreshbutton.Margin = new System.Windows.Forms.Padding(4);
             this.Table2ClearRefreshbutton.Name = "Table2ClearRefreshbutton";
-            this.Table2ClearRefreshbutton.Size = new System.Drawing.Size(95, 34);
+            this.Table2ClearRefreshbutton.Size = new System.Drawing.Size(127, 42);
             this.Table2ClearRefreshbutton.TabIndex = 9;
             this.Table2ClearRefreshbutton.Text = "Clear / Refresh";
             this.Table2ClearRefreshbutton.UseVisualStyleBackColor = false;
@@ -492,29 +525,82 @@
             this.Table2Quantity,
             this.Table2ItemPrice,
             this.Table2Amount});
-            this.Table2DataGrid.Location = new System.Drawing.Point(9, 109);
+            this.Table2DataGrid.Location = new System.Drawing.Point(12, 134);
+            this.Table2DataGrid.Margin = new System.Windows.Forms.Padding(4);
             this.Table2DataGrid.Name = "Table2DataGrid";
             this.Table2DataGrid.ReadOnly = true;
             this.Table2DataGrid.RowHeadersVisible = false;
+            this.Table2DataGrid.RowHeadersWidth = 51;
             this.Table2DataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Table2DataGrid.Size = new System.Drawing.Size(350, 150);
+            this.Table2DataGrid.Size = new System.Drawing.Size(467, 185);
             this.Table2DataGrid.TabIndex = 8;
             this.Table2DataGrid.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.Table2DataGrid_RowsAdded);
+            // 
+            // Table2Sno
+            // 
+            this.Table2Sno.HeaderText = "S.no.";
+            this.Table2Sno.MinimumWidth = 6;
+            this.Table2Sno.Name = "Table2Sno";
+            this.Table2Sno.ReadOnly = true;
+            this.Table2Sno.Width = 46;
+            // 
+            // Table2Id
+            // 
+            this.Table2Id.HeaderText = "Item ID";
+            this.Table2Id.MinimumWidth = 6;
+            this.Table2Id.Name = "Table2Id";
+            this.Table2Id.ReadOnly = true;
+            this.Table2Id.Visible = false;
+            this.Table2Id.Width = 125;
+            // 
+            // Table2name
+            // 
+            this.Table2name.HeaderText = "Particular(s)";
+            this.Table2name.MinimumWidth = 6;
+            this.Table2name.Name = "Table2name";
+            this.Table2name.ReadOnly = true;
+            this.Table2name.Width = 150;
+            // 
+            // Table2Quantity
+            // 
+            this.Table2Quantity.HeaderText = "Qty";
+            this.Table2Quantity.MinimumWidth = 6;
+            this.Table2Quantity.Name = "Table2Quantity";
+            this.Table2Quantity.ReadOnly = true;
+            this.Table2Quantity.Width = 50;
+            // 
+            // Table2ItemPrice
+            // 
+            this.Table2ItemPrice.HeaderText = "Item Price";
+            this.Table2ItemPrice.MinimumWidth = 6;
+            this.Table2ItemPrice.Name = "Table2ItemPrice";
+            this.Table2ItemPrice.ReadOnly = true;
+            this.Table2ItemPrice.Width = 50;
+            // 
+            // Table2Amount
+            // 
+            this.Table2Amount.HeaderText = "Amount";
+            this.Table2Amount.MinimumWidth = 6;
+            this.Table2Amount.Name = "Table2Amount";
+            this.Table2Amount.ReadOnly = true;
+            this.Table2Amount.Width = 50;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(279, 29);
+            this.label5.Location = new System.Drawing.Point(372, 36);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(23, 13);
+            this.label5.Size = new System.Drawing.Size(27, 16);
             this.label5.TabIndex = 7;
             this.label5.Text = "Qty";
             // 
             // Table2QuantityTextbox
             // 
-            this.Table2QuantityTextbox.Location = new System.Drawing.Point(320, 27);
+            this.Table2QuantityTextbox.Location = new System.Drawing.Point(427, 33);
+            this.Table2QuantityTextbox.Margin = new System.Windows.Forms.Padding(4);
             this.Table2QuantityTextbox.Name = "Table2QuantityTextbox";
-            this.Table2QuantityTextbox.Size = new System.Drawing.Size(39, 20);
+            this.Table2QuantityTextbox.Size = new System.Drawing.Size(52, 22);
             this.Table2QuantityTextbox.TabIndex = 6;
             this.Table2QuantityTextbox.Value = new decimal(new int[] {
             1,
@@ -525,9 +611,10 @@
             // Table2HalfPlateButton
             // 
             this.Table2HalfPlateButton.BackColor = System.Drawing.Color.NavajoWhite;
-            this.Table2HalfPlateButton.Location = new System.Drawing.Point(9, 64);
+            this.Table2HalfPlateButton.Location = new System.Drawing.Point(12, 79);
+            this.Table2HalfPlateButton.Margin = new System.Windows.Forms.Padding(4);
             this.Table2HalfPlateButton.Name = "Table2HalfPlateButton";
-            this.Table2HalfPlateButton.Size = new System.Drawing.Size(136, 29);
+            this.Table2HalfPlateButton.Size = new System.Drawing.Size(181, 36);
             this.Table2HalfPlateButton.TabIndex = 5;
             this.Table2HalfPlateButton.Text = "Half Plate Price";
             this.Table2HalfPlateButton.UseVisualStyleBackColor = false;
@@ -536,9 +623,10 @@
             // Table2FullPlateButton
             // 
             this.Table2FullPlateButton.BackColor = System.Drawing.Color.DarkKhaki;
-            this.Table2FullPlateButton.Location = new System.Drawing.Point(223, 64);
+            this.Table2FullPlateButton.Location = new System.Drawing.Point(297, 79);
+            this.Table2FullPlateButton.Margin = new System.Windows.Forms.Padding(4);
             this.Table2FullPlateButton.Name = "Table2FullPlateButton";
-            this.Table2FullPlateButton.Size = new System.Drawing.Size(136, 29);
+            this.Table2FullPlateButton.Size = new System.Drawing.Size(181, 36);
             this.Table2FullPlateButton.TabIndex = 4;
             this.Table2FullPlateButton.Text = "FullPlatePrice";
             this.Table2FullPlateButton.UseVisualStyleBackColor = false;
@@ -547,18 +635,20 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 29);
+            this.label6.Location = new System.Drawing.Point(8, 36);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 13);
+            this.label6.Size = new System.Drawing.Size(69, 16);
             this.label6.TabIndex = 3;
             this.label6.Text = "Item name";
             // 
             // Table2Combobox
             // 
             this.Table2Combobox.FormattingEnabled = true;
-            this.Table2Combobox.Location = new System.Drawing.Point(68, 26);
+            this.Table2Combobox.Location = new System.Drawing.Point(91, 32);
+            this.Table2Combobox.Margin = new System.Windows.Forms.Padding(4);
             this.Table2Combobox.Name = "Table2Combobox";
-            this.Table2Combobox.Size = new System.Drawing.Size(179, 21);
+            this.Table2Combobox.Size = new System.Drawing.Size(237, 24);
             this.Table2Combobox.TabIndex = 2;
             this.Table2Combobox.SelectedIndexChanged += new System.EventHandler(this.Table2Combobox_SelectedIndexChanged);
             // 
@@ -577,9 +667,11 @@
             this.Table3Groupbox.Controls.Add(this.Table3FullPlatePriceButton);
             this.Table3Groupbox.Controls.Add(this.label9);
             this.Table3Groupbox.Controls.Add(this.Table3Combobox);
-            this.Table3Groupbox.Location = new System.Drawing.Point(762, 45);
+            this.Table3Groupbox.Location = new System.Drawing.Point(1016, 55);
+            this.Table3Groupbox.Margin = new System.Windows.Forms.Padding(4);
             this.Table3Groupbox.Name = "Table3Groupbox";
-            this.Table3Groupbox.Size = new System.Drawing.Size(369, 353);
+            this.Table3Groupbox.Padding = new System.Windows.Forms.Padding(4);
+            this.Table3Groupbox.Size = new System.Drawing.Size(492, 434);
             this.Table3Groupbox.TabIndex = 2;
             this.Table3Groupbox.TabStop = false;
             this.Table3Groupbox.Text = "Table 3";
@@ -587,9 +679,10 @@
             // Table3SaveButton
             // 
             this.Table3SaveButton.BackColor = System.Drawing.Color.PaleGreen;
-            this.Table3SaveButton.Location = new System.Drawing.Point(9, 308);
+            this.Table3SaveButton.Location = new System.Drawing.Point(12, 379);
+            this.Table3SaveButton.Margin = new System.Windows.Forms.Padding(4);
             this.Table3SaveButton.Name = "Table3SaveButton";
-            this.Table3SaveButton.Size = new System.Drawing.Size(350, 39);
+            this.Table3SaveButton.Size = new System.Drawing.Size(467, 48);
             this.Table3SaveButton.TabIndex = 13;
             this.Table3SaveButton.Text = "Save / Print";
             this.Table3SaveButton.UseVisualStyleBackColor = false;
@@ -597,27 +690,30 @@
             // 
             // Table3TotalTextBox
             // 
-            this.Table3TotalTextBox.Location = new System.Drawing.Point(275, 276);
+            this.Table3TotalTextBox.Location = new System.Drawing.Point(367, 340);
+            this.Table3TotalTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.Table3TotalTextBox.Name = "Table3TotalTextBox";
-            this.Table3TotalTextBox.Size = new System.Drawing.Size(84, 20);
+            this.Table3TotalTextBox.Size = new System.Drawing.Size(111, 22);
             this.Table3TotalTextBox.TabIndex = 12;
             this.Table3TotalTextBox.TextChanged += new System.EventHandler(this.Table3TotalTextBox_TextChanged);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(232, 278);
+            this.label7.Location = new System.Drawing.Point(309, 342);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(34, 13);
+            this.label7.Size = new System.Drawing.Size(41, 16);
             this.label7.TabIndex = 11;
             this.label7.Text = "Total ";
             // 
             // Table3RemoveButton
             // 
             this.Table3RemoveButton.BackColor = System.Drawing.Color.OrangeRed;
-            this.Table3RemoveButton.Location = new System.Drawing.Point(124, 268);
+            this.Table3RemoveButton.Location = new System.Drawing.Point(165, 330);
+            this.Table3RemoveButton.Margin = new System.Windows.Forms.Padding(4);
             this.Table3RemoveButton.Name = "Table3RemoveButton";
-            this.Table3RemoveButton.Size = new System.Drawing.Size(87, 34);
+            this.Table3RemoveButton.Size = new System.Drawing.Size(116, 42);
             this.Table3RemoveButton.TabIndex = 10;
             this.Table3RemoveButton.Text = "Remove Item";
             this.Table3RemoveButton.UseVisualStyleBackColor = false;
@@ -626,9 +722,10 @@
             // Table3ClearRefreshbutton
             // 
             this.Table3ClearRefreshbutton.BackColor = System.Drawing.Color.Gold;
-            this.Table3ClearRefreshbutton.Location = new System.Drawing.Point(9, 268);
+            this.Table3ClearRefreshbutton.Location = new System.Drawing.Point(12, 330);
+            this.Table3ClearRefreshbutton.Margin = new System.Windows.Forms.Padding(4);
             this.Table3ClearRefreshbutton.Name = "Table3ClearRefreshbutton";
-            this.Table3ClearRefreshbutton.Size = new System.Drawing.Size(95, 34);
+            this.Table3ClearRefreshbutton.Size = new System.Drawing.Size(127, 42);
             this.Table3ClearRefreshbutton.TabIndex = 9;
             this.Table3ClearRefreshbutton.Text = "Clear / Refresh";
             this.Table3ClearRefreshbutton.UseVisualStyleBackColor = false;
@@ -648,29 +745,82 @@
             this.Table3Quantity,
             this.Table3ItemPrice,
             this.Table3Amount});
-            this.Table3Datagrid.Location = new System.Drawing.Point(9, 109);
+            this.Table3Datagrid.Location = new System.Drawing.Point(12, 134);
+            this.Table3Datagrid.Margin = new System.Windows.Forms.Padding(4);
             this.Table3Datagrid.Name = "Table3Datagrid";
             this.Table3Datagrid.ReadOnly = true;
             this.Table3Datagrid.RowHeadersVisible = false;
+            this.Table3Datagrid.RowHeadersWidth = 51;
             this.Table3Datagrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Table3Datagrid.Size = new System.Drawing.Size(350, 150);
+            this.Table3Datagrid.Size = new System.Drawing.Size(467, 185);
             this.Table3Datagrid.TabIndex = 8;
             this.Table3Datagrid.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.Table3Datagrid_RowsAdded);
+            // 
+            // Table3Sno
+            // 
+            this.Table3Sno.HeaderText = "S.no.";
+            this.Table3Sno.MinimumWidth = 6;
+            this.Table3Sno.Name = "Table3Sno";
+            this.Table3Sno.ReadOnly = true;
+            this.Table3Sno.Width = 46;
+            // 
+            // Table3Id
+            // 
+            this.Table3Id.HeaderText = "Item ID";
+            this.Table3Id.MinimumWidth = 6;
+            this.Table3Id.Name = "Table3Id";
+            this.Table3Id.ReadOnly = true;
+            this.Table3Id.Visible = false;
+            this.Table3Id.Width = 125;
+            // 
+            // Table3name
+            // 
+            this.Table3name.HeaderText = "Particular(s)";
+            this.Table3name.MinimumWidth = 6;
+            this.Table3name.Name = "Table3name";
+            this.Table3name.ReadOnly = true;
+            this.Table3name.Width = 150;
+            // 
+            // Table3Quantity
+            // 
+            this.Table3Quantity.HeaderText = "Qty";
+            this.Table3Quantity.MinimumWidth = 6;
+            this.Table3Quantity.Name = "Table3Quantity";
+            this.Table3Quantity.ReadOnly = true;
+            this.Table3Quantity.Width = 50;
+            // 
+            // Table3ItemPrice
+            // 
+            this.Table3ItemPrice.HeaderText = "Item Price";
+            this.Table3ItemPrice.MinimumWidth = 6;
+            this.Table3ItemPrice.Name = "Table3ItemPrice";
+            this.Table3ItemPrice.ReadOnly = true;
+            this.Table3ItemPrice.Width = 50;
+            // 
+            // Table3Amount
+            // 
+            this.Table3Amount.HeaderText = "Amount";
+            this.Table3Amount.MinimumWidth = 6;
+            this.Table3Amount.Name = "Table3Amount";
+            this.Table3Amount.ReadOnly = true;
+            this.Table3Amount.Width = 50;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(279, 29);
+            this.label8.Location = new System.Drawing.Point(372, 36);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(23, 13);
+            this.label8.Size = new System.Drawing.Size(27, 16);
             this.label8.TabIndex = 7;
             this.label8.Text = "Qty";
             // 
             // Table3QuantityTextBox
             // 
-            this.Table3QuantityTextBox.Location = new System.Drawing.Point(320, 27);
+            this.Table3QuantityTextBox.Location = new System.Drawing.Point(427, 33);
+            this.Table3QuantityTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.Table3QuantityTextBox.Name = "Table3QuantityTextBox";
-            this.Table3QuantityTextBox.Size = new System.Drawing.Size(39, 20);
+            this.Table3QuantityTextBox.Size = new System.Drawing.Size(52, 22);
             this.Table3QuantityTextBox.TabIndex = 6;
             this.Table3QuantityTextBox.Value = new decimal(new int[] {
             1,
@@ -681,9 +831,10 @@
             // Table3HalfPlatePriceButton
             // 
             this.Table3HalfPlatePriceButton.BackColor = System.Drawing.Color.NavajoWhite;
-            this.Table3HalfPlatePriceButton.Location = new System.Drawing.Point(9, 64);
+            this.Table3HalfPlatePriceButton.Location = new System.Drawing.Point(12, 79);
+            this.Table3HalfPlatePriceButton.Margin = new System.Windows.Forms.Padding(4);
             this.Table3HalfPlatePriceButton.Name = "Table3HalfPlatePriceButton";
-            this.Table3HalfPlatePriceButton.Size = new System.Drawing.Size(136, 29);
+            this.Table3HalfPlatePriceButton.Size = new System.Drawing.Size(181, 36);
             this.Table3HalfPlatePriceButton.TabIndex = 5;
             this.Table3HalfPlatePriceButton.Text = "Half Plate Price";
             this.Table3HalfPlatePriceButton.UseVisualStyleBackColor = false;
@@ -692,9 +843,10 @@
             // Table3FullPlatePriceButton
             // 
             this.Table3FullPlatePriceButton.BackColor = System.Drawing.Color.DarkKhaki;
-            this.Table3FullPlatePriceButton.Location = new System.Drawing.Point(223, 64);
+            this.Table3FullPlatePriceButton.Location = new System.Drawing.Point(297, 79);
+            this.Table3FullPlatePriceButton.Margin = new System.Windows.Forms.Padding(4);
             this.Table3FullPlatePriceButton.Name = "Table3FullPlatePriceButton";
-            this.Table3FullPlatePriceButton.Size = new System.Drawing.Size(136, 29);
+            this.Table3FullPlatePriceButton.Size = new System.Drawing.Size(181, 36);
             this.Table3FullPlatePriceButton.TabIndex = 4;
             this.Table3FullPlatePriceButton.Text = "FullPlatePrice";
             this.Table3FullPlatePriceButton.UseVisualStyleBackColor = false;
@@ -703,18 +855,20 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 29);
+            this.label9.Location = new System.Drawing.Point(8, 36);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(56, 13);
+            this.label9.Size = new System.Drawing.Size(69, 16);
             this.label9.TabIndex = 3;
             this.label9.Text = "Item name";
             // 
             // Table3Combobox
             // 
             this.Table3Combobox.FormattingEnabled = true;
-            this.Table3Combobox.Location = new System.Drawing.Point(68, 26);
+            this.Table3Combobox.Location = new System.Drawing.Point(91, 32);
+            this.Table3Combobox.Margin = new System.Windows.Forms.Padding(4);
             this.Table3Combobox.Name = "Table3Combobox";
-            this.Table3Combobox.Size = new System.Drawing.Size(179, 21);
+            this.Table3Combobox.Size = new System.Drawing.Size(237, 24);
             this.Table3Combobox.TabIndex = 2;
             this.Table3Combobox.SelectedIndexChanged += new System.EventHandler(this.Table3Combobox_SelectedIndexChanged);
             // 
@@ -733,9 +887,11 @@
             this.Table4GroupBox.Controls.Add(this.Table4FullPlatePriceButton);
             this.Table4GroupBox.Controls.Add(this.label12);
             this.Table4GroupBox.Controls.Add(this.Table4Combobox);
-            this.Table4GroupBox.Location = new System.Drawing.Point(1137, 45);
+            this.Table4GroupBox.Location = new System.Drawing.Point(1516, 55);
+            this.Table4GroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.Table4GroupBox.Name = "Table4GroupBox";
-            this.Table4GroupBox.Size = new System.Drawing.Size(369, 353);
+            this.Table4GroupBox.Padding = new System.Windows.Forms.Padding(4);
+            this.Table4GroupBox.Size = new System.Drawing.Size(492, 434);
             this.Table4GroupBox.TabIndex = 3;
             this.Table4GroupBox.TabStop = false;
             this.Table4GroupBox.Text = "Table 4";
@@ -743,9 +899,10 @@
             // Table4SaveButton
             // 
             this.Table4SaveButton.BackColor = System.Drawing.Color.PaleGreen;
-            this.Table4SaveButton.Location = new System.Drawing.Point(9, 308);
+            this.Table4SaveButton.Location = new System.Drawing.Point(12, 379);
+            this.Table4SaveButton.Margin = new System.Windows.Forms.Padding(4);
             this.Table4SaveButton.Name = "Table4SaveButton";
-            this.Table4SaveButton.Size = new System.Drawing.Size(350, 39);
+            this.Table4SaveButton.Size = new System.Drawing.Size(467, 48);
             this.Table4SaveButton.TabIndex = 13;
             this.Table4SaveButton.Text = "Save / Print";
             this.Table4SaveButton.UseVisualStyleBackColor = false;
@@ -753,27 +910,30 @@
             // 
             // Table4TotalTextBox
             // 
-            this.Table4TotalTextBox.Location = new System.Drawing.Point(275, 276);
+            this.Table4TotalTextBox.Location = new System.Drawing.Point(367, 340);
+            this.Table4TotalTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.Table4TotalTextBox.Name = "Table4TotalTextBox";
-            this.Table4TotalTextBox.Size = new System.Drawing.Size(84, 20);
+            this.Table4TotalTextBox.Size = new System.Drawing.Size(111, 22);
             this.Table4TotalTextBox.TabIndex = 12;
             this.Table4TotalTextBox.TextChanged += new System.EventHandler(this.Table4TotalTextBox_TextChanged);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(232, 278);
+            this.label10.Location = new System.Drawing.Point(309, 342);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(34, 13);
+            this.label10.Size = new System.Drawing.Size(41, 16);
             this.label10.TabIndex = 11;
             this.label10.Text = "Total ";
             // 
             // Table4RemoveButton
             // 
             this.Table4RemoveButton.BackColor = System.Drawing.Color.OrangeRed;
-            this.Table4RemoveButton.Location = new System.Drawing.Point(124, 268);
+            this.Table4RemoveButton.Location = new System.Drawing.Point(165, 330);
+            this.Table4RemoveButton.Margin = new System.Windows.Forms.Padding(4);
             this.Table4RemoveButton.Name = "Table4RemoveButton";
-            this.Table4RemoveButton.Size = new System.Drawing.Size(87, 34);
+            this.Table4RemoveButton.Size = new System.Drawing.Size(116, 42);
             this.Table4RemoveButton.TabIndex = 10;
             this.Table4RemoveButton.Text = "Remove Item";
             this.Table4RemoveButton.UseVisualStyleBackColor = false;
@@ -782,9 +942,10 @@
             // Table4ClearRefreshButton
             // 
             this.Table4ClearRefreshButton.BackColor = System.Drawing.Color.Gold;
-            this.Table4ClearRefreshButton.Location = new System.Drawing.Point(9, 268);
+            this.Table4ClearRefreshButton.Location = new System.Drawing.Point(12, 330);
+            this.Table4ClearRefreshButton.Margin = new System.Windows.Forms.Padding(4);
             this.Table4ClearRefreshButton.Name = "Table4ClearRefreshButton";
-            this.Table4ClearRefreshButton.Size = new System.Drawing.Size(95, 34);
+            this.Table4ClearRefreshButton.Size = new System.Drawing.Size(127, 42);
             this.Table4ClearRefreshButton.TabIndex = 9;
             this.Table4ClearRefreshButton.Text = "Clear / Refresh";
             this.Table4ClearRefreshButton.UseVisualStyleBackColor = false;
@@ -804,29 +965,82 @@
             this.Table4Quantity,
             this.Table4ItemPrice,
             this.Table4Amount});
-            this.Table4DataGrid.Location = new System.Drawing.Point(9, 109);
+            this.Table4DataGrid.Location = new System.Drawing.Point(12, 134);
+            this.Table4DataGrid.Margin = new System.Windows.Forms.Padding(4);
             this.Table4DataGrid.Name = "Table4DataGrid";
             this.Table4DataGrid.ReadOnly = true;
             this.Table4DataGrid.RowHeadersVisible = false;
+            this.Table4DataGrid.RowHeadersWidth = 51;
             this.Table4DataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Table4DataGrid.Size = new System.Drawing.Size(350, 150);
+            this.Table4DataGrid.Size = new System.Drawing.Size(467, 185);
             this.Table4DataGrid.TabIndex = 8;
             this.Table4DataGrid.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.Table4DataGrid_RowsAdded);
+            // 
+            // Table4Sno
+            // 
+            this.Table4Sno.HeaderText = "S.no.";
+            this.Table4Sno.MinimumWidth = 6;
+            this.Table4Sno.Name = "Table4Sno";
+            this.Table4Sno.ReadOnly = true;
+            this.Table4Sno.Width = 46;
+            // 
+            // Table4Id
+            // 
+            this.Table4Id.HeaderText = "Item ID";
+            this.Table4Id.MinimumWidth = 6;
+            this.Table4Id.Name = "Table4Id";
+            this.Table4Id.ReadOnly = true;
+            this.Table4Id.Visible = false;
+            this.Table4Id.Width = 125;
+            // 
+            // Table4name
+            // 
+            this.Table4name.HeaderText = "Particular(s)";
+            this.Table4name.MinimumWidth = 6;
+            this.Table4name.Name = "Table4name";
+            this.Table4name.ReadOnly = true;
+            this.Table4name.Width = 150;
+            // 
+            // Table4Quantity
+            // 
+            this.Table4Quantity.HeaderText = "Qty";
+            this.Table4Quantity.MinimumWidth = 6;
+            this.Table4Quantity.Name = "Table4Quantity";
+            this.Table4Quantity.ReadOnly = true;
+            this.Table4Quantity.Width = 50;
+            // 
+            // Table4ItemPrice
+            // 
+            this.Table4ItemPrice.HeaderText = "Item Price";
+            this.Table4ItemPrice.MinimumWidth = 6;
+            this.Table4ItemPrice.Name = "Table4ItemPrice";
+            this.Table4ItemPrice.ReadOnly = true;
+            this.Table4ItemPrice.Width = 50;
+            // 
+            // Table4Amount
+            // 
+            this.Table4Amount.HeaderText = "Amount";
+            this.Table4Amount.MinimumWidth = 6;
+            this.Table4Amount.Name = "Table4Amount";
+            this.Table4Amount.ReadOnly = true;
+            this.Table4Amount.Width = 50;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(279, 29);
+            this.label11.Location = new System.Drawing.Point(372, 36);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(23, 13);
+            this.label11.Size = new System.Drawing.Size(27, 16);
             this.label11.TabIndex = 7;
             this.label11.Text = "Qty";
             // 
             // Table4QuantityTextBox
             // 
-            this.Table4QuantityTextBox.Location = new System.Drawing.Point(320, 27);
+            this.Table4QuantityTextBox.Location = new System.Drawing.Point(427, 33);
+            this.Table4QuantityTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.Table4QuantityTextBox.Name = "Table4QuantityTextBox";
-            this.Table4QuantityTextBox.Size = new System.Drawing.Size(39, 20);
+            this.Table4QuantityTextBox.Size = new System.Drawing.Size(52, 22);
             this.Table4QuantityTextBox.TabIndex = 6;
             this.Table4QuantityTextBox.Value = new decimal(new int[] {
             1,
@@ -837,9 +1051,10 @@
             // Table4HalfPlatePriceButton
             // 
             this.Table4HalfPlatePriceButton.BackColor = System.Drawing.Color.NavajoWhite;
-            this.Table4HalfPlatePriceButton.Location = new System.Drawing.Point(9, 64);
+            this.Table4HalfPlatePriceButton.Location = new System.Drawing.Point(12, 79);
+            this.Table4HalfPlatePriceButton.Margin = new System.Windows.Forms.Padding(4);
             this.Table4HalfPlatePriceButton.Name = "Table4HalfPlatePriceButton";
-            this.Table4HalfPlatePriceButton.Size = new System.Drawing.Size(136, 29);
+            this.Table4HalfPlatePriceButton.Size = new System.Drawing.Size(181, 36);
             this.Table4HalfPlatePriceButton.TabIndex = 5;
             this.Table4HalfPlatePriceButton.Text = "Half Plate Price";
             this.Table4HalfPlatePriceButton.UseVisualStyleBackColor = false;
@@ -848,9 +1063,10 @@
             // Table4FullPlatePriceButton
             // 
             this.Table4FullPlatePriceButton.BackColor = System.Drawing.Color.DarkKhaki;
-            this.Table4FullPlatePriceButton.Location = new System.Drawing.Point(223, 64);
+            this.Table4FullPlatePriceButton.Location = new System.Drawing.Point(297, 79);
+            this.Table4FullPlatePriceButton.Margin = new System.Windows.Forms.Padding(4);
             this.Table4FullPlatePriceButton.Name = "Table4FullPlatePriceButton";
-            this.Table4FullPlatePriceButton.Size = new System.Drawing.Size(136, 29);
+            this.Table4FullPlatePriceButton.Size = new System.Drawing.Size(181, 36);
             this.Table4FullPlatePriceButton.TabIndex = 4;
             this.Table4FullPlatePriceButton.Text = "FullPlatePrice";
             this.Table4FullPlatePriceButton.UseVisualStyleBackColor = false;
@@ -859,18 +1075,20 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(6, 29);
+            this.label12.Location = new System.Drawing.Point(8, 36);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(56, 13);
+            this.label12.Size = new System.Drawing.Size(69, 16);
             this.label12.TabIndex = 3;
             this.label12.Text = "Item name";
             // 
             // Table4Combobox
             // 
             this.Table4Combobox.FormattingEnabled = true;
-            this.Table4Combobox.Location = new System.Drawing.Point(68, 26);
+            this.Table4Combobox.Location = new System.Drawing.Point(91, 32);
+            this.Table4Combobox.Margin = new System.Windows.Forms.Padding(4);
             this.Table4Combobox.Name = "Table4Combobox";
-            this.Table4Combobox.Size = new System.Drawing.Size(179, 21);
+            this.Table4Combobox.Size = new System.Drawing.Size(237, 24);
             this.Table4Combobox.TabIndex = 2;
             this.Table4Combobox.SelectedIndexChanged += new System.EventHandler(this.Table4Combobox_SelectedIndexChanged);
             // 
@@ -889,9 +1107,11 @@
             this.Table8GroupBox.Controls.Add(this.Table8FullPlatePriceButton);
             this.Table8GroupBox.Controls.Add(this.label15);
             this.Table8GroupBox.Controls.Add(this.Table8Combobox);
-            this.Table8GroupBox.Location = new System.Drawing.Point(1137, 415);
+            this.Table8GroupBox.Location = new System.Drawing.Point(1516, 511);
+            this.Table8GroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.Table8GroupBox.Name = "Table8GroupBox";
-            this.Table8GroupBox.Size = new System.Drawing.Size(369, 353);
+            this.Table8GroupBox.Padding = new System.Windows.Forms.Padding(4);
+            this.Table8GroupBox.Size = new System.Drawing.Size(492, 434);
             this.Table8GroupBox.TabIndex = 7;
             this.Table8GroupBox.TabStop = false;
             this.Table8GroupBox.Text = "Table 8";
@@ -899,9 +1119,10 @@
             // Table8SaveButton
             // 
             this.Table8SaveButton.BackColor = System.Drawing.Color.PaleGreen;
-            this.Table8SaveButton.Location = new System.Drawing.Point(9, 308);
+            this.Table8SaveButton.Location = new System.Drawing.Point(12, 379);
+            this.Table8SaveButton.Margin = new System.Windows.Forms.Padding(4);
             this.Table8SaveButton.Name = "Table8SaveButton";
-            this.Table8SaveButton.Size = new System.Drawing.Size(350, 39);
+            this.Table8SaveButton.Size = new System.Drawing.Size(467, 48);
             this.Table8SaveButton.TabIndex = 13;
             this.Table8SaveButton.Text = "Save / Print";
             this.Table8SaveButton.UseVisualStyleBackColor = false;
@@ -909,27 +1130,30 @@
             // 
             // Table8TotalTextBox
             // 
-            this.Table8TotalTextBox.Location = new System.Drawing.Point(275, 276);
+            this.Table8TotalTextBox.Location = new System.Drawing.Point(367, 340);
+            this.Table8TotalTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.Table8TotalTextBox.Name = "Table8TotalTextBox";
-            this.Table8TotalTextBox.Size = new System.Drawing.Size(84, 20);
+            this.Table8TotalTextBox.Size = new System.Drawing.Size(111, 22);
             this.Table8TotalTextBox.TabIndex = 12;
             this.Table8TotalTextBox.TextChanged += new System.EventHandler(this.Table8TotalTextBox_TextChanged);
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(232, 278);
+            this.label13.Location = new System.Drawing.Point(309, 342);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(34, 13);
+            this.label13.Size = new System.Drawing.Size(41, 16);
             this.label13.TabIndex = 11;
             this.label13.Text = "Total ";
             // 
             // Table8RemoveButton
             // 
             this.Table8RemoveButton.BackColor = System.Drawing.Color.OrangeRed;
-            this.Table8RemoveButton.Location = new System.Drawing.Point(124, 268);
+            this.Table8RemoveButton.Location = new System.Drawing.Point(165, 330);
+            this.Table8RemoveButton.Margin = new System.Windows.Forms.Padding(4);
             this.Table8RemoveButton.Name = "Table8RemoveButton";
-            this.Table8RemoveButton.Size = new System.Drawing.Size(87, 34);
+            this.Table8RemoveButton.Size = new System.Drawing.Size(116, 42);
             this.Table8RemoveButton.TabIndex = 10;
             this.Table8RemoveButton.Text = "Remove Item";
             this.Table8RemoveButton.UseVisualStyleBackColor = false;
@@ -938,9 +1162,10 @@
             // Table8ClearRefreshButton
             // 
             this.Table8ClearRefreshButton.BackColor = System.Drawing.Color.Gold;
-            this.Table8ClearRefreshButton.Location = new System.Drawing.Point(9, 268);
+            this.Table8ClearRefreshButton.Location = new System.Drawing.Point(12, 330);
+            this.Table8ClearRefreshButton.Margin = new System.Windows.Forms.Padding(4);
             this.Table8ClearRefreshButton.Name = "Table8ClearRefreshButton";
-            this.Table8ClearRefreshButton.Size = new System.Drawing.Size(95, 34);
+            this.Table8ClearRefreshButton.Size = new System.Drawing.Size(127, 42);
             this.Table8ClearRefreshButton.TabIndex = 9;
             this.Table8ClearRefreshButton.Text = "Clear / Refresh";
             this.Table8ClearRefreshButton.UseVisualStyleBackColor = false;
@@ -960,29 +1185,82 @@
             this.Table8Quantity,
             this.Table8ItemPrice,
             this.Table8Amount});
-            this.Table8Datagrid.Location = new System.Drawing.Point(9, 109);
+            this.Table8Datagrid.Location = new System.Drawing.Point(12, 134);
+            this.Table8Datagrid.Margin = new System.Windows.Forms.Padding(4);
             this.Table8Datagrid.Name = "Table8Datagrid";
             this.Table8Datagrid.ReadOnly = true;
             this.Table8Datagrid.RowHeadersVisible = false;
+            this.Table8Datagrid.RowHeadersWidth = 51;
             this.Table8Datagrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Table8Datagrid.Size = new System.Drawing.Size(350, 150);
+            this.Table8Datagrid.Size = new System.Drawing.Size(467, 185);
             this.Table8Datagrid.TabIndex = 8;
             this.Table8Datagrid.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.Table8Datagrid_RowsAdded);
+            // 
+            // Table8Sno
+            // 
+            this.Table8Sno.HeaderText = "S.no.";
+            this.Table8Sno.MinimumWidth = 6;
+            this.Table8Sno.Name = "Table8Sno";
+            this.Table8Sno.ReadOnly = true;
+            this.Table8Sno.Width = 46;
+            // 
+            // Table8Id
+            // 
+            this.Table8Id.HeaderText = "Item ID";
+            this.Table8Id.MinimumWidth = 6;
+            this.Table8Id.Name = "Table8Id";
+            this.Table8Id.ReadOnly = true;
+            this.Table8Id.Visible = false;
+            this.Table8Id.Width = 125;
+            // 
+            // Table8name
+            // 
+            this.Table8name.HeaderText = "Particular(s)";
+            this.Table8name.MinimumWidth = 6;
+            this.Table8name.Name = "Table8name";
+            this.Table8name.ReadOnly = true;
+            this.Table8name.Width = 150;
+            // 
+            // Table8Quantity
+            // 
+            this.Table8Quantity.HeaderText = "Qty";
+            this.Table8Quantity.MinimumWidth = 6;
+            this.Table8Quantity.Name = "Table8Quantity";
+            this.Table8Quantity.ReadOnly = true;
+            this.Table8Quantity.Width = 50;
+            // 
+            // Table8ItemPrice
+            // 
+            this.Table8ItemPrice.HeaderText = "Item Price";
+            this.Table8ItemPrice.MinimumWidth = 6;
+            this.Table8ItemPrice.Name = "Table8ItemPrice";
+            this.Table8ItemPrice.ReadOnly = true;
+            this.Table8ItemPrice.Width = 50;
+            // 
+            // Table8Amount
+            // 
+            this.Table8Amount.HeaderText = "Amount";
+            this.Table8Amount.MinimumWidth = 6;
+            this.Table8Amount.Name = "Table8Amount";
+            this.Table8Amount.ReadOnly = true;
+            this.Table8Amount.Width = 50;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(279, 29);
+            this.label14.Location = new System.Drawing.Point(372, 36);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(23, 13);
+            this.label14.Size = new System.Drawing.Size(27, 16);
             this.label14.TabIndex = 7;
             this.label14.Text = "Qty";
             // 
             // Table8QuantityTextBox
             // 
-            this.Table8QuantityTextBox.Location = new System.Drawing.Point(320, 27);
+            this.Table8QuantityTextBox.Location = new System.Drawing.Point(427, 33);
+            this.Table8QuantityTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.Table8QuantityTextBox.Name = "Table8QuantityTextBox";
-            this.Table8QuantityTextBox.Size = new System.Drawing.Size(39, 20);
+            this.Table8QuantityTextBox.Size = new System.Drawing.Size(52, 22);
             this.Table8QuantityTextBox.TabIndex = 6;
             this.Table8QuantityTextBox.Value = new decimal(new int[] {
             1,
@@ -993,9 +1271,10 @@
             // Table8HalfPlatePriceButton
             // 
             this.Table8HalfPlatePriceButton.BackColor = System.Drawing.Color.NavajoWhite;
-            this.Table8HalfPlatePriceButton.Location = new System.Drawing.Point(9, 64);
+            this.Table8HalfPlatePriceButton.Location = new System.Drawing.Point(12, 79);
+            this.Table8HalfPlatePriceButton.Margin = new System.Windows.Forms.Padding(4);
             this.Table8HalfPlatePriceButton.Name = "Table8HalfPlatePriceButton";
-            this.Table8HalfPlatePriceButton.Size = new System.Drawing.Size(136, 29);
+            this.Table8HalfPlatePriceButton.Size = new System.Drawing.Size(181, 36);
             this.Table8HalfPlatePriceButton.TabIndex = 5;
             this.Table8HalfPlatePriceButton.Text = "Half Plate Price";
             this.Table8HalfPlatePriceButton.UseVisualStyleBackColor = false;
@@ -1004,9 +1283,10 @@
             // Table8FullPlatePriceButton
             // 
             this.Table8FullPlatePriceButton.BackColor = System.Drawing.Color.DarkKhaki;
-            this.Table8FullPlatePriceButton.Location = new System.Drawing.Point(223, 64);
+            this.Table8FullPlatePriceButton.Location = new System.Drawing.Point(297, 79);
+            this.Table8FullPlatePriceButton.Margin = new System.Windows.Forms.Padding(4);
             this.Table8FullPlatePriceButton.Name = "Table8FullPlatePriceButton";
-            this.Table8FullPlatePriceButton.Size = new System.Drawing.Size(136, 29);
+            this.Table8FullPlatePriceButton.Size = new System.Drawing.Size(181, 36);
             this.Table8FullPlatePriceButton.TabIndex = 4;
             this.Table8FullPlatePriceButton.Text = "FullPlatePrice";
             this.Table8FullPlatePriceButton.UseVisualStyleBackColor = false;
@@ -1015,18 +1295,20 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(6, 29);
+            this.label15.Location = new System.Drawing.Point(8, 36);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(56, 13);
+            this.label15.Size = new System.Drawing.Size(69, 16);
             this.label15.TabIndex = 3;
             this.label15.Text = "Item name";
             // 
             // Table8Combobox
             // 
             this.Table8Combobox.FormattingEnabled = true;
-            this.Table8Combobox.Location = new System.Drawing.Point(68, 26);
+            this.Table8Combobox.Location = new System.Drawing.Point(91, 32);
+            this.Table8Combobox.Margin = new System.Windows.Forms.Padding(4);
             this.Table8Combobox.Name = "Table8Combobox";
-            this.Table8Combobox.Size = new System.Drawing.Size(179, 21);
+            this.Table8Combobox.Size = new System.Drawing.Size(237, 24);
             this.Table8Combobox.TabIndex = 2;
             this.Table8Combobox.SelectedIndexChanged += new System.EventHandler(this.Table8Combobox_SelectedIndexChanged);
             // 
@@ -1045,9 +1327,11 @@
             this.Table7GroupBox.Controls.Add(this.Table7FullPlatePriceButton);
             this.Table7GroupBox.Controls.Add(this.label18);
             this.Table7GroupBox.Controls.Add(this.Table7Combobox);
-            this.Table7GroupBox.Location = new System.Drawing.Point(762, 415);
+            this.Table7GroupBox.Location = new System.Drawing.Point(1016, 511);
+            this.Table7GroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.Table7GroupBox.Name = "Table7GroupBox";
-            this.Table7GroupBox.Size = new System.Drawing.Size(369, 353);
+            this.Table7GroupBox.Padding = new System.Windows.Forms.Padding(4);
+            this.Table7GroupBox.Size = new System.Drawing.Size(492, 434);
             this.Table7GroupBox.TabIndex = 6;
             this.Table7GroupBox.TabStop = false;
             this.Table7GroupBox.Text = "Table 7";
@@ -1055,9 +1339,10 @@
             // Table7SaveButton
             // 
             this.Table7SaveButton.BackColor = System.Drawing.Color.PaleGreen;
-            this.Table7SaveButton.Location = new System.Drawing.Point(9, 308);
+            this.Table7SaveButton.Location = new System.Drawing.Point(12, 379);
+            this.Table7SaveButton.Margin = new System.Windows.Forms.Padding(4);
             this.Table7SaveButton.Name = "Table7SaveButton";
-            this.Table7SaveButton.Size = new System.Drawing.Size(350, 39);
+            this.Table7SaveButton.Size = new System.Drawing.Size(467, 48);
             this.Table7SaveButton.TabIndex = 13;
             this.Table7SaveButton.Text = "Save / Print";
             this.Table7SaveButton.UseVisualStyleBackColor = false;
@@ -1065,27 +1350,30 @@
             // 
             // Table7TotalTextBox
             // 
-            this.Table7TotalTextBox.Location = new System.Drawing.Point(275, 276);
+            this.Table7TotalTextBox.Location = new System.Drawing.Point(367, 340);
+            this.Table7TotalTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.Table7TotalTextBox.Name = "Table7TotalTextBox";
-            this.Table7TotalTextBox.Size = new System.Drawing.Size(84, 20);
+            this.Table7TotalTextBox.Size = new System.Drawing.Size(111, 22);
             this.Table7TotalTextBox.TabIndex = 12;
             this.Table7TotalTextBox.TextChanged += new System.EventHandler(this.Table7TotalTextBox_TextChanged);
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(232, 278);
+            this.label16.Location = new System.Drawing.Point(309, 342);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(34, 13);
+            this.label16.Size = new System.Drawing.Size(41, 16);
             this.label16.TabIndex = 11;
             this.label16.Text = "Total ";
             // 
             // Table7RemoveButton
             // 
             this.Table7RemoveButton.BackColor = System.Drawing.Color.OrangeRed;
-            this.Table7RemoveButton.Location = new System.Drawing.Point(124, 268);
+            this.Table7RemoveButton.Location = new System.Drawing.Point(165, 330);
+            this.Table7RemoveButton.Margin = new System.Windows.Forms.Padding(4);
             this.Table7RemoveButton.Name = "Table7RemoveButton";
-            this.Table7RemoveButton.Size = new System.Drawing.Size(87, 34);
+            this.Table7RemoveButton.Size = new System.Drawing.Size(116, 42);
             this.Table7RemoveButton.TabIndex = 10;
             this.Table7RemoveButton.Text = "Remove Item";
             this.Table7RemoveButton.UseVisualStyleBackColor = false;
@@ -1094,9 +1382,10 @@
             // Table7ClearRefreshButton
             // 
             this.Table7ClearRefreshButton.BackColor = System.Drawing.Color.Gold;
-            this.Table7ClearRefreshButton.Location = new System.Drawing.Point(9, 268);
+            this.Table7ClearRefreshButton.Location = new System.Drawing.Point(12, 330);
+            this.Table7ClearRefreshButton.Margin = new System.Windows.Forms.Padding(4);
             this.Table7ClearRefreshButton.Name = "Table7ClearRefreshButton";
-            this.Table7ClearRefreshButton.Size = new System.Drawing.Size(95, 34);
+            this.Table7ClearRefreshButton.Size = new System.Drawing.Size(127, 42);
             this.Table7ClearRefreshButton.TabIndex = 9;
             this.Table7ClearRefreshButton.Text = "Clear / Refresh";
             this.Table7ClearRefreshButton.UseVisualStyleBackColor = false;
@@ -1116,29 +1405,82 @@
             this.Table7Quantity,
             this.Table7ItemPrice,
             this.Table7Amount});
-            this.Table7Datagrid.Location = new System.Drawing.Point(9, 109);
+            this.Table7Datagrid.Location = new System.Drawing.Point(12, 134);
+            this.Table7Datagrid.Margin = new System.Windows.Forms.Padding(4);
             this.Table7Datagrid.Name = "Table7Datagrid";
             this.Table7Datagrid.ReadOnly = true;
             this.Table7Datagrid.RowHeadersVisible = false;
+            this.Table7Datagrid.RowHeadersWidth = 51;
             this.Table7Datagrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Table7Datagrid.Size = new System.Drawing.Size(350, 150);
+            this.Table7Datagrid.Size = new System.Drawing.Size(467, 185);
             this.Table7Datagrid.TabIndex = 8;
             this.Table7Datagrid.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.Table7Datagrid_RowsAdded);
+            // 
+            // Table7Sno
+            // 
+            this.Table7Sno.HeaderText = "S.no.";
+            this.Table7Sno.MinimumWidth = 6;
+            this.Table7Sno.Name = "Table7Sno";
+            this.Table7Sno.ReadOnly = true;
+            this.Table7Sno.Width = 46;
+            // 
+            // Table7Id
+            // 
+            this.Table7Id.HeaderText = "Item ID";
+            this.Table7Id.MinimumWidth = 6;
+            this.Table7Id.Name = "Table7Id";
+            this.Table7Id.ReadOnly = true;
+            this.Table7Id.Visible = false;
+            this.Table7Id.Width = 125;
+            // 
+            // Table7name
+            // 
+            this.Table7name.HeaderText = "Particular(s)";
+            this.Table7name.MinimumWidth = 6;
+            this.Table7name.Name = "Table7name";
+            this.Table7name.ReadOnly = true;
+            this.Table7name.Width = 150;
+            // 
+            // Table7Quantity
+            // 
+            this.Table7Quantity.HeaderText = "Qty";
+            this.Table7Quantity.MinimumWidth = 6;
+            this.Table7Quantity.Name = "Table7Quantity";
+            this.Table7Quantity.ReadOnly = true;
+            this.Table7Quantity.Width = 50;
+            // 
+            // Table7ItemPrice
+            // 
+            this.Table7ItemPrice.HeaderText = "Item Price";
+            this.Table7ItemPrice.MinimumWidth = 6;
+            this.Table7ItemPrice.Name = "Table7ItemPrice";
+            this.Table7ItemPrice.ReadOnly = true;
+            this.Table7ItemPrice.Width = 50;
+            // 
+            // Table7Amount
+            // 
+            this.Table7Amount.HeaderText = "Amount";
+            this.Table7Amount.MinimumWidth = 6;
+            this.Table7Amount.Name = "Table7Amount";
+            this.Table7Amount.ReadOnly = true;
+            this.Table7Amount.Width = 50;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(279, 29);
+            this.label17.Location = new System.Drawing.Point(372, 36);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(23, 13);
+            this.label17.Size = new System.Drawing.Size(27, 16);
             this.label17.TabIndex = 7;
             this.label17.Text = "Qty";
             // 
             // Table7QuantityTextBox
             // 
-            this.Table7QuantityTextBox.Location = new System.Drawing.Point(320, 27);
+            this.Table7QuantityTextBox.Location = new System.Drawing.Point(427, 33);
+            this.Table7QuantityTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.Table7QuantityTextBox.Name = "Table7QuantityTextBox";
-            this.Table7QuantityTextBox.Size = new System.Drawing.Size(39, 20);
+            this.Table7QuantityTextBox.Size = new System.Drawing.Size(52, 22);
             this.Table7QuantityTextBox.TabIndex = 6;
             this.Table7QuantityTextBox.Value = new decimal(new int[] {
             1,
@@ -1149,9 +1491,10 @@
             // Table7HalfPlatePriceButton
             // 
             this.Table7HalfPlatePriceButton.BackColor = System.Drawing.Color.NavajoWhite;
-            this.Table7HalfPlatePriceButton.Location = new System.Drawing.Point(9, 64);
+            this.Table7HalfPlatePriceButton.Location = new System.Drawing.Point(12, 79);
+            this.Table7HalfPlatePriceButton.Margin = new System.Windows.Forms.Padding(4);
             this.Table7HalfPlatePriceButton.Name = "Table7HalfPlatePriceButton";
-            this.Table7HalfPlatePriceButton.Size = new System.Drawing.Size(136, 29);
+            this.Table7HalfPlatePriceButton.Size = new System.Drawing.Size(181, 36);
             this.Table7HalfPlatePriceButton.TabIndex = 5;
             this.Table7HalfPlatePriceButton.Text = "Half Plate Price";
             this.Table7HalfPlatePriceButton.UseVisualStyleBackColor = false;
@@ -1160,9 +1503,10 @@
             // Table7FullPlatePriceButton
             // 
             this.Table7FullPlatePriceButton.BackColor = System.Drawing.Color.DarkKhaki;
-            this.Table7FullPlatePriceButton.Location = new System.Drawing.Point(223, 64);
+            this.Table7FullPlatePriceButton.Location = new System.Drawing.Point(297, 79);
+            this.Table7FullPlatePriceButton.Margin = new System.Windows.Forms.Padding(4);
             this.Table7FullPlatePriceButton.Name = "Table7FullPlatePriceButton";
-            this.Table7FullPlatePriceButton.Size = new System.Drawing.Size(136, 29);
+            this.Table7FullPlatePriceButton.Size = new System.Drawing.Size(181, 36);
             this.Table7FullPlatePriceButton.TabIndex = 4;
             this.Table7FullPlatePriceButton.Text = "FullPlatePrice";
             this.Table7FullPlatePriceButton.UseVisualStyleBackColor = false;
@@ -1171,18 +1515,20 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(6, 29);
+            this.label18.Location = new System.Drawing.Point(8, 36);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(56, 13);
+            this.label18.Size = new System.Drawing.Size(69, 16);
             this.label18.TabIndex = 3;
             this.label18.Text = "Item name";
             // 
             // Table7Combobox
             // 
             this.Table7Combobox.FormattingEnabled = true;
-            this.Table7Combobox.Location = new System.Drawing.Point(68, 26);
+            this.Table7Combobox.Location = new System.Drawing.Point(91, 32);
+            this.Table7Combobox.Margin = new System.Windows.Forms.Padding(4);
             this.Table7Combobox.Name = "Table7Combobox";
-            this.Table7Combobox.Size = new System.Drawing.Size(179, 21);
+            this.Table7Combobox.Size = new System.Drawing.Size(237, 24);
             this.Table7Combobox.TabIndex = 2;
             this.Table7Combobox.SelectedIndexChanged += new System.EventHandler(this.Table7Combobox_SelectedIndexChanged);
             // 
@@ -1201,9 +1547,11 @@
             this.Table6groupbox.Controls.Add(this.Table6FullPlatePriceButton);
             this.Table6groupbox.Controls.Add(this.label21);
             this.Table6groupbox.Controls.Add(this.Table6Combobox);
-            this.Table6groupbox.Location = new System.Drawing.Point(387, 415);
+            this.Table6groupbox.Location = new System.Drawing.Point(516, 511);
+            this.Table6groupbox.Margin = new System.Windows.Forms.Padding(4);
             this.Table6groupbox.Name = "Table6groupbox";
-            this.Table6groupbox.Size = new System.Drawing.Size(369, 353);
+            this.Table6groupbox.Padding = new System.Windows.Forms.Padding(4);
+            this.Table6groupbox.Size = new System.Drawing.Size(492, 434);
             this.Table6groupbox.TabIndex = 5;
             this.Table6groupbox.TabStop = false;
             this.Table6groupbox.Text = "Table 6";
@@ -1211,9 +1559,10 @@
             // Table6SaveButton
             // 
             this.Table6SaveButton.BackColor = System.Drawing.Color.PaleGreen;
-            this.Table6SaveButton.Location = new System.Drawing.Point(9, 308);
+            this.Table6SaveButton.Location = new System.Drawing.Point(12, 379);
+            this.Table6SaveButton.Margin = new System.Windows.Forms.Padding(4);
             this.Table6SaveButton.Name = "Table6SaveButton";
-            this.Table6SaveButton.Size = new System.Drawing.Size(350, 39);
+            this.Table6SaveButton.Size = new System.Drawing.Size(467, 48);
             this.Table6SaveButton.TabIndex = 13;
             this.Table6SaveButton.Text = "Save / Print";
             this.Table6SaveButton.UseVisualStyleBackColor = false;
@@ -1221,27 +1570,30 @@
             // 
             // Table6TotalTextBox
             // 
-            this.Table6TotalTextBox.Location = new System.Drawing.Point(275, 276);
+            this.Table6TotalTextBox.Location = new System.Drawing.Point(367, 340);
+            this.Table6TotalTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.Table6TotalTextBox.Name = "Table6TotalTextBox";
-            this.Table6TotalTextBox.Size = new System.Drawing.Size(84, 20);
+            this.Table6TotalTextBox.Size = new System.Drawing.Size(111, 22);
             this.Table6TotalTextBox.TabIndex = 12;
             this.Table6TotalTextBox.TextChanged += new System.EventHandler(this.Table6TotalTextBox_TextChanged);
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(232, 278);
+            this.label19.Location = new System.Drawing.Point(309, 342);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(34, 13);
+            this.label19.Size = new System.Drawing.Size(41, 16);
             this.label19.TabIndex = 11;
             this.label19.Text = "Total ";
             // 
             // Table6RemoveButton
             // 
             this.Table6RemoveButton.BackColor = System.Drawing.Color.OrangeRed;
-            this.Table6RemoveButton.Location = new System.Drawing.Point(124, 268);
+            this.Table6RemoveButton.Location = new System.Drawing.Point(165, 330);
+            this.Table6RemoveButton.Margin = new System.Windows.Forms.Padding(4);
             this.Table6RemoveButton.Name = "Table6RemoveButton";
-            this.Table6RemoveButton.Size = new System.Drawing.Size(87, 34);
+            this.Table6RemoveButton.Size = new System.Drawing.Size(116, 42);
             this.Table6RemoveButton.TabIndex = 10;
             this.Table6RemoveButton.Text = "Remove Item";
             this.Table6RemoveButton.UseVisualStyleBackColor = false;
@@ -1250,9 +1602,10 @@
             // Table6ClearRefreshButton
             // 
             this.Table6ClearRefreshButton.BackColor = System.Drawing.Color.Gold;
-            this.Table6ClearRefreshButton.Location = new System.Drawing.Point(9, 268);
+            this.Table6ClearRefreshButton.Location = new System.Drawing.Point(12, 330);
+            this.Table6ClearRefreshButton.Margin = new System.Windows.Forms.Padding(4);
             this.Table6ClearRefreshButton.Name = "Table6ClearRefreshButton";
-            this.Table6ClearRefreshButton.Size = new System.Drawing.Size(95, 34);
+            this.Table6ClearRefreshButton.Size = new System.Drawing.Size(127, 42);
             this.Table6ClearRefreshButton.TabIndex = 9;
             this.Table6ClearRefreshButton.Text = "Clear / Refresh";
             this.Table6ClearRefreshButton.UseVisualStyleBackColor = false;
@@ -1272,29 +1625,82 @@
             this.Table6Quantity,
             this.Table6ItemPrice,
             this.Table6Amount});
-            this.Table6Datagrid.Location = new System.Drawing.Point(9, 109);
+            this.Table6Datagrid.Location = new System.Drawing.Point(12, 134);
+            this.Table6Datagrid.Margin = new System.Windows.Forms.Padding(4);
             this.Table6Datagrid.Name = "Table6Datagrid";
             this.Table6Datagrid.ReadOnly = true;
             this.Table6Datagrid.RowHeadersVisible = false;
+            this.Table6Datagrid.RowHeadersWidth = 51;
             this.Table6Datagrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Table6Datagrid.Size = new System.Drawing.Size(350, 150);
+            this.Table6Datagrid.Size = new System.Drawing.Size(467, 185);
             this.Table6Datagrid.TabIndex = 8;
             this.Table6Datagrid.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.Table6Datagrid_RowsAdded);
+            // 
+            // Table6Sno
+            // 
+            this.Table6Sno.HeaderText = "S.no.";
+            this.Table6Sno.MinimumWidth = 6;
+            this.Table6Sno.Name = "Table6Sno";
+            this.Table6Sno.ReadOnly = true;
+            this.Table6Sno.Width = 46;
+            // 
+            // Table6Id
+            // 
+            this.Table6Id.HeaderText = "Item ID";
+            this.Table6Id.MinimumWidth = 6;
+            this.Table6Id.Name = "Table6Id";
+            this.Table6Id.ReadOnly = true;
+            this.Table6Id.Visible = false;
+            this.Table6Id.Width = 125;
+            // 
+            // Table6name
+            // 
+            this.Table6name.HeaderText = "Particular(s)";
+            this.Table6name.MinimumWidth = 6;
+            this.Table6name.Name = "Table6name";
+            this.Table6name.ReadOnly = true;
+            this.Table6name.Width = 150;
+            // 
+            // Table6Quantity
+            // 
+            this.Table6Quantity.HeaderText = "Qty";
+            this.Table6Quantity.MinimumWidth = 6;
+            this.Table6Quantity.Name = "Table6Quantity";
+            this.Table6Quantity.ReadOnly = true;
+            this.Table6Quantity.Width = 50;
+            // 
+            // Table6ItemPrice
+            // 
+            this.Table6ItemPrice.HeaderText = "Item Price";
+            this.Table6ItemPrice.MinimumWidth = 6;
+            this.Table6ItemPrice.Name = "Table6ItemPrice";
+            this.Table6ItemPrice.ReadOnly = true;
+            this.Table6ItemPrice.Width = 50;
+            // 
+            // Table6Amount
+            // 
+            this.Table6Amount.HeaderText = "Amount";
+            this.Table6Amount.MinimumWidth = 6;
+            this.Table6Amount.Name = "Table6Amount";
+            this.Table6Amount.ReadOnly = true;
+            this.Table6Amount.Width = 50;
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(279, 29);
+            this.label20.Location = new System.Drawing.Point(372, 36);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(23, 13);
+            this.label20.Size = new System.Drawing.Size(27, 16);
             this.label20.TabIndex = 7;
             this.label20.Text = "Qty";
             // 
             // Table6QuantityTextBox
             // 
-            this.Table6QuantityTextBox.Location = new System.Drawing.Point(320, 27);
+            this.Table6QuantityTextBox.Location = new System.Drawing.Point(427, 33);
+            this.Table6QuantityTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.Table6QuantityTextBox.Name = "Table6QuantityTextBox";
-            this.Table6QuantityTextBox.Size = new System.Drawing.Size(39, 20);
+            this.Table6QuantityTextBox.Size = new System.Drawing.Size(52, 22);
             this.Table6QuantityTextBox.TabIndex = 6;
             this.Table6QuantityTextBox.Value = new decimal(new int[] {
             1,
@@ -1305,9 +1711,10 @@
             // Table6HalfPlatePriceButton
             // 
             this.Table6HalfPlatePriceButton.BackColor = System.Drawing.Color.NavajoWhite;
-            this.Table6HalfPlatePriceButton.Location = new System.Drawing.Point(9, 64);
+            this.Table6HalfPlatePriceButton.Location = new System.Drawing.Point(12, 79);
+            this.Table6HalfPlatePriceButton.Margin = new System.Windows.Forms.Padding(4);
             this.Table6HalfPlatePriceButton.Name = "Table6HalfPlatePriceButton";
-            this.Table6HalfPlatePriceButton.Size = new System.Drawing.Size(136, 29);
+            this.Table6HalfPlatePriceButton.Size = new System.Drawing.Size(181, 36);
             this.Table6HalfPlatePriceButton.TabIndex = 5;
             this.Table6HalfPlatePriceButton.Text = "Half Plate Price";
             this.Table6HalfPlatePriceButton.UseVisualStyleBackColor = false;
@@ -1316,9 +1723,10 @@
             // Table6FullPlatePriceButton
             // 
             this.Table6FullPlatePriceButton.BackColor = System.Drawing.Color.DarkKhaki;
-            this.Table6FullPlatePriceButton.Location = new System.Drawing.Point(223, 64);
+            this.Table6FullPlatePriceButton.Location = new System.Drawing.Point(297, 79);
+            this.Table6FullPlatePriceButton.Margin = new System.Windows.Forms.Padding(4);
             this.Table6FullPlatePriceButton.Name = "Table6FullPlatePriceButton";
-            this.Table6FullPlatePriceButton.Size = new System.Drawing.Size(136, 29);
+            this.Table6FullPlatePriceButton.Size = new System.Drawing.Size(181, 36);
             this.Table6FullPlatePriceButton.TabIndex = 4;
             this.Table6FullPlatePriceButton.Text = "FullPlatePrice";
             this.Table6FullPlatePriceButton.UseVisualStyleBackColor = false;
@@ -1327,18 +1735,20 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(6, 29);
+            this.label21.Location = new System.Drawing.Point(8, 36);
+            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(56, 13);
+            this.label21.Size = new System.Drawing.Size(69, 16);
             this.label21.TabIndex = 3;
             this.label21.Text = "Item name";
             // 
             // Table6Combobox
             // 
             this.Table6Combobox.FormattingEnabled = true;
-            this.Table6Combobox.Location = new System.Drawing.Point(68, 26);
+            this.Table6Combobox.Location = new System.Drawing.Point(91, 32);
+            this.Table6Combobox.Margin = new System.Windows.Forms.Padding(4);
             this.Table6Combobox.Name = "Table6Combobox";
-            this.Table6Combobox.Size = new System.Drawing.Size(179, 21);
+            this.Table6Combobox.Size = new System.Drawing.Size(237, 24);
             this.Table6Combobox.TabIndex = 2;
             this.Table6Combobox.SelectedIndexChanged += new System.EventHandler(this.Table6Combobox_SelectedIndexChanged);
             // 
@@ -1357,9 +1767,11 @@
             this.Table5GroupBox.Controls.Add(this.Table5FullPlatePriceButton);
             this.Table5GroupBox.Controls.Add(this.label24);
             this.Table5GroupBox.Controls.Add(this.Table5Combobox);
-            this.Table5GroupBox.Location = new System.Drawing.Point(12, 415);
+            this.Table5GroupBox.Location = new System.Drawing.Point(16, 511);
+            this.Table5GroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.Table5GroupBox.Name = "Table5GroupBox";
-            this.Table5GroupBox.Size = new System.Drawing.Size(369, 353);
+            this.Table5GroupBox.Padding = new System.Windows.Forms.Padding(4);
+            this.Table5GroupBox.Size = new System.Drawing.Size(492, 434);
             this.Table5GroupBox.TabIndex = 4;
             this.Table5GroupBox.TabStop = false;
             this.Table5GroupBox.Text = "Table 5";
@@ -1367,29 +1779,41 @@
             // Table5SaveButton
             // 
             this.Table5SaveButton.BackColor = System.Drawing.Color.PaleGreen;
-            this.Table5SaveButton.Location = new System.Drawing.Point(9, 308);
+            this.Table5SaveButton.Location = new System.Drawing.Point(12, 379);
+            this.Table5SaveButton.Margin = new System.Windows.Forms.Padding(4);
             this.Table5SaveButton.Name = "Table5SaveButton";
-            this.Table5SaveButton.Size = new System.Drawing.Size(350, 39);
+            this.Table5SaveButton.Size = new System.Drawing.Size(467, 48);
             this.Table5SaveButton.TabIndex = 13;
             this.Table5SaveButton.Text = "Save / Print";
             this.Table5SaveButton.UseVisualStyleBackColor = false;
             this.Table5SaveButton.Click += new System.EventHandler(this.Table5SaveButton_Click);
             // 
+            // Table5TotalTextBox
+            // 
+            this.Table5TotalTextBox.Location = new System.Drawing.Point(367, 340);
+            this.Table5TotalTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.Table5TotalTextBox.Name = "Table5TotalTextBox";
+            this.Table5TotalTextBox.Size = new System.Drawing.Size(111, 22);
+            this.Table5TotalTextBox.TabIndex = 12;
+            this.Table5TotalTextBox.TextChanged += new System.EventHandler(this.Table5TotalTextBox_TextChanged);
+            // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(232, 278);
+            this.label22.Location = new System.Drawing.Point(309, 342);
+            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(34, 13);
+            this.label22.Size = new System.Drawing.Size(41, 16);
             this.label22.TabIndex = 11;
             this.label22.Text = "Total ";
             // 
             // Table5RemoveButton
             // 
             this.Table5RemoveButton.BackColor = System.Drawing.Color.OrangeRed;
-            this.Table5RemoveButton.Location = new System.Drawing.Point(124, 268);
+            this.Table5RemoveButton.Location = new System.Drawing.Point(165, 330);
+            this.Table5RemoveButton.Margin = new System.Windows.Forms.Padding(4);
             this.Table5RemoveButton.Name = "Table5RemoveButton";
-            this.Table5RemoveButton.Size = new System.Drawing.Size(87, 34);
+            this.Table5RemoveButton.Size = new System.Drawing.Size(116, 42);
             this.Table5RemoveButton.TabIndex = 10;
             this.Table5RemoveButton.Text = "Remove Item";
             this.Table5RemoveButton.UseVisualStyleBackColor = false;
@@ -1398,9 +1822,10 @@
             // Table5ClearRefreshButton
             // 
             this.Table5ClearRefreshButton.BackColor = System.Drawing.Color.Gold;
-            this.Table5ClearRefreshButton.Location = new System.Drawing.Point(9, 268);
+            this.Table5ClearRefreshButton.Location = new System.Drawing.Point(12, 330);
+            this.Table5ClearRefreshButton.Margin = new System.Windows.Forms.Padding(4);
             this.Table5ClearRefreshButton.Name = "Table5ClearRefreshButton";
-            this.Table5ClearRefreshButton.Size = new System.Drawing.Size(95, 34);
+            this.Table5ClearRefreshButton.Size = new System.Drawing.Size(127, 42);
             this.Table5ClearRefreshButton.TabIndex = 9;
             this.Table5ClearRefreshButton.Text = "Clear / Refresh";
             this.Table5ClearRefreshButton.UseVisualStyleBackColor = false;
@@ -1420,29 +1845,82 @@
             this.Table5Quantity,
             this.Table5ItemPrice,
             this.Table5Amount});
-            this.Table5Datagrid.Location = new System.Drawing.Point(9, 109);
+            this.Table5Datagrid.Location = new System.Drawing.Point(12, 134);
+            this.Table5Datagrid.Margin = new System.Windows.Forms.Padding(4);
             this.Table5Datagrid.Name = "Table5Datagrid";
             this.Table5Datagrid.ReadOnly = true;
             this.Table5Datagrid.RowHeadersVisible = false;
+            this.Table5Datagrid.RowHeadersWidth = 51;
             this.Table5Datagrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Table5Datagrid.Size = new System.Drawing.Size(350, 150);
+            this.Table5Datagrid.Size = new System.Drawing.Size(467, 185);
             this.Table5Datagrid.TabIndex = 8;
             this.Table5Datagrid.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.Table5Datagrid_RowsAdded);
+            // 
+            // Table5Sno
+            // 
+            this.Table5Sno.HeaderText = "S.no.";
+            this.Table5Sno.MinimumWidth = 6;
+            this.Table5Sno.Name = "Table5Sno";
+            this.Table5Sno.ReadOnly = true;
+            this.Table5Sno.Width = 46;
+            // 
+            // Table5Id
+            // 
+            this.Table5Id.HeaderText = "Item ID";
+            this.Table5Id.MinimumWidth = 6;
+            this.Table5Id.Name = "Table5Id";
+            this.Table5Id.ReadOnly = true;
+            this.Table5Id.Visible = false;
+            this.Table5Id.Width = 125;
+            // 
+            // Table5name
+            // 
+            this.Table5name.HeaderText = "Particular(s)";
+            this.Table5name.MinimumWidth = 6;
+            this.Table5name.Name = "Table5name";
+            this.Table5name.ReadOnly = true;
+            this.Table5name.Width = 150;
+            // 
+            // Table5Quantity
+            // 
+            this.Table5Quantity.HeaderText = "Qty";
+            this.Table5Quantity.MinimumWidth = 6;
+            this.Table5Quantity.Name = "Table5Quantity";
+            this.Table5Quantity.ReadOnly = true;
+            this.Table5Quantity.Width = 50;
+            // 
+            // Table5ItemPrice
+            // 
+            this.Table5ItemPrice.HeaderText = "Item Price";
+            this.Table5ItemPrice.MinimumWidth = 6;
+            this.Table5ItemPrice.Name = "Table5ItemPrice";
+            this.Table5ItemPrice.ReadOnly = true;
+            this.Table5ItemPrice.Width = 50;
+            // 
+            // Table5Amount
+            // 
+            this.Table5Amount.HeaderText = "Amount";
+            this.Table5Amount.MinimumWidth = 6;
+            this.Table5Amount.Name = "Table5Amount";
+            this.Table5Amount.ReadOnly = true;
+            this.Table5Amount.Width = 50;
             // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(279, 29);
+            this.label23.Location = new System.Drawing.Point(372, 36);
+            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(23, 13);
+            this.label23.Size = new System.Drawing.Size(27, 16);
             this.label23.TabIndex = 7;
             this.label23.Text = "Qty";
             // 
             // Table5QuantityTextbox
             // 
-            this.Table5QuantityTextbox.Location = new System.Drawing.Point(320, 27);
+            this.Table5QuantityTextbox.Location = new System.Drawing.Point(427, 33);
+            this.Table5QuantityTextbox.Margin = new System.Windows.Forms.Padding(4);
             this.Table5QuantityTextbox.Name = "Table5QuantityTextbox";
-            this.Table5QuantityTextbox.Size = new System.Drawing.Size(39, 20);
+            this.Table5QuantityTextbox.Size = new System.Drawing.Size(52, 22);
             this.Table5QuantityTextbox.TabIndex = 6;
             this.Table5QuantityTextbox.Value = new decimal(new int[] {
             1,
@@ -1453,9 +1931,10 @@
             // Table5HalfPlatePriceButton
             // 
             this.Table5HalfPlatePriceButton.BackColor = System.Drawing.Color.NavajoWhite;
-            this.Table5HalfPlatePriceButton.Location = new System.Drawing.Point(9, 64);
+            this.Table5HalfPlatePriceButton.Location = new System.Drawing.Point(12, 79);
+            this.Table5HalfPlatePriceButton.Margin = new System.Windows.Forms.Padding(4);
             this.Table5HalfPlatePriceButton.Name = "Table5HalfPlatePriceButton";
-            this.Table5HalfPlatePriceButton.Size = new System.Drawing.Size(136, 29);
+            this.Table5HalfPlatePriceButton.Size = new System.Drawing.Size(181, 36);
             this.Table5HalfPlatePriceButton.TabIndex = 5;
             this.Table5HalfPlatePriceButton.Text = "Half Plate Price";
             this.Table5HalfPlatePriceButton.UseVisualStyleBackColor = false;
@@ -1464,9 +1943,10 @@
             // Table5FullPlatePriceButton
             // 
             this.Table5FullPlatePriceButton.BackColor = System.Drawing.Color.DarkKhaki;
-            this.Table5FullPlatePriceButton.Location = new System.Drawing.Point(223, 64);
+            this.Table5FullPlatePriceButton.Location = new System.Drawing.Point(297, 79);
+            this.Table5FullPlatePriceButton.Margin = new System.Windows.Forms.Padding(4);
             this.Table5FullPlatePriceButton.Name = "Table5FullPlatePriceButton";
-            this.Table5FullPlatePriceButton.Size = new System.Drawing.Size(136, 29);
+            this.Table5FullPlatePriceButton.Size = new System.Drawing.Size(181, 36);
             this.Table5FullPlatePriceButton.TabIndex = 4;
             this.Table5FullPlatePriceButton.Text = "FullPlatePrice";
             this.Table5FullPlatePriceButton.UseVisualStyleBackColor = false;
@@ -1475,330 +1955,31 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(6, 29);
+            this.label24.Location = new System.Drawing.Point(8, 36);
+            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(56, 13);
+            this.label24.Size = new System.Drawing.Size(69, 16);
             this.label24.TabIndex = 3;
             this.label24.Text = "Item name";
             // 
             // Table5Combobox
             // 
             this.Table5Combobox.FormattingEnabled = true;
-            this.Table5Combobox.Location = new System.Drawing.Point(68, 26);
+            this.Table5Combobox.Location = new System.Drawing.Point(91, 32);
+            this.Table5Combobox.Margin = new System.Windows.Forms.Padding(4);
             this.Table5Combobox.Name = "Table5Combobox";
-            this.Table5Combobox.Size = new System.Drawing.Size(179, 21);
+            this.Table5Combobox.Size = new System.Drawing.Size(237, 24);
             this.Table5Combobox.TabIndex = 2;
             this.Table5Combobox.SelectedIndexChanged += new System.EventHandler(this.Table5Combobox_SelectedIndexChanged);
-            // 
-            // Table2Sno
-            // 
-            this.Table2Sno.HeaderText = "S.no.";
-            this.Table2Sno.Name = "Table2Sno";
-            this.Table2Sno.ReadOnly = true;
-            this.Table2Sno.Width = 46;
-            // 
-            // Table2Id
-            // 
-            this.Table2Id.HeaderText = "Item ID";
-            this.Table2Id.Name = "Table2Id";
-            this.Table2Id.ReadOnly = true;
-            this.Table2Id.Visible = false;
-            // 
-            // Table2name
-            // 
-            this.Table2name.HeaderText = "Particular(s)";
-            this.Table2name.Name = "Table2name";
-            this.Table2name.ReadOnly = true;
-            this.Table2name.Width = 150;
-            // 
-            // Table2Quantity
-            // 
-            this.Table2Quantity.HeaderText = "Qty";
-            this.Table2Quantity.Name = "Table2Quantity";
-            this.Table2Quantity.ReadOnly = true;
-            this.Table2Quantity.Width = 50;
-            // 
-            // Table2ItemPrice
-            // 
-            this.Table2ItemPrice.HeaderText = "Item Price";
-            this.Table2ItemPrice.Name = "Table2ItemPrice";
-            this.Table2ItemPrice.ReadOnly = true;
-            this.Table2ItemPrice.Width = 50;
-            // 
-            // Table2Amount
-            // 
-            this.Table2Amount.HeaderText = "Amount";
-            this.Table2Amount.Name = "Table2Amount";
-            this.Table2Amount.ReadOnly = true;
-            this.Table2Amount.Width = 50;
-            // 
-            // Table3Sno
-            // 
-            this.Table3Sno.HeaderText = "S.no.";
-            this.Table3Sno.Name = "Table3Sno";
-            this.Table3Sno.ReadOnly = true;
-            this.Table3Sno.Width = 46;
-            // 
-            // Table3Id
-            // 
-            this.Table3Id.HeaderText = "Item ID";
-            this.Table3Id.Name = "Table3Id";
-            this.Table3Id.ReadOnly = true;
-            this.Table3Id.Visible = false;
-            // 
-            // Table3name
-            // 
-            this.Table3name.HeaderText = "Particular(s)";
-            this.Table3name.Name = "Table3name";
-            this.Table3name.ReadOnly = true;
-            this.Table3name.Width = 150;
-            // 
-            // Table3Quantity
-            // 
-            this.Table3Quantity.HeaderText = "Qty";
-            this.Table3Quantity.Name = "Table3Quantity";
-            this.Table3Quantity.ReadOnly = true;
-            this.Table3Quantity.Width = 50;
-            // 
-            // Table3ItemPrice
-            // 
-            this.Table3ItemPrice.HeaderText = "Item Price";
-            this.Table3ItemPrice.Name = "Table3ItemPrice";
-            this.Table3ItemPrice.ReadOnly = true;
-            this.Table3ItemPrice.Width = 50;
-            // 
-            // Table3Amount
-            // 
-            this.Table3Amount.HeaderText = "Amount";
-            this.Table3Amount.Name = "Table3Amount";
-            this.Table3Amount.ReadOnly = true;
-            this.Table3Amount.Width = 50;
-            // 
-            // Table4Sno
-            // 
-            this.Table4Sno.HeaderText = "S.no.";
-            this.Table4Sno.Name = "Table4Sno";
-            this.Table4Sno.ReadOnly = true;
-            this.Table4Sno.Width = 46;
-            // 
-            // Table4Id
-            // 
-            this.Table4Id.HeaderText = "Item ID";
-            this.Table4Id.Name = "Table4Id";
-            this.Table4Id.ReadOnly = true;
-            this.Table4Id.Visible = false;
-            // 
-            // Table4name
-            // 
-            this.Table4name.HeaderText = "Particular(s)";
-            this.Table4name.Name = "Table4name";
-            this.Table4name.ReadOnly = true;
-            this.Table4name.Width = 150;
-            // 
-            // Table4Quantity
-            // 
-            this.Table4Quantity.HeaderText = "Qty";
-            this.Table4Quantity.Name = "Table4Quantity";
-            this.Table4Quantity.ReadOnly = true;
-            this.Table4Quantity.Width = 50;
-            // 
-            // Table4ItemPrice
-            // 
-            this.Table4ItemPrice.HeaderText = "Item Price";
-            this.Table4ItemPrice.Name = "Table4ItemPrice";
-            this.Table4ItemPrice.ReadOnly = true;
-            this.Table4ItemPrice.Width = 50;
-            // 
-            // Table4Amount
-            // 
-            this.Table4Amount.HeaderText = "Amount";
-            this.Table4Amount.Name = "Table4Amount";
-            this.Table4Amount.ReadOnly = true;
-            this.Table4Amount.Width = 50;
-            // 
-            // Table5TotalTextBox
-            // 
-            this.Table5TotalTextBox.Location = new System.Drawing.Point(275, 276);
-            this.Table5TotalTextBox.Name = "Table5TotalTextBox";
-            this.Table5TotalTextBox.Size = new System.Drawing.Size(84, 20);
-            this.Table5TotalTextBox.TabIndex = 12;
-            this.Table5TotalTextBox.TextChanged += new System.EventHandler(this.Table5TotalTextBox_TextChanged);
-            // 
-            // Table5Sno
-            // 
-            this.Table5Sno.HeaderText = "S.no.";
-            this.Table5Sno.Name = "Table5Sno";
-            this.Table5Sno.ReadOnly = true;
-            this.Table5Sno.Width = 46;
-            // 
-            // Table5Id
-            // 
-            this.Table5Id.HeaderText = "Item ID";
-            this.Table5Id.Name = "Table5Id";
-            this.Table5Id.ReadOnly = true;
-            this.Table5Id.Visible = false;
-            // 
-            // Table5name
-            // 
-            this.Table5name.HeaderText = "Particular(s)";
-            this.Table5name.Name = "Table5name";
-            this.Table5name.ReadOnly = true;
-            this.Table5name.Width = 150;
-            // 
-            // Table5Quantity
-            // 
-            this.Table5Quantity.HeaderText = "Qty";
-            this.Table5Quantity.Name = "Table5Quantity";
-            this.Table5Quantity.ReadOnly = true;
-            this.Table5Quantity.Width = 50;
-            // 
-            // Table5ItemPrice
-            // 
-            this.Table5ItemPrice.HeaderText = "Item Price";
-            this.Table5ItemPrice.Name = "Table5ItemPrice";
-            this.Table5ItemPrice.ReadOnly = true;
-            this.Table5ItemPrice.Width = 50;
-            // 
-            // Table5Amount
-            // 
-            this.Table5Amount.HeaderText = "Amount";
-            this.Table5Amount.Name = "Table5Amount";
-            this.Table5Amount.ReadOnly = true;
-            this.Table5Amount.Width = 50;
-            // 
-            // Table6Sno
-            // 
-            this.Table6Sno.HeaderText = "S.no.";
-            this.Table6Sno.Name = "Table6Sno";
-            this.Table6Sno.ReadOnly = true;
-            this.Table6Sno.Width = 46;
-            // 
-            // Table6Id
-            // 
-            this.Table6Id.HeaderText = "Item ID";
-            this.Table6Id.Name = "Table6Id";
-            this.Table6Id.ReadOnly = true;
-            this.Table6Id.Visible = false;
-            // 
-            // Table6name
-            // 
-            this.Table6name.HeaderText = "Particular(s)";
-            this.Table6name.Name = "Table6name";
-            this.Table6name.ReadOnly = true;
-            this.Table6name.Width = 150;
-            // 
-            // Table6Quantity
-            // 
-            this.Table6Quantity.HeaderText = "Qty";
-            this.Table6Quantity.Name = "Table6Quantity";
-            this.Table6Quantity.ReadOnly = true;
-            this.Table6Quantity.Width = 50;
-            // 
-            // Table6ItemPrice
-            // 
-            this.Table6ItemPrice.HeaderText = "Item Price";
-            this.Table6ItemPrice.Name = "Table6ItemPrice";
-            this.Table6ItemPrice.ReadOnly = true;
-            this.Table6ItemPrice.Width = 50;
-            // 
-            // Table6Amount
-            // 
-            this.Table6Amount.HeaderText = "Amount";
-            this.Table6Amount.Name = "Table6Amount";
-            this.Table6Amount.ReadOnly = true;
-            this.Table6Amount.Width = 50;
-            // 
-            // Table7Sno
-            // 
-            this.Table7Sno.HeaderText = "S.no.";
-            this.Table7Sno.Name = "Table7Sno";
-            this.Table7Sno.ReadOnly = true;
-            this.Table7Sno.Width = 46;
-            // 
-            // Table7Id
-            // 
-            this.Table7Id.HeaderText = "Item ID";
-            this.Table7Id.Name = "Table7Id";
-            this.Table7Id.ReadOnly = true;
-            this.Table7Id.Visible = false;
-            // 
-            // Table7name
-            // 
-            this.Table7name.HeaderText = "Particular(s)";
-            this.Table7name.Name = "Table7name";
-            this.Table7name.ReadOnly = true;
-            this.Table7name.Width = 150;
-            // 
-            // Table7Quantity
-            // 
-            this.Table7Quantity.HeaderText = "Qty";
-            this.Table7Quantity.Name = "Table7Quantity";
-            this.Table7Quantity.ReadOnly = true;
-            this.Table7Quantity.Width = 50;
-            // 
-            // Table7ItemPrice
-            // 
-            this.Table7ItemPrice.HeaderText = "Item Price";
-            this.Table7ItemPrice.Name = "Table7ItemPrice";
-            this.Table7ItemPrice.ReadOnly = true;
-            this.Table7ItemPrice.Width = 50;
-            // 
-            // Table7Amount
-            // 
-            this.Table7Amount.HeaderText = "Amount";
-            this.Table7Amount.Name = "Table7Amount";
-            this.Table7Amount.ReadOnly = true;
-            this.Table7Amount.Width = 50;
-            // 
-            // Table8Sno
-            // 
-            this.Table8Sno.HeaderText = "S.no.";
-            this.Table8Sno.Name = "Table8Sno";
-            this.Table8Sno.ReadOnly = true;
-            this.Table8Sno.Width = 46;
-            // 
-            // Table8Id
-            // 
-            this.Table8Id.HeaderText = "Item ID";
-            this.Table8Id.Name = "Table8Id";
-            this.Table8Id.ReadOnly = true;
-            this.Table8Id.Visible = false;
-            // 
-            // Table8name
-            // 
-            this.Table8name.HeaderText = "Particular(s)";
-            this.Table8name.Name = "Table8name";
-            this.Table8name.ReadOnly = true;
-            this.Table8name.Width = 150;
-            // 
-            // Table8Quantity
-            // 
-            this.Table8Quantity.HeaderText = "Qty";
-            this.Table8Quantity.Name = "Table8Quantity";
-            this.Table8Quantity.ReadOnly = true;
-            this.Table8Quantity.Width = 50;
-            // 
-            // Table8ItemPrice
-            // 
-            this.Table8ItemPrice.HeaderText = "Item Price";
-            this.Table8ItemPrice.Name = "Table8ItemPrice";
-            this.Table8ItemPrice.ReadOnly = true;
-            this.Table8ItemPrice.Width = 50;
-            // 
-            // Table8Amount
-            // 
-            this.Table8Amount.HeaderText = "Amount";
-            this.Table8Amount.Name = "Table8Amount";
-            this.Table8Amount.ReadOnly = true;
-            this.Table8Amount.Width = 50;
             // 
             // AddUpdateOpenForm
             // 
             this.AddUpdateOpenForm.BackColor = System.Drawing.Color.Tan;
             this.AddUpdateOpenForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddUpdateOpenForm.Location = new System.Drawing.Point(1318, 4);
+            this.AddUpdateOpenForm.Location = new System.Drawing.Point(1757, 5);
+            this.AddUpdateOpenForm.Margin = new System.Windows.Forms.Padding(4);
             this.AddUpdateOpenForm.Name = "AddUpdateOpenForm";
-            this.AddUpdateOpenForm.Size = new System.Drawing.Size(188, 35);
+            this.AddUpdateOpenForm.Size = new System.Drawing.Size(251, 43);
             this.AddUpdateOpenForm.TabIndex = 8;
             this.AddUpdateOpenForm.Text = "Add / Update Items";
             this.AddUpdateOpenForm.UseVisualStyleBackColor = false;
@@ -1808,12 +1989,34 @@
             // 
             this.printDialog1.UseEXDialog = true;
             // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // printPreviewControl1
+            // 
+            this.printPreviewControl1.Location = new System.Drawing.Point(1207, 964);
+            this.printPreviewControl1.Name = "printPreviewControl1";
+            this.printPreviewControl1.Size = new System.Drawing.Size(8, 8);
+            this.printPreviewControl1.TabIndex = 9;
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
             // Billing
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1531, 785);
+            this.ClientSize = new System.Drawing.Size(2083, 966);
+            this.Controls.Add(this.printPreviewControl1);
             this.Controls.Add(this.Table8GroupBox);
             this.Controls.Add(this.Table7GroupBox);
             this.Controls.Add(this.Table6groupbox);
@@ -1823,6 +2026,7 @@
             this.Controls.Add(this.Table2Groupbox);
             this.Controls.Add(this.Table1Groupbox);
             this.Controls.Add(this.AddUpdateOpenForm);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Billing";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Billing";
@@ -2019,5 +2223,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Table8Amount;
         private System.Windows.Forms.Button AddUpdateOpenForm;
         private System.Windows.Forms.PrintDialog printDialog1;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewControl printPreviewControl1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
     }
 }

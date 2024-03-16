@@ -9,6 +9,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp1
@@ -39,6 +40,7 @@ namespace WindowsFormsApp1
                     {
                         con.Open();
                         int isroweffected = cmd.ExecuteNonQuery();
+                        con.Close();
                         return isroweffected > 0;
                     }
                     catch (Exception ex)
@@ -64,6 +66,7 @@ namespace WindowsFormsApp1
                     {
                         con.Open();
                         int isroweffected = cmd.ExecuteNonQuery();
+                        con.Close();
                         return isroweffected > 0;
                     }
                     catch (Exception ex)
@@ -96,7 +99,56 @@ namespace WindowsFormsApp1
             }
             return dt;
         }
+        public DataTable getSaleData(int OrderNumber)
+        {
+            DataTable dt = new DataTable();
+            using (SqlConnection con = new SqlConnection(constring))
+            {
+                string sqlcmd = "Select TableNumber as 'Table No.', ItemName as 'Particulars', ItemQuantity as 'Qty', ItemPrice as 'Item Price', ItemAmount as 'Item Amount', OrderDate as 'Date' from sale where OrderNumber = @ordernumber";
+                using (SqlCommand cmd = new SqlCommand(sqlcmd, con))
+                {
+                    cmd.Parameters.AddWithValue("@ordernumber", OrderNumber);
+                    try
+                    {
+                        con.Open();
+                        SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                        sda.Fill(dt);
+                        con.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error: {ex.Message}");
+                    }
+                }
+            }
+            return dt;
+        }
 
+        public DataTable GetOrderNumberDetail(int order)
+        {
+            DataTable dt = new DataTable();
+
+            using (SqlConnection con = new SqlConnection(constring))
+            {
+                string sqlcmd = "SELECT * FROM dbo.OrderNumber WHERE OrderNumber = @order";
+                using (SqlCommand cmd = new SqlCommand(sqlcmd, con))
+                {
+                    cmd.Parameters.AddWithValue("@order", order);
+                    try
+                    {
+                        con.Open();
+                        SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                        sda.Fill(dt);
+                        con.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error: {ex.Message}");
+                    }
+                }
+            }
+            return dt;
+        }    
         public bool UpdateItem(int id, string itemname, int itemhprice, int itemfprice)
         {
             using (SqlConnection con = new SqlConnection(constring))
@@ -142,6 +194,8 @@ namespace WindowsFormsApp1
                     {
                         con.Open();
                         int isroweffected = cmd.ExecuteNonQuery();
+
+                        con.Close();
                         return isroweffected;
                     }
                     catch (Exception ex)
@@ -194,5 +248,6 @@ namespace WindowsFormsApp1
                 }
             }
         }
+        
     }
 }

@@ -69,6 +69,8 @@ namespace WindowsFormsApp1
 
         public string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
 
+        //public int PrintOrderNumber = 0;
+
         public Billing()
         {
             InitializeComponent();
@@ -1869,7 +1871,13 @@ namespace WindowsFormsApp1
                             dbclass.SavetoDatabase(tablenumber, rowid, rowname, rowquantity, rowprice, rowamount, currentdate, Ordernumber);
                         }
                     }
-                    Createpdf(Ordernumber, currentdate, tablenumber, Table8Datagrid, amount);
+
+                    printDialog1.Document = printDocument1;
+                    printPreviewDialog1.Document = printDocument1;
+                    printDocument1.DefaultPageSettings.PaperSize = new PaperSize("custom", 285, 600);
+                    printPreviewDialog1.ShowDialog();
+
+                    //Createpdf(Ordernumber, currentdate, tablenumber, Table8Datagrid, amount);
 
                     MessageBox.Show("Order Saved Successfully with Order number: " + Ordernumber, "Saved", MessageBoxButtons.OK);
                 }
@@ -2026,7 +2034,10 @@ namespace WindowsFormsApp1
                 string printername = GetDefaultPrinterName();
                 if (!string.IsNullOrEmpty(printername))
                 {
-                    PrintPdf(pdfpath, printername);
+                    printDialog1.Document = printDocument1;
+                    printDocument1.DefaultPageSettings.PaperSize = new PaperSize("custom", 285, 600);
+                    printDialog1.ShowDialog();
+                    //printDocument1.Print();
                 }
                 
             }
@@ -2039,13 +2050,20 @@ namespace WindowsFormsApp1
 
         public void PrintPdf(string pdfFilePath, string printerName)
         {
-            // Create a PrintDocument instance
-            PrintDocument printDocument = new PrintDocument();
-            printDocument.PrinterSettings.PrinterName = printerName;
+          
+        }
 
+        private void printDocument1_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            int PrintOrderNumber = dbclass.getordernumber();
 
-            // Start the printing process
-            printDocument.Print();
+            DataTable OrderDetail = dbclass.GetOrderNumberDetail(PrintOrderNumber);
+
+            string tablenumber = OrderDetail.Rows[0][1].ToString();
+            string Orderamount = OrderDetail.Rows[0][2].ToString();
+            string date = OrderDetail.Rows[0][3].ToString();
+
+            e.Graphics.DrawString("Tirupati Vaishno Dhaba", new Font("Arial", 10, FontStyle.Bold), Brushes.Black, 100, 50);
         }
     }
 }

@@ -35,27 +35,66 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
             dbclass = new dbclass();
-            
-            //datetime = DateTime.Now.ToString();
+
+            checkbox = (int)radiobutton.today;
+            DateTimePicker.Value = DateTime.Now;
+            DateTimePicker.Enabled = false;
             LoadSalesDatagrid(checkbox);
         }
 
         public void LoadSalesDatagrid(int checkbox)
         {
-            DateTime dt = DateTimePicker.Value;
-            datetime = dt.ToString("yyyy-MM-dd");
             try
             {
-                DataTable dataTable = dbclass.getSalesData(dt);
-
-                if (dataTable != null)
+                DateTime dt = DateTimePicker.Value;
+                int day = 0, month = 0, year = 0;
+                if (checkbox == 1)
                 {
-                    SalesDataGridView.DataSource = dataTable;
-                    SalesDataGridView.Columns[0].Width = 60;
-                    SalesDataGridView.Columns[1].Width = 100;
-                    SalesDataGridView.Columns[2].Width = 100;
-                    SalesDataGridView.Columns[3].Width = 100;
+                    day = dt.Day;
+                    month = dt.Month;
+                    year = dt.Year;
+                    DataTable dataTable = dbclass.getSalesData(checkbox, day, month, year);
+
+                    if (dataTable != null)
+                    {
+                        SalesDataGridView.DataSource = dataTable;
+                        SalesDataGridView.Columns[0].Width = 60;
+                        SalesDataGridView.Columns[1].Width = 100;
+                        SalesDataGridView.Columns[2].Width = 100;
+                        SalesDataGridView.Columns[3].Width = 100;
+                    }
+
                 }
+                else if (checkbox == 2)
+                {
+                    month = dt.Month;
+                    year = dt.Year;
+                    DataTable dataTable = dbclass.getSalesData(checkbox,day, month, year);
+
+                    if (dataTable != null)
+                    {
+                        SalesDataGridView.DataSource = dataTable;
+                        SalesDataGridView.Columns[0].Width = 60;
+                        SalesDataGridView.Columns[1].Width = 100;
+                        SalesDataGridView.Columns[2].Width = 100;
+                        SalesDataGridView.Columns[3].Width = 100;
+                    }
+                }
+                else if (checkbox == 3)
+                {
+                    year = dt.Year;
+                    DataTable dataTable = dbclass.getSalesData(checkbox, day, month, year);
+
+                    if (dataTable != null)
+                    {
+                        SalesDataGridView.DataSource = dataTable;
+                        SalesDataGridView.Columns[0].Width = 60;
+                        SalesDataGridView.Columns[1].Width = 100;
+                        SalesDataGridView.Columns[2].Width = 100;
+                        SalesDataGridView.Columns[3].Width = 100;
+                    }
+                }
+               
             }
             catch (Exception ex)
             {
@@ -147,13 +186,16 @@ namespace WindowsFormsApp1
             e.Graphics.DrawString("THANK YOU!", new Font("Arial", 10, FontStyle.Bold), Brushes.Black, 100, y + 40);
         }
 
-        private void TodayCheckBox_EnabledChanged(object sender, EventArgs e)
+        private void TodayCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            checkbox = Convert.ToInt32(radiobutton.today.ToString());
-            if (TodayCheckBox.Checked)
+            
+            if (TodayCheckBox.Checked == true)
             {
+                checkbox = (int)radiobutton.today;
                 DateTimePicker.Enabled = false;
+                LoadSalesDatagrid(checkbox);
             }
+
         }
 
         private void OpenBilling_Click(object sender, EventArgs e)
@@ -163,6 +205,37 @@ namespace WindowsFormsApp1
 
             Sale sale = new Sale();
             sale.Close();
+        }
+
+        private void SalesDataGridView_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            for (int i = 0; i < e.RowCount; i++)
+            {
+                int snoValue = e.RowIndex + i + 1;
+                SalesDataGridView.Rows[e.RowIndex + i].Cells["Sno"].Value = snoValue;
+            }
+        }
+
+        private void MonthlyCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            
+            if (MonthlyCheckBox.Checked == true)
+            {
+                checkbox = (int)radiobutton.monthly;
+                DateTimePicker.Enabled = true;
+                LoadSalesDatagrid(checkbox);
+            }
+        }
+
+        private void YearlyCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+           
+            if (YearlyCheckBox.Checked == true)
+            {
+                checkbox = (int)radiobutton.monthly;
+                DateTimePicker.Enabled = true;
+                LoadSalesDatagrid(checkbox);
+            }
         }
     }
 }

@@ -125,30 +125,72 @@ namespace WindowsFormsApp1
             return dt;
         }
 
-        public DataTable getSalesData(DateTime orderby)
+        public DataTable getSalesData(int checkbox, int day = 0, int month = 0, int year = 0)
         {
-            string datepattern= string.Empty;
             DataTable dt = new DataTable();
             using(SqlConnection con = new SqlConnection(constring))
             {
-                string sqlcmd = "Select * from OrderNumber where OrderDate LIKE @orderby";
-                using (SqlCommand cmd = new SqlCommand(sqlcmd, con))
+                if (checkbox == 1)
                 {
-                    datepattern = $"%{orderby.ToString("yyyy-MM-dd")}%";
-
-                    cmd.Parameters.AddWithValue("@orderby", datepattern);
-                    try
+                    string sqlcmd = "Select * from OrderNumber where Day = @day AND Month = @Month AND Year = @year";
+                    using (SqlCommand cmd = new SqlCommand(sqlcmd, con))
                     {
-                        con.Open();
-                        SqlDataAdapter sda = new SqlDataAdapter(cmd);
-                        sda.Fill(dt);
-                        con.Close();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show($"Error: {ex.Message}");
+                        cmd.Parameters.AddWithValue("@day", day);
+                        cmd.Parameters.AddWithValue("@Month", month);
+                        cmd.Parameters.AddWithValue("@year", year);
+                        try
+                        {
+                            con.Open();
+                            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                            sda.Fill(dt);
+                            con.Close();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Error: {ex.Message}");
+                        }
                     }
                 }
+                else if (checkbox == 2)
+                {
+                    string sqlcmd = "Select * from OrderNumber where Month = @Month AND Year = @year";
+                    using (SqlCommand cmd = new SqlCommand(sqlcmd, con))
+                    {
+                        cmd.Parameters.AddWithValue("@Month", month);
+                        cmd.Parameters.AddWithValue("@year", year);
+                        try
+                        {
+                            con.Open();
+                            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                            sda.Fill(dt);
+                            con.Close();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Error: {ex.Message}");
+                        }
+                    }
+                }
+                else if (checkbox == 3)
+                {
+                    string sqlcmd = "Select * from OrderNumber where Year = @year";
+                    using (SqlCommand cmd = new SqlCommand(sqlcmd, con))
+                    {
+                        cmd.Parameters.AddWithValue("@year", year);
+                        try
+                        {
+                            con.Open();
+                            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                            sda.Fill(dt);
+                            con.Close();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Error: {ex.Message}");
+                        }
+                    }
+                }
+                
             }
             return dt;
         }
@@ -236,16 +278,19 @@ namespace WindowsFormsApp1
             }
         }
 
-        public bool CreateOrderNumber(string TableNumber, int Amount, DateTime Orderdate)
+        public bool CreateOrderNumber(string TableNumber, int Amount, DateTime Orderdate, int day, int month, int year)
         {
             using (SqlConnection con = new SqlConnection(constring))
             {
-                string sqlcmd = "insert into OrderNumber (TableNumber, Amount, OrderDate) Values (@tablenumber, @amount, @orderdate)";
+                string sqlcmd = "insert into OrderNumber (TableNumber, Amount, OrderDate, Day, Month, Year) Values (@tablenumber, @amount, @orderdate, @day, @month, @year)";
                 using (SqlCommand cmd =new SqlCommand(sqlcmd, con))
                 {
                     cmd.Parameters.AddWithValue("@tablenumber", TableNumber);
                     cmd.Parameters.AddWithValue("@amount", Amount);
                     cmd.Parameters.AddWithValue("@orderdate", Orderdate);
+                    cmd.Parameters.AddWithValue("@day", day);
+                    cmd.Parameters.AddWithValue("@month", month);
+                    cmd.Parameters.AddWithValue("@year", year);
                     try
                     {
                         con.Open();

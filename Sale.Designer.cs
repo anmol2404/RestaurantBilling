@@ -33,14 +33,15 @@
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.TodayCheckBox = new System.Windows.Forms.RadioButton();
+            this.MonthlyCheckBox = new System.Windows.Forms.RadioButton();
+            this.YearlyCheckBox = new System.Windows.Forms.RadioButton();
             this.SalesDataGridView = new System.Windows.Forms.DataGridView();
+            this.Sno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.SearchTextBox = new System.Windows.Forms.TextBox();
             this.printPreviewControl1 = new System.Windows.Forms.PrintPreviewControl();
-            this.TodayCheckBox = new System.Windows.Forms.RadioButton();
-            this.MonthlyCheckBox = new System.Windows.Forms.RadioButton();
-            this.YearlyCheckBox = new System.Windows.Forms.RadioButton();
             this.OpenBilling = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SalesDataGridView)).BeginInit();
@@ -79,16 +80,67 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
+            // TodayCheckBox
+            // 
+            this.TodayCheckBox.AutoSize = true;
+            this.TodayCheckBox.Checked = true;
+            this.TodayCheckBox.Location = new System.Drawing.Point(57, 84);
+            this.TodayCheckBox.Name = "TodayCheckBox";
+            this.TodayCheckBox.Size = new System.Drawing.Size(68, 20);
+            this.TodayCheckBox.TabIndex = 5;
+            this.TodayCheckBox.TabStop = true;
+            this.TodayCheckBox.Text = "Today";
+            this.TodayCheckBox.UseVisualStyleBackColor = true;
+            this.TodayCheckBox.CheckedChanged += new System.EventHandler(this.TodayCheckBox_CheckedChanged);
+            // 
+            // MonthlyCheckBox
+            // 
+            this.MonthlyCheckBox.AutoSize = true;
+            this.MonthlyCheckBox.Location = new System.Drawing.Point(213, 84);
+            this.MonthlyCheckBox.Name = "MonthlyCheckBox";
+            this.MonthlyCheckBox.Size = new System.Drawing.Size(74, 20);
+            this.MonthlyCheckBox.TabIndex = 6;
+            this.MonthlyCheckBox.Text = "Monthly";
+            this.MonthlyCheckBox.UseVisualStyleBackColor = true;
+            this.MonthlyCheckBox.CheckedChanged += new System.EventHandler(this.MonthlyCheckBox_CheckedChanged);
+            // 
+            // YearlyCheckBox
+            // 
+            this.YearlyCheckBox.AutoSize = true;
+            this.YearlyCheckBox.Location = new System.Drawing.Point(369, 84);
+            this.YearlyCheckBox.Name = "YearlyCheckBox";
+            this.YearlyCheckBox.Size = new System.Drawing.Size(67, 20);
+            this.YearlyCheckBox.TabIndex = 7;
+            this.YearlyCheckBox.Text = "Yearly";
+            this.YearlyCheckBox.UseVisualStyleBackColor = true;
+            this.YearlyCheckBox.CheckedChanged += new System.EventHandler(this.YearlyCheckBox_CheckedChanged);
+            // 
             // SalesDataGridView
             // 
+            this.SalesDataGridView.AllowUserToAddRows = false;
+            this.SalesDataGridView.AllowUserToDeleteRows = false;
             this.SalesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SalesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Sno});
             this.SalesDataGridView.Location = new System.Drawing.Point(17, 129);
+            this.SalesDataGridView.MultiSelect = false;
             this.SalesDataGridView.Name = "SalesDataGridView";
+            this.SalesDataGridView.ReadOnly = true;
             this.SalesDataGridView.RowHeadersVisible = false;
             this.SalesDataGridView.RowHeadersWidth = 51;
             this.SalesDataGridView.RowTemplate.Height = 24;
+            this.SalesDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.SalesDataGridView.Size = new System.Drawing.Size(492, 295);
             this.SalesDataGridView.TabIndex = 3;
+            this.SalesDataGridView.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.SalesDataGridView_RowsAdded);
+            // 
+            // Sno
+            // 
+            this.Sno.HeaderText = "S.No";
+            this.Sno.MinimumWidth = 6;
+            this.Sno.Name = "Sno";
+            this.Sno.ReadOnly = true;
+            this.Sno.Width = 125;
             // 
             // DateTimePicker
             // 
@@ -104,7 +156,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(54, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 20);
+            this.label1.Size = new System.Drawing.Size(50, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "Search";
             // 
@@ -121,39 +173,6 @@
             this.printPreviewControl1.Name = "printPreviewControl1";
             this.printPreviewControl1.Size = new System.Drawing.Size(462, 440);
             this.printPreviewControl1.TabIndex = 4;
-            // 
-            // TodayCheckBox
-            // 
-            this.TodayCheckBox.AutoSize = true;
-            this.TodayCheckBox.Checked = true;
-            this.TodayCheckBox.Location = new System.Drawing.Point(57, 84);
-            this.TodayCheckBox.Name = "TodayCheckBox";
-            this.TodayCheckBox.Size = new System.Drawing.Size(85, 25);
-            this.TodayCheckBox.TabIndex = 5;
-            this.TodayCheckBox.TabStop = true;
-            this.TodayCheckBox.Text = "Today";
-            this.TodayCheckBox.UseVisualStyleBackColor = true;
-            this.TodayCheckBox.EnabledChanged += new System.EventHandler(this.TodayCheckBox_EnabledChanged);
-            // 
-            // MonthlyCheckBox
-            // 
-            this.MonthlyCheckBox.AutoSize = true;
-            this.MonthlyCheckBox.Location = new System.Drawing.Point(213, 84);
-            this.MonthlyCheckBox.Name = "MonthlyCheckBox";
-            this.MonthlyCheckBox.Size = new System.Drawing.Size(93, 25);
-            this.MonthlyCheckBox.TabIndex = 6;
-            this.MonthlyCheckBox.Text = "Monthly";
-            this.MonthlyCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // YearlyCheckBox
-            // 
-            this.YearlyCheckBox.AutoSize = true;
-            this.YearlyCheckBox.Location = new System.Drawing.Point(369, 84);
-            this.YearlyCheckBox.Name = "YearlyCheckBox";
-            this.YearlyCheckBox.Size = new System.Drawing.Size(84, 25);
-            this.YearlyCheckBox.TabIndex = 7;
-            this.YearlyCheckBox.Text = "Yearly";
-            this.YearlyCheckBox.UseVisualStyleBackColor = true;
             // 
             // OpenBilling
             // 
@@ -196,5 +215,6 @@
         private System.Windows.Forms.RadioButton MonthlyCheckBox;
         private System.Windows.Forms.RadioButton YearlyCheckBox;
         private System.Windows.Forms.Button OpenBilling;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Sno;
     }
 }

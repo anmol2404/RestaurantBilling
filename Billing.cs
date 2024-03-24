@@ -321,10 +321,13 @@ namespace WindowsFormsApp1
         private void SavePrintButton_Click(object sender, EventArgs e)
         {
             DateTime currentdate = DateTime.Now;
+            int day = currentdate.Day;
+            int month = currentdate.Month;
+            int year = currentdate.Year;
             string tablenumber = "1";
             int amount = Convert.ToInt32(TotalTextBox.Text.ToString());
 
-            bool isOrdercreated = dbclass.CreateOrderNumber(tablenumber, amount, currentdate);
+            bool isOrdercreated = dbclass.CreateOrderNumber(tablenumber, amount, currentdate, day, month, year);
 
             if (isOrdercreated)
             {
@@ -532,10 +535,13 @@ namespace WindowsFormsApp1
         private void Table2Savebutton_Click(object sender, EventArgs e)
         {
             DateTime currentdate = DateTime.Now;
+            int day = currentdate.Day;
+            int month = currentdate.Month;
+            int year = currentdate.Year;
             string tablenumber = "2";
             int amount = Convert.ToInt32(Table2TotalTextBox.Text.ToString());
 
-            bool isOrdercreated = dbclass.CreateOrderNumber(tablenumber, amount, currentdate);
+            bool isOrdercreated = dbclass.CreateOrderNumber(tablenumber, amount, currentdate, day, month, year);
 
             if (isOrdercreated)
             {
@@ -744,10 +750,13 @@ namespace WindowsFormsApp1
         private void Table3SaveButton_Click(object sender, EventArgs e)
         {
             DateTime currentdate = DateTime.Now;
+            int day = currentdate.Day;
+            int month = currentdate.Month;
+            int year = currentdate.Year;
             string tablenumber = "3";
             int amount = Convert.ToInt32(Table3TotalTextBox.Text.ToString());
 
-            bool isOrdercreated = dbclass.CreateOrderNumber(tablenumber, amount, currentdate);
+            bool isOrdercreated = dbclass.CreateOrderNumber(tablenumber, amount, currentdate, day, month, year);
 
             if (isOrdercreated)
             {
@@ -963,10 +972,13 @@ namespace WindowsFormsApp1
         private void Table4SaveButton_Click(object sender, EventArgs e)
         {
             DateTime currentdate = DateTime.Now;
+            int day = currentdate.Day;
+            int month = currentdate.Month;
+            int year = currentdate.Year;
             string tablenumber = "4";
             int amount = Convert.ToInt32(Table4TotalTextBox.Text.ToString());
 
-            bool isOrdercreated = dbclass.CreateOrderNumber(tablenumber, amount, currentdate);
+            bool isOrdercreated = dbclass.CreateOrderNumber(tablenumber, amount, currentdate, day, month, year);
 
             if (isOrdercreated)
             {
@@ -1182,10 +1194,13 @@ namespace WindowsFormsApp1
         private void Table5SaveButton_Click(object sender, EventArgs e)
         {
             DateTime currentdate = DateTime.Now;
+            int day = currentdate.Day;
+            int month = currentdate.Month;
+            int year = currentdate.Year;
             string tablenumber = "5";
             int amount = Convert.ToInt32(Table5TotalTextBox.Text.ToString());
 
-            bool isOrdercreated = dbclass.CreateOrderNumber(tablenumber, amount, currentdate);
+            bool isOrdercreated = dbclass.CreateOrderNumber(tablenumber, amount, currentdate, day, month, year);
 
             if (isOrdercreated)
             {
@@ -1401,10 +1416,13 @@ namespace WindowsFormsApp1
         private void Table6SaveButton_Click(object sender, EventArgs e)
         {
             DateTime currentdate = DateTime.Now;
+            int day = currentdate.Day;
+            int month = currentdate.Month;
+            int year = currentdate.Year;
             string tablenumber = "6";
             int amount = Convert.ToInt32(Table6TotalTextBox.Text.ToString());
 
-            bool isOrdercreated = dbclass.CreateOrderNumber(tablenumber, amount, currentdate);
+            bool isOrdercreated = dbclass.CreateOrderNumber(tablenumber, amount, currentdate, day, month, year);
 
             if (isOrdercreated)
             {
@@ -1620,10 +1638,13 @@ namespace WindowsFormsApp1
         private void Table7SaveButton_Click(object sender, EventArgs e)
         {
             DateTime currentdate = DateTime.Now;
+            int day = currentdate.Day;
+            int month = currentdate.Month;
+            int year = currentdate.Year;
             string tablenumber = "7";
             int amount = Convert.ToInt32(Table7TotalTextBox.Text.ToString());
 
-            bool isOrdercreated = dbclass.CreateOrderNumber(tablenumber, amount, currentdate);
+            bool isOrdercreated = dbclass.CreateOrderNumber(tablenumber, amount, currentdate, day, month, year);
 
             if (isOrdercreated)
             {
@@ -1839,10 +1860,13 @@ namespace WindowsFormsApp1
         private void Table8SaveButton_Click(object sender, EventArgs e)
         {
             DateTime currentdate = DateTime.Now;
+            int day = currentdate.Day;
+            int month = currentdate.Month;
+            int year = currentdate.Year;
             string tablenumber = "8";
             int amount = Convert.ToInt32(Table8TotalTextBox.Text.ToString());
 
-            bool isOrdercreated = dbclass.CreateOrderNumber(tablenumber, amount, currentdate);
+            bool isOrdercreated = dbclass.CreateOrderNumber(tablenumber, amount, currentdate, day, month, year);
 
             if (isOrdercreated)
             {

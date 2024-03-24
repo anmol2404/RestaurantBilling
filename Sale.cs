@@ -21,17 +21,46 @@ namespace WindowsFormsApp1
 
         public int x;
         public int y;
+
+        public string datetime;
+        public int checkbox;
+
+        public enum radiobutton
+        {
+            today = 1,
+            monthly = 2,
+            yearly = 3
+        }
         public Sale()
         {
             InitializeComponent();
             dbclass = new dbclass();
+            
+            //datetime = DateTime.Now.ToString();
+            LoadSalesDatagrid(checkbox);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void LoadSalesDatagrid(int checkbox)
         {
-            printPreviewDialog1.Document = printDocument1;
-            printDocument1.DefaultPageSettings.PaperSize = new PaperSize("custom", 285, 700);
-            printPreviewDialog1.ShowDialog();
+            DateTime dt = DateTimePicker.Value;
+            datetime = dt.ToString("yyyy-MM-dd");
+            try
+            {
+                DataTable dataTable = dbclass.getSalesData(dt);
+
+                if (dataTable != null)
+                {
+                    SalesDataGridView.DataSource = dataTable;
+                    SalesDataGridView.Columns[0].Width = 60;
+                    SalesDataGridView.Columns[1].Width = 100;
+                    SalesDataGridView.Columns[2].Width = 100;
+                    SalesDataGridView.Columns[3].Width = 100;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}");
+            }
         }
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
@@ -116,6 +145,24 @@ namespace WindowsFormsApp1
             dotted6.Dispose();
             
             e.Graphics.DrawString("THANK YOU!", new Font("Arial", 10, FontStyle.Bold), Brushes.Black, 100, y + 40);
+        }
+
+        private void TodayCheckBox_EnabledChanged(object sender, EventArgs e)
+        {
+            checkbox = Convert.ToInt32(radiobutton.today.ToString());
+            if (TodayCheckBox.Checked)
+            {
+                DateTimePicker.Enabled = false;
+            }
+        }
+
+        private void OpenBilling_Click(object sender, EventArgs e)
+        {
+            Billing form = new Billing();
+            form.ShowDialog();
+
+            Sale sale = new Sale();
+            sale.Close();
         }
     }
 }

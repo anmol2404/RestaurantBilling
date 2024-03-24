@@ -186,6 +186,7 @@
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewControl1 = new System.Windows.Forms.PrintPreviewControl();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.OpenSalesWindow = new System.Windows.Forms.Button();
             this.Table1Groupbox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TableOneDatagrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Qtytextbox)).BeginInit();
@@ -2010,12 +2011,26 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
+            // OpenSalesWindow
+            // 
+            this.OpenSalesWindow.BackColor = System.Drawing.Color.Tan;
+            this.OpenSalesWindow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.OpenSalesWindow.Location = new System.Drawing.Point(1458, 4);
+            this.OpenSalesWindow.Margin = new System.Windows.Forms.Padding(4);
+            this.OpenSalesWindow.Name = "OpenSalesWindow";
+            this.OpenSalesWindow.Size = new System.Drawing.Size(251, 43);
+            this.OpenSalesWindow.TabIndex = 10;
+            this.OpenSalesWindow.Text = "Sales Window";
+            this.OpenSalesWindow.UseVisualStyleBackColor = false;
+            this.OpenSalesWindow.Click += new System.EventHandler(this.OpenSalesWindow_Click);
+            // 
             // Billing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(2083, 966);
+            this.Controls.Add(this.OpenSalesWindow);
             this.Controls.Add(this.printPreviewControl1);
             this.Controls.Add(this.Table8GroupBox);
             this.Controls.Add(this.Table7GroupBox);
@@ -2226,5 +2241,6 @@
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintPreviewControl printPreviewControl1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Windows.Forms.Button OpenSalesWindow;
     }
 }

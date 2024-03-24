@@ -1,4 +1,5 @@
-﻿using System;
+﻿using iText.Layout.Splitting;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -108,6 +109,34 @@ namespace WindowsFormsApp1
                 using (SqlCommand cmd = new SqlCommand(sqlcmd, con))
                 {
                     cmd.Parameters.AddWithValue("@ordernumber", OrderNumber);
+                    try
+                    {
+                        con.Open();
+                        SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                        sda.Fill(dt);
+                        con.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error: {ex.Message}");
+                    }
+                }
+            }
+            return dt;
+        }
+
+        public DataTable getSalesData(DateTime orderby)
+        {
+            string datepattern= string.Empty;
+            DataTable dt = new DataTable();
+            using(SqlConnection con = new SqlConnection(constring))
+            {
+                string sqlcmd = "Select * from OrderNumber where OrderDate LIKE @orderby";
+                using (SqlCommand cmd = new SqlCommand(sqlcmd, con))
+                {
+                    datepattern = $"%{orderby.ToString("yyyy-MM-dd")}%";
+
+                    cmd.Parameters.AddWithValue("@orderby", datepattern);
                     try
                     {
                         con.Open();

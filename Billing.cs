@@ -21,6 +21,8 @@ using System.Windows.Controls;
 using System.Windows.Forms;
 using iText.Kernel.Pdf.Action;
 using System.Drawing.Drawing2D;
+using System.Configuration;
+using System.Management;
 
 namespace WindowsFormsApp1
 {
@@ -135,7 +137,11 @@ namespace WindowsFormsApp1
         private string GetDefaultPrinterName()
         {
             PrinterSettings settings = new PrinterSettings();
-            return settings.PrinterName;
+            string printername = settings.PrinterName;
+            if (settings.IsDefaultPrinter && settings.IsValid)
+                return printername;
+            else 
+                return printername = "";
         }
         #region table 1 
         private void Linkcombobox()
@@ -272,7 +278,7 @@ namespace WindowsFormsApp1
             Itemname = (string)selectedrow["Particulars"];
             hprice = (int)selectedrow["Half P price"];
 
-            Itemname = Itemname + " (Half Plate)";
+            Itemname = Itemname + " (Half)";
 
             int qty = (int)Qtytextbox.Value;
 
@@ -311,6 +317,40 @@ namespace WindowsFormsApp1
             {
                 SavePrintButton.Enabled = false;
             }
+        }
+        private void SavePrintButton_Click(object sender, EventArgs e)
+        {
+            DateTime currentdate = DateTime.Now;
+            string tablenumber = "1";
+            int amount = Convert.ToInt32(TotalTextBox.Text.ToString());
+
+            bool isOrdercreated = dbclass.CreateOrderNumber(tablenumber, amount, currentdate);
+
+            if (isOrdercreated)
+            {
+                int Ordernumber = dbclass.getordernumber();
+
+                if (Ordernumber > 0)
+                {
+                    foreach (DataGridViewRow row in TableOneDatagrid.Rows)
+                    {
+                        if (!row.IsNewRow)
+                        {
+                            int rowid = Convert.ToInt32(row.Cells["Id"].Value.ToString());
+                            string rowname = row.Cells["name"].Value.ToString();
+                            int rowquantity = Convert.ToInt32(row.Cells["Quantity"].Value.ToString());
+                            int rowprice = Convert.ToInt32(row.Cells["ItemPrice"].Value.ToString());
+                            int rowamount = Convert.ToInt32(row.Cells["Amount"].Value.ToString());
+
+                            dbclass.SavetoDatabase(tablenumber, rowid, rowname, rowquantity, rowprice, rowamount, currentdate, Ordernumber);
+
+                        }
+                    }
+                    Createpdf(Ordernumber, currentdate, tablenumber, TableOneDatagrid, amount);
+                    MessageBox.Show("Order Saved Successfully with Order number: " + Ordernumber, "Saved", MessageBoxButtons.OK);
+                }
+            }
+            ClearButton_Click(sender, e);
         }
         #endregion
 
@@ -403,7 +443,7 @@ namespace WindowsFormsApp1
             table2Itemname = (string)selectedrow["Particulars"];
             table2hprice = (int)selectedrow["Half P price"];
 
-            table2Itemname = table2Itemname + " (Half Plate)";
+            table2Itemname = table2Itemname + " (Half)";
 
             int qty = (int)Table2QuantityTextbox.Value;
 
@@ -488,6 +528,40 @@ namespace WindowsFormsApp1
             {
                 Table2Savebutton.Enabled = false;
             }
+        }
+        private void Table2Savebutton_Click(object sender, EventArgs e)
+        {
+            DateTime currentdate = DateTime.Now;
+            string tablenumber = "2";
+            int amount = Convert.ToInt32(Table2TotalTextBox.Text.ToString());
+
+            bool isOrdercreated = dbclass.CreateOrderNumber(tablenumber, amount, currentdate);
+
+            if (isOrdercreated)
+            {
+                int Ordernumber = dbclass.getordernumber();
+
+                if (Ordernumber > 0)
+                {
+                    foreach (DataGridViewRow row in Table2DataGrid.Rows)
+                    {
+                        if (!row.IsNewRow)
+                        {
+                            int rowid = Convert.ToInt32(row.Cells["Table2Id"].Value.ToString());
+                            string rowname = row.Cells["Table2name"].Value.ToString();
+                            int rowquantity = Convert.ToInt32(row.Cells["Table2Quantity"].Value.ToString());
+                            int rowprice = Convert.ToInt32(row.Cells["Table2ItemPrice"].Value.ToString());
+                            int rowamount = Convert.ToInt32(row.Cells["Table2Amount"].Value.ToString());
+
+                            dbclass.SavetoDatabase(tablenumber, rowid, rowname, rowquantity, rowprice, rowamount, currentdate, Ordernumber);
+
+                        }
+                    }
+                    Createpdf(Ordernumber, currentdate, tablenumber, Table2DataGrid, amount);
+                    MessageBox.Show("Order Saved Successfully with Order number: " + Ordernumber, "Saved", MessageBoxButtons.OK);
+                }
+            }
+            Table2ClearRefreshbutton_Click(sender, e);
         }
         #endregion
 
@@ -581,7 +655,7 @@ namespace WindowsFormsApp1
             table3Itemname = (string)selectedrow["Particulars"];
             table3hprice = (int)selectedrow["Half P price"];
 
-            table3Itemname = table3Itemname + " (Half Plate)";
+            table3Itemname = table3Itemname + " (Half)";
 
             int qty = (int)Table3QuantityTextBox.Value;
 
@@ -666,6 +740,40 @@ namespace WindowsFormsApp1
             {
                 Table3SaveButton.Enabled = false;
             }
+        }
+        private void Table3SaveButton_Click(object sender, EventArgs e)
+        {
+            DateTime currentdate = DateTime.Now;
+            string tablenumber = "3";
+            int amount = Convert.ToInt32(Table3TotalTextBox.Text.ToString());
+
+            bool isOrdercreated = dbclass.CreateOrderNumber(tablenumber, amount, currentdate);
+
+            if (isOrdercreated)
+            {
+                int Ordernumber = dbclass.getordernumber();
+
+                if (Ordernumber > 0)
+                {
+                    foreach (DataGridViewRow row in Table3Datagrid.Rows)
+                    {
+                        if (!row.IsNewRow)
+                        {
+                            int rowid = Convert.ToInt32(row.Cells["Table3Id"].Value.ToString());
+                            string rowname = row.Cells["Table3name"].Value.ToString();
+                            int rowquantity = Convert.ToInt32(row.Cells["Table3Quantity"].Value.ToString());
+                            int rowprice = Convert.ToInt32(row.Cells["Table3ItemPrice"].Value.ToString());
+                            int rowamount = Convert.ToInt32(row.Cells["Table3Amount"].Value.ToString());
+
+                            dbclass.SavetoDatabase(tablenumber, rowid, rowname, rowquantity, rowprice, rowamount, currentdate, Ordernumber);
+
+                        }
+                    }
+                    Createpdf(Ordernumber, currentdate, tablenumber, Table3Datagrid, amount);
+                    MessageBox.Show("Order Saved Successfully with Order number: " + Ordernumber, "Saved", MessageBoxButtons.OK);
+                }
+            }
+            Table3ClearRefreshbutton_Click(sender, e);
         }
         #endregion
 
@@ -763,7 +871,7 @@ namespace WindowsFormsApp1
             table4Itemname = (string)selectedrow["Particulars"];
             table4hprice = (int)selectedrow["Half P price"];
 
-            table4Itemname = table4Itemname + " (Half Plate)";
+            table4Itemname = table4Itemname + " (Half)";
 
             int qty = (int)Table4QuantityTextBox.Value;
 
@@ -851,6 +959,40 @@ namespace WindowsFormsApp1
             {
                 Table4SaveButton.Enabled = false;
             }
+        }
+        private void Table4SaveButton_Click(object sender, EventArgs e)
+        {
+            DateTime currentdate = DateTime.Now;
+            string tablenumber = "4";
+            int amount = Convert.ToInt32(Table4TotalTextBox.Text.ToString());
+
+            bool isOrdercreated = dbclass.CreateOrderNumber(tablenumber, amount, currentdate);
+
+            if (isOrdercreated)
+            {
+                int Ordernumber = dbclass.getordernumber();
+
+                if (Ordernumber > 0)
+                {
+                    foreach (DataGridViewRow row in Table4DataGrid.Rows)
+                    {
+                        if (!row.IsNewRow)
+                        {
+                            int rowid = Convert.ToInt32(row.Cells["Table4Id"].Value.ToString());
+                            string rowname = row.Cells["Table4name"].Value.ToString();
+                            int rowquantity = Convert.ToInt32(row.Cells["Table4Quantity"].Value.ToString());
+                            int rowprice = Convert.ToInt32(row.Cells["Table4ItemPrice"].Value.ToString());
+                            int rowamount = Convert.ToInt32(row.Cells["Table4Amount"].Value.ToString());
+
+                            dbclass.SavetoDatabase(tablenumber, rowid, rowname, rowquantity, rowprice, rowamount, currentdate, Ordernumber);
+
+                        }
+                    }
+                    Createpdf(Ordernumber, currentdate, tablenumber, Table4DataGrid, amount);
+                    MessageBox.Show("Order Saved Successfully with Order number: " + Ordernumber, "Saved", MessageBoxButtons.OK);
+                }
+            }
+            Table4ClearRefreshButton_Click(sender, e);
         }
         #endregion
 
@@ -948,7 +1090,7 @@ namespace WindowsFormsApp1
             table5Itemname = (string)selectedrow["Particulars"];
             table5hprice = (int)selectedrow["Half P price"];
 
-            table5Itemname = table5Itemname + " (Half Plate)";
+            table5Itemname = table5Itemname + " (Half)";
 
             int qty = (int)Table5QuantityTextbox.Value;
 
@@ -1036,6 +1178,40 @@ namespace WindowsFormsApp1
             {
                 Table5SaveButton.Enabled = false;
             }
+        }
+        private void Table5SaveButton_Click(object sender, EventArgs e)
+        {
+            DateTime currentdate = DateTime.Now;
+            string tablenumber = "5";
+            int amount = Convert.ToInt32(Table5TotalTextBox.Text.ToString());
+
+            bool isOrdercreated = dbclass.CreateOrderNumber(tablenumber, amount, currentdate);
+
+            if (isOrdercreated)
+            {
+                int Ordernumber = dbclass.getordernumber();
+
+                if (Ordernumber > 0)
+                {
+                    foreach (DataGridViewRow row in Table5Datagrid.Rows)
+                    {
+                        if (!row.IsNewRow)
+                        {
+                            int rowid = Convert.ToInt32(row.Cells["Table5Id"].Value.ToString());
+                            string rowname = row.Cells["Table5name"].Value.ToString();
+                            int rowquantity = Convert.ToInt32(row.Cells["Table5Quantity"].Value.ToString());
+                            int rowprice = Convert.ToInt32(row.Cells["Table5ItemPrice"].Value.ToString());
+                            int rowamount = Convert.ToInt32(row.Cells["Table5Amount"].Value.ToString());
+
+                            dbclass.SavetoDatabase(tablenumber, rowid, rowname, rowquantity, rowprice, rowamount, currentdate, Ordernumber);
+
+                        }
+                    }
+                    Createpdf(Ordernumber, currentdate, tablenumber, Table5Datagrid, amount);
+                    MessageBox.Show("Order Saved Successfully with Order number: " + Ordernumber, "Saved", MessageBoxButtons.OK);
+                }
+            }
+            Table5ClearRefreshButton_Click(sender, e);
         }
         #endregion
 
@@ -1133,7 +1309,7 @@ namespace WindowsFormsApp1
             table6Itemname = (string)selectedrow["Particulars"];
             table6hprice = (int)selectedrow["Half P price"];
 
-            table6Itemname = table6Itemname + " (Half Plate)";
+            table6Itemname = table6Itemname + " (Half)";
 
             int qty = (int)Table6QuantityTextBox.Value;
 
@@ -1221,6 +1397,40 @@ namespace WindowsFormsApp1
             {
                 Table6SaveButton.Enabled = false;
             }
+        }
+        private void Table6SaveButton_Click(object sender, EventArgs e)
+        {
+            DateTime currentdate = DateTime.Now;
+            string tablenumber = "6";
+            int amount = Convert.ToInt32(Table6TotalTextBox.Text.ToString());
+
+            bool isOrdercreated = dbclass.CreateOrderNumber(tablenumber, amount, currentdate);
+
+            if (isOrdercreated)
+            {
+                int Ordernumber = dbclass.getordernumber();
+
+                if (Ordernumber > 0)
+                {
+                    foreach (DataGridViewRow row in Table6Datagrid.Rows)
+                    {
+                        if (!row.IsNewRow)
+                        {
+                            int rowid = Convert.ToInt32(row.Cells["Table6Id"].Value.ToString());
+                            string rowname = row.Cells["Table6name"].Value.ToString();
+                            int rowquantity = Convert.ToInt32(row.Cells["Table6Quantity"].Value.ToString());
+                            int rowprice = Convert.ToInt32(row.Cells["Table6ItemPrice"].Value.ToString());
+                            int rowamount = Convert.ToInt32(row.Cells["Table6Amount"].Value.ToString());
+
+                            dbclass.SavetoDatabase(tablenumber, rowid, rowname, rowquantity, rowprice, rowamount, currentdate, Ordernumber);
+
+                        }
+                    }
+                    Createpdf(Ordernumber, currentdate, tablenumber, Table6Datagrid, amount);
+                    MessageBox.Show("Order Saved Successfully with Order number: " + Ordernumber, "Saved", MessageBoxButtons.OK);
+                }
+            }
+            Table6ClearRefreshButton_Click(sender, e);
         }
         #endregion
 
@@ -1318,7 +1528,7 @@ namespace WindowsFormsApp1
             table7Itemname = (string)selectedrow["Particulars"];
             table7hprice = (int)selectedrow["Half P price"];
 
-            table7Itemname = table7Itemname + " (Half Plate)";
+            table7Itemname = table7Itemname + " (Half)";
 
             int qty = (int)Table7QuantityTextBox.Value;
 
@@ -1406,6 +1616,40 @@ namespace WindowsFormsApp1
             {
                 Table7SaveButton.Enabled = false;
             }
+        }
+        private void Table7SaveButton_Click(object sender, EventArgs e)
+        {
+            DateTime currentdate = DateTime.Now;
+            string tablenumber = "7";
+            int amount = Convert.ToInt32(Table7TotalTextBox.Text.ToString());
+
+            bool isOrdercreated = dbclass.CreateOrderNumber(tablenumber, amount, currentdate);
+
+            if (isOrdercreated)
+            {
+                int Ordernumber = dbclass.getordernumber();
+
+                if (Ordernumber > 0)
+                {
+                    foreach (DataGridViewRow row in Table7Datagrid.Rows)
+                    {
+                        if (!row.IsNewRow)
+                        {
+                            int rowid = Convert.ToInt32(row.Cells["Table7Id"].Value.ToString());
+                            string rowname = row.Cells["Table7name"].Value.ToString();
+                            int rowquantity = Convert.ToInt32(row.Cells["Table7Quantity"].Value.ToString());
+                            int rowprice = Convert.ToInt32(row.Cells["Table7ItemPrice"].Value.ToString());
+                            int rowamount = Convert.ToInt32(row.Cells["Table7Amount"].Value.ToString());
+
+                            dbclass.SavetoDatabase(tablenumber, rowid, rowname, rowquantity, rowprice, rowamount, currentdate, Ordernumber);
+
+                        }
+                    }
+                    Createpdf(Ordernumber, currentdate, tablenumber, Table7Datagrid, amount);
+                    MessageBox.Show("Order Saved Successfully with Order number: " + Ordernumber, "Saved", MessageBoxButtons.OK);
+                }
+            }
+            Table7ClearRefreshButton_Click(sender, e);
         }
         #endregion
 
@@ -1503,7 +1747,7 @@ namespace WindowsFormsApp1
             table8Itemname = (string)selectedrow["Particulars"];
             table8hprice = (int)selectedrow["Half P price"];
 
-            table8Itemname = table8Itemname + " (Half Plate)";
+            table8Itemname = table8Itemname + " (Half)";
 
             int qty = (int)Table8QuantityTextBox.Value;
 
@@ -1592,259 +1836,6 @@ namespace WindowsFormsApp1
                 Table8SaveButton.Enabled = false;
             }
         }
-        #endregion
-
-        private void AddUpdateOpenForm_Click(object sender, EventArgs e)
-        {
-            AddUpdateForm form = new AddUpdateForm();
-            form.ShowDialog();
-        }
-
-        private void SavePrintButton_Click(object sender, EventArgs e)
-        {
-            DateTime currentdate = DateTime.Now;
-            string tablenumber = "1";
-            int amount = Convert.ToInt32(TotalTextBox.Text.ToString());
-
-            bool isOrdercreated = dbclass.CreateOrderNumber(tablenumber, amount, currentdate);
-
-            if (isOrdercreated)
-            {
-                int Ordernumber = dbclass.getordernumber();
-
-                if (Ordernumber > 0)
-                {
-                    foreach (DataGridViewRow row in TableOneDatagrid.Rows)
-                    {
-                        if (!row.IsNewRow)
-                        {
-                            int rowid = Convert.ToInt32(row.Cells["Id"].Value.ToString());
-                            string rowname = row.Cells["name"].Value.ToString();
-                            int rowquantity = Convert.ToInt32(row.Cells["Quantity"].Value.ToString());
-                            int rowprice = Convert.ToInt32(row.Cells["ItemPrice"].Value.ToString());
-                            int rowamount = Convert.ToInt32(row.Cells["Amount"].Value.ToString());
-                            
-                            dbclass.SavetoDatabase(tablenumber, rowid, rowname, rowquantity, rowprice, rowamount, currentdate, Ordernumber);
-                           
-                        }
-                    }
-                    Createpdf(Ordernumber, currentdate, tablenumber, TableOneDatagrid, amount);
-                    MessageBox.Show("Order Saved Successfully with Order number: " + Ordernumber , "Saved", MessageBoxButtons.OK);
-                }
-            }
-            ClearButton_Click(sender, e);
-        }
-
-        private void Table2Savebutton_Click(object sender, EventArgs e)
-        {
-            DateTime currentdate = DateTime.Now;
-            string tablenumber = "2";
-            int amount = Convert.ToInt32(Table2TotalTextBox.Text.ToString());
-
-            bool isOrdercreated = dbclass.CreateOrderNumber(tablenumber, amount, currentdate);
-
-            if (isOrdercreated)
-            {
-                int Ordernumber = dbclass.getordernumber();
-
-                if (Ordernumber > 0)
-                {
-                    foreach (DataGridViewRow row in Table2DataGrid.Rows)
-                    {
-                        if (!row.IsNewRow)
-                        {
-                            int rowid = Convert.ToInt32(row.Cells["Table2Id"].Value.ToString());
-                            string rowname = row.Cells["Table2name"].Value.ToString();
-                            int rowquantity = Convert.ToInt32(row.Cells["Table2Quantity"].Value.ToString());
-                            int rowprice = Convert.ToInt32(row.Cells["Table2ItemPrice"].Value.ToString());
-                            int rowamount = Convert.ToInt32(row.Cells["Table2Amount"].Value.ToString());
-
-                            dbclass.SavetoDatabase(tablenumber, rowid, rowname, rowquantity, rowprice, rowamount, currentdate, Ordernumber);
-
-                        }
-                    }
-                    Createpdf(Ordernumber, currentdate, tablenumber, Table2DataGrid, amount);
-                    MessageBox.Show("Order Saved Successfully with Order number: " + Ordernumber, "Saved", MessageBoxButtons.OK);
-                }
-            }
-            Table2ClearRefreshbutton_Click(sender, e);
-        }
-
-        private void Table3SaveButton_Click(object sender, EventArgs e)
-        {
-            DateTime currentdate = DateTime.Now;
-            string tablenumber = "3";
-            int amount = Convert.ToInt32(Table3TotalTextBox.Text.ToString());
-
-            bool isOrdercreated = dbclass.CreateOrderNumber(tablenumber, amount, currentdate);
-
-            if (isOrdercreated)
-            {
-                int Ordernumber = dbclass.getordernumber();
-
-                if (Ordernumber > 0)
-                {
-                    foreach (DataGridViewRow row in Table3Datagrid.Rows)
-                    {
-                        if (!row.IsNewRow)
-                        {
-                            int rowid = Convert.ToInt32(row.Cells["Table3Id"].Value.ToString());
-                            string rowname = row.Cells["Table3name"].Value.ToString();
-                            int rowquantity = Convert.ToInt32(row.Cells["Table3Quantity"].Value.ToString());
-                            int rowprice = Convert.ToInt32(row.Cells["Table3ItemPrice"].Value.ToString());
-                            int rowamount = Convert.ToInt32(row.Cells["Table3Amount"].Value.ToString());
-
-                            dbclass.SavetoDatabase(tablenumber, rowid, rowname, rowquantity, rowprice, rowamount, currentdate, Ordernumber);
-
-                        }
-                    }
-                    Createpdf(Ordernumber, currentdate, tablenumber, Table3Datagrid, amount);
-                    MessageBox.Show("Order Saved Successfully with Order number: " + Ordernumber, "Saved", MessageBoxButtons.OK);
-                }
-            }
-            Table3ClearRefreshbutton_Click(sender, e);
-        }
-
-        private void Table4SaveButton_Click(object sender, EventArgs e)
-        {
-            DateTime currentdate = DateTime.Now;
-            string tablenumber = "4";
-            int amount = Convert.ToInt32(Table4TotalTextBox.Text.ToString());
-
-            bool isOrdercreated = dbclass.CreateOrderNumber(tablenumber, amount, currentdate);
-
-            if (isOrdercreated)
-            {
-                int Ordernumber = dbclass.getordernumber();
-
-                if (Ordernumber > 0)
-                {
-                    foreach (DataGridViewRow row in Table4DataGrid.Rows)
-                    {
-                        if (!row.IsNewRow)
-                        {
-                            int rowid = Convert.ToInt32(row.Cells["Table4Id"].Value.ToString());
-                            string rowname = row.Cells["Table4name"].Value.ToString();
-                            int rowquantity = Convert.ToInt32(row.Cells["Table4Quantity"].Value.ToString());
-                            int rowprice = Convert.ToInt32(row.Cells["Table4ItemPrice"].Value.ToString());
-                            int rowamount = Convert.ToInt32(row.Cells["Table4Amount"].Value.ToString());
-
-                            dbclass.SavetoDatabase(tablenumber, rowid, rowname, rowquantity, rowprice, rowamount, currentdate, Ordernumber);
-
-                        }
-                    }
-                    Createpdf(Ordernumber, currentdate, tablenumber, Table4DataGrid, amount);
-                    MessageBox.Show("Order Saved Successfully with Order number: " + Ordernumber, "Saved", MessageBoxButtons.OK);
-                }
-            }
-            Table4ClearRefreshButton_Click(sender, e);
-        }
-
-        private void Table5SaveButton_Click(object sender, EventArgs e)
-        {
-            DateTime currentdate = DateTime.Now;
-            string tablenumber = "5";
-            int amount = Convert.ToInt32(Table5TotalTextBox.Text.ToString());
-
-            bool isOrdercreated = dbclass.CreateOrderNumber(tablenumber, amount, currentdate);
-
-            if (isOrdercreated)
-            {
-                int Ordernumber = dbclass.getordernumber();
-
-                if (Ordernumber > 0)
-                {
-                    foreach (DataGridViewRow row in Table5Datagrid.Rows)
-                    {
-                        if (!row.IsNewRow)
-                        {
-                            int rowid = Convert.ToInt32(row.Cells["Table5Id"].Value.ToString());
-                            string rowname = row.Cells["Table5name"].Value.ToString();
-                            int rowquantity = Convert.ToInt32(row.Cells["Table5Quantity"].Value.ToString());
-                            int rowprice = Convert.ToInt32(row.Cells["Table5ItemPrice"].Value.ToString());
-                            int rowamount = Convert.ToInt32(row.Cells["Table5Amount"].Value.ToString());
-
-                            dbclass.SavetoDatabase(tablenumber, rowid, rowname, rowquantity, rowprice, rowamount, currentdate, Ordernumber);
-
-                        }
-                    }
-                    Createpdf(Ordernumber, currentdate, tablenumber, Table5Datagrid, amount);
-                    MessageBox.Show("Order Saved Successfully with Order number: " + Ordernumber, "Saved", MessageBoxButtons.OK);
-                }
-            }
-            Table5ClearRefreshButton_Click(sender, e);
-        }
-
-        private void Table6SaveButton_Click(object sender, EventArgs e)
-        {
-            DateTime currentdate = DateTime.Now;
-            string tablenumber = "6";
-            int amount = Convert.ToInt32(Table6TotalTextBox.Text.ToString());
-
-            bool isOrdercreated = dbclass.CreateOrderNumber(tablenumber, amount, currentdate);
-
-            if (isOrdercreated)
-            {
-                int Ordernumber = dbclass.getordernumber();
-
-                if (Ordernumber > 0)
-                {
-                    foreach (DataGridViewRow row in Table6Datagrid.Rows)
-                    {
-                        if (!row.IsNewRow)
-                        {
-                            int rowid = Convert.ToInt32(row.Cells["Table6Id"].Value.ToString());
-                            string rowname = row.Cells["Table6name"].Value.ToString();
-                            int rowquantity = Convert.ToInt32(row.Cells["Table6Quantity"].Value.ToString());
-                            int rowprice = Convert.ToInt32(row.Cells["Table6ItemPrice"].Value.ToString());
-                            int rowamount = Convert.ToInt32(row.Cells["Table6Amount"].Value.ToString());
-
-                            dbclass.SavetoDatabase(tablenumber, rowid, rowname, rowquantity, rowprice, rowamount, currentdate, Ordernumber);
-
-                        }
-                    }
-                    Createpdf(Ordernumber, currentdate, tablenumber, Table6Datagrid, amount);
-                    MessageBox.Show("Order Saved Successfully with Order number: " + Ordernumber, "Saved", MessageBoxButtons.OK);
-                }
-            }
-            Table6ClearRefreshButton_Click(sender, e);
-        }
-
-        private void Table7SaveButton_Click(object sender, EventArgs e)
-        {
-            DateTime currentdate = DateTime.Now;
-            string tablenumber = "7";
-            int amount = Convert.ToInt32(Table7TotalTextBox.Text.ToString());
-
-            bool isOrdercreated = dbclass.CreateOrderNumber(tablenumber, amount, currentdate);
-
-            if (isOrdercreated)
-            {
-                int Ordernumber = dbclass.getordernumber();
-
-                if (Ordernumber > 0)
-                {
-                    foreach (DataGridViewRow row in Table7Datagrid.Rows)
-                    {
-                        if (!row.IsNewRow)
-                        {
-                            int rowid = Convert.ToInt32(row.Cells["Table7Id"].Value.ToString());
-                            string rowname = row.Cells["Table7name"].Value.ToString();
-                            int rowquantity = Convert.ToInt32(row.Cells["Table7Quantity"].Value.ToString());
-                            int rowprice = Convert.ToInt32(row.Cells["Table7ItemPrice"].Value.ToString());
-                            int rowamount = Convert.ToInt32(row.Cells["Table7Amount"].Value.ToString());
-
-                            dbclass.SavetoDatabase(tablenumber, rowid, rowname, rowquantity, rowprice, rowamount, currentdate, Ordernumber);
-
-                        }
-                    }
-                    Createpdf(Ordernumber, currentdate, tablenumber, Table7Datagrid, amount);
-                    MessageBox.Show("Order Saved Successfully with Order number: " + Ordernumber, "Saved", MessageBoxButtons.OK);
-                }
-            }
-            Table7ClearRefreshButton_Click(sender, e);
-        }
-
         private void Table8SaveButton_Click(object sender, EventArgs e)
         {
             DateTime currentdate = DateTime.Now;
@@ -1880,6 +1871,14 @@ namespace WindowsFormsApp1
             }
             Table8ClearRefreshButton_Click(sender, e);
         }
+        #endregion
+
+        private void AddUpdateOpenForm_Click(object sender, EventArgs e)
+        {
+            AddUpdateForm form = new AddUpdateForm();
+            form.ShowDialog();
+        }
+        
 
         private void Createpdf(int OrderNumber, DateTime Currentdate, string TableName, DataGridView TableDataGrid, int TableAmount)
         {
@@ -2021,15 +2020,7 @@ namespace WindowsFormsApp1
                         document.Close();
                     }
                 }
-                string printername = GetDefaultPrinterName();
-                if (!string.IsNullOrEmpty(printername))
-                {
-                    printPreviewDialog1.Document = printDocument1;
-                    printDocument1.DefaultPageSettings.PaperSize = new PaperSize("custom", 285, 700);
-                    printPreviewDialog1.ShowDialog(); ;
-                    //printDocument1.Print();
-                }
-                
+                PrintPdf();
             }
             catch (Exception ex)
             {
@@ -2038,9 +2029,22 @@ namespace WindowsFormsApp1
             }
         }
 
-        public void PrintPdf(string pdfFilePath, string printerName)
+        public void PrintPdf()
         {
-          
+            string printername = GetDefaultPrinterName();
+            if (!string.IsNullOrEmpty(printername))
+            {
+                printPreviewDialog1.Document = printDocument1;
+                printDocument1.DefaultPageSettings.PaperSize = new PaperSize("custom", 285, 700);
+                //printPreviewDialog1.ShowDialog();
+                //printDocument1.Print();
+            }
+        }
+
+        private void OpenSalesWindow_Click(object sender, EventArgs e)
+        {
+            Sale form = new Sale();
+            form.ShowDialog();
         }
 
         private void printDocument1_PrintPage(object sender, PrintPageEventArgs e)

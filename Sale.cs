@@ -25,11 +25,16 @@ namespace WindowsFormsApp1
         public string datetime;
         public int checkbox;
 
+        public int Monthlymonth, Monthlyyear, YearlyYear;
+
+        public int optional = 0;
+
         public enum radiobutton
         {
             today = 1,
             monthly = 2,
-            yearly = 3
+            yearly = 3,
+            date = 4
         }
         public Sale()
         {
@@ -39,17 +44,57 @@ namespace WindowsFormsApp1
             checkbox = (int)radiobutton.today;
             DateTimePicker.Value = DateTime.Now;
             DateTimePicker.Enabled = false;
+            YearlyCombobox.Enabled = false;
+            MonthlymonthsComboBox.Enabled = false;
+            MonthlyYearComboBox.Enabled = false;
             LoadSalesDatagrid(checkbox);
+            LoadComboBox();
+
+            MonthlymonthsComboBox.SelectedIndex = 1;
+            MonthlyYearComboBox.SelectedIndex = 1;
+            YearlyCombobox.SelectedIndex=1;
+            Monthlymonth = MonthlymonthsComboBox.SelectedIndex;
         }
 
-        public void LoadSalesDatagrid(int checkbox)
+        private void LoadComboBox()
+        {
+            string[] monthNames = {
+            "Months","January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"
+            };
+            MonthlymonthsComboBox.Items.AddRange(monthNames);
+
+            int year = 2023;
+            int arraysize = 100;
+            int[] yearlist = new int[arraysize];
+
+            for (int i = 0; i < 100; i++)
+            {
+                yearlist[i] = year;
+
+                year++;
+            }
+
+            foreach (int item in yearlist)
+            {
+                MonthlyYearComboBox.Items.Add(item.ToString());
+                YearlyCombobox.Items.Add(item.ToString());
+            }
+
+            
+            
+
+        }
+
+        public void LoadSalesDatagrid(int checkbox, int Month=0, int Year=0)
         {
             try
             {
-                DateTime dt = DateTimePicker.Value;
+                
                 int day = 0, month = 0, year = 0;
                 if (checkbox == 1)
                 {
+                    DateTime dt = DateTimePicker.Value;
                     day = dt.Day;
                     month = dt.Month;
                     year = dt.Year;
@@ -67,8 +112,8 @@ namespace WindowsFormsApp1
                 }
                 else if (checkbox == 2)
                 {
-                    month = dt.Month;
-                    year = dt.Year;
+                    month = Month;
+                    year = Year;
                     DataTable dataTable = dbclass.getSalesData(checkbox,day, month, year);
 
                     if (dataTable != null)
@@ -82,7 +127,7 @@ namespace WindowsFormsApp1
                 }
                 else if (checkbox == 3)
                 {
-                    year = dt.Year;
+                    year = Year;
                     DataTable dataTable = dbclass.getSalesData(checkbox, day, month, year);
 
                     if (dataTable != null)
@@ -193,9 +238,9 @@ namespace WindowsFormsApp1
             {
                 checkbox = (int)radiobutton.today;
                 DateTimePicker.Enabled = false;
+                DateTimePicker.Value = DateTime.Now;
                 LoadSalesDatagrid(checkbox);
             }
-
         }
 
         private void OpenBilling_Click(object sender, EventArgs e)
@@ -222,8 +267,18 @@ namespace WindowsFormsApp1
             if (MonthlyCheckBox.Checked == true)
             {
                 checkbox = (int)radiobutton.monthly;
-                DateTimePicker.Enabled = true;
-                LoadSalesDatagrid(checkbox);
+                DateTimePicker.Enabled = false;
+                YearlyCombobox.Enabled = false;
+
+                MonthlymonthsComboBox.Enabled = true;
+                MonthlyYearComboBox.Enabled = true;
+
+                LoadSalesDatagrid(checkbox, Monthlymonth, Monthlyyear);
+            }
+            else
+            {
+                MonthlymonthsComboBox.Enabled = false;
+                MonthlyYearComboBox.Enabled = false;
             }
         }
 
@@ -232,10 +287,39 @@ namespace WindowsFormsApp1
            
             if (YearlyCheckBox.Checked == true)
             {
-                checkbox = (int)radiobutton.monthly;
-                DateTimePicker.Enabled = true;
-                LoadSalesDatagrid(checkbox);
+                checkbox = (int)radiobutton.yearly;
+                DateTimePicker.Enabled = false;
+                YearlyCombobox.Enabled = true;
+                LoadSalesDatagrid(checkbox, optional, YearlyYear);
             }
+            else
+            {
+                YearlyCombobox.Enabled = false;
+            }
+        }
+
+        private void DateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            LoadSalesDatagrid(checkbox);
+        }
+
+        private void MonthlyYearComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Monthlyyear = Convert.ToInt32(MonthlyYearComboBox.SelectedItem.ToString());
+            LoadSalesDatagrid(checkbox, Monthlymonth, Monthlyyear);
+        }
+
+        private void YearlyCombobox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+            YearlyYear = Convert.ToInt32(YearlyCombobox.SelectedItem.ToString());
+            LoadSalesDatagrid(checkbox, optional, YearlyYear);
+        }
+
+        private void MonthlymonthsComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Monthlymonth = MonthlymonthsComboBox.SelectedIndex ;
+            LoadSalesDatagrid(checkbox, Monthlymonth, Monthlyyear);
         }
     }
 }

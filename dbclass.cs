@@ -132,7 +132,7 @@ namespace WindowsFormsApp1
             {
                 if (checkbox == 1)
                 {
-                    string sqlcmd = "Select * from OrderNumber where Day = @day AND Month = @Month AND Year = @year";
+                    string sqlcmd = "Select OrderNumber as 'Order No.', TableNumber as 'Table no.', Amount as 'Amount', OrderDate as 'Date' from OrderNumber where Day = @day AND Month = @Month AND Year = @year";
                     using (SqlCommand cmd = new SqlCommand(sqlcmd, con))
                     {
                         cmd.Parameters.AddWithValue("@day", day);
@@ -153,7 +153,7 @@ namespace WindowsFormsApp1
                 }
                 else if (checkbox == 2)
                 {
-                    string sqlcmd = "Select * from OrderNumber where Month = @Month AND Year = @year";
+                    string sqlcmd = "Select OrderNumber as 'Order No.', TableNumber as 'Table no.', Amount as 'Amount', OrderDate as 'Date' from OrderNumber where Month = @Month AND Year = @year";
                     using (SqlCommand cmd = new SqlCommand(sqlcmd, con))
                     {
                         cmd.Parameters.AddWithValue("@Month", month);
@@ -173,7 +173,7 @@ namespace WindowsFormsApp1
                 }
                 else if (checkbox == 3)
                 {
-                    string sqlcmd = "Select * from OrderNumber where Year = @year";
+                    string sqlcmd = "Select OrderNumber as 'Order No.', TableNumber as 'Table no.', Amount as 'Amount', OrderDate as 'Date' from OrderNumber where Year = @year";
                     using (SqlCommand cmd = new SqlCommand(sqlcmd, con))
                     {
                         cmd.Parameters.AddWithValue("@year", year);

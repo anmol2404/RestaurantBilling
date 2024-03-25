@@ -37,12 +37,15 @@
             this.MonthlyCheckBox = new System.Windows.Forms.RadioButton();
             this.YearlyCheckBox = new System.Windows.Forms.RadioButton();
             this.SalesDataGridView = new System.Windows.Forms.DataGridView();
-            this.Sno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.SearchTextBox = new System.Windows.Forms.TextBox();
             this.printPreviewControl1 = new System.Windows.Forms.PrintPreviewControl();
             this.OpenBilling = new System.Windows.Forms.Button();
+            this.Sno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MonthlyYearComboBox = new System.Windows.Forms.ComboBox();
+            this.MonthlymonthsComboBox = new System.Windows.Forms.ComboBox();
+            this.YearlyCombobox = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SalesDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -67,6 +70,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.YearlyCombobox);
+            this.groupBox1.Controls.Add(this.MonthlymonthsComboBox);
+            this.groupBox1.Controls.Add(this.MonthlyYearComboBox);
             this.groupBox1.Controls.Add(this.TodayCheckBox);
             this.groupBox1.Controls.Add(this.MonthlyCheckBox);
             this.groupBox1.Controls.Add(this.YearlyCheckBox);
@@ -84,7 +90,7 @@
             // 
             this.TodayCheckBox.AutoSize = true;
             this.TodayCheckBox.Checked = true;
-            this.TodayCheckBox.Location = new System.Drawing.Point(57, 84);
+            this.TodayCheckBox.Location = new System.Drawing.Point(336, 18);
             this.TodayCheckBox.Name = "TodayCheckBox";
             this.TodayCheckBox.Size = new System.Drawing.Size(68, 20);
             this.TodayCheckBox.TabIndex = 5;
@@ -96,7 +102,7 @@
             // MonthlyCheckBox
             // 
             this.MonthlyCheckBox.AutoSize = true;
-            this.MonthlyCheckBox.Location = new System.Drawing.Point(213, 84);
+            this.MonthlyCheckBox.Location = new System.Drawing.Point(249, 56);
             this.MonthlyCheckBox.Name = "MonthlyCheckBox";
             this.MonthlyCheckBox.Size = new System.Drawing.Size(74, 20);
             this.MonthlyCheckBox.TabIndex = 6;
@@ -107,7 +113,7 @@
             // YearlyCheckBox
             // 
             this.YearlyCheckBox.AutoSize = true;
-            this.YearlyCheckBox.Location = new System.Drawing.Point(369, 84);
+            this.YearlyCheckBox.Location = new System.Drawing.Point(249, 92);
             this.YearlyCheckBox.Name = "YearlyCheckBox";
             this.YearlyCheckBox.Size = new System.Drawing.Size(67, 20);
             this.YearlyCheckBox.TabIndex = 7;
@@ -134,27 +140,20 @@
             this.SalesDataGridView.TabIndex = 3;
             this.SalesDataGridView.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.SalesDataGridView_RowsAdded);
             // 
-            // Sno
-            // 
-            this.Sno.HeaderText = "S.No";
-            this.Sno.MinimumWidth = 6;
-            this.Sno.Name = "Sno";
-            this.Sno.ReadOnly = true;
-            this.Sno.Width = 125;
-            // 
             // DateTimePicker
             // 
             this.DateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DateTimePicker.Location = new System.Drawing.Point(369, 36);
+            this.DateTimePicker.Location = new System.Drawing.Point(79, 56);
             this.DateTimePicker.Name = "DateTimePicker";
-            this.DateTimePicker.Size = new System.Drawing.Size(140, 22);
+            this.DateTimePicker.Size = new System.Drawing.Size(129, 22);
             this.DateTimePicker.TabIndex = 2;
-            this.DateTimePicker.Value = new System.DateTime(2024, 3, 24, 0, 0, 0, 0);
+            this.DateTimePicker.Value = new System.DateTime(2024, 3, 25, 0, 0, 0, 0);
+            this.DateTimePicker.ValueChanged += new System.EventHandler(this.DateTimePicker_ValueChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(54, 41);
+            this.label1.Location = new System.Drawing.Point(14, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 16);
             this.label1.TabIndex = 1;
@@ -162,9 +161,9 @@
             // 
             // SearchTextBox
             // 
-            this.SearchTextBox.Location = new System.Drawing.Point(143, 35);
+            this.SearchTextBox.Location = new System.Drawing.Point(79, 15);
             this.SearchTextBox.Name = "SearchTextBox";
-            this.SearchTextBox.Size = new System.Drawing.Size(173, 22);
+            this.SearchTextBox.Size = new System.Drawing.Size(207, 22);
             this.SearchTextBox.TabIndex = 0;
             // 
             // printPreviewControl1
@@ -183,6 +182,41 @@
             this.OpenBilling.Text = "Billing";
             this.OpenBilling.UseVisualStyleBackColor = true;
             this.OpenBilling.Click += new System.EventHandler(this.OpenBilling_Click);
+            // 
+            // Sno
+            // 
+            this.Sno.HeaderText = "S.No";
+            this.Sno.MinimumWidth = 6;
+            this.Sno.Name = "Sno";
+            this.Sno.ReadOnly = true;
+            this.Sno.Width = 50;
+            // 
+            // MonthlyYearComboBox
+            // 
+            this.MonthlyYearComboBox.FormattingEnabled = true;
+            this.MonthlyYearComboBox.Location = new System.Drawing.Point(419, 52);
+            this.MonthlyYearComboBox.Name = "MonthlyYearComboBox";
+            this.MonthlyYearComboBox.Size = new System.Drawing.Size(90, 24);
+            this.MonthlyYearComboBox.TabIndex = 8;
+            this.MonthlyYearComboBox.SelectedIndexChanged += new System.EventHandler(this.MonthlyYearComboBox_SelectedIndexChanged);
+            // 
+            // MonthlymonthsComboBox
+            // 
+            this.MonthlymonthsComboBox.FormattingEnabled = true;
+            this.MonthlymonthsComboBox.Location = new System.Drawing.Point(336, 52);
+            this.MonthlymonthsComboBox.Name = "MonthlymonthsComboBox";
+            this.MonthlymonthsComboBox.Size = new System.Drawing.Size(77, 24);
+            this.MonthlymonthsComboBox.TabIndex = 9;
+            this.MonthlymonthsComboBox.SelectedIndexChanged += new System.EventHandler(this.MonthlymonthsComboBox_SelectedIndexChanged);
+            // 
+            // YearlyCombobox
+            // 
+            this.YearlyCombobox.FormattingEnabled = true;
+            this.YearlyCombobox.Location = new System.Drawing.Point(336, 92);
+            this.YearlyCombobox.Name = "YearlyCombobox";
+            this.YearlyCombobox.Size = new System.Drawing.Size(77, 24);
+            this.YearlyCombobox.TabIndex = 10;
+            this.YearlyCombobox.SelectedIndexChanged += new System.EventHandler(this.YearlyCombobox_SelectedIndexChanged);
             // 
             // Sale
             // 
@@ -216,5 +250,8 @@
         private System.Windows.Forms.RadioButton YearlyCheckBox;
         private System.Windows.Forms.Button OpenBilling;
         private System.Windows.Forms.DataGridViewTextBoxColumn Sno;
+        private System.Windows.Forms.ComboBox YearlyCombobox;
+        private System.Windows.Forms.ComboBox MonthlymonthsComboBox;
+        private System.Windows.Forms.ComboBox MonthlyYearComboBox;
     }
 }

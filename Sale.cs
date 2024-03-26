@@ -381,6 +381,11 @@ namespace WindowsFormsApp1
             }
         }
 
+        private void PrintSalesButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void MonthlymonthsComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             Monthlymonth = MonthlymonthsComboBox.SelectedIndex;

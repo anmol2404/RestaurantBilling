@@ -47,6 +47,8 @@
             this.printPreviewControl1 = new System.Windows.Forms.PrintPreviewControl();
             this.OpenBilling = new System.Windows.Forms.Button();
             this.SearchByOrderNumber = new System.Windows.Forms.RadioButton();
+            this.PrintSalesButton = new System.Windows.Forms.Button();
+            this.ClearRefreshSalesButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SalesDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -216,9 +218,9 @@
             // 
             // OpenBilling
             // 
-            this.OpenBilling.Location = new System.Drawing.Point(873, 12);
+            this.OpenBilling.Location = new System.Drawing.Point(12, 12);
             this.OpenBilling.Name = "OpenBilling";
-            this.OpenBilling.Size = new System.Drawing.Size(177, 23);
+            this.OpenBilling.Size = new System.Drawing.Size(177, 36);
             this.OpenBilling.TabIndex = 5;
             this.OpenBilling.Text = "Billing";
             this.OpenBilling.UseVisualStyleBackColor = true;
@@ -236,11 +238,32 @@
             this.SearchByOrderNumber.UseVisualStyleBackColor = true;
             this.SearchByOrderNumber.CheckedChanged += new System.EventHandler(this.SearchByOrderNumber_CheckedChanged);
             // 
+            // PrintSalesButton
+            // 
+            this.PrintSalesButton.Location = new System.Drawing.Point(994, 12);
+            this.PrintSalesButton.Name = "PrintSalesButton";
+            this.PrintSalesButton.Size = new System.Drawing.Size(177, 36);
+            this.PrintSalesButton.TabIndex = 7;
+            this.PrintSalesButton.Text = "Print";
+            this.PrintSalesButton.UseVisualStyleBackColor = true;
+            this.PrintSalesButton.Click += new System.EventHandler(this.PrintSalesButton_Click);
+            // 
+            // ClearRefreshSalesButton
+            // 
+            this.ClearRefreshSalesButton.Location = new System.Drawing.Point(811, 12);
+            this.ClearRefreshSalesButton.Name = "ClearRefreshSalesButton";
+            this.ClearRefreshSalesButton.Size = new System.Drawing.Size(177, 36);
+            this.ClearRefreshSalesButton.TabIndex = 8;
+            this.ClearRefreshSalesButton.Text = "Clear/Refresh";
+            this.ClearRefreshSalesButton.UseVisualStyleBackColor = true;
+            // 
             // Sale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1233, 520);
+            this.Controls.Add(this.ClearRefreshSalesButton);
+            this.Controls.Add(this.PrintSalesButton);
             this.Controls.Add(this.OpenBilling);
             this.Controls.Add(this.printPreviewControl1);
             this.Controls.Add(this.groupBox1);
@@ -272,5 +295,7 @@
         private System.Windows.Forms.ComboBox MonthlyYearComboBox;
         private System.Windows.Forms.RadioButton CustomRadioButton;
         private System.Windows.Forms.RadioButton SearchByOrderNumber;
+        private System.Windows.Forms.Button PrintSalesButton;
+        private System.Windows.Forms.Button ClearRefreshSalesButton;
     }
 }

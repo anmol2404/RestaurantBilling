@@ -195,26 +195,48 @@ namespace WindowsFormsApp1
             return dt;
         }
 
-        public DataTable GetOrderNumberDetail(int order)
+        public DataTable GetOrderNumberDetail(int order=0, int checkbox = 0)
         {
             DataTable dt = new DataTable();
 
             using (SqlConnection con = new SqlConnection(constring))
             {
-                string sqlcmd = "SELECT * FROM dbo.OrderNumber WHERE OrderNumber = @order";
-                using (SqlCommand cmd = new SqlCommand(sqlcmd, con))
+                if (checkbox == 0)
                 {
-                    cmd.Parameters.AddWithValue("@order", order);
-                    try
+                    string sqlcmd = "SELECT * FROM dbo.OrderNumber WHERE OrderNumber = @order";
+                    using (SqlCommand cmd = new SqlCommand(sqlcmd, con))
                     {
-                        con.Open();
-                        SqlDataAdapter sda = new SqlDataAdapter(cmd);
-                        sda.Fill(dt);
-                        con.Close();
+                        cmd.Parameters.AddWithValue("@order", order);
+                        try
+                        {
+                            con.Open();
+                            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                            sda.Fill(dt);
+                            con.Close();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Error: {ex.Message}");
+                        }
                     }
-                    catch (Exception ex)
+                }
+                else if (checkbox == 4)
+                {
+                    string sqlcmd = "Select OrderNumber, TableNumber as 'Table no.', Amount as 'Amount', OrderDate as 'Date' from OrderNumber";
+                    using (SqlCommand cmd = new SqlCommand(sqlcmd, con))
                     {
-                        MessageBox.Show($"Error: {ex.Message}");
+                        cmd.Parameters.AddWithValue("@order", order);
+                        try
+                        {
+                            con.Open();
+                            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                            sda.Fill(dt);
+                            con.Close();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Error: {ex.Message}");
+                        }
                     }
                 }
             }

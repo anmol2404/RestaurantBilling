@@ -1,4 +1,5 @@
-﻿using iText.Kernel.Pdf.Canvas.Draw;
+﻿using Google.Protobuf.WellKnownTypes;
+using iText.Kernel.Pdf.Canvas.Draw;
 using Org.BouncyCastle.Crypto.Digests;
 using System;
 using System.Collections.Generic;
@@ -34,7 +35,7 @@ namespace WindowsFormsApp1
             today = 1,
             monthly = 2,
             yearly = 3,
-            date = 4
+            searchbyordernumber = 4
         }
         public Sale()
         {
@@ -47,6 +48,7 @@ namespace WindowsFormsApp1
             YearlyCombobox.Enabled = false;
             MonthlymonthsComboBox.Enabled = false;
             MonthlyYearComboBox.Enabled = false;
+            SearchSalesTextBox.Enabled = false;
             LoadSalesDatagrid(checkbox);
             LoadComboBox();
 
@@ -62,6 +64,7 @@ namespace WindowsFormsApp1
             "Months","January", "February", "March", "April", "May", "June",
             "July", "August", "September", "October", "November", "December"
             };
+
             MonthlymonthsComboBox.Items.AddRange(monthNames);
 
             int year = 2023;
@@ -80,10 +83,6 @@ namespace WindowsFormsApp1
                 MonthlyYearComboBox.Items.Add(item.ToString());
                 YearlyCombobox.Items.Add(item.ToString());
             }
-
-            
-            
-
         }
 
         public void LoadSalesDatagrid(int checkbox, int Month=0, int Year=0)
@@ -139,7 +138,24 @@ namespace WindowsFormsApp1
                         SalesDataGridView.Columns[3].Width = 100;
                     }
                 }
-               
+                else if (checkbox == 4)
+                {
+                    DateTime dt = DateTimePicker.Value;
+                    day = dt.Day;
+                    month = dt.Month;
+                    year = dt.Year;
+                    DataTable dataTable = dbclass.getSalesData(checkbox, day, month, year);
+
+                    if (dataTable != null && dataTable.Rows.Count>0)
+                    {
+                        SalesDataGridView.DataSource = dataTable;
+                        SalesDataGridView.Columns[0].Width = 60;
+                        SalesDataGridView.Columns[1].Width = 100;
+                        SalesDataGridView.Columns[2].Width = 100;
+                        SalesDataGridView.Columns[3].Width = 100;
+                    }
+                }
+
             }
             catch (Exception ex)
             {
@@ -237,9 +253,10 @@ namespace WindowsFormsApp1
             if (TodayCheckBox.Checked == true)
             {
                 checkbox = (int)radiobutton.today;
+                resetfields();
                 DateTimePicker.Enabled = false;
-                DateTimePicker.Value = DateTime.Now;
                 LoadSalesDatagrid(checkbox);
+                
             }
         }
 
@@ -267,6 +284,7 @@ namespace WindowsFormsApp1
             if (MonthlyCheckBox.Checked == true)
             {
                 checkbox = (int)radiobutton.monthly;
+                resetfields();
                 DateTimePicker.Enabled = false;
                 YearlyCombobox.Enabled = false;
 
@@ -274,6 +292,7 @@ namespace WindowsFormsApp1
                 MonthlyYearComboBox.Enabled = true;
 
                 LoadSalesDatagrid(checkbox, Monthlymonth, Monthlyyear);
+                
             }
             else
             {
@@ -288,6 +307,7 @@ namespace WindowsFormsApp1
             if (YearlyCheckBox.Checked == true)
             {
                 checkbox = (int)radiobutton.yearly;
+                resetfields();
                 DateTimePicker.Enabled = false;
                 YearlyCombobox.Enabled = true;
                 LoadSalesDatagrid(checkbox, optional, YearlyYear);
@@ -295,6 +315,20 @@ namespace WindowsFormsApp1
             else
             {
                 YearlyCombobox.Enabled = false;
+            }
+        }
+        private void CustomRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CustomRadioButton.Checked == true)
+            {
+                checkbox = (int)radiobutton.today;
+                resetfields();
+                DateTimePicker.Enabled = true;
+                LoadSalesDatagrid(checkbox);
+            }
+            else
+            {
+                DateTimePicker.Enabled = false;
             }
         }
 
@@ -316,10 +350,50 @@ namespace WindowsFormsApp1
             LoadSalesDatagrid(checkbox, optional, YearlyYear);
         }
 
+        private void SearchByOrderNumber_CheckedChanged(object sender, EventArgs e)
+        {
+            if (SearchByOrderNumber.Checked == true)
+            {
+                SearchSalesTextBox.Enabled = true;
+                checkbox = (int)radiobutton.searchbyordernumber;
+                DataTable dt =dbclass.GetOrderNumberDetail(optional,checkbox);
+                if (dt != null)
+                {
+                    SalesDataGridView.DataSource = dt;
+                    SalesDataGridView.Columns[0].Width = 60;
+                    SalesDataGridView.Columns[1].Width = 100;
+                    SalesDataGridView.Columns[2].Width = 100;
+                    SalesDataGridView.Columns[3].Width = 100;
+                }
+            }
+            else
+            {
+                SearchSalesTextBox.Enabled = false;
+            }
+        }
+
+        private void SearchTextBox_TextChanged(object sender, EventArgs e)
+        {
+            (SalesDataGridView.DataSource as DataTable).DefaultView.RowFilter = string.Format("Convert(OrderNumber, 'System.String') LIKE '{0}%'", SearchSalesTextBox.Text);
+            if (string.IsNullOrWhiteSpace(SearchSalesTextBox.Text))
+            {
+                SearchByOrderNumber_CheckedChanged(sender, e);
+            }
+        }
+
         private void MonthlymonthsComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Monthlymonth = MonthlymonthsComboBox.SelectedIndex ;
+            Monthlymonth = MonthlymonthsComboBox.SelectedIndex;
             LoadSalesDatagrid(checkbox, Monthlymonth, Monthlyyear);
+        }
+
+        public void resetfields()
+        {
+            SearchSalesTextBox.Text = string.Empty;
+            DateTimePicker.Value = DateTime.Now;
+            MonthlymonthsComboBox.SelectedIndex = 1;
+            YearlyCombobox.SelectedIndex = 1;
+            MonthlyYearComboBox.SelectedIndex = 1;
         }
     }
 }

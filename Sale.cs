@@ -284,23 +284,6 @@ namespace WindowsFormsApp1
                 printPreviewControl1.Document = null;
             }
         }
-
-        private void OpenBilling_Click(object sender, EventArgs e)
-        {   
-            if (Application.OpenForms["Billing"] != null)
-            {
-                // If Form2 is already open, bring it to the front
-                Billing form2 = (Billing)Application.OpenForms["Billing"];
-                form2.BringToFront();
-            }
-            else
-            {
-                // If Form2 is not yet opened, instantiate it and show
-                Billing form2 = new Billing();
-                form2.Show();
-            }
-        }
-
         private void SalesDataGridView_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
             for (int i = 0; i < e.RowCount; i++)

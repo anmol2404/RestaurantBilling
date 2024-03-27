@@ -1906,18 +1906,8 @@ namespace WindowsFormsApp1
 
         private void AddUpdateOpenForm_Click(object sender, EventArgs e)
         {
-            if (Application.OpenForms["AddUpdateForm"] != null)
-            {
-                // If Form2 is already open, bring it to the front
-                AddUpdateForm form2 = (AddUpdateForm)Application.OpenForms["AddUpdateForm"];
-                form2.BringToFront();
-            }
-            else
-            {
-                // If Form2 is not yet opened, instantiate it and show
-                AddUpdateForm form2 = new AddUpdateForm();
-                form2.Show();
-            }
+            AddUpdateForm form2 = new AddUpdateForm();
+            form2 .ShowDialog();
         }
         
 
@@ -2084,24 +2074,8 @@ namespace WindowsFormsApp1
 
         private void OpenSalesWindow_Click(object sender, EventArgs e)
         {
-            //this.Hide();
-
-            //Sale form = new Sale();
-            //form.Show();
-            //form.BringToFront();
-
-            if (Application.OpenForms["Sale"] != null)
-            {
-                // If Form2 is already open, bring it to the front
-                Sale form2 = (Sale)Application.OpenForms["Sale"];
-                form2.BringToFront();
-            }
-            else
-            {
-                // If Form2 is not yet opened, instantiate it and show
                 Sale form2 = new Sale();
-                form2.Show();
-            }
+                form2.ShowDialog();
         }
 
         private void ExitButton_Click(object sender, EventArgs e)

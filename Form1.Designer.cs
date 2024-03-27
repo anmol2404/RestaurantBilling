@@ -45,9 +45,6 @@
             this.SearchTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.AddUpdateDatagrid = new System.Windows.Forms.DataGridView();
-            this.BillingButton = new System.Windows.Forms.Button();
-            this.SalesReportButton = new System.Windows.Forms.Button();
-            this.ExitButon = new System.Windows.Forms.Button();
             this.AddUpdateGroupBox.SuspendLayout();
             this.SearchGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AddUpdateDatagrid)).BeginInit();
@@ -118,7 +115,7 @@
             this.AddUpdateGroupBox.Controls.Add(this.ItemNameTextBox);
             this.AddUpdateGroupBox.Controls.Add(this.AddNewButton);
             this.AddUpdateGroupBox.Controls.Add(this.label2);
-            this.AddUpdateGroupBox.Location = new System.Drawing.Point(637, 48);
+            this.AddUpdateGroupBox.Location = new System.Drawing.Point(634, 34);
             this.AddUpdateGroupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.AddUpdateGroupBox.Name = "AddUpdateGroupBox";
             this.AddUpdateGroupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -205,7 +202,7 @@
             this.SearchGroupBox.Controls.Add(this.SearchTextBox);
             this.SearchGroupBox.Controls.Add(this.label4);
             this.SearchGroupBox.Controls.Add(this.AddUpdateDatagrid);
-            this.SearchGroupBox.Location = new System.Drawing.Point(16, 48);
+            this.SearchGroupBox.Location = new System.Drawing.Point(13, 34);
             this.SearchGroupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.SearchGroupBox.Name = "SearchGroupBox";
             this.SearchGroupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -248,51 +245,12 @@
             this.AddUpdateDatagrid.Size = new System.Drawing.Size(568, 356);
             this.AddUpdateDatagrid.TabIndex = 0;
             // 
-            // BillingButton
-            // 
-            this.BillingButton.BackColor = System.Drawing.Color.Goldenrod;
-            this.BillingButton.Location = new System.Drawing.Point(17, 2);
-            this.BillingButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.BillingButton.Name = "BillingButton";
-            this.BillingButton.Size = new System.Drawing.Size(247, 38);
-            this.BillingButton.TabIndex = 8;
-            this.BillingButton.Text = "Billing";
-            this.BillingButton.UseVisualStyleBackColor = false;
-            this.BillingButton.Click += new System.EventHandler(this.BillingButton_Click);
-            // 
-            // SalesReportButton
-            // 
-            this.SalesReportButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.SalesReportButton.Location = new System.Drawing.Point(345, 2);
-            this.SalesReportButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.SalesReportButton.Name = "SalesReportButton";
-            this.SalesReportButton.Size = new System.Drawing.Size(247, 38);
-            this.SalesReportButton.TabIndex = 9;
-            this.SalesReportButton.Text = "Sales Report";
-            this.SalesReportButton.UseVisualStyleBackColor = false;
-            this.SalesReportButton.Click += new System.EventHandler(this.SalesReportButton_Click);
-            // 
-            // ExitButon
-            // 
-            this.ExitButon.BackColor = System.Drawing.Color.IndianRed;
-            this.ExitButon.Location = new System.Drawing.Point(980, 2);
-            this.ExitButon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.ExitButon.Name = "ExitButon";
-            this.ExitButon.Size = new System.Drawing.Size(100, 38);
-            this.ExitButon.TabIndex = 10;
-            this.ExitButon.Text = "EXIT";
-            this.ExitButon.UseVisualStyleBackColor = false;
-            this.ExitButon.Click += new System.EventHandler(this.ExitButon_Click);
-            // 
             // AddUpdateForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1096, 554);
-            this.Controls.Add(this.ExitButon);
-            this.Controls.Add(this.SalesReportButton);
-            this.Controls.Add(this.BillingButton);
             this.Controls.Add(this.SearchGroupBox);
             this.Controls.Add(this.AddUpdateGroupBox);
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -329,9 +287,6 @@
         private System.Windows.Forms.TextBox FullPlatePriceTextBox;
         private System.Windows.Forms.TextBox HalfPlatePriceTextBox;
         private System.Windows.Forms.Button Clearbutton;
-        private System.Windows.Forms.Button BillingButton;
-        private System.Windows.Forms.Button SalesReportButton;
-        private System.Windows.Forms.Button ExitButon;
     }
 }
 

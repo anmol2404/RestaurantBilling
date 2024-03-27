@@ -222,7 +222,7 @@ namespace WindowsFormsApp1
                 }
                 else if (checkbox == 4)
                 {
-                    string sqlcmd = "Select OrderNumber, TableNumber as 'Table no.', Amount as 'Amount', OrderDate as 'Date' from OrderNumber";
+                    string sqlcmd = "Select OrderNumber as 'Order_No', TableNumber as 'Table no.', Amount as 'Amount', OrderDate as 'Date' from OrderNumber";
                     using (SqlCommand cmd = new SqlCommand(sqlcmd, con))
                     {
                         cmd.Parameters.AddWithValue("@order", order);

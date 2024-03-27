@@ -33,6 +33,7 @@
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.SearchByOrderNumber = new System.Windows.Forms.RadioButton();
             this.CustomRadioButton = new System.Windows.Forms.RadioButton();
             this.YearlyCombobox = new System.Windows.Forms.ComboBox();
             this.MonthlymonthsComboBox = new System.Windows.Forms.ComboBox();
@@ -46,16 +47,19 @@
             this.SearchSalesTextBox = new System.Windows.Forms.TextBox();
             this.printPreviewControl1 = new System.Windows.Forms.PrintPreviewControl();
             this.OpenBilling = new System.Windows.Forms.Button();
-            this.SearchByOrderNumber = new System.Windows.Forms.RadioButton();
             this.PrintSalesButton = new System.Windows.Forms.Button();
             this.ClearRefreshSalesButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.TotalOrdersLabel = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.TotalAmountLabel = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SalesDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // printDocument1
             // 
-            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            //this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
             // printDialog1
             // 
@@ -89,6 +93,18 @@
             this.groupBox1.Size = new System.Drawing.Size(644, 440);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // SearchByOrderNumber
+            // 
+            this.SearchByOrderNumber.AutoSize = true;
+            this.SearchByOrderNumber.Location = new System.Drawing.Point(26, 21);
+            this.SearchByOrderNumber.Name = "SearchByOrderNumber";
+            this.SearchByOrderNumber.Size = new System.Drawing.Size(148, 20);
+            this.SearchByOrderNumber.TabIndex = 12;
+            this.SearchByOrderNumber.TabStop = true;
+            this.SearchByOrderNumber.Text = "Search By Order No";
+            this.SearchByOrderNumber.UseVisualStyleBackColor = true;
+            this.SearchByOrderNumber.CheckedChanged += new System.EventHandler(this.SearchByOrderNumber_CheckedChanged);
             // 
             // CustomRadioButton
             // 
@@ -182,6 +198,7 @@
             this.SalesDataGridView.Size = new System.Drawing.Size(606, 312);
             this.SalesDataGridView.TabIndex = 3;
             this.SalesDataGridView.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.SalesDataGridView_RowsAdded);
+            this.SalesDataGridView.SelectionChanged += new System.EventHandler(this.SalesDataGridView_SelectionChanged);
             // 
             // Sno
             // 
@@ -211,7 +228,7 @@
             // 
             // printPreviewControl1
             // 
-            this.printPreviewControl1.Location = new System.Drawing.Point(729, 54);
+            this.printPreviewControl1.Location = new System.Drawing.Point(731, 54);
             this.printPreviewControl1.Name = "printPreviewControl1";
             this.printPreviewControl1.Size = new System.Drawing.Size(462, 440);
             this.printPreviewControl1.TabIndex = 4;
@@ -225,18 +242,6 @@
             this.OpenBilling.Text = "Billing";
             this.OpenBilling.UseVisualStyleBackColor = true;
             this.OpenBilling.Click += new System.EventHandler(this.OpenBilling_Click);
-            // 
-            // SearchByOrderNumber
-            // 
-            this.SearchByOrderNumber.AutoSize = true;
-            this.SearchByOrderNumber.Location = new System.Drawing.Point(26, 21);
-            this.SearchByOrderNumber.Name = "SearchByOrderNumber";
-            this.SearchByOrderNumber.Size = new System.Drawing.Size(148, 20);
-            this.SearchByOrderNumber.TabIndex = 12;
-            this.SearchByOrderNumber.TabStop = true;
-            this.SearchByOrderNumber.Text = "Search By Order No";
-            this.SearchByOrderNumber.UseVisualStyleBackColor = true;
-            this.SearchByOrderNumber.CheckedChanged += new System.EventHandler(this.SearchByOrderNumber_CheckedChanged);
             // 
             // PrintSalesButton
             // 
@@ -256,23 +261,75 @@
             this.ClearRefreshSalesButton.TabIndex = 8;
             this.ClearRefreshSalesButton.Text = "Clear/Refresh";
             this.ClearRefreshSalesButton.UseVisualStyleBackColor = true;
+            this.ClearRefreshSalesButton.Click += new System.EventHandler(this.ClearRefreshSalesButton_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(218, 12);
+            this.label1.MinimumSize = new System.Drawing.Size(150, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(159, 30);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Total Orders:";
+            // 
+            // TotalOrdersLabel
+            // 
+            this.TotalOrdersLabel.AutoSize = true;
+            this.TotalOrdersLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalOrdersLabel.Location = new System.Drawing.Point(383, 13);
+            this.TotalOrdersLabel.MinimumSize = new System.Drawing.Size(100, 0);
+            this.TotalOrdersLabel.Name = "TotalOrdersLabel";
+            this.TotalOrdersLabel.Size = new System.Drawing.Size(100, 29);
+            this.TotalOrdersLabel.TabIndex = 10;
+            this.TotalOrdersLabel.Text = "----";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(532, 12);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(108, 29);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Amount:";
+            // 
+            // TotalAmountLabel
+            // 
+            this.TotalAmountLabel.AutoSize = true;
+            this.TotalAmountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalAmountLabel.Location = new System.Drawing.Point(646, 13);
+            this.TotalAmountLabel.MinimumSize = new System.Drawing.Size(100, 0);
+            this.TotalAmountLabel.Name = "TotalAmountLabel";
+            this.TotalAmountLabel.Size = new System.Drawing.Size(100, 29);
+            this.TotalAmountLabel.TabIndex = 12;
+            this.TotalAmountLabel.Text = "----";
             // 
             // Sale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1233, 520);
+            this.Controls.Add(this.TotalAmountLabel);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.TotalOrdersLabel);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.ClearRefreshSalesButton);
             this.Controls.Add(this.PrintSalesButton);
             this.Controls.Add(this.OpenBilling);
             this.Controls.Add(this.printPreviewControl1);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
             this.Name = "Sale";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sale";
+            this.Load += new System.EventHandler(this.Sale_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SalesDataGridView)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -297,5 +354,9 @@
         private System.Windows.Forms.RadioButton SearchByOrderNumber;
         private System.Windows.Forms.Button PrintSalesButton;
         private System.Windows.Forms.Button ClearRefreshSalesButton;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label TotalOrdersLabel;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label TotalAmountLabel;
     }
 }

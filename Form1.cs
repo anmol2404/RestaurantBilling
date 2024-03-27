@@ -223,6 +223,7 @@ namespace WindowsFormsApp1
             billing.ShowDialog();
 
             this.Close();
+            this.Hide();
         }
     }
 }

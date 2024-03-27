@@ -30,49 +30,49 @@ namespace WindowsFormsApp1
     {
         private dbclass dbclass;
 
-        public int itemID;
-        public string Itemname;
-        public int hprice;
-        public int fprice;
+        private int itemID;
+        private string Itemname;
+        private int hprice;
+        private int fprice;
 
-        public int table2itemID;
-        public string table2Itemname;
-        public int table2hprice;
-        public int table2fprice;
+        private int table2itemID;
+        private string table2Itemname;
+        private int table2hprice;
+        private int table2fprice;
 
-        public int table3itemID;
-        public string table3Itemname;
-        public int table3hprice;
-        public int table3fprice;
+        private int table3itemID;
+        private string table3Itemname;
+        private int table3hprice;
+        private int table3fprice;
 
-        public int table4itemID;
-        public string table4Itemname;
-        public int table4hprice;
-        public int table4fprice;
+        private int table4itemID;
+        private string table4Itemname;
+        private int table4hprice;
+        private int table4fprice;
 
-        public int table5itemID;
-        public string table5Itemname;
-        public int table5hprice;
-        public int table5fprice;
+        private int table5itemID;
+        private string table5Itemname;
+        private int table5hprice;
+        private int table5fprice;
 
-        public int table6itemID;
-        public string table6Itemname;
-        public int table6hprice;
-        public int table6fprice;
+        private int table6itemID;
+        private string table6Itemname;
+        private int table6hprice;
+        private int table6fprice;
 
-        public int table7itemID;
-        public string table7Itemname;
-        public int table7hprice;
-        public int table7fprice;
+        private int table7itemID;
+        private string table7Itemname;
+        private int table7hprice;
+        private int table7fprice;
 
-        public int table8itemID;
-        public string table8Itemname;
-        public int table8hprice;
-        public int table8fprice;
+        private int table8itemID;
+        private string table8Itemname;
+        private int table8hprice;
+        private int table8fprice;
 
-        public string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+        private string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
 
-        public int x, y;
+        private int x, y;
 
         public Billing()
         {
@@ -80,7 +80,7 @@ namespace WindowsFormsApp1
 
             dbclass = new dbclass();
 
-            CreateFolder();
+            //CreateFolder();
             GetDefaultPrinterName();
 
             Linkcombobox();
@@ -121,18 +121,18 @@ namespace WindowsFormsApp1
         }
 
 
-        public string CreateFolder()
-        {
-            string folderpath = System.IO.Path.Combine(desktopPath, "ORDERS");
+        //public string CreateFolder()
+        //{
+        //    string folderpath = System.IO.Path.Combine(desktopPath, "ORDERS");
 
-            if (!Directory.Exists(folderpath))
-            {
-                Directory.CreateDirectory(folderpath);
+        //    if (!Directory.Exists(folderpath))
+        //    {
+        //        Directory.CreateDirectory(folderpath);
 
-                return folderpath;
-            }
-            return folderpath;
-        }
+        //        return folderpath;
+        //    }
+        //    return folderpath;
+        //}
 
         private string GetDefaultPrinterName()
         {
@@ -349,7 +349,8 @@ namespace WindowsFormsApp1
 
                         }
                     }
-                    Createpdf(Ordernumber, currentdate, tablenumber, TableOneDatagrid, amount);
+                    //Createpdf(Ordernumber, currentdate, tablenumber, TableOneDatagrid, amount);
+                    PrintPdf();
                     MessageBox.Show("Order Saved Successfully with Order number: " + Ordernumber, "Saved", MessageBoxButtons.OK);
                 }
             }
@@ -563,7 +564,8 @@ namespace WindowsFormsApp1
 
                         }
                     }
-                    Createpdf(Ordernumber, currentdate, tablenumber, Table2DataGrid, amount);
+                    //Createpdf(Ordernumber, currentdate, tablenumber, Table2DataGrid, amount);
+                    PrintPdf();
                     MessageBox.Show("Order Saved Successfully with Order number: " + Ordernumber, "Saved", MessageBoxButtons.OK);
                 }
             }
@@ -778,7 +780,8 @@ namespace WindowsFormsApp1
 
                         }
                     }
-                    Createpdf(Ordernumber, currentdate, tablenumber, Table3Datagrid, amount);
+                    //Createpdf(Ordernumber, currentdate, tablenumber, Table3Datagrid, amount);
+                    PrintPdf();
                     MessageBox.Show("Order Saved Successfully with Order number: " + Ordernumber, "Saved", MessageBoxButtons.OK);
                 }
             }
@@ -1000,7 +1003,8 @@ namespace WindowsFormsApp1
 
                         }
                     }
-                    Createpdf(Ordernumber, currentdate, tablenumber, Table4DataGrid, amount);
+                    //Createpdf(Ordernumber, currentdate, tablenumber, Table4DataGrid, amount);
+                    PrintPdf();
                     MessageBox.Show("Order Saved Successfully with Order number: " + Ordernumber, "Saved", MessageBoxButtons.OK);
                 }
             }
@@ -1222,7 +1226,8 @@ namespace WindowsFormsApp1
 
                         }
                     }
-                    Createpdf(Ordernumber, currentdate, tablenumber, Table5Datagrid, amount);
+                    //Createpdf(Ordernumber, currentdate, tablenumber, Table5Datagrid, amount);
+                    PrintPdf();
                     MessageBox.Show("Order Saved Successfully with Order number: " + Ordernumber, "Saved", MessageBoxButtons.OK);
                 }
             }
@@ -1444,7 +1449,8 @@ namespace WindowsFormsApp1
 
                         }
                     }
-                    Createpdf(Ordernumber, currentdate, tablenumber, Table6Datagrid, amount);
+                    //Createpdf(Ordernumber, currentdate, tablenumber, Table6Datagrid, amount);
+                    PrintPdf();
                     MessageBox.Show("Order Saved Successfully with Order number: " + Ordernumber, "Saved", MessageBoxButtons.OK);
                 }
             }
@@ -1666,7 +1672,8 @@ namespace WindowsFormsApp1
 
                         }
                     }
-                    Createpdf(Ordernumber, currentdate, tablenumber, Table7Datagrid, amount);
+                    //Createpdf(Ordernumber, currentdate, tablenumber, Table7Datagrid, amount);
+                    PrintPdf();
                     MessageBox.Show("Order Saved Successfully with Order number: " + Ordernumber, "Saved", MessageBoxButtons.OK);
                 }
             }
@@ -1888,8 +1895,8 @@ namespace WindowsFormsApp1
                         }
                     }
 
-                    Createpdf(Ordernumber, currentdate, tablenumber, Table8Datagrid, amount);
-
+                    //Createpdf(Ordernumber, currentdate, tablenumber, Table8Datagrid, amount);
+                    PrintPdf();
                     MessageBox.Show("Order Saved Successfully with Order number: " + Ordernumber, "Saved", MessageBoxButtons.OK);
                 }
             }
@@ -1899,159 +1906,169 @@ namespace WindowsFormsApp1
 
         private void AddUpdateOpenForm_Click(object sender, EventArgs e)
         {
-            AddUpdateForm form = new AddUpdateForm();
-            form.ShowDialog();
+            if (Application.OpenForms["AddUpdateForm"] != null)
+            {
+                // If Form2 is already open, bring it to the front
+                AddUpdateForm form2 = (AddUpdateForm)Application.OpenForms["AddUpdateForm"];
+                form2.BringToFront();
+            }
+            else
+            {
+                // If Form2 is not yet opened, instantiate it and show
+                AddUpdateForm form2 = new AddUpdateForm();
+                form2.Show();
+            }
         }
         
 
-        private void Createpdf(int OrderNumber, DateTime Currentdate, string TableName, DataGridView TableDataGrid, int TableAmount)
-        {
-            try
-            {
-                string folderpath = CreateFolder();
-                string pdfname = OrderNumber + ".pdf";
+        //private void Createpdf(int OrderNumber, DateTime Currentdate, string TableName, DataGridView TableDataGrid, int TableAmount)
+        //{
+        //    try
+        //    {
+        //        string folderpath = CreateFolder();
+        //        string pdfname = OrderNumber + ".pdf";
 
-                string pdfpath = System.IO.Path.Combine(folderpath, pdfname);
+        //        string pdfpath = System.IO.Path.Combine(folderpath, pdfname);
 
-                using (PdfWriter writer = new PdfWriter(pdfpath))
-                {
-                    using (iText.Kernel.Pdf.PdfDocument pdf = new iText.Kernel.Pdf.PdfDocument(writer))
-                    {
-                        Document document = new Document(pdf);
+        //        using (PdfWriter writer = new PdfWriter(pdfpath))
+        //        {
+        //            using (iText.Kernel.Pdf.PdfDocument pdf = new iText.Kernel.Pdf.PdfDocument(writer))
+        //            {
+        //                Document document = new Document(pdf);
 
-                        Paragraph header = new Paragraph("Tirupati Vaishno Dhaba")
-                            .SetTextAlignment(TextAlignment.CENTER)
-                            .SetFontSize(20);
-                        header.SetWidth(UnitValue.CreatePercentValue(100));
-                        document.Add(header);
+        //                Paragraph header = new Paragraph("Tirupati Vaishno Dhaba")
+        //                    .SetTextAlignment(TextAlignment.CENTER)
+        //                    .SetFontSize(20);
+        //                header.SetWidth(UnitValue.CreatePercentValue(100));
+        //                document.Add(header);
 
-                        Paragraph address = new Paragraph("JawalaJi road, P.W.D Rest House,")
-                            .SetTextAlignment(TextAlignment.CENTER)
-                            .SetFontSize(15);
-                        address.SetWidth(UnitValue.CreatePercentValue(100));
-                        Paragraph address2 = new Paragraph("Nadaun Distt. Hamirpur, H.P.")
-                            .SetTextAlignment(TextAlignment.CENTER)
-                            .SetFontSize(15);
-                        address2.SetWidth(UnitValue.CreatePercentValue(100));
-                        document.Add(address);
-                        document.Add(address2);
+        //                Paragraph address = new Paragraph("JawalaJi road, P.W.D Rest House,")
+        //                    .SetTextAlignment(TextAlignment.CENTER)
+        //                    .SetFontSize(15);
+        //                address.SetWidth(UnitValue.CreatePercentValue(100));
+        //                Paragraph address2 = new Paragraph("Nadaun Distt. Hamirpur, H.P.")
+        //                    .SetTextAlignment(TextAlignment.CENTER)
+        //                    .SetFontSize(15);
+        //                address2.SetWidth(UnitValue.CreatePercentValue(100));
+        //                document.Add(address);
+        //                document.Add(address2);
 
-                        Paragraph contact = new Paragraph("Contact: 01972-313228")
-                            .SetTextAlignment(TextAlignment.CENTER)
-                            .SetFontSize(15);
-                        contact.SetWidth(UnitValue.CreatePercentValue(100));
-                        document.Add(contact);
+        //                Paragraph contact = new Paragraph("Contact: 01972-313228")
+        //                    .SetTextAlignment(TextAlignment.CENTER)
+        //                    .SetFontSize(15);
+        //                contact.SetWidth(UnitValue.CreatePercentValue(100));
+        //                document.Add(contact);
 
-                        LineSeparator ls = new LineSeparator(new DottedLine());
-                        ls.SetWidth(UnitValue.CreatePercentValue(100));
-                        document.Add(ls);
+        //                LineSeparator ls = new LineSeparator(new DottedLine());
+        //                ls.SetWidth(UnitValue.CreatePercentValue(100));
+        //                document.Add(ls);
 
-                        Paragraph tableno = new Paragraph("Table No.: " + TableName)
-                            .SetTextAlignment(TextAlignment.LEFT)
-                            .SetFontSize(15);
-                        tableno.SetWidth(UnitValue.CreatePercentValue(100));
-                        document.Add(tableno);
+        //                Paragraph tableno = new Paragraph("Table No.: " + TableName)
+        //                    .SetTextAlignment(TextAlignment.LEFT)
+        //                    .SetFontSize(15);
+        //                tableno.SetWidth(UnitValue.CreatePercentValue(100));
+        //                document.Add(tableno);
 
-                        Paragraph date = new Paragraph("Date: " + Currentdate)
-                           .SetTextAlignment(TextAlignment.LEFT)
-                           .SetFontSize(15);
-                        date.SetWidth(UnitValue.CreatePercentValue(100));
-                        document.Add(date);
+        //                Paragraph date = new Paragraph("Date: " + Currentdate)
+        //                   .SetTextAlignment(TextAlignment.LEFT)
+        //                   .SetFontSize(15);
+        //                date.SetWidth(UnitValue.CreatePercentValue(100));
+        //                document.Add(date);
 
-                        LineSeparator ls2 = new LineSeparator(new SolidLine());
-                        ls2.SetWidth(UnitValue.CreatePercentValue(100));
-                        document.Add(ls2);
+        //                LineSeparator ls2 = new LineSeparator(new SolidLine());
+        //                ls2.SetWidth(UnitValue.CreatePercentValue(100));
+        //                document.Add(ls2);
 
-                        Paragraph blank = new Paragraph("")
-                           .SetTextAlignment(TextAlignment.LEFT)
-                           .SetFontSize(15);
-                        blank.SetWidth(UnitValue.CreatePercentValue(100));
-                        document.Add(blank);
+        //                Paragraph blank = new Paragraph("")
+        //                   .SetTextAlignment(TextAlignment.LEFT)
+        //                   .SetFontSize(15);
+        //                blank.SetWidth(UnitValue.CreatePercentValue(100));
+        //                document.Add(blank);
 
-                        Table table = new Table(4, false);
-                        table.SetWidth(UnitValue.CreatePercentValue(100));
-                        Cell particulars = new Cell(1, 1)
-                          .SetTextAlignment(TextAlignment.CENTER)
-                          .Add(new Paragraph("Particulars"));
+        //                Table table = new Table(4, false);
+        //                table.SetWidth(UnitValue.CreatePercentValue(100));
+        //                Cell particulars = new Cell(1, 1)
+        //                  .SetTextAlignment(TextAlignment.CENTER)
+        //                  .Add(new Paragraph("Particulars"));
 
-                        Cell qty = new Cell(1, 1)
-                          .SetTextAlignment(TextAlignment.CENTER)
-                          .Add(new Paragraph("Qty"));
+        //                Cell qty = new Cell(1, 1)
+        //                  .SetTextAlignment(TextAlignment.CENTER)
+        //                  .Add(new Paragraph("Qty"));
 
-                        Cell price = new Cell(1, 1)
-                          .SetTextAlignment(TextAlignment.CENTER)
-                          .Add(new Paragraph("Price"));
+        //                Cell price = new Cell(1, 1)
+        //                  .SetTextAlignment(TextAlignment.CENTER)
+        //                  .Add(new Paragraph("Price"));
 
-                        Cell Particularsamount = new Cell(1, 1)
-                          .SetTextAlignment(TextAlignment.CENTER)
-                          .Add(new Paragraph("Amount"));
+        //                Cell Particularsamount = new Cell(1, 1)
+        //                  .SetTextAlignment(TextAlignment.CENTER)
+        //                  .Add(new Paragraph("Amount"));
 
-                        table.AddCell(particulars);
-                        table.AddCell(qty);
-                        table.AddCell(price);
-                        table.AddCell(Particularsamount);
+        //                table.AddCell(particulars);
+        //                table.AddCell(qty);
+        //                table.AddCell(price);
+        //                table.AddCell(Particularsamount);
 
 
-                        foreach (DataGridViewRow row in TableDataGrid.Rows)
-                        {
-                            if (!row.IsNewRow)
-                            {
-                                int rowid = Convert.ToInt32(row.Cells[1].Value.ToString());
-                                string rowname = row.Cells[2].Value.ToString();
-                                int rowquantity = Convert.ToInt32(row.Cells[3].Value.ToString());
-                                int rowprice = Convert.ToInt32(row.Cells[4].Value.ToString());
-                                int rowamount = Convert.ToInt32(row.Cells[5].Value.ToString());
+        //                foreach (DataGridViewRow row in TableDataGrid.Rows)
+        //                {
+        //                    if (!row.IsNewRow)
+        //                    {
+        //                        int rowid = Convert.ToInt32(row.Cells[1].Value.ToString());
+        //                        string rowname = row.Cells[2].Value.ToString();
+        //                        int rowquantity = Convert.ToInt32(row.Cells[3].Value.ToString());
+        //                        int rowprice = Convert.ToInt32(row.Cells[4].Value.ToString());
+        //                        int rowamount = Convert.ToInt32(row.Cells[5].Value.ToString());
 
-                                Cell tableitemname = new Cell(1, 1)
-                                  .SetTextAlignment(TextAlignment.CENTER)
-                                  .Add(new Paragraph(rowname));
+        //                        Cell tableitemname = new Cell(1, 1)
+        //                          .SetTextAlignment(TextAlignment.CENTER)
+        //                          .Add(new Paragraph(rowname));
 
-                                Cell tableitemqty = new Cell(1, 1)
-                                  .SetTextAlignment(TextAlignment.CENTER)
-                                  .Add(new Paragraph(rowquantity.ToString()));
+        //                        Cell tableitemqty = new Cell(1, 1)
+        //                          .SetTextAlignment(TextAlignment.CENTER)
+        //                          .Add(new Paragraph(rowquantity.ToString()));
 
-                                Cell tableitemprice = new Cell(1, 1)
-                                  .SetTextAlignment(TextAlignment.CENTER)
-                                  .Add(new Paragraph(rowprice.ToString()));
+        //                        Cell tableitemprice = new Cell(1, 1)
+        //                          .SetTextAlignment(TextAlignment.CENTER)
+        //                          .Add(new Paragraph(rowprice.ToString()));
 
-                                Cell tableitemamount = new Cell(1, 1)
-                                  .SetTextAlignment(TextAlignment.CENTER)
-                                  .Add(new Paragraph(rowamount.ToString()));
+        //                        Cell tableitemamount = new Cell(1, 1)
+        //                          .SetTextAlignment(TextAlignment.CENTER)
+        //                          .Add(new Paragraph(rowamount.ToString()));
 
-                                table.AddCell(tableitemname);
-                                table.AddCell(tableitemqty);
-                                table.AddCell(tableitemprice);
-                                table.AddCell(tableitemamount);
-                            }
-                        }
-                        document.Add(table);
-                        document.Add(blank);
+        //                        table.AddCell(tableitemname);
+        //                        table.AddCell(tableitemqty);
+        //                        table.AddCell(tableitemprice);
+        //                        table.AddCell(tableitemamount);
+        //                    }
+        //                }
+        //                document.Add(table);
+        //                document.Add(blank);
 
-                        Paragraph totalamount = new Paragraph("Total: Rs." + TableAmount +"/-")
-                           .SetTextAlignment(TextAlignment.RIGHT)
-                           .SetFontSize(15);
-                        totalamount.SetWidth(UnitValue.CreatePercentValue(100));
-                        document.Add(totalamount);
-                        document.Add(blank);
+        //                Paragraph totalamount = new Paragraph("Total: Rs." + TableAmount +"/-")
+        //                   .SetTextAlignment(TextAlignment.RIGHT)
+        //                   .SetFontSize(15);
+        //                totalamount.SetWidth(UnitValue.CreatePercentValue(100));
+        //                document.Add(totalamount);
+        //                document.Add(blank);
 
-                        document.Add(ls2);
+        //                document.Add(ls2);
 
-                        Paragraph thankyou = new Paragraph("Thank You")
-                          .SetTextAlignment(TextAlignment.CENTER)
-                          .SetFontSize(15);
-                        thankyou.SetWidth(UnitValue.CreatePercentValue(100));
-                        document.Add(thankyou);
-                        document.Close();
-                    }
-                }
-                PrintPdf();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error on printing: {ex.Message}");
-                throw;
-            }
-        }
+        //                Paragraph thankyou = new Paragraph("Thank You")
+        //                  .SetTextAlignment(TextAlignment.CENTER)
+        //                  .SetFontSize(15);
+        //                thankyou.SetWidth(UnitValue.CreatePercentValue(100));
+        //                document.Add(thankyou);
+        //                document.Close();
+        //            }
+        //        }
+        //        PrintPdf();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show($"Error on printing: {ex.Message}");
+        //        throw;
+        //    }
+        //}
 
         public void PrintPdf()
         {
@@ -2061,14 +2078,101 @@ namespace WindowsFormsApp1
                 printPreviewDialog1.Document = printDocument1;
                 printDocument1.DefaultPageSettings.PaperSize = new PaperSize("custom", 285, 700);
                 //printPreviewDialog1.ShowDialog();
-                //printDocument1.Print();
+                printDocument1.Print();
             }
         }
 
         private void OpenSalesWindow_Click(object sender, EventArgs e)
         {
-            Sale form = new Sale();
-            form.ShowDialog();
+            //this.Hide();
+
+            //Sale form = new Sale();
+            //form.Show();
+            //form.BringToFront();
+
+            if (Application.OpenForms["Sale"] != null)
+            {
+                // If Form2 is already open, bring it to the front
+                Sale form2 = (Sale)Application.OpenForms["Sale"];
+                form2.BringToFront();
+            }
+            else
+            {
+                // If Form2 is not yet opened, instantiate it and show
+                Sale form2 = new Sale();
+                form2.Show();
+            }
+        }
+
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void ClearRefreshButton_Click(object sender, EventArgs e)
+        {
+            Linkcombobox();
+            Table2Linkcombobox();
+            Table3Linkcombobox();
+            Table4Linkcombobox();
+            Table5Linkcombobox();
+            Table6Linkcombobox();
+            Table7Linkcombobox();
+            Table8Linkcombobox();
+
+            TotalTextBox.Enabled = false;
+            Table2TotalTextBox.Enabled = false;
+            Table3TotalTextBox.Enabled = false;
+            Table4TotalTextBox.Enabled = false;
+            Table5TotalTextBox.Enabled = false;
+            Table6TotalTextBox.Enabled = false;
+            Table7TotalTextBox.Enabled = false;
+            Table8TotalTextBox.Enabled = false;
+
+            RemoveItembutton.Enabled = false;
+            Table2RemoveButton.Enabled = false;
+            Table3RemoveButton.Enabled = false;
+            Table4RemoveButton.Enabled = false;
+            Table5RemoveButton.Enabled = false;
+            Table6RemoveButton.Enabled = false;
+            Table7RemoveButton.Enabled = false;
+            Table8RemoveButton.Enabled = false;
+
+            SavePrintButton.Enabled = false;
+            Table2Savebutton.Enabled = false;
+            Table3SaveButton.Enabled = false;
+            Table4SaveButton.Enabled = false;
+            Table5SaveButton.Enabled = false;
+            Table6SaveButton.Enabled = false;
+            Table7SaveButton.Enabled = false;
+            Table8SaveButton.Enabled = false;
+
+            TableOneDatagrid.Rows.Clear();
+            Table2DataGrid.Rows.Clear();
+            Table3Datagrid.Rows.Clear();
+            Table4DataGrid.Rows.Clear();
+            Table5Datagrid.Rows.Clear();
+            Table6Datagrid.Rows.Clear();
+            Table7Datagrid.Rows.Clear();
+            Table8Datagrid.Rows.Clear();
+
+            Qtytextbox.Value = 1;
+            Table2QuantityTextbox.Value = 1;
+            Table3QuantityTextBox.Value = 1;
+            Table4QuantityTextBox.Value = 1;
+            Table5QuantityTextbox.Value = 1;
+            Table6QuantityTextBox.Value = 1;
+            Table7QuantityTextBox.Value = 1;
+            Table8QuantityTextBox.Value = 1;
+
+            TotalTextBox.Text = string.Empty;
+            Table2TotalTextBox.Text = string.Empty;
+            Table3TotalTextBox.Text = string.Empty;
+            Table3TotalTextBox.Text = string.Empty;
+            Table4TotalTextBox.Text = string.Empty;
+            TotalTextBox.Text = string.Empty;
+            TotalTextBox.Text = string.Empty;
+            TotalTextBox.Text = string.Empty;
         }
 
         private void printDocument1_PrintPage(object sender, PrintPageEventArgs e)

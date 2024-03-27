@@ -218,12 +218,39 @@ namespace WindowsFormsApp1
 
         private void BillingButton_Click(object sender, EventArgs e)
         {
-            Billing billing = new Billing();
+            if (Application.OpenForms["Billing"] != null)
+            {
+                // If Form2 is already open, bring it to the front
+                Billing form2 = (Billing)Application.OpenForms["Billing"];
+                form2.BringToFront();
+            }
+            else
+            {
+                // If Form2 is not yet opened, instantiate it and show
+                Billing form2 = new Billing();
+                form2.Show();
+            }
+        }
 
-            billing.ShowDialog();
+        private void ExitButon_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
 
-            this.Close();
-            this.Hide();
+        private void SalesReportButton_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms["Sale"] != null)
+            {
+                // If Form2 is already open, bring it to the front
+                Sale form2 = (Sale)Application.OpenForms["Sale"];
+                form2.BringToFront();
+            }
+            else
+            {
+                // If Form2 is not yet opened, instantiate it and show
+                Sale form2 = new Sale();
+                form2.Show();
+            }
         }
     }
 }

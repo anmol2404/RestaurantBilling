@@ -28,10 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sale));
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.printDialog1 = new System.Windows.Forms.PrintDialog();
-            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.SearchByOrderNumber = new System.Windows.Forms.RadioButton();
             this.CustomRadioButton = new System.Windows.Forms.RadioButton();
@@ -57,26 +54,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.SalesDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // printDocument1
-            // 
-            //this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
-            // 
-            // printDialog1
-            // 
-            this.printDialog1.UseEXDialog = true;
-            // 
-            // printPreviewDialog1
-            // 
-            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
-            this.printPreviewDialog1.Enabled = true;
-            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
-            this.printPreviewDialog1.Name = "printPreviewDialog1";
-            this.printPreviewDialog1.Visible = false;
-            // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.groupBox1.Controls.Add(this.SearchByOrderNumber);
             this.groupBox1.Controls.Add(this.CustomRadioButton);
             this.groupBox1.Controls.Add(this.YearlyCombobox);
@@ -235,32 +215,35 @@
             // 
             // OpenBilling
             // 
+            this.OpenBilling.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.OpenBilling.Location = new System.Drawing.Point(12, 12);
             this.OpenBilling.Name = "OpenBilling";
             this.OpenBilling.Size = new System.Drawing.Size(177, 36);
             this.OpenBilling.TabIndex = 5;
             this.OpenBilling.Text = "Billing";
-            this.OpenBilling.UseVisualStyleBackColor = true;
+            this.OpenBilling.UseVisualStyleBackColor = false;
             this.OpenBilling.Click += new System.EventHandler(this.OpenBilling_Click);
             // 
             // PrintSalesButton
             // 
+            this.PrintSalesButton.BackColor = System.Drawing.Color.YellowGreen;
             this.PrintSalesButton.Location = new System.Drawing.Point(994, 12);
             this.PrintSalesButton.Name = "PrintSalesButton";
             this.PrintSalesButton.Size = new System.Drawing.Size(177, 36);
             this.PrintSalesButton.TabIndex = 7;
             this.PrintSalesButton.Text = "Print";
-            this.PrintSalesButton.UseVisualStyleBackColor = true;
+            this.PrintSalesButton.UseVisualStyleBackColor = false;
             this.PrintSalesButton.Click += new System.EventHandler(this.PrintSalesButton_Click);
             // 
             // ClearRefreshSalesButton
             // 
+            this.ClearRefreshSalesButton.BackColor = System.Drawing.Color.Khaki;
             this.ClearRefreshSalesButton.Location = new System.Drawing.Point(811, 12);
             this.ClearRefreshSalesButton.Name = "ClearRefreshSalesButton";
             this.ClearRefreshSalesButton.Size = new System.Drawing.Size(177, 36);
             this.ClearRefreshSalesButton.TabIndex = 8;
             this.ClearRefreshSalesButton.Text = "Clear/Refresh";
-            this.ClearRefreshSalesButton.UseVisualStyleBackColor = true;
+            this.ClearRefreshSalesButton.UseVisualStyleBackColor = false;
             this.ClearRefreshSalesButton.Click += new System.EventHandler(this.ClearRefreshSalesButton_Click);
             // 
             // label1
@@ -310,6 +293,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1233, 520);
             this.Controls.Add(this.TotalAmountLabel);
             this.Controls.Add(this.label3);
@@ -335,8 +319,6 @@
 
         #endregion
         private System.Drawing.Printing.PrintDocument printDocument1;
-        private System.Windows.Forms.PrintDialog printDialog1;
-        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DateTimePicker DateTimePicker;
         private System.Windows.Forms.TextBox SearchSalesTextBox;

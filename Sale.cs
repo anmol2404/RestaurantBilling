@@ -286,13 +286,19 @@ namespace WindowsFormsApp1
         }
 
         private void OpenBilling_Click(object sender, EventArgs e)
-        {
-            Billing form = new Billing();
-            form.ShowDialog();
-
-            Sale sale = new Sale();
-            sale.Close();
-            sale.Hide();
+        {   
+            if (Application.OpenForms["Billing"] != null)
+            {
+                // If Form2 is already open, bring it to the front
+                Billing form2 = (Billing)Application.OpenForms["Billing"];
+                form2.BringToFront();
+            }
+            else
+            {
+                // If Form2 is not yet opened, instantiate it and show
+                Billing form2 = new Billing();
+                form2.Show();
+            }
         }
 
         private void SalesDataGridView_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
@@ -475,7 +481,10 @@ namespace WindowsFormsApp1
 
         private void PrintSalesButton_Click(object sender, EventArgs e)
         {
-
+            if (printPreviewControl1.Document != null)
+            {
+                printPreviewControl1.Document.Print();
+            }
         }
 
         private void ClearRefreshSalesButton_Click(object sender, EventArgs e)

@@ -46,8 +46,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.AddUpdateDatagrid = new System.Windows.Forms.DataGridView();
             this.BillingButton = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.SalesReportButton = new System.Windows.Forms.Button();
+            this.ExitButon = new System.Windows.Forms.Button();
             this.AddUpdateGroupBox.SuspendLayout();
             this.SearchGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AddUpdateDatagrid)).BeginInit();
@@ -55,35 +55,39 @@
             // 
             // ItemNameTextBox
             // 
-            this.ItemNameTextBox.Location = new System.Drawing.Point(118, 43);
+            this.ItemNameTextBox.Location = new System.Drawing.Point(157, 53);
+            this.ItemNameTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ItemNameTextBox.Name = "ItemNameTextBox";
-            this.ItemNameTextBox.Size = new System.Drawing.Size(122, 20);
+            this.ItemNameTextBox.Size = new System.Drawing.Size(161, 22);
             this.ItemNameTextBox.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(41, 46);
+            this.label1.Location = new System.Drawing.Point(55, 57);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 13);
+            this.label1.Size = new System.Drawing.Size(72, 16);
             this.label1.TabIndex = 2;
             this.label1.Text = "Item Name";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 95);
+            this.label2.Location = new System.Drawing.Point(27, 117);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 13);
+            this.label2.Size = new System.Drawing.Size(98, 16);
             this.label2.TabIndex = 3;
             this.label2.Text = "Half plate Price";
             // 
             // AddNewButton
             // 
             this.AddNewButton.BackColor = System.Drawing.Color.PaleGreen;
-            this.AddNewButton.Location = new System.Drawing.Point(23, 200);
+            this.AddNewButton.Location = new System.Drawing.Point(31, 246);
+            this.AddNewButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.AddNewButton.Name = "AddNewButton";
-            this.AddNewButton.Size = new System.Drawing.Size(123, 59);
+            this.AddNewButton.Size = new System.Drawing.Size(164, 73);
             this.AddNewButton.TabIndex = 3;
             this.AddNewButton.Text = "ADD NEW";
             this.AddNewButton.UseVisualStyleBackColor = false;
@@ -92,9 +96,10 @@
             // UpdateButton
             // 
             this.UpdateButton.BackColor = System.Drawing.Color.Gold;
-            this.UpdateButton.Location = new System.Drawing.Point(169, 200);
+            this.UpdateButton.Location = new System.Drawing.Point(225, 246);
+            this.UpdateButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.UpdateButton.Name = "UpdateButton";
-            this.UpdateButton.Size = new System.Drawing.Size(123, 59);
+            this.UpdateButton.Size = new System.Drawing.Size(164, 73);
             this.UpdateButton.TabIndex = 4;
             this.UpdateButton.Text = "UPDATE";
             this.UpdateButton.UseVisualStyleBackColor = false;
@@ -113,18 +118,21 @@
             this.AddUpdateGroupBox.Controls.Add(this.ItemNameTextBox);
             this.AddUpdateGroupBox.Controls.Add(this.AddNewButton);
             this.AddUpdateGroupBox.Controls.Add(this.label2);
-            this.AddUpdateGroupBox.Location = new System.Drawing.Point(478, 39);
+            this.AddUpdateGroupBox.Location = new System.Drawing.Point(637, 48);
+            this.AddUpdateGroupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.AddUpdateGroupBox.Name = "AddUpdateGroupBox";
-            this.AddUpdateGroupBox.Size = new System.Drawing.Size(332, 390);
+            this.AddUpdateGroupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AddUpdateGroupBox.Size = new System.Drawing.Size(443, 480);
             this.AddUpdateGroupBox.TabIndex = 6;
             this.AddUpdateGroupBox.TabStop = false;
             // 
             // Clearbutton
             // 
             this.Clearbutton.BackColor = System.Drawing.Color.Silver;
-            this.Clearbutton.Location = new System.Drawing.Point(23, 275);
+            this.Clearbutton.Location = new System.Drawing.Point(31, 338);
+            this.Clearbutton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Clearbutton.Name = "Clearbutton";
-            this.Clearbutton.Size = new System.Drawing.Size(123, 59);
+            this.Clearbutton.Size = new System.Drawing.Size(164, 73);
             this.Clearbutton.TabIndex = 11;
             this.Clearbutton.Text = "Clear / Refresh";
             this.Clearbutton.UseVisualStyleBackColor = false;
@@ -132,42 +140,47 @@
             // 
             // FullPlatePriceTextBox
             // 
-            this.FullPlatePriceTextBox.Location = new System.Drawing.Point(118, 138);
+            this.FullPlatePriceTextBox.Location = new System.Drawing.Point(157, 170);
+            this.FullPlatePriceTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.FullPlatePriceTextBox.Name = "FullPlatePriceTextBox";
-            this.FullPlatePriceTextBox.Size = new System.Drawing.Size(122, 20);
+            this.FullPlatePriceTextBox.Size = new System.Drawing.Size(161, 22);
             this.FullPlatePriceTextBox.TabIndex = 2;
             // 
             // HalfPlatePriceTextBox
             // 
-            this.HalfPlatePriceTextBox.Location = new System.Drawing.Point(118, 92);
+            this.HalfPlatePriceTextBox.Location = new System.Drawing.Point(157, 113);
+            this.HalfPlatePriceTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.HalfPlatePriceTextBox.Name = "HalfPlatePriceTextBox";
-            this.HalfPlatePriceTextBox.Size = new System.Drawing.Size(122, 20);
+            this.HalfPlatePriceTextBox.Size = new System.Drawing.Size(161, 22);
             this.HalfPlatePriceTextBox.TabIndex = 1;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(23, 141);
+            this.label5.Location = new System.Drawing.Point(31, 174);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 13);
+            this.label5.Size = new System.Drawing.Size(95, 16);
             this.label5.TabIndex = 10;
             this.label5.Text = "Full plate Price";
             // 
             // ItemIDLabel
             // 
             this.ItemIDLabel.AutoSize = true;
-            this.ItemIDLabel.Location = new System.Drawing.Point(275, 16);
+            this.ItemIDLabel.Location = new System.Drawing.Point(367, 20);
+            this.ItemIDLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ItemIDLabel.Name = "ItemIDLabel";
-            this.ItemIDLabel.Size = new System.Drawing.Size(21, 13);
+            this.ItemIDLabel.Size = new System.Drawing.Size(23, 16);
             this.ItemIDLabel.TabIndex = 7;
             this.ItemIDLabel.Text = "ID:";
             // 
             // EditButton
             // 
             this.EditButton.BackColor = System.Drawing.Color.Orange;
-            this.EditButton.Location = new System.Drawing.Point(6, 356);
+            this.EditButton.Location = new System.Drawing.Point(8, 438);
+            this.EditButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.EditButton.Name = "EditButton";
-            this.EditButton.Size = new System.Drawing.Size(203, 28);
+            this.EditButton.Size = new System.Drawing.Size(271, 34);
             this.EditButton.TabIndex = 8;
             this.EditButton.Text = "EDIT";
             this.EditButton.UseVisualStyleBackColor = false;
@@ -176,9 +189,10 @@
             // DeleteButton
             // 
             this.DeleteButton.BackColor = System.Drawing.Color.Tomato;
-            this.DeleteButton.Location = new System.Drawing.Point(229, 356);
+            this.DeleteButton.Location = new System.Drawing.Point(305, 438);
+            this.DeleteButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.Size = new System.Drawing.Size(203, 28);
+            this.DeleteButton.Size = new System.Drawing.Size(271, 34);
             this.DeleteButton.TabIndex = 9;
             this.DeleteButton.Text = "DELETE";
             this.DeleteButton.UseVisualStyleBackColor = false;
@@ -191,27 +205,31 @@
             this.SearchGroupBox.Controls.Add(this.SearchTextBox);
             this.SearchGroupBox.Controls.Add(this.label4);
             this.SearchGroupBox.Controls.Add(this.AddUpdateDatagrid);
-            this.SearchGroupBox.Location = new System.Drawing.Point(12, 39);
+            this.SearchGroupBox.Location = new System.Drawing.Point(16, 48);
+            this.SearchGroupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.SearchGroupBox.Name = "SearchGroupBox";
-            this.SearchGroupBox.Size = new System.Drawing.Size(438, 390);
+            this.SearchGroupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SearchGroupBox.Size = new System.Drawing.Size(584, 480);
             this.SearchGroupBox.TabIndex = 7;
             this.SearchGroupBox.TabStop = false;
             // 
             // SearchTextBox
             // 
             this.SearchTextBox.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.SearchTextBox.Location = new System.Drawing.Point(132, 23);
+            this.SearchTextBox.Location = new System.Drawing.Point(176, 28);
+            this.SearchTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.SearchTextBox.Name = "SearchTextBox";
-            this.SearchTextBox.Size = new System.Drawing.Size(245, 20);
+            this.SearchTextBox.Size = new System.Drawing.Size(325, 22);
             this.SearchTextBox.TabIndex = 4;
             this.SearchTextBox.TextChanged += new System.EventHandler(this.SearchTextBox_TextChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(71, 26);
+            this.label4.Location = new System.Drawing.Point(95, 32);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(41, 13);
+            this.label4.Size = new System.Drawing.Size(50, 16);
             this.label4.TabIndex = 5;
             this.label4.Text = "Search";
             // 
@@ -220,54 +238,64 @@
             this.AddUpdateDatagrid.AllowUserToAddRows = false;
             this.AddUpdateDatagrid.AllowUserToDeleteRows = false;
             this.AddUpdateDatagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.AddUpdateDatagrid.Location = new System.Drawing.Point(6, 61);
+            this.AddUpdateDatagrid.Location = new System.Drawing.Point(8, 75);
+            this.AddUpdateDatagrid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.AddUpdateDatagrid.Name = "AddUpdateDatagrid";
             this.AddUpdateDatagrid.ReadOnly = true;
             this.AddUpdateDatagrid.RowHeadersVisible = false;
+            this.AddUpdateDatagrid.RowHeadersWidth = 51;
             this.AddUpdateDatagrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.AddUpdateDatagrid.Size = new System.Drawing.Size(426, 289);
+            this.AddUpdateDatagrid.Size = new System.Drawing.Size(568, 356);
             this.AddUpdateDatagrid.TabIndex = 0;
             // 
             // BillingButton
             // 
             this.BillingButton.BackColor = System.Drawing.Color.Goldenrod;
-            this.BillingButton.Location = new System.Drawing.Point(112, 10);
+            this.BillingButton.Location = new System.Drawing.Point(17, 2);
+            this.BillingButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BillingButton.Name = "BillingButton";
-            this.BillingButton.Size = new System.Drawing.Size(185, 23);
+            this.BillingButton.Size = new System.Drawing.Size(247, 38);
             this.BillingButton.TabIndex = 8;
             this.BillingButton.Text = "Billing";
             this.BillingButton.UseVisualStyleBackColor = false;
             this.BillingButton.Click += new System.EventHandler(this.BillingButton_Click);
             // 
-            // button2
+            // SalesReportButton
             // 
-            this.button2.Location = new System.Drawing.Point(358, 10);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(185, 23);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.SalesReportButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.SalesReportButton.Location = new System.Drawing.Point(345, 2);
+            this.SalesReportButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SalesReportButton.Name = "SalesReportButton";
+            this.SalesReportButton.Size = new System.Drawing.Size(247, 38);
+            this.SalesReportButton.TabIndex = 9;
+            this.SalesReportButton.Text = "Sales Report";
+            this.SalesReportButton.UseVisualStyleBackColor = false;
+            this.SalesReportButton.Click += new System.EventHandler(this.SalesReportButton_Click);
             // 
-            // button3
+            // ExitButon
             // 
-            this.button3.Location = new System.Drawing.Point(735, 10);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.ExitButon.BackColor = System.Drawing.Color.IndianRed;
+            this.ExitButon.Location = new System.Drawing.Point(980, 2);
+            this.ExitButon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ExitButon.Name = "ExitButon";
+            this.ExitButon.Size = new System.Drawing.Size(100, 38);
+            this.ExitButon.TabIndex = 10;
+            this.ExitButon.Text = "EXIT";
+            this.ExitButon.UseVisualStyleBackColor = false;
+            this.ExitButon.Click += new System.EventHandler(this.ExitButon_Click);
             // 
             // AddUpdateForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(822, 450);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.ClientSize = new System.Drawing.Size(1096, 554);
+            this.Controls.Add(this.ExitButon);
+            this.Controls.Add(this.SalesReportButton);
             this.Controls.Add(this.BillingButton);
             this.Controls.Add(this.SearchGroupBox);
             this.Controls.Add(this.AddUpdateGroupBox);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "AddUpdateForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -302,8 +330,8 @@
         private System.Windows.Forms.TextBox HalfPlatePriceTextBox;
         private System.Windows.Forms.Button Clearbutton;
         private System.Windows.Forms.Button BillingButton;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button SalesReportButton;
+        private System.Windows.Forms.Button ExitButon;
     }
 }
 

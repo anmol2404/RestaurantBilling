@@ -187,6 +187,8 @@
             this.printPreviewControl1 = new System.Windows.Forms.PrintPreviewControl();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.OpenSalesWindow = new System.Windows.Forms.Button();
+            this.ExitButton = new System.Windows.Forms.Button();
+            this.ClearRefreshButton = new System.Windows.Forms.Button();
             this.Table1Groupbox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TableOneDatagrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Qtytextbox)).BeginInit();
@@ -1975,9 +1977,9 @@
             // 
             // AddUpdateOpenForm
             // 
-            this.AddUpdateOpenForm.BackColor = System.Drawing.Color.Tan;
+            this.AddUpdateOpenForm.BackColor = System.Drawing.Color.Cornsilk;
             this.AddUpdateOpenForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddUpdateOpenForm.Location = new System.Drawing.Point(1757, 5);
+            this.AddUpdateOpenForm.Location = new System.Drawing.Point(313, 4);
             this.AddUpdateOpenForm.Margin = new System.Windows.Forms.Padding(4);
             this.AddUpdateOpenForm.Name = "AddUpdateOpenForm";
             this.AddUpdateOpenForm.Size = new System.Drawing.Size(251, 43);
@@ -2013,9 +2015,9 @@
             // 
             // OpenSalesWindow
             // 
-            this.OpenSalesWindow.BackColor = System.Drawing.Color.Tan;
+            this.OpenSalesWindow.BackColor = System.Drawing.Color.DarkKhaki;
             this.OpenSalesWindow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.OpenSalesWindow.Location = new System.Drawing.Point(1458, 4);
+            this.OpenSalesWindow.Location = new System.Drawing.Point(14, 3);
             this.OpenSalesWindow.Margin = new System.Windows.Forms.Padding(4);
             this.OpenSalesWindow.Name = "OpenSalesWindow";
             this.OpenSalesWindow.Size = new System.Drawing.Size(251, 43);
@@ -2024,12 +2026,41 @@
             this.OpenSalesWindow.UseVisualStyleBackColor = false;
             this.OpenSalesWindow.Click += new System.EventHandler(this.OpenSalesWindow_Click);
             // 
+            // ExitButton
+            // 
+            this.ExitButton.BackColor = System.Drawing.Color.IndianRed;
+            this.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ExitButton.Location = new System.Drawing.Point(1757, 4);
+            this.ExitButton.Margin = new System.Windows.Forms.Padding(4);
+            this.ExitButton.Name = "ExitButton";
+            this.ExitButton.Size = new System.Drawing.Size(251, 43);
+            this.ExitButton.TabIndex = 11;
+            this.ExitButton.Text = "EXIT";
+            this.ExitButton.UseVisualStyleBackColor = false;
+            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
+            // 
+            // ClearRefreshButton
+            // 
+            this.ClearRefreshButton.BackColor = System.Drawing.Color.LavenderBlush;
+            this.ClearRefreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ClearRefreshButton.Location = new System.Drawing.Point(1498, 4);
+            this.ClearRefreshButton.Margin = new System.Windows.Forms.Padding(4);
+            this.ClearRefreshButton.Name = "ClearRefreshButton";
+            this.ClearRefreshButton.Size = new System.Drawing.Size(251, 43);
+            this.ClearRefreshButton.TabIndex = 12;
+            this.ClearRefreshButton.Text = "Clear / Refresh";
+            this.ClearRefreshButton.UseVisualStyleBackColor = false;
+            this.ClearRefreshButton.Click += new System.EventHandler(this.ClearRefreshButton_Click);
+            // 
             // Billing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(2083, 966);
+            this.ControlBox = false;
+            this.Controls.Add(this.ClearRefreshButton);
+            this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.OpenSalesWindow);
             this.Controls.Add(this.printPreviewControl1);
             this.Controls.Add(this.Table8GroupBox);
@@ -2042,6 +2073,7 @@
             this.Controls.Add(this.Table1Groupbox);
             this.Controls.Add(this.AddUpdateOpenForm);
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "Billing";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Billing";
@@ -2242,5 +2274,7 @@
         private System.Windows.Forms.PrintPreviewControl printPreviewControl1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Windows.Forms.Button OpenSalesWindow;
+        private System.Windows.Forms.Button ExitButton;
+        private System.Windows.Forms.Button ClearRefreshButton;
     }
 }

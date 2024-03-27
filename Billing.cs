@@ -70,7 +70,7 @@ namespace WindowsFormsApp1
         private int table8hprice;
         private int table8fprice;
 
-        private string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+        //private string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
 
         private int x, y;
 

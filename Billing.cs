@@ -70,6 +70,25 @@ namespace WindowsFormsApp1
         private int table8hprice;
         private int table8fprice;
 
+        private int table9itemID;
+        private string table9Itemname;
+        private int table9hprice;
+        private int table9fprice;
+
+        private int table10itemID;
+        private string table10Itemname;
+        private int table10hprice;
+        private int table10fprice;
+
+        private int table11itemID;
+        private string table11Itemname;
+        private int table11hprice;
+        private int table11fprice;
+
+        private int table12itemID;
+        private string table12Itemname;
+        private int table12hprice;
+        private int table12fprice;
         //private string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
 
         private int x, y;
@@ -91,6 +110,10 @@ namespace WindowsFormsApp1
             Table6Linkcombobox();
             Table7Linkcombobox();
             Table8Linkcombobox();
+            Table9Linkcombobox();
+            Table10Linkcombobox();
+            Table11Linkcombobox();
+            Table12Linkcombobox();
 
             TotalTextBox.Enabled = false;
             Table2TotalTextBox.Enabled = false;
@@ -100,6 +123,10 @@ namespace WindowsFormsApp1
             Table6TotalTextBox.Enabled = false;
             Table7TotalTextBox.Enabled = false;
             Table8TotalTextBox.Enabled = false;
+            Table9TotalTextBox.Enabled = false;
+            Table10TotalTextBox.Enabled = false;
+            Table11TotalTextBox.Enabled = false;
+            Table12TotalTextBox.Enabled = false;
 
             RemoveItembutton.Enabled = false;
             Table2RemoveButton.Enabled = false;
@@ -109,6 +136,10 @@ namespace WindowsFormsApp1
             Table6RemoveButton.Enabled = false;
             Table7RemoveButton.Enabled = false;
             Table8RemoveButton.Enabled = false;
+            Table9RemoveButton.Enabled = false;
+            Table10RemoveButton.Enabled = false;
+            Table11RemoveButton.Enabled = false;
+            Table12RemoveButton.Enabled = false;
 
             SavePrintButton.Enabled = false;
             Table2Savebutton.Enabled = false;
@@ -118,6 +149,10 @@ namespace WindowsFormsApp1
             Table6SaveButton.Enabled = false;
             Table7SaveButton.Enabled = false;
             Table8SaveButton.Enabled = false;
+            Table9SaveButton.Enabled = false;
+            Table10SaveButton.Enabled = false;
+            Table11SaveButton.Enabled = false;
+            Table12SaveButton.Enabled = false;
         }
 
 
@@ -257,6 +292,7 @@ namespace WindowsFormsApp1
                 if (index >= 0)
                 {
                     TableOneDatagrid.Rows.RemoveAt(index);
+                    TotalTextBoxValue();
                 }
                 if (TableOneDatagrid.Rows.Count == 0)
                 {
@@ -426,6 +462,7 @@ namespace WindowsFormsApp1
                 if (index >= 0)
                 {
                     Table2DataGrid.Rows.RemoveAt(index);
+                    Table2TextBoxValue();
                 }
                 if (Table2DataGrid.Rows.Count == 0)
                 {
@@ -642,6 +679,7 @@ namespace WindowsFormsApp1
                 if (index >= 0)
                 {
                     Table3Datagrid.Rows.RemoveAt(index);
+                    Table3TextBoxValue();
                 }
                 if (Table3Datagrid.Rows.Count == 0)
                 {
@@ -861,6 +899,7 @@ namespace WindowsFormsApp1
                 if (index >= 0)
                 {
                     Table4DataGrid.Rows.RemoveAt(index);
+                    Table4TextBoxValue();
                 }
                 if (Table4DataGrid.Rows.Count == 0)
                 {
@@ -1084,6 +1123,7 @@ namespace WindowsFormsApp1
                 if (index >= 0)
                 {
                     Table5Datagrid.Rows.RemoveAt(index);
+                    Table5TextBoxValue();
                 }
                 if (Table5Datagrid.Rows.Count == 0)
                 {
@@ -1307,6 +1347,7 @@ namespace WindowsFormsApp1
                 if (index >= 0)
                 {
                     Table6Datagrid.Rows.RemoveAt(index);
+                    Table6TextBoxValue();
                 }
                 if (Table6Datagrid.Rows.Count == 0)
                 {
@@ -1530,6 +1571,7 @@ namespace WindowsFormsApp1
                 if (index >= 0)
                 {
                     Table7Datagrid.Rows.RemoveAt(index);
+                    Table7TextBoxValue();
                 }
                 if (Table7Datagrid.Rows.Count == 0)
                 {
@@ -1753,6 +1795,7 @@ namespace WindowsFormsApp1
                 if (index >= 0)
                 {
                     Table8Datagrid.Rows.RemoveAt(index);
+                    Table8TextBoxValue();
                 }
                 if (Table8Datagrid.Rows.Count == 0)
                 {
@@ -2093,6 +2136,10 @@ namespace WindowsFormsApp1
             Table6Linkcombobox();
             Table7Linkcombobox();
             Table8Linkcombobox();
+            Table9Linkcombobox();
+            Table10Linkcombobox();
+            Table11Linkcombobox();
+            Table12Linkcombobox();
 
             TotalTextBox.Enabled = false;
             Table2TotalTextBox.Enabled = false;
@@ -2102,6 +2149,10 @@ namespace WindowsFormsApp1
             Table6TotalTextBox.Enabled = false;
             Table7TotalTextBox.Enabled = false;
             Table8TotalTextBox.Enabled = false;
+            Table9TotalTextBox.Enabled = false;
+            Table10TotalTextBox.Enabled = false;
+            Table11TotalTextBox.Enabled = false;
+            Table12TotalTextBox.Enabled = false;
 
             RemoveItembutton.Enabled = false;
             Table2RemoveButton.Enabled = false;
@@ -2111,6 +2162,10 @@ namespace WindowsFormsApp1
             Table6RemoveButton.Enabled = false;
             Table7RemoveButton.Enabled = false;
             Table8RemoveButton.Enabled = false;
+            Table9RemoveButton.Enabled = false;
+            Table10RemoveButton.Enabled = false;
+            Table11RemoveButton.Enabled = false;
+            Table12RemoveButton.Enabled = false;
 
             SavePrintButton.Enabled = false;
             Table2Savebutton.Enabled = false;
@@ -2120,6 +2175,10 @@ namespace WindowsFormsApp1
             Table6SaveButton.Enabled = false;
             Table7SaveButton.Enabled = false;
             Table8SaveButton.Enabled = false;
+            Table9SaveButton.Enabled = false;
+            Table10SaveButton.Enabled = false;
+            Table11SaveButton.Enabled = false;
+            Table12SaveButton.Enabled = false;
 
             TableOneDatagrid.Rows.Clear();
             Table2DataGrid.Rows.Clear();
@@ -2129,6 +2188,10 @@ namespace WindowsFormsApp1
             Table6Datagrid.Rows.Clear();
             Table7Datagrid.Rows.Clear();
             Table8Datagrid.Rows.Clear();
+            Table9Datagrid.Rows.Clear();
+            Table10Datagrid.Rows.Clear();
+            Table12Datagrid.Rows.Clear();
+            Table11Datagrid.Rows.Clear();
 
             Qtytextbox.Value = 1;
             Table2QuantityTextbox.Value = 1;
@@ -2139,14 +2202,23 @@ namespace WindowsFormsApp1
             Table7QuantityTextBox.Value = 1;
             Table8QuantityTextBox.Value = 1;
 
+            Table9QuantityTextbox.Value = 1;
+            Table10QuantityTextbox.Value = 1;
+            Table11QuantityTextbox.Value = 1;
+            Table12QuantityTextbox.Value = 1;
+
             TotalTextBox.Text = string.Empty;
             Table2TotalTextBox.Text = string.Empty;
             Table3TotalTextBox.Text = string.Empty;
-            Table3TotalTextBox.Text = string.Empty;
             Table4TotalTextBox.Text = string.Empty;
-            TotalTextBox.Text = string.Empty;
-            TotalTextBox.Text = string.Empty;
-            TotalTextBox.Text = string.Empty;
+            Table5TotalTextBox.Text = string.Empty;
+            Table6TotalTextBox.Text = string.Empty;
+            Table7TotalTextBox.Text = string.Empty;
+            Table8TotalTextBox.Text = string.Empty;
+            Table9TotalTextBox.Text = string.Empty;
+            Table10TotalTextBox.Text = string.Empty;
+            Table11TotalTextBox.Text = string.Empty;
+            Table12TotalTextBox.Text = string.Empty;
         }
 
         private void printDocument1_PrintPage(object sender, PrintPageEventArgs e)
@@ -2223,7 +2295,7 @@ namespace WindowsFormsApp1
             e.Graphics.DrawLine(dotted5, new Point(20, y + 5), new Point(265, y + 5));
             dotted5.Dispose();
 
-            e.Graphics.DrawString("Total : ₹" + Orderamount + "/-", new Font("Arial", 10, FontStyle.Bold), Brushes.Black, 170, y + 15);
+            e.Graphics.DrawString("Total : ₹" + Orderamount + "/-", new Font("Arial", 10, FontStyle.Bold), Brushes.Black, 165, y + 15);
 
             Pen dotted6 = new Pen(Color.Black);
             dotted6.DashStyle = DashStyle.Solid;
@@ -2232,5 +2304,905 @@ namespace WindowsFormsApp1
 
             e.Graphics.DrawString("THANK YOU!", new Font("Arial", 10, FontStyle.Bold), Brushes.Black, 100, y + 40);
         }
+
+        #region Table 9
+        private void Table9Linkcombobox()
+        {
+            Table9Combobox.DataSource = dbclass.getData();
+            Table9Combobox.DisplayMember = "Particulars";
+            Table9Combobox.AutoCompleteMode = AutoCompleteMode.Suggest;
+            Table9Combobox.AutoCompleteSource = AutoCompleteSource.ListItems;
+        }
+        private void Table9TextBoxValue()
+        {
+            int sum = 0;
+            foreach (DataGridViewRow row in Table9Datagrid.Rows)
+            {
+                if (row.Cells["Table9Amount"].Value != null && !string.IsNullOrEmpty(row.Cells["Table9Amount"].Value.ToString()))
+                {
+                    if (int.TryParse(row.Cells["Table9Amount"].Value.ToString(), out int cellValue))
+                    {
+                        sum += cellValue;
+                        Table9TotalTextBox.Text = sum.ToString();
+                    }
+                }
+                else
+                {
+                    Table9TotalTextBox.Text = string.Empty;
+                }
+            }
+        }
+
+        private void Table9Datagrid_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+
+            for (int i = 0; i < e.RowCount; i++)
+            {
+                int snoValue = e.RowIndex + i + 1;
+                Table9Datagrid.Rows[e.RowIndex + i].Cells["Table9Sno"].Value = snoValue;
+            }
+            Table9RemoveButton.Enabled = true;
+            Table9SaveButton.Enabled = true;
+            Table9TextBoxValue();
+        }
+
+        private void Table9RemoveButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int index = Convert.ToInt32(Table9Datagrid.SelectedRows[0].Index);
+                if (index >= 0)
+                {
+                    Table9Datagrid.Rows.RemoveAt(index);
+                    Table9TextBoxValue();
+                }
+                if (Table9Datagrid.Rows.Count == 0)
+                {
+                    Table9TotalTextBox.Text = string.Empty;
+                    Table9RemoveButton.Enabled = false;
+                    Table9SaveButton.Enabled = false;
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show($"error: No Item to Remove");
+            }
+        }
+
+        private void Table9HalfPlatePriceButton_Click(object sender, EventArgs e)
+        {
+            DataRowView selectedrow = (DataRowView)Table9Combobox.SelectedItem;
+
+            table9itemID = (int)selectedrow["S.No."];
+            table9Itemname = (string)selectedrow["Particulars"];
+            table9hprice = (int)selectedrow["Half P price"];
+
+            table9Itemname = table9Itemname + " (Half)";
+
+            int qty = (int)Table9QuantityTextbox.Value;
+
+            if (qty <= 0)
+            {
+                MessageBox.Show("Please enter Quantity of the item");
+            }
+            foreach (DataGridViewRow row in Table9Datagrid.Rows)
+            {
+                int ItemIDExist = int.Parse(row.Cells["Table9Id"].Value.ToString());
+                int itempriceexist = int.Parse(row.Cells["Table9ItemPrice"].Value.ToString());
+
+                if (ItemIDExist == table9itemID && itempriceexist == table9hprice)
+                {
+                    int currentqty = int.Parse(row.Cells["Table9Quantity"].Value.ToString());
+                    row.Cells["Table9Quantity"].Value = qty + currentqty;
+
+                    int amount = (qty + currentqty) * table9hprice;
+                    row.Cells["Table9Amount"].Value = amount;
+
+                    Table9TextBoxValue();
+                    Table9QuantityTextbox.Value = 1;
+                    return;
+                }
+            }
+            if (qty > 0)
+            {
+                int amount = qty * table9hprice;
+                Table9Datagrid.Rows.Add("", table9itemID, table9Itemname, qty, table9hprice, amount);
+                Table9QuantityTextbox.Value = 1;
+            }
+        }
+
+        private void Table9FullPlatePriceButton_Click(object sender, EventArgs e)
+        {
+            DataRowView selectedrow = (DataRowView)Table9Combobox.SelectedItem;
+
+            table9itemID = (int)selectedrow["S.No."];
+            table9Itemname = (string)selectedrow["Particulars"];
+            table9fprice = (int)selectedrow["Full P price"];
+
+            int qty = (int)Table9QuantityTextbox.Value;
+
+            if (qty <= 0)
+            {
+                MessageBox.Show("Please enter Quantity of the item");
+            }
+            foreach (DataGridViewRow row in Table9Datagrid.Rows)
+            {
+                int ItemIDExist = int.Parse(row.Cells["Table9Id"].Value.ToString());
+                int itempriceexist = int.Parse(row.Cells["Table9ItemPrice"].Value.ToString());
+                if (ItemIDExist == table9itemID && itempriceexist == table9fprice)
+                {
+                    int currentqty = int.Parse(row.Cells["Table9Quantity"].Value.ToString());
+                    row.Cells["Table9Quantity"].Value = qty + currentqty;
+
+                    int amount = (qty + currentqty) * table9fprice;
+                    row.Cells["Table9Amount"].Value = amount;
+
+                    Table9TextBoxValue();
+                    Table9QuantityTextbox.Value = 1;
+                    return;
+                }
+            }
+            if (qty > 0)
+            {
+                int amount = qty * table9fprice;
+
+                Table9Datagrid.Rows.Add("", table9itemID, table9Itemname, qty, table9fprice, amount);
+                Table9QuantityTextbox.Value = 1;
+            }
+        }
+
+        private void Table9ClearRefreshButton_Click(object sender, EventArgs e)
+        {
+            Table9Linkcombobox();
+            Table9Datagrid.Rows.Clear();
+            Table9TotalTextBox.Text = "";
+            Table9QuantityTextbox.Value = 1;
+        }
+
+        private void Table9TotalTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(Table9TotalTextBox.Text))
+            {
+                Table9SaveButton.Enabled = false;
+            }
+        }
+
+        private void Table9SaveButton_Click(object sender, EventArgs e)
+        {
+            DateTime currentdate = DateTime.Now;
+            int day = currentdate.Day;
+            int month = currentdate.Month;
+            int year = currentdate.Year;
+            string tablenumber = "9";
+            int amount = Convert.ToInt32(Table9TotalTextBox.Text.ToString());
+
+            bool isOrdercreated = dbclass.CreateOrderNumber(tablenumber, amount, currentdate, day, month, year);
+
+            if (isOrdercreated)
+            {
+                int Ordernumber = dbclass.getordernumber();
+
+                if (Ordernumber > 0) // ordernumber, amount, datetime, tablenumber, datagridview
+                {
+                    foreach (DataGridViewRow row in Table9Datagrid.Rows)
+                    {
+                        if (!row.IsNewRow)
+                        {
+                            int rowid = Convert.ToInt32(row.Cells["Table9Id"].Value.ToString());
+                            string rowname = row.Cells["Table9name"].Value.ToString();
+                            int rowquantity = Convert.ToInt32(row.Cells["Table9Quantity"].Value.ToString());
+                            int rowprice = Convert.ToInt32(row.Cells["Table9ItemPrice"].Value.ToString());
+                            int rowamount = Convert.ToInt32(row.Cells["Table9Amount"].Value.ToString());
+
+                            dbclass.SavetoDatabase(tablenumber, rowid, rowname, rowquantity, rowprice, rowamount, currentdate, Ordernumber);
+                        }
+                    }
+
+                    //Createpdf(Ordernumber, currentdate, tablenumber, Table8Datagrid, amount);
+                    PrintPdf();
+                    MessageBox.Show("Order Saved Successfully with Order number: " + Ordernumber, "Saved", MessageBoxButtons.OK);
+                }
+            }
+            Table9ClearRefreshButton_Click(sender, e);
+        }
+        private void Table9Combobox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataRowView selectedrow = (DataRowView)Table9Combobox.SelectedItem;
+
+            table9itemID = (int)selectedrow["S.No."];
+            table9Itemname = (string)selectedrow["Particulars"];
+            table9hprice = (int)selectedrow["Half P price"];
+            table9fprice = (int)selectedrow["Full P price"];
+            if (selectedrow != null)
+            {
+                Table9FullPlatePriceButton.Text = "Full " + table9fprice;
+                Table9HalfPlatePriceButton.Text = "Half " + table9hprice;
+
+                if (table9hprice == 0)
+                {
+                    Table9HalfPlatePriceButton.Enabled = false;
+                }
+                else
+                {
+                    Table9HalfPlatePriceButton.Enabled = true;
+                }
+            }
+        }
+
+        #endregion
+
+        #region Table 10
+        private void Table10Linkcombobox()
+        {
+            Table10Combobox.DataSource = dbclass.getData();
+            Table10Combobox.DisplayMember = "Particulars";
+            Table10Combobox.AutoCompleteMode = AutoCompleteMode.Suggest;
+            Table10Combobox.AutoCompleteSource = AutoCompleteSource.ListItems;
+        }
+        private void Table10TextBoxValue()
+        {
+            int sum = 0;
+            foreach (DataGridViewRow row in Table10Datagrid.Rows)
+            {
+                if (row.Cells["Table10Amount"].Value != null && !string.IsNullOrEmpty(row.Cells["Table10Amount"].Value.ToString()))
+                {
+                    if (int.TryParse(row.Cells["Table10Amount"].Value.ToString(), out int cellValue))
+                    {
+                        sum += cellValue;
+                        Table10TotalTextBox.Text = sum.ToString();
+                    }
+                }
+                else
+                {
+                    Table10TotalTextBox.Text = string.Empty;
+                }
+            }
+        }
+        private void Table10Datagrid_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            for (int i = 0; i < e.RowCount; i++)
+            {
+                int snoValue = e.RowIndex + i + 1;
+                Table10Datagrid.Rows[e.RowIndex + i].Cells["Table10Sno"].Value = snoValue;
+            }
+            Table10RemoveButton.Enabled = true;
+            Table10SaveButton.Enabled = true;
+            Table10TextBoxValue();
+        }
+
+        private void Table10HalfPlatePriceButton_Click(object sender, EventArgs e)
+        {
+            DataRowView selectedrow = (DataRowView)Table10Combobox.SelectedItem;
+
+            table10itemID = (int)selectedrow["S.No."];
+            table10Itemname = (string)selectedrow["Particulars"];
+            table10hprice = (int)selectedrow["Half P price"];
+
+            table10Itemname = table10Itemname + " (Half)";
+
+            int qty = (int)Table10QuantityTextbox.Value;
+
+            if (qty <= 0)
+            {
+                MessageBox.Show("Please enter Quantity of the item");
+            }
+            foreach (DataGridViewRow row in Table10Datagrid.Rows)
+            {
+                int ItemIDExist = int.Parse(row.Cells["Table10Id"].Value.ToString());
+                int itempriceexist = int.Parse(row.Cells["Table10ItemPrice"].Value.ToString());
+
+                if (ItemIDExist == table10itemID && itempriceexist == table10hprice)
+                {
+                    int currentqty = int.Parse(row.Cells["Table10Quantity"].Value.ToString());
+                    row.Cells["Table10Quantity"].Value = qty + currentqty;
+
+                    int amount = (qty + currentqty) * table10hprice;
+                    row.Cells["Table10Amount"].Value = amount;
+
+                    Table10TextBoxValue();
+                    Table10QuantityTextbox.Value = 1;
+                    return;
+                }
+            }
+            if (qty > 0)
+            {
+                int amount = qty * table10hprice;
+                Table10Datagrid.Rows.Add("", table10itemID, table10Itemname, qty, table10hprice, amount);
+                Table10QuantityTextbox.Value = 1;
+            }
+        }
+
+        private void Table10ClearRefreshButton_Click(object sender, EventArgs e)
+        {
+            Table10Linkcombobox();
+            Table10Datagrid.Rows.Clear();
+            Table10TotalTextBox.Text = "";
+            Table10QuantityTextbox.Value = 1;
+        }
+
+        private void Table10TotalTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(Table10TotalTextBox.Text))
+            {
+                Table10SaveButton.Enabled = false;
+            }
+        }
+
+        private void Table10SaveButton_Click(object sender, EventArgs e)
+        {
+            DateTime currentdate = DateTime.Now;
+            int day = currentdate.Day;
+            int month = currentdate.Month;
+            int year = currentdate.Year;
+            string tablenumber = "10";
+            int amount = Convert.ToInt32(Table10TotalTextBox.Text.ToString());
+
+            bool isOrdercreated = dbclass.CreateOrderNumber(tablenumber, amount, currentdate, day, month, year);
+
+            if (isOrdercreated)
+            {
+                int Ordernumber = dbclass.getordernumber();
+
+                if (Ordernumber > 0) // ordernumber, amount, datetime, tablenumber, datagridview
+                {
+                    foreach (DataGridViewRow row in Table10Datagrid.Rows)
+                    {
+                        if (!row.IsNewRow)
+                        {
+                            int rowid = Convert.ToInt32(row.Cells["Table10Id"].Value.ToString());
+                            string rowname = row.Cells["Table10name"].Value.ToString();
+                            int rowquantity = Convert.ToInt32(row.Cells["Table10Quantity"].Value.ToString());
+                            int rowprice = Convert.ToInt32(row.Cells["Table10ItemPrice"].Value.ToString());
+                            int rowamount = Convert.ToInt32(row.Cells["Table10Amount"].Value.ToString());
+
+                            dbclass.SavetoDatabase(tablenumber, rowid, rowname, rowquantity, rowprice, rowamount, currentdate, Ordernumber);
+                        }
+                    }
+
+                    //Createpdf(Ordernumber, currentdate, tablenumber, Table8Datagrid, amount);
+                    PrintPdf();
+                    MessageBox.Show("Order Saved Successfully with Order number: " + Ordernumber, "Saved", MessageBoxButtons.OK);
+                }
+            }
+            Table10ClearRefreshButton_Click(sender, e);
+        }
+
+        private void Table10Combobox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataRowView selectedrow = (DataRowView)Table10Combobox.SelectedItem;
+
+            table10itemID = (int)selectedrow["S.No."];
+            table10Itemname = (string)selectedrow["Particulars"];
+            table10hprice = (int)selectedrow["Half P price"];
+            table10fprice = (int)selectedrow["Full P price"];
+            if (selectedrow != null)
+            {
+                Table10FullPlatePriceButton.Text = "Full " + table10fprice;
+                Table10HalfPlatePriceButton.Text = "Half " + table10hprice;
+
+                if (table10hprice == 0)
+                {
+                    Table10HalfPlatePriceButton.Enabled = false;
+                }
+                else
+                {
+                    Table10HalfPlatePriceButton.Enabled = true;
+                }
+            }
+        }
+
+        private void Table10FullPlatePriceButton_Click_1(object sender, EventArgs e)
+        {
+            DataRowView selectedrow = (DataRowView)Table10Combobox.SelectedItem;
+
+            table10itemID = (int)selectedrow["S.No."];
+            table10Itemname = (string)selectedrow["Particulars"];
+            table10fprice = (int)selectedrow["Full P price"];
+
+            int qty = (int)Table10QuantityTextbox.Value;
+
+            if (qty <= 0)
+            {
+                MessageBox.Show("Please enter Quantity of the item");
+            }
+            foreach (DataGridViewRow row in Table10Datagrid.Rows)
+            {
+                int ItemIDExist = int.Parse(row.Cells["Table10Id"].Value.ToString());
+                int itempriceexist = int.Parse(row.Cells["Table10ItemPrice"].Value.ToString());
+                if (ItemIDExist == table10itemID && itempriceexist == table10fprice)
+                {
+                    int currentqty = int.Parse(row.Cells["Table10Quantity"].Value.ToString());
+                    row.Cells["Table10Quantity"].Value = qty + currentqty;
+
+                    int amount = (qty + currentqty) * table10fprice;
+                    row.Cells["Table10Amount"].Value = amount;
+
+                    Table10TextBoxValue();
+                    Table10QuantityTextbox.Value = 1;
+                    return;
+                }
+            }
+            if (qty > 0)
+            {
+                int amount = qty * table10fprice;
+
+                Table10Datagrid.Rows.Add("", table10itemID, table10Itemname, qty, table10fprice, amount);
+                Table10QuantityTextbox.Value = 1;
+            }
+        }
+
+        private void Table10RemoveButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int index = Convert.ToInt32(Table10Datagrid.SelectedRows[0].Index);
+                if (index >= 0)
+                {
+                    Table10Datagrid.Rows.RemoveAt(index);
+                    Table10TextBoxValue();
+                }
+                if (Table10Datagrid.Rows.Count == 0)
+                {
+                    Table10TotalTextBox.Text = string.Empty;
+                    Table10RemoveButton.Enabled = false;
+                    Table10SaveButton.Enabled = false;
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show($"error: No Item to Remove");
+            }
+        }
+
+        #endregion
+
+        #region Table 11
+        private void Table11Linkcombobox()
+        {
+            Table11Combobox.DataSource = dbclass.getData();
+            Table11Combobox.DisplayMember = "Particulars";
+            Table11Combobox.AutoCompleteMode = AutoCompleteMode.Suggest;
+            Table11Combobox.AutoCompleteSource = AutoCompleteSource.ListItems;
+        }
+        private void Table11TextBoxValue()
+        {
+            int sum = 0;
+            foreach (DataGridViewRow row in Table11Datagrid.Rows)
+            {
+                if (row.Cells["Table11Amount"].Value != null && !string.IsNullOrEmpty(row.Cells["Table11Amount"].Value.ToString()))
+                {
+                    if (int.TryParse(row.Cells["Table11Amount"].Value.ToString(), out int cellValue))
+                    {
+                        sum += cellValue;
+                        Table11TotalTextBox.Text = sum.ToString();
+                    }
+                }
+                else
+                {
+                    Table11TotalTextBox.Text = string.Empty;
+                }
+            }
+        }
+        private void Table11Combobox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataRowView selectedrow = (DataRowView)Table11Combobox.SelectedItem;
+
+            table11itemID = (int)selectedrow["S.No."];
+            table11Itemname = (string)selectedrow["Particulars"];
+            table11hprice = (int)selectedrow["Half P price"];
+            table11fprice = (int)selectedrow["Full P price"];
+            if (selectedrow != null)
+            {
+                Table11FullPlatePriceButton.Text = "Full " + table11fprice;
+                Table11HalfPlatePriceButton.Text = "Half " + table11hprice;
+
+                if (table11hprice == 0)
+                {
+                    Table11HalfPlatePriceButton.Enabled = false;
+                }
+                else
+                {
+                    Table11HalfPlatePriceButton.Enabled = true;
+                }
+            }
+        }
+
+        private void Table11HalfPlatePriceButton_Click(object sender, EventArgs e)
+        {
+            DataRowView selectedrow = (DataRowView)Table11Combobox.SelectedItem;
+
+            table11itemID = (int)selectedrow["S.No."];
+            table11Itemname = (string)selectedrow["Particulars"];
+            table11hprice = (int)selectedrow["Half P price"];
+
+            table11Itemname = table11Itemname + " (Half)";
+
+            int qty = (int)Table11QuantityTextbox.Value;
+
+            if (qty <= 0)
+            {
+                MessageBox.Show("Please enter Quantity of the item");
+            }
+            foreach (DataGridViewRow row in Table11Datagrid.Rows)
+            {
+                int ItemIDExist = int.Parse(row.Cells["Table11Id"].Value.ToString());
+                int itempriceexist = int.Parse(row.Cells["Table11ItemPrice"].Value.ToString());
+
+                if (ItemIDExist == table11itemID && itempriceexist == table11hprice)
+                {
+                    int currentqty = int.Parse(row.Cells["Table11Quantity"].Value.ToString());
+                    row.Cells["Table11Quantity"].Value = qty + currentqty;
+
+                    int amount = (qty + currentqty) * table11hprice;
+                    row.Cells["Table11Amount"].Value = amount;
+
+                    Table11TextBoxValue();
+                    Table11QuantityTextbox.Value = 1;
+                    return;
+                }
+            }
+            if (qty > 0)
+            {
+                int amount = qty * table11hprice;
+                Table11Datagrid.Rows.Add("", table11itemID, table11Itemname, qty, table11hprice, amount);
+                Table11QuantityTextbox.Value = 1;
+            }
+        }
+
+        private void Table11FullPlatePriceButton_Click(object sender, EventArgs e)
+        {
+            DataRowView selectedrow = (DataRowView)Table11Combobox.SelectedItem;
+
+            table11itemID = (int)selectedrow["S.No."];
+            table11Itemname = (string)selectedrow["Particulars"];
+            table11fprice = (int)selectedrow["Full P price"];
+
+            int qty = (int)Table11QuantityTextbox.Value;
+
+            if (qty <= 0)
+            {
+                MessageBox.Show("Please enter Quantity of the item");
+            }
+            foreach (DataGridViewRow row in Table11Datagrid.Rows)
+            {
+                int ItemIDExist = int.Parse(row.Cells["Table11Id"].Value.ToString());
+                int itempriceexist = int.Parse(row.Cells["Table11ItemPrice"].Value.ToString());
+                if (ItemIDExist == table11itemID && itempriceexist == table11fprice)
+                {
+                    int currentqty = int.Parse(row.Cells["Table11Quantity"].Value.ToString());
+                    row.Cells["Table11Quantity"].Value = qty + currentqty;
+
+                    int amount = (qty + currentqty) * table11fprice;
+                    row.Cells["Table11Amount"].Value = amount;
+
+                    Table11TextBoxValue();
+                    Table11QuantityTextbox.Value = 1;
+                    return;
+                }
+            }
+            if (qty > 0)
+            {
+                int amount = qty * table11fprice;
+
+                Table11Datagrid.Rows.Add("", table11itemID, table11Itemname, qty, table11fprice, amount);
+                Table11QuantityTextbox.Value = 1;
+            }
+        }
+
+        private void Table11Datagrid_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            for (int i = 0; i < e.RowCount; i++)
+            {
+                int snoValue = e.RowIndex + i + 1;
+                Table11Datagrid.Rows[e.RowIndex + i].Cells["Table11Sno"].Value = snoValue;
+            }
+            Table11RemoveButton.Enabled = true;
+            Table11SaveButton.Enabled = true;
+            Table11TextBoxValue();
+        }
+
+        private void Table11ClearRefreshButton_Click(object sender, EventArgs e)
+        {
+            Table11Linkcombobox();
+            Table11Datagrid.Rows.Clear();
+            Table11TotalTextBox.Text = "";
+            Table11QuantityTextbox.Value = 1;
+        }
+
+        private void Table11RemoveButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int index = Convert.ToInt32(Table11Datagrid.SelectedRows[0].Index);
+                if (index >= 0)
+                {
+                    Table11Datagrid.Rows.RemoveAt(index);
+                    Table11TextBoxValue();
+                }
+                if (Table11Datagrid.Rows.Count == 0)
+                {
+                    Table11TotalTextBox.Text = string.Empty;
+                    Table11RemoveButton.Enabled = false;
+                    Table11SaveButton.Enabled = false;
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show($"error: No Item to Remove");
+            }
+        }
+
+        private void Table11TotalTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(Table11TotalTextBox.Text))
+            {
+                Table11SaveButton.Enabled = false;
+            }
+        }
+        private void Table11SaveButton_Click(object sender, EventArgs e)
+        {
+            DateTime currentdate = DateTime.Now;
+            int day = currentdate.Day;
+            int month = currentdate.Month;
+            int year = currentdate.Year;
+            string tablenumber = "11";
+            int amount = Convert.ToInt32(Table11TotalTextBox.Text.ToString());
+
+            bool isOrdercreated = dbclass.CreateOrderNumber(tablenumber, amount, currentdate, day, month, year);
+
+            if (isOrdercreated)
+            {
+                int Ordernumber = dbclass.getordernumber();
+
+                if (Ordernumber > 0) // ordernumber, amount, datetime, tablenumber, datagridview
+                {
+                    foreach (DataGridViewRow row in Table11Datagrid.Rows)
+                    {
+                        if (!row.IsNewRow)
+                        {
+                            int rowid = Convert.ToInt32(row.Cells["Table11Id"].Value.ToString());
+                            string rowname = row.Cells["Table11name"].Value.ToString();
+                            int rowquantity = Convert.ToInt32(row.Cells["Table11Quantity"].Value.ToString());
+                            int rowprice = Convert.ToInt32(row.Cells["Table11ItemPrice"].Value.ToString());
+                            int rowamount = Convert.ToInt32(row.Cells["Table11Amount"].Value.ToString());
+
+                            dbclass.SavetoDatabase(tablenumber, rowid, rowname, rowquantity, rowprice, rowamount, currentdate, Ordernumber);
+                        }
+                    }
+
+                    //Createpdf(Ordernumber, currentdate, tablenumber, Table8Datagrid, amount);
+                    PrintPdf();
+                    MessageBox.Show("Order Saved Successfully with Order number: " + Ordernumber, "Saved", MessageBoxButtons.OK);
+                }
+            }
+            Table11ClearRefreshButton_Click(sender, e);
+        }
+
+        #endregion
+
+        #region Table 12
+
+        private void Table12Linkcombobox()
+        {
+            Table12Combobox.DataSource = dbclass.getData();
+            Table12Combobox.DisplayMember = "Particulars";
+            Table12Combobox.AutoCompleteMode = AutoCompleteMode.Suggest;
+            Table12Combobox.AutoCompleteSource = AutoCompleteSource.ListItems;
+        }
+        private void Table12TextBoxValue()
+        {
+            int sum = 0;
+            foreach (DataGridViewRow row in Table12Datagrid.Rows)
+            {
+                if (row.Cells["Table12Amount"].Value != null && !string.IsNullOrEmpty(row.Cells["Table12Amount"].Value.ToString()))
+                {
+                    if (int.TryParse(row.Cells["Table12Amount"].Value.ToString(), out int cellValue))
+                    {
+                        sum += cellValue;
+                        Table12TotalTextBox.Text = sum.ToString();
+                    }
+                }
+                else
+                {
+                    Table12TotalTextBox.Text = string.Empty;
+                }
+            }
+        }
+        private void Table12Combobox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataRowView selectedrow = (DataRowView)Table12Combobox.SelectedItem;
+
+            table12itemID = (int)selectedrow["S.No."];
+            table12Itemname = (string)selectedrow["Particulars"];
+            table12hprice = (int)selectedrow["Half P price"];
+            table12fprice = (int)selectedrow["Full P price"];
+            if (selectedrow != null)
+            {
+                Table12FullPlatePriceButton.Text = "Full " + table12fprice;
+                Table12HalfPlatePriceButton.Text = "Half " + table12hprice;
+
+                if (table12hprice == 0)
+                {
+                    Table12HalfPlatePriceButton.Enabled = false;
+                }
+                else
+                {
+                    Table12HalfPlatePriceButton.Enabled = true;
+                }
+            }
+        }
+
+        private void Table12HalfPlatePriceButton_Click(object sender, EventArgs e)
+        {
+            DataRowView selectedrow = (DataRowView)Table12Combobox.SelectedItem;
+
+            table12itemID = (int)selectedrow["S.No."];
+            table12Itemname = (string)selectedrow["Particulars"];
+            table12hprice = (int)selectedrow["Half P price"];
+
+            table12Itemname = table12Itemname + " (Half)";
+
+            int qty = (int)Table12QuantityTextbox.Value;
+
+            if (qty <= 0)
+            {
+                MessageBox.Show("Please enter Quantity of the item");
+            }
+            foreach (DataGridViewRow row in Table12Datagrid.Rows)
+            {
+                int ItemIDExist = int.Parse(row.Cells["Table12Id"].Value.ToString());
+                int itempriceexist = int.Parse(row.Cells["Table12ItemPrice"].Value.ToString());
+
+                if (ItemIDExist == table12itemID && itempriceexist == table12hprice)
+                {
+                    int currentqty = int.Parse(row.Cells["Table12Quantity"].Value.ToString());
+                    row.Cells["Table12Quantity"].Value = qty + currentqty;
+
+                    int amount = (qty + currentqty) * table12hprice;
+                    row.Cells["Table12Amount"].Value = amount;
+
+                    Table12TextBoxValue();
+                    Table12QuantityTextbox.Value = 1;
+                    return;
+                }
+            }
+            if (qty > 0)
+            {
+                int amount = qty * table12hprice;
+                Table12Datagrid.Rows.Add("", table12itemID, table12Itemname, qty, table12hprice, amount);
+                Table12QuantityTextbox.Value = 1;
+            }
+        }
+
+        private void Table12FullPlatePriceButton_Click(object sender, EventArgs e)
+        {
+            DataRowView selectedrow = (DataRowView)Table12Combobox.SelectedItem;
+
+            table12itemID = (int)selectedrow["S.No."];
+            table12Itemname = (string)selectedrow["Particulars"];
+            table12fprice = (int)selectedrow["Full P price"];
+
+            int qty = (int)Table12QuantityTextbox.Value;
+
+            if (qty <= 0)
+            {
+                MessageBox.Show("Please enter Quantity of the item");
+            }
+            foreach (DataGridViewRow row in Table12Datagrid.Rows)
+            {
+                int ItemIDExist = int.Parse(row.Cells["Table12Id"].Value.ToString());
+                int itempriceexist = int.Parse(row.Cells["Table12ItemPrice"].Value.ToString());
+                if (ItemIDExist == table12itemID && itempriceexist == table12fprice)
+                {
+                    int currentqty = int.Parse(row.Cells["Table12Quantity"].Value.ToString());
+                    row.Cells["Table12Quantity"].Value = qty + currentqty;
+
+                    int amount = (qty + currentqty) * table12fprice;
+                    row.Cells["Table12Amount"].Value = amount;
+
+                    Table12TextBoxValue();
+                    Table12QuantityTextbox.Value = 1;
+                    return;
+                }
+            }
+            if (qty > 0)
+            {
+                int amount = qty * table12fprice;
+
+                Table12Datagrid.Rows.Add("", table12itemID, table12Itemname, qty, table12fprice, amount);
+                Table12QuantityTextbox.Value = 1;
+            }
+        }
+
+        private void Table12Datagrid_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            for (int i = 0; i < e.RowCount; i++)
+            {
+                int snoValue = e.RowIndex + i + 1;
+                Table12Datagrid.Rows[e.RowIndex + i].Cells["Table12Sno"].Value = snoValue;
+            }
+            Table12RemoveButton.Enabled = true;
+            Table12SaveButton.Enabled = true;
+            Table12TextBoxValue();
+        }
+
+        private void Table12ClearRefreshButton_Click(object sender, EventArgs e)
+        {
+            Table12Linkcombobox();
+            Table12Datagrid.Rows.Clear();
+            Table12TotalTextBox.Text = "";
+            Table12QuantityTextbox.Value = 1;
+        }
+
+        private void Table12RemoveButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int index = Convert.ToInt32(Table12Datagrid.SelectedRows[0].Index);
+                if (index >= 0)
+                {
+                    Table12Datagrid.Rows.RemoveAt(index);
+                    Table12TextBoxValue();
+                }
+                if (Table12Datagrid.Rows.Count == 0)
+                {
+                    Table12TotalTextBox.Text = string.Empty;
+                    Table12RemoveButton.Enabled = false;
+                    Table12SaveButton.Enabled = false;
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show($"error: No Item to Remove");
+            }
+        }
+
+        private void Table12TotalTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(Table12TotalTextBox.Text))
+            {
+                Table12SaveButton.Enabled = false;
+            }
+        }
+
+        private void Table12SaveButton_Click(object sender, EventArgs e)
+        {
+            DateTime currentdate = DateTime.Now;
+            int day = currentdate.Day;
+            int month = currentdate.Month;
+            int year = currentdate.Year;
+            string tablenumber = "12";
+            int amount = Convert.ToInt32(Table12TotalTextBox.Text.ToString());
+
+            bool isOrdercreated = dbclass.CreateOrderNumber(tablenumber, amount, currentdate, day, month, year);
+
+            if (isOrdercreated)
+            {
+                int Ordernumber = dbclass.getordernumber();
+
+                if (Ordernumber > 0) // ordernumber, amount, datetime, tablenumber, datagridview
+                {
+                    foreach (DataGridViewRow row in Table12Datagrid.Rows)
+                    {
+                        if (!row.IsNewRow)
+                        {
+                            int rowid = Convert.ToInt32(row.Cells["Table12Id"].Value.ToString());
+                            string rowname = row.Cells["Table12name"].Value.ToString();
+                            int rowquantity = Convert.ToInt32(row.Cells["Table12Quantity"].Value.ToString());
+                            int rowprice = Convert.ToInt32(row.Cells["Table12ItemPrice"].Value.ToString());
+                            int rowamount = Convert.ToInt32(row.Cells["Table12Amount"].Value.ToString());
+
+                            dbclass.SavetoDatabase(tablenumber, rowid, rowname, rowquantity, rowprice, rowamount, currentdate, Ordernumber);
+                        }
+                    }
+
+                    //Createpdf(Ordernumber, currentdate, tablenumber, Table8Datagrid, amount);
+                    PrintPdf();
+                    MessageBox.Show("Order Saved Successfully with Order number: " + Ordernumber, "Saved", MessageBoxButtons.OK);
+                }
+            }
+            Table12ClearRefreshButton_Click(sender, e);
+        }
+        #endregion
     }
 }

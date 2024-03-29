@@ -110,7 +110,7 @@ namespace WindowsFormsApp1
                         SalesDataGridView.Columns[2].Width = 100;
                         SalesDataGridView.Columns[3].Width = 100;
                     }
-                    else
+                    if(dataTable.Rows.Count < 1)         
                     {
                         printPreviewControl1.Document = null;
                     }
@@ -130,7 +130,7 @@ namespace WindowsFormsApp1
                         SalesDataGridView.Columns[2].Width = 100;
                         SalesDataGridView.Columns[3].Width = 100;
                     }
-                    else
+                    if (dataTable.Rows.Count < 1)
                     {
                         printPreviewControl1.Document = null;
                     }
@@ -148,7 +148,7 @@ namespace WindowsFormsApp1
                         SalesDataGridView.Columns[2].Width = 100;
                         SalesDataGridView.Columns[3].Width = 100;
                     }
-                    else
+                    if (dataTable.Rows.Count < 1)
                     {
                         printPreviewControl1.Document = null;
                     }
@@ -169,7 +169,7 @@ namespace WindowsFormsApp1
                         SalesDataGridView.Columns[2].Width = 100;
                         SalesDataGridView.Columns[3].Width = 100;
                     }
-                    else
+                    if (dataTable.Rows.Count < 1)
                     {
                         printPreviewControl1.Document = null;
                     }
@@ -435,12 +435,15 @@ namespace WindowsFormsApp1
                     SalesDataGridView.Columns[1].Width = 100;
                     SalesDataGridView.Columns[2].Width = 100;
                     SalesDataGridView.Columns[3].Width = 100;
-
+                }
+                if(dt.Rows.Count < 1)
+                {
                     printPreviewControl1.Document = null;
                 }
                 SalesDataGridView.ClearSelection();
+                printPreviewControl1.Document = null;
             }
-            else
+            else 
             {
                 SearchSalesTextBox.Enabled = false;
                 TotalAmountLabel.Text = "----";
@@ -455,7 +458,6 @@ namespace WindowsFormsApp1
             if (string.IsNullOrWhiteSpace(SearchSalesTextBox.Text))
             {
                 SearchByOrderNumber_CheckedChanged(sender, e);
-                
             }
             SalesDataGridView.ClearSelection();
             printPreviewControl1.Document = null;
@@ -615,7 +617,7 @@ namespace WindowsFormsApp1
                 e.Graphics.DrawLine(dotted5, new Point(20, y + 5), new Point(265, y + 5));
                 dotted5.Dispose();
 
-                e.Graphics.DrawString("Total : ₹" + Orderamount + "/-", new Font("Arial", 10, FontStyle.Bold), Brushes.Black, 170, y + 15);
+                e.Graphics.DrawString("Total : ₹" + Orderamount + "/-", new Font("Arial", 10, FontStyle.Bold), Brushes.Black, 165, y + 15);
 
                 Pen dotted6 = new Pen(Color.Black);
                 dotted6.DashStyle = DashStyle.Solid;

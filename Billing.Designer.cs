@@ -182,13 +182,88 @@
             this.label24 = new System.Windows.Forms.Label();
             this.Table5Combobox = new System.Windows.Forms.ComboBox();
             this.AddUpdateOpenForm = new System.Windows.Forms.Button();
-            this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewControl1 = new System.Windows.Forms.PrintPreviewControl();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.OpenSalesWindow = new System.Windows.Forms.Button();
             this.ExitButton = new System.Windows.Forms.Button();
             this.ClearRefreshButton = new System.Windows.Forms.Button();
+            this.Table12groupBox = new System.Windows.Forms.GroupBox();
+            this.Table12SaveButton = new System.Windows.Forms.Button();
+            this.Table12TotalTextBox = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.Table12RemoveButton = new System.Windows.Forms.Button();
+            this.Table12ClearRefreshButton = new System.Windows.Forms.Button();
+            this.Table12Datagrid = new System.Windows.Forms.DataGridView();
+            this.Table12Sno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table12Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table12name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table12Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table12ItemPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table12Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label26 = new System.Windows.Forms.Label();
+            this.Table12QuantityTextbox = new System.Windows.Forms.NumericUpDown();
+            this.Table12HalfPlatePriceButton = new System.Windows.Forms.Button();
+            this.Table12FullPlatePriceButton = new System.Windows.Forms.Button();
+            this.label27 = new System.Windows.Forms.Label();
+            this.Table12Combobox = new System.Windows.Forms.ComboBox();
+            this.Table11groupBox = new System.Windows.Forms.GroupBox();
+            this.Table11SaveButton = new System.Windows.Forms.Button();
+            this.Table11TotalTextBox = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.Table11RemoveButton = new System.Windows.Forms.Button();
+            this.Table11ClearRefreshButton = new System.Windows.Forms.Button();
+            this.Table11Datagrid = new System.Windows.Forms.DataGridView();
+            this.Table11Sno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table11Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table11name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table11Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table11ItemPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table11Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label29 = new System.Windows.Forms.Label();
+            this.Table11QuantityTextbox = new System.Windows.Forms.NumericUpDown();
+            this.Table11HalfPlatePriceButton = new System.Windows.Forms.Button();
+            this.Table11FullPlatePriceButton = new System.Windows.Forms.Button();
+            this.label30 = new System.Windows.Forms.Label();
+            this.Table11Combobox = new System.Windows.Forms.ComboBox();
+            this.Table10groupBox = new System.Windows.Forms.GroupBox();
+            this.Table10SaveButton = new System.Windows.Forms.Button();
+            this.Table10TotalTextBox = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.Table10RemoveButton = new System.Windows.Forms.Button();
+            this.Table10ClearRefreshButton = new System.Windows.Forms.Button();
+            this.Table10Datagrid = new System.Windows.Forms.DataGridView();
+            this.Table10Sno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table10Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table10name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table10Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table10ItemPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table10Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label32 = new System.Windows.Forms.Label();
+            this.Table10QuantityTextbox = new System.Windows.Forms.NumericUpDown();
+            this.Table10HalfPlatePriceButton = new System.Windows.Forms.Button();
+            this.Table10FullPlatePriceButton = new System.Windows.Forms.Button();
+            this.label33 = new System.Windows.Forms.Label();
+            this.Table10Combobox = new System.Windows.Forms.ComboBox();
+            this.Table9GroupBox = new System.Windows.Forms.GroupBox();
+            this.Table9SaveButton = new System.Windows.Forms.Button();
+            this.Table9TotalTextBox = new System.Windows.Forms.TextBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.Table9RemoveButton = new System.Windows.Forms.Button();
+            this.Table9ClearRefreshButton = new System.Windows.Forms.Button();
+            this.Table9Datagrid = new System.Windows.Forms.DataGridView();
+            this.Table9Sno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table9Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table9name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table9Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table9ItemPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Table9Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label35 = new System.Windows.Forms.Label();
+            this.Table9QuantityTextbox = new System.Windows.Forms.NumericUpDown();
+            this.Table9HalfPlatePriceButton = new System.Windows.Forms.Button();
+            this.Table9FullPlatePriceButton = new System.Windows.Forms.Button();
+            this.label36 = new System.Windows.Forms.Label();
+            this.Table9Combobox = new System.Windows.Forms.ComboBox();
             this.Table1Groupbox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TableOneDatagrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Qtytextbox)).BeginInit();
@@ -213,6 +288,18 @@
             this.Table5GroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Table5Datagrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Table5QuantityTextbox)).BeginInit();
+            this.Table12groupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Table12Datagrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Table12QuantityTextbox)).BeginInit();
+            this.Table11groupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Table11Datagrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Table11QuantityTextbox)).BeginInit();
+            this.Table10groupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Table10Datagrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Table10QuantityTextbox)).BeginInit();
+            this.Table9GroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Table9Datagrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Table9QuantityTextbox)).BeginInit();
             this.SuspendLayout();
             // 
             // ItemNamecombobox
@@ -266,7 +353,7 @@
             this.TotalTextBox.Location = new System.Drawing.Point(367, 340);
             this.TotalTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.TotalTextBox.Name = "TotalTextBox";
-            this.TotalTextBox.Size = new System.Drawing.Size(111, 22);
+            this.TotalTextBox.Size = new System.Drawing.Size(174, 28);
             this.TotalTextBox.TabIndex = 12;
             this.TotalTextBox.TextChanged += new System.EventHandler(this.TotalTextBox_TextChanged);
             // 
@@ -276,7 +363,7 @@
             this.label3.Location = new System.Drawing.Point(309, 342);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 16);
+            this.label3.Size = new System.Drawing.Size(51, 20);
             this.label3.TabIndex = 11;
             this.label3.Text = "Total ";
             // 
@@ -384,7 +471,7 @@
             this.label2.Location = new System.Drawing.Point(372, 36);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(27, 16);
+            this.label2.Size = new System.Drawing.Size(34, 20);
             this.label2.TabIndex = 7;
             this.label2.Text = "Qty";
             // 
@@ -393,7 +480,7 @@
             this.Qtytextbox.Location = new System.Drawing.Point(427, 33);
             this.Qtytextbox.Margin = new System.Windows.Forms.Padding(4);
             this.Qtytextbox.Name = "Qtytextbox";
-            this.Qtytextbox.Size = new System.Drawing.Size(52, 22);
+            this.Qtytextbox.Size = new System.Drawing.Size(81, 22);
             this.Qtytextbox.TabIndex = 6;
             this.Qtytextbox.Value = new decimal(new int[] {
             1,
@@ -431,7 +518,7 @@
             this.label1.Location = new System.Drawing.Point(8, 36);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 16);
+            this.label1.Size = new System.Drawing.Size(86, 20);
             this.label1.TabIndex = 3;
             this.label1.Text = "Item name";
             // 
@@ -1988,10 +2075,6 @@
             this.AddUpdateOpenForm.UseVisualStyleBackColor = false;
             this.AddUpdateOpenForm.Click += new System.EventHandler(this.AddUpdateOpenForm_Click);
             // 
-            // printDialog1
-            // 
-            this.printDialog1.UseEXDialog = true;
-            // 
             // printDocument1
             // 
             this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
@@ -2052,13 +2135,896 @@
             this.ClearRefreshButton.UseVisualStyleBackColor = false;
             this.ClearRefreshButton.Click += new System.EventHandler(this.ClearRefreshButton_Click);
             // 
+            // Table12groupBox
+            // 
+            this.Table12groupBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.Table12groupBox.Controls.Add(this.Table12SaveButton);
+            this.Table12groupBox.Controls.Add(this.Table12TotalTextBox);
+            this.Table12groupBox.Controls.Add(this.label25);
+            this.Table12groupBox.Controls.Add(this.Table12RemoveButton);
+            this.Table12groupBox.Controls.Add(this.Table12ClearRefreshButton);
+            this.Table12groupBox.Controls.Add(this.Table12Datagrid);
+            this.Table12groupBox.Controls.Add(this.label26);
+            this.Table12groupBox.Controls.Add(this.Table12QuantityTextbox);
+            this.Table12groupBox.Controls.Add(this.Table12HalfPlatePriceButton);
+            this.Table12groupBox.Controls.Add(this.Table12FullPlatePriceButton);
+            this.Table12groupBox.Controls.Add(this.label27);
+            this.Table12groupBox.Controls.Add(this.Table12Combobox);
+            this.Table12groupBox.Location = new System.Drawing.Point(1516, 964);
+            this.Table12groupBox.Margin = new System.Windows.Forms.Padding(4);
+            this.Table12groupBox.Name = "Table12groupBox";
+            this.Table12groupBox.Padding = new System.Windows.Forms.Padding(4);
+            this.Table12groupBox.Size = new System.Drawing.Size(492, 434);
+            this.Table12groupBox.TabIndex = 16;
+            this.Table12groupBox.TabStop = false;
+            this.Table12groupBox.Text = "Table 12";
+            // 
+            // Table12SaveButton
+            // 
+            this.Table12SaveButton.BackColor = System.Drawing.Color.PaleGreen;
+            this.Table12SaveButton.Location = new System.Drawing.Point(12, 379);
+            this.Table12SaveButton.Margin = new System.Windows.Forms.Padding(4);
+            this.Table12SaveButton.Name = "Table12SaveButton";
+            this.Table12SaveButton.Size = new System.Drawing.Size(467, 48);
+            this.Table12SaveButton.TabIndex = 13;
+            this.Table12SaveButton.Text = "Save / Print";
+            this.Table12SaveButton.UseVisualStyleBackColor = false;
+            this.Table12SaveButton.Click += new System.EventHandler(this.Table12SaveButton_Click);
+            // 
+            // Table12TotalTextBox
+            // 
+            this.Table12TotalTextBox.Location = new System.Drawing.Point(367, 340);
+            this.Table12TotalTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.Table12TotalTextBox.Name = "Table12TotalTextBox";
+            this.Table12TotalTextBox.Size = new System.Drawing.Size(111, 22);
+            this.Table12TotalTextBox.TabIndex = 12;
+            this.Table12TotalTextBox.TextChanged += new System.EventHandler(this.Table12TotalTextBox_TextChanged);
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(309, 342);
+            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(41, 16);
+            this.label25.TabIndex = 11;
+            this.label25.Text = "Total ";
+            // 
+            // Table12RemoveButton
+            // 
+            this.Table12RemoveButton.BackColor = System.Drawing.Color.OrangeRed;
+            this.Table12RemoveButton.Location = new System.Drawing.Point(165, 330);
+            this.Table12RemoveButton.Margin = new System.Windows.Forms.Padding(4);
+            this.Table12RemoveButton.Name = "Table12RemoveButton";
+            this.Table12RemoveButton.Size = new System.Drawing.Size(116, 42);
+            this.Table12RemoveButton.TabIndex = 10;
+            this.Table12RemoveButton.Text = "Remove Item";
+            this.Table12RemoveButton.UseVisualStyleBackColor = false;
+            this.Table12RemoveButton.Click += new System.EventHandler(this.Table12RemoveButton_Click);
+            // 
+            // Table12ClearRefreshButton
+            // 
+            this.Table12ClearRefreshButton.BackColor = System.Drawing.Color.Gold;
+            this.Table12ClearRefreshButton.Location = new System.Drawing.Point(12, 330);
+            this.Table12ClearRefreshButton.Margin = new System.Windows.Forms.Padding(4);
+            this.Table12ClearRefreshButton.Name = "Table12ClearRefreshButton";
+            this.Table12ClearRefreshButton.Size = new System.Drawing.Size(127, 42);
+            this.Table12ClearRefreshButton.TabIndex = 9;
+            this.Table12ClearRefreshButton.Text = "Clear / Refresh";
+            this.Table12ClearRefreshButton.UseVisualStyleBackColor = false;
+            this.Table12ClearRefreshButton.Click += new System.EventHandler(this.Table12ClearRefreshButton_Click);
+            // 
+            // Table12Datagrid
+            // 
+            this.Table12Datagrid.AllowUserToAddRows = false;
+            this.Table12Datagrid.AllowUserToDeleteRows = false;
+            this.Table12Datagrid.BackgroundColor = System.Drawing.SystemColors.InactiveCaption;
+            this.Table12Datagrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Table12Datagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Table12Datagrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Table12Sno,
+            this.Table12Id,
+            this.Table12name,
+            this.Table12Quantity,
+            this.Table12ItemPrice,
+            this.Table12Amount});
+            this.Table12Datagrid.Location = new System.Drawing.Point(12, 134);
+            this.Table12Datagrid.Margin = new System.Windows.Forms.Padding(4);
+            this.Table12Datagrid.Name = "Table12Datagrid";
+            this.Table12Datagrid.ReadOnly = true;
+            this.Table12Datagrid.RowHeadersVisible = false;
+            this.Table12Datagrid.RowHeadersWidth = 51;
+            this.Table12Datagrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Table12Datagrid.Size = new System.Drawing.Size(467, 185);
+            this.Table12Datagrid.TabIndex = 8;
+            this.Table12Datagrid.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.Table12Datagrid_RowsAdded);
+            // 
+            // Table12Sno
+            // 
+            this.Table12Sno.HeaderText = "S.no.";
+            this.Table12Sno.MinimumWidth = 6;
+            this.Table12Sno.Name = "Table12Sno";
+            this.Table12Sno.ReadOnly = true;
+            this.Table12Sno.Width = 46;
+            // 
+            // Table12Id
+            // 
+            this.Table12Id.HeaderText = "Item ID";
+            this.Table12Id.MinimumWidth = 6;
+            this.Table12Id.Name = "Table12Id";
+            this.Table12Id.ReadOnly = true;
+            this.Table12Id.Visible = false;
+            this.Table12Id.Width = 125;
+            // 
+            // Table12name
+            // 
+            this.Table12name.HeaderText = "Particular(s)";
+            this.Table12name.MinimumWidth = 6;
+            this.Table12name.Name = "Table12name";
+            this.Table12name.ReadOnly = true;
+            this.Table12name.Width = 150;
+            // 
+            // Table12Quantity
+            // 
+            this.Table12Quantity.HeaderText = "Qty";
+            this.Table12Quantity.MinimumWidth = 6;
+            this.Table12Quantity.Name = "Table12Quantity";
+            this.Table12Quantity.ReadOnly = true;
+            this.Table12Quantity.Width = 50;
+            // 
+            // Table12ItemPrice
+            // 
+            this.Table12ItemPrice.HeaderText = "Item Price";
+            this.Table12ItemPrice.MinimumWidth = 6;
+            this.Table12ItemPrice.Name = "Table12ItemPrice";
+            this.Table12ItemPrice.ReadOnly = true;
+            this.Table12ItemPrice.Width = 50;
+            // 
+            // Table12Amount
+            // 
+            this.Table12Amount.HeaderText = "Amount";
+            this.Table12Amount.MinimumWidth = 6;
+            this.Table12Amount.Name = "Table12Amount";
+            this.Table12Amount.ReadOnly = true;
+            this.Table12Amount.Width = 50;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(372, 36);
+            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(27, 16);
+            this.label26.TabIndex = 7;
+            this.label26.Text = "Qty";
+            // 
+            // Table12QuantityTextbox
+            // 
+            this.Table12QuantityTextbox.Location = new System.Drawing.Point(427, 33);
+            this.Table12QuantityTextbox.Margin = new System.Windows.Forms.Padding(4);
+            this.Table12QuantityTextbox.Name = "Table12QuantityTextbox";
+            this.Table12QuantityTextbox.Size = new System.Drawing.Size(52, 22);
+            this.Table12QuantityTextbox.TabIndex = 6;
+            this.Table12QuantityTextbox.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // Table12HalfPlatePriceButton
+            // 
+            this.Table12HalfPlatePriceButton.BackColor = System.Drawing.Color.NavajoWhite;
+            this.Table12HalfPlatePriceButton.Location = new System.Drawing.Point(12, 79);
+            this.Table12HalfPlatePriceButton.Margin = new System.Windows.Forms.Padding(4);
+            this.Table12HalfPlatePriceButton.Name = "Table12HalfPlatePriceButton";
+            this.Table12HalfPlatePriceButton.Size = new System.Drawing.Size(181, 36);
+            this.Table12HalfPlatePriceButton.TabIndex = 5;
+            this.Table12HalfPlatePriceButton.Text = "Half Plate Price";
+            this.Table12HalfPlatePriceButton.UseVisualStyleBackColor = false;
+            this.Table12HalfPlatePriceButton.Click += new System.EventHandler(this.Table12HalfPlatePriceButton_Click);
+            // 
+            // Table12FullPlatePriceButton
+            // 
+            this.Table12FullPlatePriceButton.BackColor = System.Drawing.Color.DarkKhaki;
+            this.Table12FullPlatePriceButton.Location = new System.Drawing.Point(297, 79);
+            this.Table12FullPlatePriceButton.Margin = new System.Windows.Forms.Padding(4);
+            this.Table12FullPlatePriceButton.Name = "Table12FullPlatePriceButton";
+            this.Table12FullPlatePriceButton.Size = new System.Drawing.Size(181, 36);
+            this.Table12FullPlatePriceButton.TabIndex = 4;
+            this.Table12FullPlatePriceButton.Text = "FullPlatePrice";
+            this.Table12FullPlatePriceButton.UseVisualStyleBackColor = false;
+            this.Table12FullPlatePriceButton.Click += new System.EventHandler(this.Table12FullPlatePriceButton_Click);
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(8, 36);
+            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(69, 16);
+            this.label27.TabIndex = 3;
+            this.label27.Text = "Item name";
+            // 
+            // Table12Combobox
+            // 
+            this.Table12Combobox.FormattingEnabled = true;
+            this.Table12Combobox.Location = new System.Drawing.Point(91, 32);
+            this.Table12Combobox.Margin = new System.Windows.Forms.Padding(4);
+            this.Table12Combobox.Name = "Table12Combobox";
+            this.Table12Combobox.Size = new System.Drawing.Size(237, 24);
+            this.Table12Combobox.TabIndex = 2;
+            this.Table12Combobox.SelectedIndexChanged += new System.EventHandler(this.Table12Combobox_SelectedIndexChanged);
+            // 
+            // Table11groupBox
+            // 
+            this.Table11groupBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.Table11groupBox.Controls.Add(this.Table11SaveButton);
+            this.Table11groupBox.Controls.Add(this.Table11TotalTextBox);
+            this.Table11groupBox.Controls.Add(this.label28);
+            this.Table11groupBox.Controls.Add(this.Table11RemoveButton);
+            this.Table11groupBox.Controls.Add(this.Table11ClearRefreshButton);
+            this.Table11groupBox.Controls.Add(this.Table11Datagrid);
+            this.Table11groupBox.Controls.Add(this.label29);
+            this.Table11groupBox.Controls.Add(this.Table11QuantityTextbox);
+            this.Table11groupBox.Controls.Add(this.Table11HalfPlatePriceButton);
+            this.Table11groupBox.Controls.Add(this.Table11FullPlatePriceButton);
+            this.Table11groupBox.Controls.Add(this.label30);
+            this.Table11groupBox.Controls.Add(this.Table11Combobox);
+            this.Table11groupBox.Location = new System.Drawing.Point(1016, 964);
+            this.Table11groupBox.Margin = new System.Windows.Forms.Padding(4);
+            this.Table11groupBox.Name = "Table11groupBox";
+            this.Table11groupBox.Padding = new System.Windows.Forms.Padding(4);
+            this.Table11groupBox.Size = new System.Drawing.Size(492, 434);
+            this.Table11groupBox.TabIndex = 15;
+            this.Table11groupBox.TabStop = false;
+            this.Table11groupBox.Text = "Table 11";
+            // 
+            // Table11SaveButton
+            // 
+            this.Table11SaveButton.BackColor = System.Drawing.Color.PaleGreen;
+            this.Table11SaveButton.Location = new System.Drawing.Point(12, 379);
+            this.Table11SaveButton.Margin = new System.Windows.Forms.Padding(4);
+            this.Table11SaveButton.Name = "Table11SaveButton";
+            this.Table11SaveButton.Size = new System.Drawing.Size(467, 48);
+            this.Table11SaveButton.TabIndex = 13;
+            this.Table11SaveButton.Text = "Save / Print";
+            this.Table11SaveButton.UseVisualStyleBackColor = false;
+            this.Table11SaveButton.Click += new System.EventHandler(this.Table11SaveButton_Click);
+            // 
+            // Table11TotalTextBox
+            // 
+            this.Table11TotalTextBox.Location = new System.Drawing.Point(367, 340);
+            this.Table11TotalTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.Table11TotalTextBox.Name = "Table11TotalTextBox";
+            this.Table11TotalTextBox.Size = new System.Drawing.Size(111, 22);
+            this.Table11TotalTextBox.TabIndex = 12;
+            this.Table11TotalTextBox.TextChanged += new System.EventHandler(this.Table11TotalTextBox_TextChanged);
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(309, 342);
+            this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(41, 16);
+            this.label28.TabIndex = 11;
+            this.label28.Text = "Total ";
+            // 
+            // Table11RemoveButton
+            // 
+            this.Table11RemoveButton.BackColor = System.Drawing.Color.OrangeRed;
+            this.Table11RemoveButton.Location = new System.Drawing.Point(165, 330);
+            this.Table11RemoveButton.Margin = new System.Windows.Forms.Padding(4);
+            this.Table11RemoveButton.Name = "Table11RemoveButton";
+            this.Table11RemoveButton.Size = new System.Drawing.Size(116, 42);
+            this.Table11RemoveButton.TabIndex = 10;
+            this.Table11RemoveButton.Text = "Remove Item";
+            this.Table11RemoveButton.UseVisualStyleBackColor = false;
+            this.Table11RemoveButton.Click += new System.EventHandler(this.Table11RemoveButton_Click);
+            // 
+            // Table11ClearRefreshButton
+            // 
+            this.Table11ClearRefreshButton.BackColor = System.Drawing.Color.Gold;
+            this.Table11ClearRefreshButton.Location = new System.Drawing.Point(12, 330);
+            this.Table11ClearRefreshButton.Margin = new System.Windows.Forms.Padding(4);
+            this.Table11ClearRefreshButton.Name = "Table11ClearRefreshButton";
+            this.Table11ClearRefreshButton.Size = new System.Drawing.Size(127, 42);
+            this.Table11ClearRefreshButton.TabIndex = 9;
+            this.Table11ClearRefreshButton.Text = "Clear / Refresh";
+            this.Table11ClearRefreshButton.UseVisualStyleBackColor = false;
+            this.Table11ClearRefreshButton.Click += new System.EventHandler(this.Table11ClearRefreshButton_Click);
+            // 
+            // Table11Datagrid
+            // 
+            this.Table11Datagrid.AllowUserToAddRows = false;
+            this.Table11Datagrid.AllowUserToDeleteRows = false;
+            this.Table11Datagrid.BackgroundColor = System.Drawing.SystemColors.InactiveCaption;
+            this.Table11Datagrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Table11Datagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Table11Datagrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Table11Sno,
+            this.Table11Id,
+            this.Table11name,
+            this.Table11Quantity,
+            this.Table11ItemPrice,
+            this.Table11Amount});
+            this.Table11Datagrid.Location = new System.Drawing.Point(12, 134);
+            this.Table11Datagrid.Margin = new System.Windows.Forms.Padding(4);
+            this.Table11Datagrid.Name = "Table11Datagrid";
+            this.Table11Datagrid.ReadOnly = true;
+            this.Table11Datagrid.RowHeadersVisible = false;
+            this.Table11Datagrid.RowHeadersWidth = 51;
+            this.Table11Datagrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Table11Datagrid.Size = new System.Drawing.Size(467, 185);
+            this.Table11Datagrid.TabIndex = 8;
+            this.Table11Datagrid.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.Table11Datagrid_RowsAdded);
+            // 
+            // Table11Sno
+            // 
+            this.Table11Sno.HeaderText = "S.no.";
+            this.Table11Sno.MinimumWidth = 6;
+            this.Table11Sno.Name = "Table11Sno";
+            this.Table11Sno.ReadOnly = true;
+            this.Table11Sno.Width = 46;
+            // 
+            // Table11Id
+            // 
+            this.Table11Id.HeaderText = "Item ID";
+            this.Table11Id.MinimumWidth = 6;
+            this.Table11Id.Name = "Table11Id";
+            this.Table11Id.ReadOnly = true;
+            this.Table11Id.Visible = false;
+            this.Table11Id.Width = 125;
+            // 
+            // Table11name
+            // 
+            this.Table11name.HeaderText = "Particular(s)";
+            this.Table11name.MinimumWidth = 6;
+            this.Table11name.Name = "Table11name";
+            this.Table11name.ReadOnly = true;
+            this.Table11name.Width = 150;
+            // 
+            // Table11Quantity
+            // 
+            this.Table11Quantity.HeaderText = "Qty";
+            this.Table11Quantity.MinimumWidth = 6;
+            this.Table11Quantity.Name = "Table11Quantity";
+            this.Table11Quantity.ReadOnly = true;
+            this.Table11Quantity.Width = 50;
+            // 
+            // Table11ItemPrice
+            // 
+            this.Table11ItemPrice.HeaderText = "Item Price";
+            this.Table11ItemPrice.MinimumWidth = 6;
+            this.Table11ItemPrice.Name = "Table11ItemPrice";
+            this.Table11ItemPrice.ReadOnly = true;
+            this.Table11ItemPrice.Width = 50;
+            // 
+            // Table11Amount
+            // 
+            this.Table11Amount.HeaderText = "Amount";
+            this.Table11Amount.MinimumWidth = 6;
+            this.Table11Amount.Name = "Table11Amount";
+            this.Table11Amount.ReadOnly = true;
+            this.Table11Amount.Width = 50;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(372, 36);
+            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(27, 16);
+            this.label29.TabIndex = 7;
+            this.label29.Text = "Qty";
+            // 
+            // Table11QuantityTextbox
+            // 
+            this.Table11QuantityTextbox.Location = new System.Drawing.Point(427, 33);
+            this.Table11QuantityTextbox.Margin = new System.Windows.Forms.Padding(4);
+            this.Table11QuantityTextbox.Name = "Table11QuantityTextbox";
+            this.Table11QuantityTextbox.Size = new System.Drawing.Size(52, 22);
+            this.Table11QuantityTextbox.TabIndex = 6;
+            this.Table11QuantityTextbox.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // Table11HalfPlatePriceButton
+            // 
+            this.Table11HalfPlatePriceButton.BackColor = System.Drawing.Color.NavajoWhite;
+            this.Table11HalfPlatePriceButton.Location = new System.Drawing.Point(12, 79);
+            this.Table11HalfPlatePriceButton.Margin = new System.Windows.Forms.Padding(4);
+            this.Table11HalfPlatePriceButton.Name = "Table11HalfPlatePriceButton";
+            this.Table11HalfPlatePriceButton.Size = new System.Drawing.Size(181, 36);
+            this.Table11HalfPlatePriceButton.TabIndex = 5;
+            this.Table11HalfPlatePriceButton.Text = "Half Plate Price";
+            this.Table11HalfPlatePriceButton.UseVisualStyleBackColor = false;
+            this.Table11HalfPlatePriceButton.Click += new System.EventHandler(this.Table11HalfPlatePriceButton_Click);
+            // 
+            // Table11FullPlatePriceButton
+            // 
+            this.Table11FullPlatePriceButton.BackColor = System.Drawing.Color.DarkKhaki;
+            this.Table11FullPlatePriceButton.Location = new System.Drawing.Point(297, 79);
+            this.Table11FullPlatePriceButton.Margin = new System.Windows.Forms.Padding(4);
+            this.Table11FullPlatePriceButton.Name = "Table11FullPlatePriceButton";
+            this.Table11FullPlatePriceButton.Size = new System.Drawing.Size(181, 36);
+            this.Table11FullPlatePriceButton.TabIndex = 4;
+            this.Table11FullPlatePriceButton.Text = "FullPlatePrice";
+            this.Table11FullPlatePriceButton.UseVisualStyleBackColor = false;
+            this.Table11FullPlatePriceButton.Click += new System.EventHandler(this.Table11FullPlatePriceButton_Click);
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(8, 36);
+            this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(69, 16);
+            this.label30.TabIndex = 3;
+            this.label30.Text = "Item name";
+            // 
+            // Table11Combobox
+            // 
+            this.Table11Combobox.FormattingEnabled = true;
+            this.Table11Combobox.Location = new System.Drawing.Point(91, 32);
+            this.Table11Combobox.Margin = new System.Windows.Forms.Padding(4);
+            this.Table11Combobox.Name = "Table11Combobox";
+            this.Table11Combobox.Size = new System.Drawing.Size(237, 24);
+            this.Table11Combobox.TabIndex = 2;
+            this.Table11Combobox.SelectedIndexChanged += new System.EventHandler(this.Table11Combobox_SelectedIndexChanged);
+            // 
+            // Table10groupBox
+            // 
+            this.Table10groupBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.Table10groupBox.Controls.Add(this.Table10SaveButton);
+            this.Table10groupBox.Controls.Add(this.Table10TotalTextBox);
+            this.Table10groupBox.Controls.Add(this.label31);
+            this.Table10groupBox.Controls.Add(this.Table10RemoveButton);
+            this.Table10groupBox.Controls.Add(this.Table10ClearRefreshButton);
+            this.Table10groupBox.Controls.Add(this.Table10Datagrid);
+            this.Table10groupBox.Controls.Add(this.label32);
+            this.Table10groupBox.Controls.Add(this.Table10QuantityTextbox);
+            this.Table10groupBox.Controls.Add(this.Table10HalfPlatePriceButton);
+            this.Table10groupBox.Controls.Add(this.Table10FullPlatePriceButton);
+            this.Table10groupBox.Controls.Add(this.label33);
+            this.Table10groupBox.Controls.Add(this.Table10Combobox);
+            this.Table10groupBox.Location = new System.Drawing.Point(516, 964);
+            this.Table10groupBox.Margin = new System.Windows.Forms.Padding(4);
+            this.Table10groupBox.Name = "Table10groupBox";
+            this.Table10groupBox.Padding = new System.Windows.Forms.Padding(4);
+            this.Table10groupBox.Size = new System.Drawing.Size(492, 434);
+            this.Table10groupBox.TabIndex = 14;
+            this.Table10groupBox.TabStop = false;
+            this.Table10groupBox.Text = "Table 10";
+            // 
+            // Table10SaveButton
+            // 
+            this.Table10SaveButton.BackColor = System.Drawing.Color.PaleGreen;
+            this.Table10SaveButton.Location = new System.Drawing.Point(12, 379);
+            this.Table10SaveButton.Margin = new System.Windows.Forms.Padding(4);
+            this.Table10SaveButton.Name = "Table10SaveButton";
+            this.Table10SaveButton.Size = new System.Drawing.Size(467, 48);
+            this.Table10SaveButton.TabIndex = 13;
+            this.Table10SaveButton.Text = "Save / Print";
+            this.Table10SaveButton.UseVisualStyleBackColor = false;
+            this.Table10SaveButton.Click += new System.EventHandler(this.Table10SaveButton_Click);
+            // 
+            // Table10TotalTextBox
+            // 
+            this.Table10TotalTextBox.Location = new System.Drawing.Point(367, 340);
+            this.Table10TotalTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.Table10TotalTextBox.Name = "Table10TotalTextBox";
+            this.Table10TotalTextBox.Size = new System.Drawing.Size(111, 22);
+            this.Table10TotalTextBox.TabIndex = 12;
+            this.Table10TotalTextBox.TextChanged += new System.EventHandler(this.Table10TotalTextBox_TextChanged);
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(309, 342);
+            this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(41, 16);
+            this.label31.TabIndex = 11;
+            this.label31.Text = "Total ";
+            // 
+            // Table10RemoveButton
+            // 
+            this.Table10RemoveButton.BackColor = System.Drawing.Color.OrangeRed;
+            this.Table10RemoveButton.Location = new System.Drawing.Point(165, 330);
+            this.Table10RemoveButton.Margin = new System.Windows.Forms.Padding(4);
+            this.Table10RemoveButton.Name = "Table10RemoveButton";
+            this.Table10RemoveButton.Size = new System.Drawing.Size(116, 42);
+            this.Table10RemoveButton.TabIndex = 10;
+            this.Table10RemoveButton.Text = "Remove Item";
+            this.Table10RemoveButton.UseVisualStyleBackColor = false;
+            this.Table10RemoveButton.Click += new System.EventHandler(this.Table10RemoveButton_Click);
+            // 
+            // Table10ClearRefreshButton
+            // 
+            this.Table10ClearRefreshButton.BackColor = System.Drawing.Color.Gold;
+            this.Table10ClearRefreshButton.Location = new System.Drawing.Point(12, 330);
+            this.Table10ClearRefreshButton.Margin = new System.Windows.Forms.Padding(4);
+            this.Table10ClearRefreshButton.Name = "Table10ClearRefreshButton";
+            this.Table10ClearRefreshButton.Size = new System.Drawing.Size(127, 42);
+            this.Table10ClearRefreshButton.TabIndex = 9;
+            this.Table10ClearRefreshButton.Text = "Clear / Refresh";
+            this.Table10ClearRefreshButton.UseVisualStyleBackColor = false;
+            this.Table10ClearRefreshButton.Click += new System.EventHandler(this.Table10ClearRefreshButton_Click);
+            // 
+            // Table10Datagrid
+            // 
+            this.Table10Datagrid.AllowUserToAddRows = false;
+            this.Table10Datagrid.AllowUserToDeleteRows = false;
+            this.Table10Datagrid.BackgroundColor = System.Drawing.SystemColors.InactiveCaption;
+            this.Table10Datagrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Table10Datagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Table10Datagrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Table10Sno,
+            this.Table10Id,
+            this.Table10name,
+            this.Table10Quantity,
+            this.Table10ItemPrice,
+            this.Table10Amount});
+            this.Table10Datagrid.Location = new System.Drawing.Point(12, 134);
+            this.Table10Datagrid.Margin = new System.Windows.Forms.Padding(4);
+            this.Table10Datagrid.Name = "Table10Datagrid";
+            this.Table10Datagrid.ReadOnly = true;
+            this.Table10Datagrid.RowHeadersVisible = false;
+            this.Table10Datagrid.RowHeadersWidth = 51;
+            this.Table10Datagrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Table10Datagrid.Size = new System.Drawing.Size(467, 185);
+            this.Table10Datagrid.TabIndex = 8;
+            this.Table10Datagrid.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.Table10Datagrid_RowsAdded);
+            // 
+            // Table10Sno
+            // 
+            this.Table10Sno.HeaderText = "S.no.";
+            this.Table10Sno.MinimumWidth = 6;
+            this.Table10Sno.Name = "Table10Sno";
+            this.Table10Sno.ReadOnly = true;
+            this.Table10Sno.Width = 46;
+            // 
+            // Table10Id
+            // 
+            this.Table10Id.HeaderText = "Item ID";
+            this.Table10Id.MinimumWidth = 6;
+            this.Table10Id.Name = "Table10Id";
+            this.Table10Id.ReadOnly = true;
+            this.Table10Id.Visible = false;
+            this.Table10Id.Width = 125;
+            // 
+            // Table10name
+            // 
+            this.Table10name.HeaderText = "Particular(s)";
+            this.Table10name.MinimumWidth = 6;
+            this.Table10name.Name = "Table10name";
+            this.Table10name.ReadOnly = true;
+            this.Table10name.Width = 150;
+            // 
+            // Table10Quantity
+            // 
+            this.Table10Quantity.HeaderText = "Qty";
+            this.Table10Quantity.MinimumWidth = 6;
+            this.Table10Quantity.Name = "Table10Quantity";
+            this.Table10Quantity.ReadOnly = true;
+            this.Table10Quantity.Width = 50;
+            // 
+            // Table10ItemPrice
+            // 
+            this.Table10ItemPrice.HeaderText = "Item Price";
+            this.Table10ItemPrice.MinimumWidth = 6;
+            this.Table10ItemPrice.Name = "Table10ItemPrice";
+            this.Table10ItemPrice.ReadOnly = true;
+            this.Table10ItemPrice.Width = 50;
+            // 
+            // Table10Amount
+            // 
+            this.Table10Amount.HeaderText = "Amount";
+            this.Table10Amount.MinimumWidth = 6;
+            this.Table10Amount.Name = "Table10Amount";
+            this.Table10Amount.ReadOnly = true;
+            this.Table10Amount.Width = 50;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(372, 36);
+            this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(27, 16);
+            this.label32.TabIndex = 7;
+            this.label32.Text = "Qty";
+            // 
+            // Table10QuantityTextbox
+            // 
+            this.Table10QuantityTextbox.Location = new System.Drawing.Point(427, 33);
+            this.Table10QuantityTextbox.Margin = new System.Windows.Forms.Padding(4);
+            this.Table10QuantityTextbox.Name = "Table10QuantityTextbox";
+            this.Table10QuantityTextbox.Size = new System.Drawing.Size(52, 22);
+            this.Table10QuantityTextbox.TabIndex = 6;
+            this.Table10QuantityTextbox.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // Table10HalfPlatePriceButton
+            // 
+            this.Table10HalfPlatePriceButton.BackColor = System.Drawing.Color.NavajoWhite;
+            this.Table10HalfPlatePriceButton.Location = new System.Drawing.Point(12, 79);
+            this.Table10HalfPlatePriceButton.Margin = new System.Windows.Forms.Padding(4);
+            this.Table10HalfPlatePriceButton.Name = "Table10HalfPlatePriceButton";
+            this.Table10HalfPlatePriceButton.Size = new System.Drawing.Size(181, 36);
+            this.Table10HalfPlatePriceButton.TabIndex = 5;
+            this.Table10HalfPlatePriceButton.Text = "Half Plate Price";
+            this.Table10HalfPlatePriceButton.UseVisualStyleBackColor = false;
+            this.Table10HalfPlatePriceButton.Click += new System.EventHandler(this.Table10HalfPlatePriceButton_Click);
+            // 
+            // Table10FullPlatePriceButton
+            // 
+            this.Table10FullPlatePriceButton.BackColor = System.Drawing.Color.DarkKhaki;
+            this.Table10FullPlatePriceButton.Location = new System.Drawing.Point(297, 79);
+            this.Table10FullPlatePriceButton.Margin = new System.Windows.Forms.Padding(4);
+            this.Table10FullPlatePriceButton.Name = "Table10FullPlatePriceButton";
+            this.Table10FullPlatePriceButton.Size = new System.Drawing.Size(181, 36);
+            this.Table10FullPlatePriceButton.TabIndex = 4;
+            this.Table10FullPlatePriceButton.Text = "FullPlatePrice";
+            this.Table10FullPlatePriceButton.UseVisualStyleBackColor = false;
+            this.Table10FullPlatePriceButton.Click += new System.EventHandler(this.Table10FullPlatePriceButton_Click_1);
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(8, 36);
+            this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(69, 16);
+            this.label33.TabIndex = 3;
+            this.label33.Text = "Item name";
+            // 
+            // Table10Combobox
+            // 
+            this.Table10Combobox.FormattingEnabled = true;
+            this.Table10Combobox.Location = new System.Drawing.Point(91, 32);
+            this.Table10Combobox.Margin = new System.Windows.Forms.Padding(4);
+            this.Table10Combobox.Name = "Table10Combobox";
+            this.Table10Combobox.Size = new System.Drawing.Size(237, 24);
+            this.Table10Combobox.TabIndex = 2;
+            this.Table10Combobox.SelectedIndexChanged += new System.EventHandler(this.Table10Combobox_SelectedIndexChanged);
+            // 
+            // Table9GroupBox
+            // 
+            this.Table9GroupBox.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.Table9GroupBox.Controls.Add(this.Table9SaveButton);
+            this.Table9GroupBox.Controls.Add(this.Table9TotalTextBox);
+            this.Table9GroupBox.Controls.Add(this.label34);
+            this.Table9GroupBox.Controls.Add(this.Table9RemoveButton);
+            this.Table9GroupBox.Controls.Add(this.Table9ClearRefreshButton);
+            this.Table9GroupBox.Controls.Add(this.Table9Datagrid);
+            this.Table9GroupBox.Controls.Add(this.label35);
+            this.Table9GroupBox.Controls.Add(this.Table9QuantityTextbox);
+            this.Table9GroupBox.Controls.Add(this.Table9HalfPlatePriceButton);
+            this.Table9GroupBox.Controls.Add(this.Table9FullPlatePriceButton);
+            this.Table9GroupBox.Controls.Add(this.label36);
+            this.Table9GroupBox.Controls.Add(this.Table9Combobox);
+            this.Table9GroupBox.Location = new System.Drawing.Point(16, 964);
+            this.Table9GroupBox.Margin = new System.Windows.Forms.Padding(4);
+            this.Table9GroupBox.Name = "Table9GroupBox";
+            this.Table9GroupBox.Padding = new System.Windows.Forms.Padding(4);
+            this.Table9GroupBox.Size = new System.Drawing.Size(492, 434);
+            this.Table9GroupBox.TabIndex = 13;
+            this.Table9GroupBox.TabStop = false;
+            this.Table9GroupBox.Text = "Table 9";
+            // 
+            // Table9SaveButton
+            // 
+            this.Table9SaveButton.BackColor = System.Drawing.Color.PaleGreen;
+            this.Table9SaveButton.Location = new System.Drawing.Point(12, 379);
+            this.Table9SaveButton.Margin = new System.Windows.Forms.Padding(4);
+            this.Table9SaveButton.Name = "Table9SaveButton";
+            this.Table9SaveButton.Size = new System.Drawing.Size(467, 48);
+            this.Table9SaveButton.TabIndex = 13;
+            this.Table9SaveButton.Text = "Save / Print";
+            this.Table9SaveButton.UseVisualStyleBackColor = false;
+            this.Table9SaveButton.Click += new System.EventHandler(this.Table9SaveButton_Click);
+            // 
+            // Table9TotalTextBox
+            // 
+            this.Table9TotalTextBox.Location = new System.Drawing.Point(367, 340);
+            this.Table9TotalTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.Table9TotalTextBox.Name = "Table9TotalTextBox";
+            this.Table9TotalTextBox.Size = new System.Drawing.Size(111, 22);
+            this.Table9TotalTextBox.TabIndex = 12;
+            this.Table9TotalTextBox.TextChanged += new System.EventHandler(this.Table9TotalTextBox_TextChanged);
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(309, 342);
+            this.label34.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(41, 16);
+            this.label34.TabIndex = 11;
+            this.label34.Text = "Total ";
+            // 
+            // Table9RemoveButton
+            // 
+            this.Table9RemoveButton.BackColor = System.Drawing.Color.OrangeRed;
+            this.Table9RemoveButton.Location = new System.Drawing.Point(165, 330);
+            this.Table9RemoveButton.Margin = new System.Windows.Forms.Padding(4);
+            this.Table9RemoveButton.Name = "Table9RemoveButton";
+            this.Table9RemoveButton.Size = new System.Drawing.Size(116, 42);
+            this.Table9RemoveButton.TabIndex = 10;
+            this.Table9RemoveButton.Text = "Remove Item";
+            this.Table9RemoveButton.UseVisualStyleBackColor = false;
+            this.Table9RemoveButton.Click += new System.EventHandler(this.Table9RemoveButton_Click);
+            // 
+            // Table9ClearRefreshButton
+            // 
+            this.Table9ClearRefreshButton.BackColor = System.Drawing.Color.Gold;
+            this.Table9ClearRefreshButton.Location = new System.Drawing.Point(12, 330);
+            this.Table9ClearRefreshButton.Margin = new System.Windows.Forms.Padding(4);
+            this.Table9ClearRefreshButton.Name = "Table9ClearRefreshButton";
+            this.Table9ClearRefreshButton.Size = new System.Drawing.Size(127, 42);
+            this.Table9ClearRefreshButton.TabIndex = 9;
+            this.Table9ClearRefreshButton.Text = "Clear / Refresh";
+            this.Table9ClearRefreshButton.UseVisualStyleBackColor = false;
+            this.Table9ClearRefreshButton.Click += new System.EventHandler(this.Table9ClearRefreshButton_Click);
+            // 
+            // Table9Datagrid
+            // 
+            this.Table9Datagrid.AllowUserToAddRows = false;
+            this.Table9Datagrid.AllowUserToDeleteRows = false;
+            this.Table9Datagrid.BackgroundColor = System.Drawing.SystemColors.InactiveCaption;
+            this.Table9Datagrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Table9Datagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Table9Datagrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Table9Sno,
+            this.Table9Id,
+            this.Table9name,
+            this.Table9Quantity,
+            this.Table9ItemPrice,
+            this.Table9Amount});
+            this.Table9Datagrid.Location = new System.Drawing.Point(12, 134);
+            this.Table9Datagrid.Margin = new System.Windows.Forms.Padding(4);
+            this.Table9Datagrid.Name = "Table9Datagrid";
+            this.Table9Datagrid.ReadOnly = true;
+            this.Table9Datagrid.RowHeadersVisible = false;
+            this.Table9Datagrid.RowHeadersWidth = 51;
+            this.Table9Datagrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Table9Datagrid.Size = new System.Drawing.Size(467, 185);
+            this.Table9Datagrid.TabIndex = 8;
+            this.Table9Datagrid.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.Table9Datagrid_RowsAdded);
+            // 
+            // Table9Sno
+            // 
+            this.Table9Sno.HeaderText = "S.no.";
+            this.Table9Sno.MinimumWidth = 6;
+            this.Table9Sno.Name = "Table9Sno";
+            this.Table9Sno.ReadOnly = true;
+            this.Table9Sno.Width = 46;
+            // 
+            // Table9Id
+            // 
+            this.Table9Id.HeaderText = "Item ID";
+            this.Table9Id.MinimumWidth = 6;
+            this.Table9Id.Name = "Table9Id";
+            this.Table9Id.ReadOnly = true;
+            this.Table9Id.Visible = false;
+            this.Table9Id.Width = 125;
+            // 
+            // Table9name
+            // 
+            this.Table9name.HeaderText = "Particular(s)";
+            this.Table9name.MinimumWidth = 6;
+            this.Table9name.Name = "Table9name";
+            this.Table9name.ReadOnly = true;
+            this.Table9name.Width = 150;
+            // 
+            // Table9Quantity
+            // 
+            this.Table9Quantity.HeaderText = "Qty";
+            this.Table9Quantity.MinimumWidth = 6;
+            this.Table9Quantity.Name = "Table9Quantity";
+            this.Table9Quantity.ReadOnly = true;
+            this.Table9Quantity.Width = 50;
+            // 
+            // Table9ItemPrice
+            // 
+            this.Table9ItemPrice.HeaderText = "Item Price";
+            this.Table9ItemPrice.MinimumWidth = 6;
+            this.Table9ItemPrice.Name = "Table9ItemPrice";
+            this.Table9ItemPrice.ReadOnly = true;
+            this.Table9ItemPrice.Width = 50;
+            // 
+            // Table9Amount
+            // 
+            this.Table9Amount.HeaderText = "Amount";
+            this.Table9Amount.MinimumWidth = 6;
+            this.Table9Amount.Name = "Table9Amount";
+            this.Table9Amount.ReadOnly = true;
+            this.Table9Amount.Width = 50;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(372, 36);
+            this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(27, 16);
+            this.label35.TabIndex = 7;
+            this.label35.Text = "Qty";
+            // 
+            // Table9QuantityTextbox
+            // 
+            this.Table9QuantityTextbox.Location = new System.Drawing.Point(427, 33);
+            this.Table9QuantityTextbox.Margin = new System.Windows.Forms.Padding(4);
+            this.Table9QuantityTextbox.Name = "Table9QuantityTextbox";
+            this.Table9QuantityTextbox.Size = new System.Drawing.Size(52, 22);
+            this.Table9QuantityTextbox.TabIndex = 6;
+            this.Table9QuantityTextbox.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // Table9HalfPlatePriceButton
+            // 
+            this.Table9HalfPlatePriceButton.BackColor = System.Drawing.Color.NavajoWhite;
+            this.Table9HalfPlatePriceButton.Location = new System.Drawing.Point(12, 79);
+            this.Table9HalfPlatePriceButton.Margin = new System.Windows.Forms.Padding(4);
+            this.Table9HalfPlatePriceButton.Name = "Table9HalfPlatePriceButton";
+            this.Table9HalfPlatePriceButton.Size = new System.Drawing.Size(181, 36);
+            this.Table9HalfPlatePriceButton.TabIndex = 5;
+            this.Table9HalfPlatePriceButton.Text = "Half Plate Price";
+            this.Table9HalfPlatePriceButton.UseVisualStyleBackColor = false;
+            this.Table9HalfPlatePriceButton.Click += new System.EventHandler(this.Table9HalfPlatePriceButton_Click);
+            // 
+            // Table9FullPlatePriceButton
+            // 
+            this.Table9FullPlatePriceButton.BackColor = System.Drawing.Color.DarkKhaki;
+            this.Table9FullPlatePriceButton.Location = new System.Drawing.Point(297, 79);
+            this.Table9FullPlatePriceButton.Margin = new System.Windows.Forms.Padding(4);
+            this.Table9FullPlatePriceButton.Name = "Table9FullPlatePriceButton";
+            this.Table9FullPlatePriceButton.Size = new System.Drawing.Size(181, 36);
+            this.Table9FullPlatePriceButton.TabIndex = 4;
+            this.Table9FullPlatePriceButton.Text = "FullPlatePrice";
+            this.Table9FullPlatePriceButton.UseVisualStyleBackColor = false;
+            this.Table9FullPlatePriceButton.Click += new System.EventHandler(this.Table9FullPlatePriceButton_Click);
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(8, 36);
+            this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(69, 16);
+            this.label36.TabIndex = 3;
+            this.label36.Text = "Item name";
+            // 
+            // Table9Combobox
+            // 
+            this.Table9Combobox.FormattingEnabled = true;
+            this.Table9Combobox.Location = new System.Drawing.Point(91, 32);
+            this.Table9Combobox.Margin = new System.Windows.Forms.Padding(4);
+            this.Table9Combobox.Name = "Table9Combobox";
+            this.Table9Combobox.Size = new System.Drawing.Size(237, 24);
+            this.Table9Combobox.TabIndex = 2;
+            this.Table9Combobox.SelectedIndexChanged += new System.EventHandler(this.Table9Combobox_SelectedIndexChanged);
+            // 
             // Billing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(2083, 966);
-            this.ControlBox = false;
+            this.ClientSize = new System.Drawing.Size(2061, 1055);
+            this.Controls.Add(this.Table12groupBox);
+            this.Controls.Add(this.Table11groupBox);
+            this.Controls.Add(this.Table10groupBox);
+            this.Controls.Add(this.Table9GroupBox);
             this.Controls.Add(this.ClearRefreshButton);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.OpenSalesWindow);
@@ -2073,7 +3039,6 @@
             this.Controls.Add(this.Table1Groupbox);
             this.Controls.Add(this.AddUpdateOpenForm);
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MaximizeBox = false;
             this.Name = "Billing";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Billing";
@@ -2110,6 +3075,22 @@
             this.Table5GroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Table5Datagrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Table5QuantityTextbox)).EndInit();
+            this.Table12groupBox.ResumeLayout(false);
+            this.Table12groupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Table12Datagrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Table12QuantityTextbox)).EndInit();
+            this.Table11groupBox.ResumeLayout(false);
+            this.Table11groupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Table11Datagrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Table11QuantityTextbox)).EndInit();
+            this.Table10groupBox.ResumeLayout(false);
+            this.Table10groupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Table10Datagrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Table10QuantityTextbox)).EndInit();
+            this.Table9GroupBox.ResumeLayout(false);
+            this.Table9GroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Table9Datagrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Table9QuantityTextbox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2269,12 +3250,87 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Table8ItemPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn Table8Amount;
         private System.Windows.Forms.Button AddUpdateOpenForm;
-        private System.Windows.Forms.PrintDialog printDialog1;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintPreviewControl printPreviewControl1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Windows.Forms.Button OpenSalesWindow;
         private System.Windows.Forms.Button ExitButton;
         private System.Windows.Forms.Button ClearRefreshButton;
+        private System.Windows.Forms.GroupBox Table12groupBox;
+        private System.Windows.Forms.Button Table12SaveButton;
+        private System.Windows.Forms.TextBox Table12TotalTextBox;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Button Table12RemoveButton;
+        private System.Windows.Forms.Button Table12ClearRefreshButton;
+        private System.Windows.Forms.DataGridView Table12Datagrid;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.NumericUpDown Table12QuantityTextbox;
+        private System.Windows.Forms.Button Table12HalfPlatePriceButton;
+        private System.Windows.Forms.Button Table12FullPlatePriceButton;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.ComboBox Table12Combobox;
+        private System.Windows.Forms.GroupBox Table11groupBox;
+        private System.Windows.Forms.Button Table11SaveButton;
+        private System.Windows.Forms.TextBox Table11TotalTextBox;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Button Table11RemoveButton;
+        private System.Windows.Forms.Button Table11ClearRefreshButton;
+        private System.Windows.Forms.DataGridView Table11Datagrid;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.NumericUpDown Table11QuantityTextbox;
+        private System.Windows.Forms.Button Table11HalfPlatePriceButton;
+        private System.Windows.Forms.Button Table11FullPlatePriceButton;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.ComboBox Table11Combobox;
+        private System.Windows.Forms.GroupBox Table10groupBox;
+        private System.Windows.Forms.Button Table10SaveButton;
+        private System.Windows.Forms.TextBox Table10TotalTextBox;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Button Table10RemoveButton;
+        private System.Windows.Forms.Button Table10ClearRefreshButton;
+        private System.Windows.Forms.DataGridView Table10Datagrid;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.NumericUpDown Table10QuantityTextbox;
+        private System.Windows.Forms.Button Table10HalfPlatePriceButton;
+        private System.Windows.Forms.Button Table10FullPlatePriceButton;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.ComboBox Table10Combobox;
+        private System.Windows.Forms.GroupBox Table9GroupBox;
+        private System.Windows.Forms.Button Table9SaveButton;
+        private System.Windows.Forms.TextBox Table9TotalTextBox;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Button Table9RemoveButton;
+        private System.Windows.Forms.Button Table9ClearRefreshButton;
+        private System.Windows.Forms.DataGridView Table9Datagrid;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.NumericUpDown Table9QuantityTextbox;
+        private System.Windows.Forms.Button Table9HalfPlatePriceButton;
+        private System.Windows.Forms.Button Table9FullPlatePriceButton;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.ComboBox Table9Combobox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table12Sno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table12Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table12name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table12Quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table12ItemPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table12Amount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table11Sno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table11Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table11name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table11Quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table11ItemPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table11Amount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table10Sno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table10Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table10name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table10Quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table10ItemPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table10Amount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table9Sno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table9Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table9name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table9Quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table9ItemPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Table9Amount;
     }
 }

@@ -1,28 +1,9 @@
-﻿//using iText.Kernel.Colors;
-//using iText.Kernel.Geom;
-using iText.Kernel.Pdf;
-using iText.Kernel.Pdf.Canvas.Draw;
-using iText.Layout;
-using iText.Layout.Element;
-using iText.Layout.Properties;
-using Microsoft.IdentityModel.Tokens;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Controls;
 using System.Windows.Forms;
-using iText.Kernel.Pdf.Action;
 using System.Drawing.Drawing2D;
-using System.Configuration;
-using System.Management;
 
 namespace WindowsFormsApp1
 {
@@ -89,7 +70,6 @@ namespace WindowsFormsApp1
         private string table12Itemname;
         private int table12hprice;
         private int table12fprice;
-        //private string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
 
         private int x, y;
 
@@ -98,8 +78,7 @@ namespace WindowsFormsApp1
             InitializeComponent();
 
             dbclass = new dbclass();
-
-            //CreateFolder();
+            dbclass.CreateDatabaseAndFolder();
             GetDefaultPrinterName();
 
             Linkcombobox();
@@ -114,6 +93,7 @@ namespace WindowsFormsApp1
             Table10Linkcombobox();
             Table11Linkcombobox();
             Table12Linkcombobox();
+
 
             TotalTextBox.Enabled = false;
             Table2TotalTextBox.Enabled = false;
@@ -153,21 +133,9 @@ namespace WindowsFormsApp1
             Table10SaveButton.Enabled = false;
             Table11SaveButton.Enabled = false;
             Table12SaveButton.Enabled = false;
+
+            checkifdatatableemprtyornot();
         }
-
-
-        //public string CreateFolder()
-        //{
-        //    string folderpath = System.IO.Path.Combine(desktopPath, "ORDERS");
-
-        //    if (!Directory.Exists(folderpath))
-        //    {
-        //        Directory.CreateDirectory(folderpath);
-
-        //        return folderpath;
-        //    }
-        //    return folderpath;
-        //}
 
         private string GetDefaultPrinterName()
         {
@@ -178,6 +146,18 @@ namespace WindowsFormsApp1
             else 
                 return printername = "";
         }
+
+        private void checkifdatatableemprtyornot()
+        {
+            DataTable dt = dbclass.getData();
+ 
+            if (dt.Rows.Count < 1)
+            {
+                AddUpdateForm form = new AddUpdateForm();
+                form.ShowDialog();
+            }
+        }
+
         #region table 1 
         private void Linkcombobox()
         {
@@ -190,10 +170,10 @@ namespace WindowsFormsApp1
         {
             DataRowView selectedrow = (DataRowView)ItemNamecombobox.SelectedItem;
 
-            itemID = (int)selectedrow["S.No."];
-            Itemname = (string)selectedrow["Particulars"];
-            hprice = (int)selectedrow["Half P price"];
-            fprice = (int)selectedrow["Full P price"];
+            itemID = Convert.ToInt32(selectedrow["S.No."]);
+            Itemname = selectedrow["Particulars"].ToString();
+            hprice = Convert.ToInt32(selectedrow["Half P price"]);
+            fprice = Convert.ToInt32(selectedrow["Full P price"]);
             if (selectedrow != null)
             {
                 FullPlatePriceButton.Text = "Full " + fprice;
@@ -219,11 +199,11 @@ namespace WindowsFormsApp1
         {
             DataRowView selectedrow = (DataRowView)ItemNamecombobox.SelectedItem;
 
-            itemID = (int)selectedrow["S.No."];
-            Itemname = (string)selectedrow["Particulars"];
-            fprice = (int)selectedrow["Full P price"];
+            itemID = Convert.ToInt32(selectedrow["S.No."]);
+            Itemname = selectedrow["Particulars"].ToString();
+            fprice = Convert.ToInt32(selectedrow["Full P price"]);
 
-            int qty = (int)Qtytextbox.Value;
+            int qty = Convert.ToInt32(Qtytextbox.Value);
 
             if (qty <= 0)
             {
@@ -310,13 +290,13 @@ namespace WindowsFormsApp1
         {
             DataRowView selectedrow = (DataRowView)ItemNamecombobox.SelectedItem;
 
-            itemID = (int)selectedrow["S.No."];
-            Itemname = (string)selectedrow["Particulars"];
-            hprice = (int)selectedrow["Half P price"];
+            itemID = Convert.ToInt32(selectedrow["S.No."]);
+            Itemname = selectedrow["Particulars"].ToString();
+            hprice = Convert.ToInt32(selectedrow["Half P price"]);
 
             Itemname = Itemname + " (Half)";
 
-            int qty = (int)Qtytextbox.Value;
+            int qty = Convert.ToInt32(Qtytextbox.Value);
 
             if (qty <= 0)
             {
@@ -385,7 +365,6 @@ namespace WindowsFormsApp1
 
                         }
                     }
-                    //Createpdf(Ordernumber, currentdate, tablenumber, TableOneDatagrid, amount);
                     PrintPdf();
                     MessageBox.Show("Order Saved Successfully with Order number: " + Ordernumber, "Saved", MessageBoxButtons.OK);
                 }
@@ -425,10 +404,10 @@ namespace WindowsFormsApp1
         {
             DataRowView selectedrow = (DataRowView)Table2Combobox.SelectedItem;
 
-            table2itemID = (int)selectedrow["S.No."];
-            table2Itemname = (string)selectedrow["Particulars"];
-            table2hprice = (int)selectedrow["Half P price"];
-            table2fprice = (int)selectedrow["Full P price"];
+            table2itemID = Convert.ToInt32(selectedrow["S.No."]);
+            table2Itemname = selectedrow["Particulars"].ToString();
+            table2hprice = Convert.ToInt32(selectedrow["Half P price"]);
+            table2fprice = Convert.ToInt32(selectedrow["Full P price"]);
             if (selectedrow != null)
             {
                 Table2FullPlateButton.Text = "Full " + table2fprice;
@@ -480,13 +459,13 @@ namespace WindowsFormsApp1
         {
             DataRowView selectedrow = (DataRowView)Table2Combobox.SelectedItem;
 
-            table2itemID = (int)selectedrow["S.No."];
-            table2Itemname = (string)selectedrow["Particulars"];
-            table2hprice = (int)selectedrow["Half P price"];
+            table2itemID = Convert.ToInt32(selectedrow["S.No."]);
+            table2Itemname = selectedrow["Particulars"].ToString();
+            table2hprice = Convert.ToInt32(selectedrow["Half P price"]);
 
             table2Itemname = table2Itemname + " (Half)";
 
-            int qty = (int)Table2QuantityTextbox.Value;
+            int qty = Convert.ToInt32(Table2QuantityTextbox.Value);
 
             if (qty <= 0)
             {
@@ -521,11 +500,11 @@ namespace WindowsFormsApp1
         {
             DataRowView selectedrow = (DataRowView)Table2Combobox.SelectedItem;
 
-            table2itemID = (int)selectedrow["S.No."];
-            table2Itemname = (string)selectedrow["Particulars"];
-            table2fprice = (int)selectedrow["Full P price"];
+            table2itemID = Convert.ToInt32(selectedrow["S.No."]);
+            table2Itemname = selectedrow["Particulars"].ToString();
+            table2fprice = Convert.ToInt32(selectedrow["Full P price"]);
 
-            int qty = (int)Table2QuantityTextbox.Value;
+            int qty = Convert.ToInt32(Table2QuantityTextbox.Value);
 
             if (qty <= 0)
             {
@@ -601,7 +580,6 @@ namespace WindowsFormsApp1
 
                         }
                     }
-                    //Createpdf(Ordernumber, currentdate, tablenumber, Table2DataGrid, amount);
                     PrintPdf();
                     MessageBox.Show("Order Saved Successfully with Order number: " + Ordernumber, "Saved", MessageBoxButtons.OK);
                 }
@@ -641,10 +619,10 @@ namespace WindowsFormsApp1
         {
             DataRowView selectedrow = (DataRowView)Table3Combobox.SelectedItem;
 
-            table3itemID = (int)selectedrow["S.No."];
-            table3Itemname = (string)selectedrow["Particulars"];
-            table3hprice = (int)selectedrow["Half P price"];
-            table3fprice = (int)selectedrow["Full P price"];
+            table3itemID = Convert.ToInt32(selectedrow["S.No."]);
+            table3Itemname = selectedrow["Particulars"].ToString();
+            table3hprice = Convert.ToInt32(selectedrow["Half P price"]);
+            table3fprice = Convert.ToInt32(selectedrow["Full P price"]);
             if (selectedrow != null)
             {
                 Table3FullPlatePriceButton.Text = "Full " + table3fprice;
@@ -697,13 +675,13 @@ namespace WindowsFormsApp1
         {
             DataRowView selectedrow = (DataRowView)Table3Combobox.SelectedItem;
 
-            table3itemID = (int)selectedrow["S.No."];
-            table3Itemname = (string)selectedrow["Particulars"];
-            table3hprice = (int)selectedrow["Half P price"];
+            table3itemID = Convert.ToInt32(selectedrow["S.No."]);
+            table3Itemname = selectedrow["Particulars"].ToString();
+            table3hprice = Convert.ToInt32(selectedrow["Half P price"]);
 
             table3Itemname = table3Itemname + " (Half)";
 
-            int qty = (int)Table3QuantityTextBox.Value;
+            int qty = Convert.ToInt32(Table3QuantityTextBox.Value);
 
             if (qty <= 0)
             {
@@ -738,11 +716,11 @@ namespace WindowsFormsApp1
         {
             DataRowView selectedrow = (DataRowView)Table3Combobox.SelectedItem;
 
-            table3itemID = (int)selectedrow["S.No."];
-            table3Itemname = (string)selectedrow["Particulars"];
-            table3fprice = (int)selectedrow["Full P price"];
+            table3itemID = Convert.ToInt32(selectedrow["S.No."]);
+            table3Itemname = selectedrow["Particulars"].ToString();
+            table3fprice = Convert.ToInt32(selectedrow["Full P price"]);
 
-            int qty = (int)Table3QuantityTextBox.Value;
+            int qty = Convert.ToInt32(Table3QuantityTextBox.Value);
 
             if (qty <= 0)
             {
@@ -818,7 +796,6 @@ namespace WindowsFormsApp1
 
                         }
                     }
-                    //Createpdf(Ordernumber, currentdate, tablenumber, Table3Datagrid, amount);
                     PrintPdf();
                     MessageBox.Show("Order Saved Successfully with Order number: " + Ordernumber, "Saved", MessageBoxButtons.OK);
                 }
@@ -859,10 +836,10 @@ namespace WindowsFormsApp1
         {
             DataRowView selectedrow = (DataRowView)Table4Combobox.SelectedItem;
 
-            table4itemID = (int)selectedrow["S.No."];
-            table4Itemname = (string)selectedrow["Particulars"];
-            table4hprice = (int)selectedrow["Half P price"];
-            table4fprice = (int)selectedrow["Full P price"];
+            table4itemID = Convert.ToInt32(selectedrow["S.No."]);
+            table4Itemname = selectedrow["Particulars"].ToString();
+            table4hprice = Convert.ToInt32(selectedrow["Half P price"]);
+            table4fprice = Convert.ToInt32(selectedrow["Full P price"]);
             if (selectedrow != null)
             {
                 Table4FullPlatePriceButton.Text = "Full " + table4fprice;
@@ -918,13 +895,13 @@ namespace WindowsFormsApp1
         {
             DataRowView selectedrow = (DataRowView)Table4Combobox.SelectedItem;
 
-            table4itemID = (int)selectedrow["S.No."];
-            table4Itemname = (string)selectedrow["Particulars"];
-            table4hprice = (int)selectedrow["Half P price"];
+            table4itemID = Convert.ToInt32(selectedrow["S.No."]);
+            table4Itemname = selectedrow["Particulars"].ToString();
+            table4hprice = Convert.ToInt32(selectedrow["Half P price"]);
 
             table4Itemname = table4Itemname + " (Half)";
 
-            int qty = (int)Table4QuantityTextBox.Value;
+            int qty = Convert.ToInt32(Table4QuantityTextBox.Value);
 
             if (qty <= 0)
             {
@@ -960,11 +937,11 @@ namespace WindowsFormsApp1
         {
             DataRowView selectedrow = (DataRowView)Table4Combobox.SelectedItem;
 
-            table4itemID = (int)selectedrow["S.No."];
-            table4Itemname = (string)selectedrow["Particulars"];
-            table4fprice = (int)selectedrow["Full P price"];
+            table4itemID = Convert.ToInt32(selectedrow["S.No."]);
+            table4Itemname = selectedrow["Particulars"].ToString();
+            table4fprice = Convert.ToInt32(selectedrow["Full P price"]);
 
-            int qty = (int)Table4QuantityTextBox.Value;
+            int qty = Convert.ToInt32(Table4QuantityTextBox.Value);
 
             if (qty <= 0)
             {
@@ -1042,7 +1019,6 @@ namespace WindowsFormsApp1
 
                         }
                     }
-                    //Createpdf(Ordernumber, currentdate, tablenumber, Table4DataGrid, amount);
                     PrintPdf();
                     MessageBox.Show("Order Saved Successfully with Order number: " + Ordernumber, "Saved", MessageBoxButtons.OK);
                 }
@@ -1083,10 +1059,10 @@ namespace WindowsFormsApp1
         {
             DataRowView selectedrow = (DataRowView)Table5Combobox.SelectedItem;
 
-            table5itemID = (int)selectedrow["S.No."];
-            table5Itemname = (string)selectedrow["Particulars"];
-            table5hprice = (int)selectedrow["Half P price"];
-            table5fprice = (int)selectedrow["Full P price"];
+            table5itemID = Convert.ToInt32(selectedrow["S.No."]);
+            table5Itemname = selectedrow["Particulars"].ToString();
+            table5hprice = Convert.ToInt32(selectedrow["Half P price"]);
+            table5fprice = Convert.ToInt32(selectedrow["Full P price"]);
             if (selectedrow != null)
             {
                 Table5FullPlatePriceButton.Text = "Full " + table5fprice;
@@ -1142,13 +1118,13 @@ namespace WindowsFormsApp1
         {
             DataRowView selectedrow = (DataRowView)Table5Combobox.SelectedItem;
 
-            table5itemID = (int)selectedrow["S.No."];
-            table5Itemname = (string)selectedrow["Particulars"];
-            table5hprice = (int)selectedrow["Half P price"];
+            table5itemID = Convert.ToInt32(selectedrow["S.No."]);
+            table5Itemname = selectedrow["Particulars"].ToString();
+            table5hprice = Convert.ToInt32(selectedrow["Half P price"]);
 
             table5Itemname = table5Itemname + " (Half)";
 
-            int qty = (int)Table5QuantityTextbox.Value;
+            int qty = Convert.ToInt32(Table5QuantityTextbox.Value);
 
             if (qty <= 0)
             {
@@ -1184,11 +1160,11 @@ namespace WindowsFormsApp1
         {
             DataRowView selectedrow = (DataRowView)Table5Combobox.SelectedItem;
 
-            table5itemID = (int)selectedrow["S.No."];
-            table5Itemname = (string)selectedrow["Particulars"];
-            table5fprice = (int)selectedrow["Full P price"];
+            table5itemID = Convert.ToInt32(selectedrow["S.No."]);
+            table5Itemname = selectedrow["Particulars"].ToString();
+            table5fprice = Convert.ToInt32(selectedrow["Full P price"]);
 
-            int qty = (int)Table5QuantityTextbox.Value;
+            int qty = Convert.ToInt32(Table5QuantityTextbox.Value);
 
             if (qty <= 0)
             {
@@ -1266,7 +1242,6 @@ namespace WindowsFormsApp1
 
                         }
                     }
-                    //Createpdf(Ordernumber, currentdate, tablenumber, Table5Datagrid, amount);
                     PrintPdf();
                     MessageBox.Show("Order Saved Successfully with Order number: " + Ordernumber, "Saved", MessageBoxButtons.OK);
                 }
@@ -1307,10 +1282,10 @@ namespace WindowsFormsApp1
         {
             DataRowView selectedrow = (DataRowView)Table6Combobox.SelectedItem;
 
-            table6itemID = (int)selectedrow["S.No."];
-            table6Itemname = (string)selectedrow["Particulars"];
-            table6hprice = (int)selectedrow["Half P price"];
-            table6fprice = (int)selectedrow["Full P price"];
+            table6itemID = Convert.ToInt32(selectedrow["S.No."]);
+            table6Itemname = selectedrow["Particulars"].ToString();
+            table6hprice = Convert.ToInt32(selectedrow["Half P price"]);
+            table6fprice = Convert.ToInt32(selectedrow["Full P price"]);
             if (selectedrow != null)
             {
                 Table6FullPlatePriceButton.Text = "Full " + table6fprice;
@@ -1366,13 +1341,13 @@ namespace WindowsFormsApp1
         {
             DataRowView selectedrow = (DataRowView)Table6Combobox.SelectedItem;
 
-            table6itemID = (int)selectedrow["S.No."];
-            table6Itemname = (string)selectedrow["Particulars"];
-            table6hprice = (int)selectedrow["Half P price"];
+            table6itemID = Convert.ToInt32(selectedrow["S.No."]);
+            table6Itemname = selectedrow["Particulars"].ToString();
+            table6hprice = Convert.ToInt32(selectedrow["Half P price"]);
 
             table6Itemname = table6Itemname + " (Half)";
 
-            int qty = (int)Table6QuantityTextBox.Value;
+            int qty = Convert.ToInt32(Table6QuantityTextBox.Value);
 
             if (qty <= 0)
             {
@@ -1408,11 +1383,11 @@ namespace WindowsFormsApp1
         {
             DataRowView selectedrow = (DataRowView)Table6Combobox.SelectedItem;
 
-            table6itemID = (int)selectedrow["S.No."];
-            table6Itemname = (string)selectedrow["Particulars"];
-            table6fprice = (int)selectedrow["Full P price"];
+            table6itemID = Convert.ToInt32(selectedrow["S.No."]);
+            table6Itemname = selectedrow["Particulars"].ToString();
+            table6fprice = Convert.ToInt32(selectedrow["Full P price"]);
 
-            int qty = (int)Table6QuantityTextBox.Value;
+            int qty = Convert.ToInt32(Table6QuantityTextBox.Value);
 
             if (qty <= 0)
             {
@@ -1490,7 +1465,6 @@ namespace WindowsFormsApp1
 
                         }
                     }
-                    //Createpdf(Ordernumber, currentdate, tablenumber, Table6Datagrid, amount);
                     PrintPdf();
                     MessageBox.Show("Order Saved Successfully with Order number: " + Ordernumber, "Saved", MessageBoxButtons.OK);
                 }
@@ -1531,10 +1505,10 @@ namespace WindowsFormsApp1
         {
             DataRowView selectedrow = (DataRowView)Table7Combobox.SelectedItem;
 
-            table7itemID = (int)selectedrow["S.No."];
-            table7Itemname = (string)selectedrow["Particulars"];
-            table7hprice = (int)selectedrow["Half P price"];
-            table7fprice = (int)selectedrow["Full P price"];
+            table7itemID = Convert.ToInt32(selectedrow["S.No."]);
+            table7Itemname = selectedrow["Particulars"].ToString();
+            table7hprice = Convert.ToInt32(selectedrow["Half P price"]);
+            table7fprice = Convert.ToInt32(selectedrow["Full P price"]);
             if (selectedrow != null)
             {
                 Table7FullPlatePriceButton.Text = "Full " + table7fprice;
@@ -1590,13 +1564,13 @@ namespace WindowsFormsApp1
         {
             DataRowView selectedrow = (DataRowView)Table7Combobox.SelectedItem;
 
-            table7itemID = (int)selectedrow["S.No."];
-            table7Itemname = (string)selectedrow["Particulars"];
-            table7hprice = (int)selectedrow["Half P price"];
+            table7itemID = Convert.ToInt32(selectedrow["S.No."]);
+            table7Itemname = selectedrow["Particulars"].ToString();
+            table7hprice = Convert.ToInt32(selectedrow["Half P price"]);
 
             table7Itemname = table7Itemname + " (Half)";
 
-            int qty = (int)Table7QuantityTextBox.Value;
+            int qty = Convert.ToInt32(Table7QuantityTextBox.Value);
 
             if (qty <= 0)
             {
@@ -1632,11 +1606,11 @@ namespace WindowsFormsApp1
         {
             DataRowView selectedrow = (DataRowView)Table7Combobox.SelectedItem;
 
-            table7itemID = (int)selectedrow["S.No."];
-            table7Itemname = (string)selectedrow["Particulars"];
-            table7fprice = (int)selectedrow["Full P price"];
+            table7itemID = Convert.ToInt32(selectedrow["S.No."]);
+            table7Itemname = selectedrow["Particulars"].ToString();
+            table7fprice = Convert.ToInt32(selectedrow["Full P price"]);
 
-            int qty = (int)Table7QuantityTextBox.Value;
+            int qty = Convert.ToInt32(Table7QuantityTextBox.Value);
 
             if (qty <= 0)
             {
@@ -1714,7 +1688,6 @@ namespace WindowsFormsApp1
 
                         }
                     }
-                    //Createpdf(Ordernumber, currentdate, tablenumber, Table7Datagrid, amount);
                     PrintPdf();
                     MessageBox.Show("Order Saved Successfully with Order number: " + Ordernumber, "Saved", MessageBoxButtons.OK);
                 }
@@ -1755,10 +1728,10 @@ namespace WindowsFormsApp1
         {
             DataRowView selectedrow = (DataRowView)Table8Combobox.SelectedItem;
 
-            table8itemID = (int)selectedrow["S.No."];
-            table8Itemname = (string)selectedrow["Particulars"];
-            table8hprice = (int)selectedrow["Half P price"];
-            table8fprice = (int)selectedrow["Full P price"];
+            table8itemID = Convert.ToInt32(selectedrow["S.No."]);
+            table8Itemname = selectedrow["Particulars"].ToString();
+            table8hprice = Convert.ToInt32(selectedrow["Half P price"]);
+            table8fprice = Convert.ToInt32(selectedrow["Full P price"]);
             if (selectedrow != null)
             {
                 Table8FullPlatePriceButton.Text = "Full " + table8fprice;
@@ -1814,13 +1787,13 @@ namespace WindowsFormsApp1
         {
             DataRowView selectedrow = (DataRowView)Table8Combobox.SelectedItem;
 
-            table8itemID = (int)selectedrow["S.No."];
-            table8Itemname = (string)selectedrow["Particulars"];
-            table8hprice = (int)selectedrow["Half P price"];
+            table8itemID = Convert.ToInt32(selectedrow["S.No."]);
+            table8Itemname = selectedrow["Particulars"].ToString();
+            table8hprice = Convert.ToInt32(selectedrow["Half P price"]);
 
             table8Itemname = table8Itemname + " (Half)";
 
-            int qty = (int)Table8QuantityTextBox.Value;
+            int qty = Convert.ToInt32(Table8QuantityTextBox.Value);
 
             if (qty <= 0)
             {
@@ -1856,11 +1829,11 @@ namespace WindowsFormsApp1
         {
             DataRowView selectedrow = (DataRowView)Table8Combobox.SelectedItem;
 
-            table8itemID = (int)selectedrow["S.No."];
-            table8Itemname = (string)selectedrow["Particulars"];
-            table8fprice = (int)selectedrow["Full P price"];
+            table8itemID = Convert.ToInt32(selectedrow["S.No."]);
+            table8Itemname = selectedrow["Particulars"].ToString();
+            table8fprice = Convert.ToInt32(selectedrow["Full P price"]);
 
-            int qty = (int)Table8QuantityTextBox.Value;
+            int qty = Convert.ToInt32(Table8QuantityTextBox.Value);
 
             if (qty <= 0)
             {
@@ -1938,7 +1911,6 @@ namespace WindowsFormsApp1
                         }
                     }
 
-                    //Createpdf(Ordernumber, currentdate, tablenumber, Table8Datagrid, amount);
                     PrintPdf();
                     MessageBox.Show("Order Saved Successfully with Order number: " + Ordernumber, "Saved", MessageBoxButtons.OK);
                 }
@@ -1952,156 +1924,6 @@ namespace WindowsFormsApp1
             AddUpdateForm form2 = new AddUpdateForm();
             form2 .ShowDialog();
         }
-        
-
-        //private void Createpdf(int OrderNumber, DateTime Currentdate, string TableName, DataGridView TableDataGrid, int TableAmount)
-        //{
-        //    try
-        //    {
-        //        string folderpath = CreateFolder();
-        //        string pdfname = OrderNumber + ".pdf";
-
-        //        string pdfpath = System.IO.Path.Combine(folderpath, pdfname);
-
-        //        using (PdfWriter writer = new PdfWriter(pdfpath))
-        //        {
-        //            using (iText.Kernel.Pdf.PdfDocument pdf = new iText.Kernel.Pdf.PdfDocument(writer))
-        //            {
-        //                Document document = new Document(pdf);
-
-        //                Paragraph header = new Paragraph("Tirupati Vaishno Dhaba")
-        //                    .SetTextAlignment(TextAlignment.CENTER)
-        //                    .SetFontSize(20);
-        //                header.SetWidth(UnitValue.CreatePercentValue(100));
-        //                document.Add(header);
-
-        //                Paragraph address = new Paragraph("JawalaJi road, P.W.D Rest House,")
-        //                    .SetTextAlignment(TextAlignment.CENTER)
-        //                    .SetFontSize(15);
-        //                address.SetWidth(UnitValue.CreatePercentValue(100));
-        //                Paragraph address2 = new Paragraph("Nadaun Distt. Hamirpur, H.P.")
-        //                    .SetTextAlignment(TextAlignment.CENTER)
-        //                    .SetFontSize(15);
-        //                address2.SetWidth(UnitValue.CreatePercentValue(100));
-        //                document.Add(address);
-        //                document.Add(address2);
-
-        //                Paragraph contact = new Paragraph("Contact: 01972-313228")
-        //                    .SetTextAlignment(TextAlignment.CENTER)
-        //                    .SetFontSize(15);
-        //                contact.SetWidth(UnitValue.CreatePercentValue(100));
-        //                document.Add(contact);
-
-        //                LineSeparator ls = new LineSeparator(new DottedLine());
-        //                ls.SetWidth(UnitValue.CreatePercentValue(100));
-        //                document.Add(ls);
-
-        //                Paragraph tableno = new Paragraph("Table No.: " + TableName)
-        //                    .SetTextAlignment(TextAlignment.LEFT)
-        //                    .SetFontSize(15);
-        //                tableno.SetWidth(UnitValue.CreatePercentValue(100));
-        //                document.Add(tableno);
-
-        //                Paragraph date = new Paragraph("Date: " + Currentdate)
-        //                   .SetTextAlignment(TextAlignment.LEFT)
-        //                   .SetFontSize(15);
-        //                date.SetWidth(UnitValue.CreatePercentValue(100));
-        //                document.Add(date);
-
-        //                LineSeparator ls2 = new LineSeparator(new SolidLine());
-        //                ls2.SetWidth(UnitValue.CreatePercentValue(100));
-        //                document.Add(ls2);
-
-        //                Paragraph blank = new Paragraph("")
-        //                   .SetTextAlignment(TextAlignment.LEFT)
-        //                   .SetFontSize(15);
-        //                blank.SetWidth(UnitValue.CreatePercentValue(100));
-        //                document.Add(blank);
-
-        //                Table table = new Table(4, false);
-        //                table.SetWidth(UnitValue.CreatePercentValue(100));
-        //                Cell particulars = new Cell(1, 1)
-        //                  .SetTextAlignment(TextAlignment.CENTER)
-        //                  .Add(new Paragraph("Particulars"));
-
-        //                Cell qty = new Cell(1, 1)
-        //                  .SetTextAlignment(TextAlignment.CENTER)
-        //                  .Add(new Paragraph("Qty"));
-
-        //                Cell price = new Cell(1, 1)
-        //                  .SetTextAlignment(TextAlignment.CENTER)
-        //                  .Add(new Paragraph("Price"));
-
-        //                Cell Particularsamount = new Cell(1, 1)
-        //                  .SetTextAlignment(TextAlignment.CENTER)
-        //                  .Add(new Paragraph("Amount"));
-
-        //                table.AddCell(particulars);
-        //                table.AddCell(qty);
-        //                table.AddCell(price);
-        //                table.AddCell(Particularsamount);
-
-
-        //                foreach (DataGridViewRow row in TableDataGrid.Rows)
-        //                {
-        //                    if (!row.IsNewRow)
-        //                    {
-        //                        int rowid = Convert.ToInt32(row.Cells[1].Value.ToString());
-        //                        string rowname = row.Cells[2].Value.ToString();
-        //                        int rowquantity = Convert.ToInt32(row.Cells[3].Value.ToString());
-        //                        int rowprice = Convert.ToInt32(row.Cells[4].Value.ToString());
-        //                        int rowamount = Convert.ToInt32(row.Cells[5].Value.ToString());
-
-        //                        Cell tableitemname = new Cell(1, 1)
-        //                          .SetTextAlignment(TextAlignment.CENTER)
-        //                          .Add(new Paragraph(rowname));
-
-        //                        Cell tableitemqty = new Cell(1, 1)
-        //                          .SetTextAlignment(TextAlignment.CENTER)
-        //                          .Add(new Paragraph(rowquantity.ToString()));
-
-        //                        Cell tableitemprice = new Cell(1, 1)
-        //                          .SetTextAlignment(TextAlignment.CENTER)
-        //                          .Add(new Paragraph(rowprice.ToString()));
-
-        //                        Cell tableitemamount = new Cell(1, 1)
-        //                          .SetTextAlignment(TextAlignment.CENTER)
-        //                          .Add(new Paragraph(rowamount.ToString()));
-
-        //                        table.AddCell(tableitemname);
-        //                        table.AddCell(tableitemqty);
-        //                        table.AddCell(tableitemprice);
-        //                        table.AddCell(tableitemamount);
-        //                    }
-        //                }
-        //                document.Add(table);
-        //                document.Add(blank);
-
-        //                Paragraph totalamount = new Paragraph("Total: Rs." + TableAmount +"/-")
-        //                   .SetTextAlignment(TextAlignment.RIGHT)
-        //                   .SetFontSize(15);
-        //                totalamount.SetWidth(UnitValue.CreatePercentValue(100));
-        //                document.Add(totalamount);
-        //                document.Add(blank);
-
-        //                document.Add(ls2);
-
-        //                Paragraph thankyou = new Paragraph("Thank You")
-        //                  .SetTextAlignment(TextAlignment.CENTER)
-        //                  .SetFontSize(15);
-        //                thankyou.SetWidth(UnitValue.CreatePercentValue(100));
-        //                document.Add(thankyou);
-        //                document.Close();
-        //            }
-        //        }
-        //        PrintPdf();
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show($"Error on printing: {ex.Message}");
-        //        throw;
-        //    }
-        //}
 
         public void PrintPdf()
         {
@@ -2219,6 +2041,8 @@ namespace WindowsFormsApp1
             Table10TotalTextBox.Text = string.Empty;
             Table11TotalTextBox.Text = string.Empty;
             Table12TotalTextBox.Text = string.Empty;
+
+            checkifdatatableemprtyornot();
         }
 
         private void printDocument1_PrintPage(object sender, PrintPageEventArgs e)
@@ -2277,9 +2101,9 @@ namespace WindowsFormsApp1
 
             foreach (DataRow row in itemList.Rows)
             {
-                string itemname = (string)row["Particulars"];
-                int qty = (int)row["Qty"];
-                int price = (int)row["Item Amount"];
+                string itemname = row["Particulars"].ToString();
+                int qty = Convert.ToInt32(row["Qty"]);
+                int price = Convert.ToInt32(row["Item Amount"]);
 
                 e.Graphics.DrawString(itemname, new Font("Arial", 8, FontStyle.Regular), Brushes.Black, x, y);
                 x = x + 150;
@@ -2373,13 +2197,13 @@ namespace WindowsFormsApp1
         {
             DataRowView selectedrow = (DataRowView)Table9Combobox.SelectedItem;
 
-            table9itemID = (int)selectedrow["S.No."];
-            table9Itemname = (string)selectedrow["Particulars"];
-            table9hprice = (int)selectedrow["Half P price"];
+            table9itemID = Convert.ToInt32(selectedrow["S.No."]);
+            table9Itemname = selectedrow["Particulars"].ToString();
+            table9hprice = Convert.ToInt32(selectedrow["Half P price"]);
 
             table9Itemname = table9Itemname + " (Half)";
 
-            int qty = (int)Table9QuantityTextbox.Value;
+            int qty = Convert.ToInt32(Table9QuantityTextbox.Value);
 
             if (qty <= 0)
             {
@@ -2415,11 +2239,11 @@ namespace WindowsFormsApp1
         {
             DataRowView selectedrow = (DataRowView)Table9Combobox.SelectedItem;
 
-            table9itemID = (int)selectedrow["S.No."];
-            table9Itemname = (string)selectedrow["Particulars"];
-            table9fprice = (int)selectedrow["Full P price"];
+            table9itemID = Convert.ToInt32(selectedrow["S.No."]);
+            table9Itemname = selectedrow["Particulars"].ToString();
+            table9fprice = Convert.ToInt32(selectedrow["Full P price"]);
 
-            int qty = (int)Table9QuantityTextbox.Value;
+            int qty = Convert.ToInt32(Table9QuantityTextbox.Value);
 
             if (qty <= 0)
             {
@@ -2497,8 +2321,6 @@ namespace WindowsFormsApp1
                             dbclass.SavetoDatabase(tablenumber, rowid, rowname, rowquantity, rowprice, rowamount, currentdate, Ordernumber);
                         }
                     }
-
-                    //Createpdf(Ordernumber, currentdate, tablenumber, Table8Datagrid, amount);
                     PrintPdf();
                     MessageBox.Show("Order Saved Successfully with Order number: " + Ordernumber, "Saved", MessageBoxButtons.OK);
                 }
@@ -2509,10 +2331,10 @@ namespace WindowsFormsApp1
         {
             DataRowView selectedrow = (DataRowView)Table9Combobox.SelectedItem;
 
-            table9itemID = (int)selectedrow["S.No."];
-            table9Itemname = (string)selectedrow["Particulars"];
-            table9hprice = (int)selectedrow["Half P price"];
-            table9fprice = (int)selectedrow["Full P price"];
+            table9itemID = Convert.ToInt32(selectedrow["S.No."]);
+            table9Itemname = selectedrow["Particulars"].ToString();
+            table9hprice = Convert.ToInt32(selectedrow["Half P price"]);
+            table9fprice = Convert.ToInt32(selectedrow["Full P price"]);
             if (selectedrow != null)
             {
                 Table9FullPlatePriceButton.Text = "Full " + table9fprice;
@@ -2574,13 +2396,13 @@ namespace WindowsFormsApp1
         {
             DataRowView selectedrow = (DataRowView)Table10Combobox.SelectedItem;
 
-            table10itemID = (int)selectedrow["S.No."];
-            table10Itemname = (string)selectedrow["Particulars"];
-            table10hprice = (int)selectedrow["Half P price"];
+            table10itemID = Convert.ToInt32(selectedrow["S.No."]);
+            table10Itemname = selectedrow["Particulars"].ToString();
+            table10hprice = Convert.ToInt32(selectedrow["Half P price"]);
 
             table10Itemname = table10Itemname + " (Half)";
 
-            int qty = (int)Table10QuantityTextbox.Value;
+            int qty = Convert.ToInt32(Table10QuantityTextbox.Value);
 
             if (qty <= 0)
             {
@@ -2658,8 +2480,6 @@ namespace WindowsFormsApp1
                             dbclass.SavetoDatabase(tablenumber, rowid, rowname, rowquantity, rowprice, rowamount, currentdate, Ordernumber);
                         }
                     }
-
-                    //Createpdf(Ordernumber, currentdate, tablenumber, Table8Datagrid, amount);
                     PrintPdf();
                     MessageBox.Show("Order Saved Successfully with Order number: " + Ordernumber, "Saved", MessageBoxButtons.OK);
                 }
@@ -2671,10 +2491,10 @@ namespace WindowsFormsApp1
         {
             DataRowView selectedrow = (DataRowView)Table10Combobox.SelectedItem;
 
-            table10itemID = (int)selectedrow["S.No."];
-            table10Itemname = (string)selectedrow["Particulars"];
-            table10hprice = (int)selectedrow["Half P price"];
-            table10fprice = (int)selectedrow["Full P price"];
+            table10itemID = Convert.ToInt32(selectedrow["S.No."]);   
+            table10Itemname = selectedrow["Particulars"].ToString();
+            table10hprice = Convert.ToInt32(selectedrow["Half P price"]);
+            table10fprice = Convert.ToInt32(selectedrow["Full P price"]);
             if (selectedrow != null)
             {
                 Table10FullPlatePriceButton.Text = "Full " + table10fprice;
@@ -2695,11 +2515,11 @@ namespace WindowsFormsApp1
         {
             DataRowView selectedrow = (DataRowView)Table10Combobox.SelectedItem;
 
-            table10itemID = (int)selectedrow["S.No."];
-            table10Itemname = (string)selectedrow["Particulars"];
-            table10fprice = (int)selectedrow["Full P price"];
+            table10itemID = Convert.ToInt32(selectedrow["S.No."]);
+            table10Itemname = selectedrow["Particulars"].ToString();
+            table10fprice = Convert.ToInt32(selectedrow["Full P price"]);
 
-            int qty = (int)Table10QuantityTextbox.Value;
+            int qty = Convert.ToInt32(Table10QuantityTextbox.Value);
 
             if (qty <= 0)
             {
@@ -2787,10 +2607,10 @@ namespace WindowsFormsApp1
         {
             DataRowView selectedrow = (DataRowView)Table11Combobox.SelectedItem;
 
-            table11itemID = (int)selectedrow["S.No."];
-            table11Itemname = (string)selectedrow["Particulars"];
-            table11hprice = (int)selectedrow["Half P price"];
-            table11fprice = (int)selectedrow["Full P price"];
+            table11itemID = Convert.ToInt32(selectedrow["S.No."]);
+            table11Itemname = selectedrow["Particulars"].ToString();
+            table11hprice = Convert.ToInt32(selectedrow["Half P price"]);
+            table11fprice = Convert.ToInt32(selectedrow["Full P price"]);
             if (selectedrow != null)
             {
                 Table11FullPlatePriceButton.Text = "Full " + table11fprice;
@@ -2811,13 +2631,13 @@ namespace WindowsFormsApp1
         {
             DataRowView selectedrow = (DataRowView)Table11Combobox.SelectedItem;
 
-            table11itemID = (int)selectedrow["S.No."];
-            table11Itemname = (string)selectedrow["Particulars"];
-            table11hprice = (int)selectedrow["Half P price"];
+            table11itemID = Convert.ToInt32(selectedrow["S.No."]);
+            table11Itemname = selectedrow["Particulars"].ToString();
+            table11hprice = Convert.ToInt32(selectedrow["Half P price"]);
 
             table11Itemname = table11Itemname + " (Half)";
 
-            int qty = (int)Table11QuantityTextbox.Value;
+            int qty = Convert.ToInt32(Table11QuantityTextbox.Value);
 
             if (qty <= 0)
             {
@@ -2853,11 +2673,11 @@ namespace WindowsFormsApp1
         {
             DataRowView selectedrow = (DataRowView)Table11Combobox.SelectedItem;
 
-            table11itemID = (int)selectedrow["S.No."];
-            table11Itemname = (string)selectedrow["Particulars"];
-            table11fprice = (int)selectedrow["Full P price"];
+            table11itemID = Convert.ToInt32(selectedrow["S.No."]);
+            table11Itemname = selectedrow["Particulars"].ToString();
+            table11fprice = Convert.ToInt32(selectedrow["Full P price"]);
 
-            int qty = (int)Table11QuantityTextbox.Value;
+            int qty = Convert.ToInt32(Table11QuantityTextbox.Value);
 
             if (qty <= 0)
             {
@@ -2969,8 +2789,6 @@ namespace WindowsFormsApp1
                             dbclass.SavetoDatabase(tablenumber, rowid, rowname, rowquantity, rowprice, rowamount, currentdate, Ordernumber);
                         }
                     }
-
-                    //Createpdf(Ordernumber, currentdate, tablenumber, Table8Datagrid, amount);
                     PrintPdf();
                     MessageBox.Show("Order Saved Successfully with Order number: " + Ordernumber, "Saved", MessageBoxButtons.OK);
                 }
@@ -3012,10 +2830,10 @@ namespace WindowsFormsApp1
         {
             DataRowView selectedrow = (DataRowView)Table12Combobox.SelectedItem;
 
-            table12itemID = (int)selectedrow["S.No."];
-            table12Itemname = (string)selectedrow["Particulars"];
-            table12hprice = (int)selectedrow["Half P price"];
-            table12fprice = (int)selectedrow["Full P price"];
+            table12itemID = Convert.ToInt32(selectedrow["S.No."]);
+            table12Itemname = selectedrow["Particulars"].ToString();
+            table12hprice = Convert.ToInt32(selectedrow["Half P price"]);
+            table12fprice = Convert.ToInt32(selectedrow["Full P price"]);
             if (selectedrow != null)
             {
                 Table12FullPlatePriceButton.Text = "Full " + table12fprice;
@@ -3036,13 +2854,13 @@ namespace WindowsFormsApp1
         {
             DataRowView selectedrow = (DataRowView)Table12Combobox.SelectedItem;
 
-            table12itemID = (int)selectedrow["S.No."];
-            table12Itemname = (string)selectedrow["Particulars"];
-            table12hprice = (int)selectedrow["Half P price"];
+            table12itemID = Convert.ToInt32(selectedrow["S.No."]);
+            table12Itemname =selectedrow["Particulars"].ToString();
+            table12hprice = Convert.ToInt32(selectedrow["Half P price"]);
 
             table12Itemname = table12Itemname + " (Half)";
 
-            int qty = (int)Table12QuantityTextbox.Value;
+            int qty = Convert.ToInt32(Table12QuantityTextbox.Value);
 
             if (qty <= 0)
             {
@@ -3078,11 +2896,11 @@ namespace WindowsFormsApp1
         {
             DataRowView selectedrow = (DataRowView)Table12Combobox.SelectedItem;
 
-            table12itemID = (int)selectedrow["S.No."];
-            table12Itemname = (string)selectedrow["Particulars"];
-            table12fprice = (int)selectedrow["Full P price"];
+            table12itemID = Convert.ToInt32(selectedrow["S.No."]);
+            table12Itemname = selectedrow["Particulars"].ToString();
+            table12fprice = Convert.ToInt32(selectedrow["Full P price"]);
 
-            int qty = (int)Table12QuantityTextbox.Value;
+            int qty = Convert.ToInt32(Table12QuantityTextbox.Value);
 
             if (qty <= 0)
             {
@@ -3195,8 +3013,6 @@ namespace WindowsFormsApp1
                             dbclass.SavetoDatabase(tablenumber, rowid, rowname, rowquantity, rowprice, rowamount, currentdate, Ordernumber);
                         }
                     }
-
-                    //Createpdf(Ordernumber, currentdate, tablenumber, Table8Datagrid, amount);
                     PrintPdf();
                     MessageBox.Show("Order Saved Successfully with Order number: " + Ordernumber, "Saved", MessageBoxButtons.OK);
                 }

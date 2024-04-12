@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace WindowsFormsApp1 {
+namespace Tulip {
     
     
     /// <summary>
@@ -682,7 +682,7 @@ namespace WindowsFormsApp1 {
         }
     }
 }
-namespace WindowsFormsApp1.AddUpdateDatagridTableAdapters {
+namespace Tulip.AddUpdateDatagridTableAdapters {
     
     
     /// <summary>

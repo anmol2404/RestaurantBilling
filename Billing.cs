@@ -134,6 +134,8 @@ namespace WindowsFormsApp1
             Table11SaveButton.Enabled = false;
             Table12SaveButton.Enabled = false;
 
+            EnablePrint.Checked = true;
+
             checkifdatatableemprtyornot();
         }
 
@@ -1927,13 +1929,16 @@ namespace WindowsFormsApp1
 
         public void PrintPdf()
         {
-            string printername = GetDefaultPrinterName();
-            if (!string.IsNullOrEmpty(printername))
+            if (EnablePrint.Checked)
             {
-                printPreviewDialog1.Document = printDocument1;
-                printDocument1.DefaultPageSettings.PaperSize = new PaperSize("custom", 285, 700);
-                //printPreviewDialog1.ShowDialog();
-                printDocument1.Print();
+                string printername = GetDefaultPrinterName();
+                if (!string.IsNullOrEmpty(printername))
+                {
+                    printPreviewDialog1.Document = printDocument1;
+                    printDocument1.DefaultPageSettings.PaperSize = new PaperSize("custom", 285, 700);
+                    //printPreviewDialog1.ShowDialog();
+                    printDocument1.Print();
+                }
             }
         }
 

@@ -264,6 +264,7 @@
             this.Table9FullPlatePriceButton = new System.Windows.Forms.Button();
             this.label36 = new System.Windows.Forms.Label();
             this.Table9Combobox = new System.Windows.Forms.ComboBox();
+            this.EnablePrint = new System.Windows.Forms.CheckBox();
             this.Table1Groupbox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TableOneDatagrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Qtytextbox)).BeginInit();
@@ -353,7 +354,7 @@
             this.TotalTextBox.Location = new System.Drawing.Point(367, 340);
             this.TotalTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.TotalTextBox.Name = "TotalTextBox";
-            this.TotalTextBox.Size = new System.Drawing.Size(174, 28);
+            this.TotalTextBox.Size = new System.Drawing.Size(111, 22);
             this.TotalTextBox.TabIndex = 12;
             this.TotalTextBox.TextChanged += new System.EventHandler(this.TotalTextBox_TextChanged);
             // 
@@ -363,7 +364,7 @@
             this.label3.Location = new System.Drawing.Point(309, 342);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 20);
+            this.label3.Size = new System.Drawing.Size(41, 16);
             this.label3.TabIndex = 11;
             this.label3.Text = "Total ";
             // 
@@ -471,7 +472,7 @@
             this.label2.Location = new System.Drawing.Point(372, 36);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 20);
+            this.label2.Size = new System.Drawing.Size(27, 16);
             this.label2.TabIndex = 7;
             this.label2.Text = "Qty";
             // 
@@ -480,7 +481,7 @@
             this.Qtytextbox.Location = new System.Drawing.Point(427, 33);
             this.Qtytextbox.Margin = new System.Windows.Forms.Padding(4);
             this.Qtytextbox.Name = "Qtytextbox";
-            this.Qtytextbox.Size = new System.Drawing.Size(81, 22);
+            this.Qtytextbox.Size = new System.Drawing.Size(52, 22);
             this.Qtytextbox.TabIndex = 6;
             this.Qtytextbox.Value = new decimal(new int[] {
             1,
@@ -518,7 +519,7 @@
             this.label1.Location = new System.Drawing.Point(8, 36);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 20);
+            this.label1.Size = new System.Drawing.Size(69, 16);
             this.label1.TabIndex = 3;
             this.label1.Text = "Item name";
             // 
@@ -3015,12 +3016,24 @@
             this.Table9Combobox.TabIndex = 2;
             this.Table9Combobox.SelectedIndexChanged += new System.EventHandler(this.Table9Combobox_SelectedIndexChanged);
             // 
+            // EnablePrint
+            // 
+            this.EnablePrint.AutoSize = true;
+            this.EnablePrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EnablePrint.Location = new System.Drawing.Point(1328, 12);
+            this.EnablePrint.Name = "EnablePrint";
+            this.EnablePrint.Size = new System.Drawing.Size(139, 29);
+            this.EnablePrint.TabIndex = 17;
+            this.EnablePrint.Text = "Enable Print";
+            this.EnablePrint.UseVisualStyleBackColor = true;
+            // 
             // Billing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(2061, 1055);
+            this.Controls.Add(this.EnablePrint);
             this.Controls.Add(this.Table12groupBox);
             this.Controls.Add(this.Table11groupBox);
             this.Controls.Add(this.Table10groupBox);
@@ -3092,6 +3105,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Table9Datagrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Table9QuantityTextbox)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -3332,5 +3346,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Table9Quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn Table9ItemPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn Table9Amount;
+        private System.Windows.Forms.CheckBox EnablePrint;
     }
 }

@@ -149,7 +149,7 @@ namespace WindowsFormsApp1
             DataTable dt = new DataTable();
             using (SQLiteConnection con = new SQLiteConnection(constring))
             {
-                string sqlcmd = "Select TableNumber as 'Table No.', ItemName as 'Particulars', ItemQuantity as 'Qty', ItemPrice as 'Item Price', ItemAmount as 'Item Amount', OrderDate as 'Date' from sale where OrderNumber = @ordernumber";
+                string sqlcmd = "Select TableNumber as 'Table No.', ItemName as 'Particulars', ItemQuantity as 'Qty', ItemPrice as 'Item Price', ItemAmount as 'Item Amount', OrderDate as 'Date' from sale where OrderNumber = @ordernumber Order By OrderNumber DESC";
                 using (SQLiteCommand cmd = new SQLiteCommand(sqlcmd, con))
                 {
                     cmd.Parameters.AddWithValue("@ordernumber", OrderNumber);
@@ -176,7 +176,7 @@ namespace WindowsFormsApp1
             {
                 if (checkbox == 1)
                 {
-                    string sqlcmd = "Select OrderNumber as 'Order No.', TableNumber as 'Table no.', Amount as 'Amount', OrderDate as 'Date' from OrderNumber where Day = @day AND Month = @Month AND Year = @year";
+                    string sqlcmd = "Select OrderNumber as 'Order No.', TableNumber as 'Table no.', Amount as 'Amount', OrderDate as 'Date' from OrderNumber where Day = @day AND Month = @Month AND Year = @year Order By OrderNumber DESC";
                     using (SQLiteCommand cmd = new SQLiteCommand(sqlcmd, con))
                     {
                         cmd.Parameters.AddWithValue("@day", day);
@@ -197,7 +197,7 @@ namespace WindowsFormsApp1
                 }
                 else if (checkbox == 2)
                 {
-                    string sqlcmd = "Select OrderNumber as 'Order No.', TableNumber as 'Table no.', Amount as 'Amount', OrderDate as 'Date' from OrderNumber where Month = @Month AND Year = @year";
+                    string sqlcmd = "Select OrderNumber as 'Order No.', TableNumber as 'Table no.', Amount as 'Amount', OrderDate as 'Date' from OrderNumber where Month = @Month AND Year = @year Order By OrderNumber DESC";
                     using (SQLiteCommand cmd = new SQLiteCommand(sqlcmd, con))
                     {
                         cmd.Parameters.AddWithValue("@Month", month);
@@ -217,7 +217,7 @@ namespace WindowsFormsApp1
                 }
                 else if (checkbox == 3)
                 {
-                    string sqlcmd = "Select OrderNumber as 'Order No.', TableNumber as 'Table no.', Amount as 'Amount', OrderDate as 'Date' from OrderNumber where Year = @year";
+                    string sqlcmd = "Select OrderNumber as 'Order No.', TableNumber as 'Table no.', Amount as 'Amount', OrderDate as 'Date' from OrderNumber where Year = @year Order By OrderNumber DESC";
                     using (SQLiteCommand cmd = new SQLiteCommand(sqlcmd, con))
                     {
                         cmd.Parameters.AddWithValue("@year", year);
@@ -247,7 +247,7 @@ namespace WindowsFormsApp1
             {
                 if (checkbox == 0)
                 {
-                    string sqlcmd = "SELECT * FROM OrderNumber WHERE OrderNumber = @order";
+                    string sqlcmd = "SELECT * FROM OrderNumber WHERE OrderNumber = @order Order By OrderNumber DESC";
                     using (SQLiteCommand cmd = new SQLiteCommand(sqlcmd, con))
                     {
                         cmd.Parameters.AddWithValue("@order", order);
@@ -266,7 +266,7 @@ namespace WindowsFormsApp1
                 }
                 else if (checkbox == 4)
                 {
-                    string sqlcmd = "Select OrderNumber as 'Order_No', TableNumber as 'Table no.', Amount as 'Amount', OrderDate as 'Date' from OrderNumber";
+                    string sqlcmd = "Select OrderNumber as 'Order_No', TableNumber as 'Table no.', Amount as 'Amount', OrderDate as 'Date' from OrderNumber Order By OrderNumber DESC";
                     using (SQLiteCommand cmd = new SQLiteCommand(sqlcmd, con))
                     {
                         cmd.Parameters.AddWithValue("@order", order);

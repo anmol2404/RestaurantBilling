@@ -31,23 +31,23 @@ namespace WindowsFormsApp1
         public Sale()
         {
             InitializeComponent();
-            dbclass = new dbclass();
+            //dbclass = new dbclass();
 
-            checkbox = Convert.ToInt16(radiobutton.today);
-            DateTimePicker.Value = DateTime.Now;
-            DateTimePicker.Enabled = false;
-            YearlyCombobox.Enabled = false;
-            MonthlymonthsComboBox.Enabled = false;
-            MonthlyYearComboBox.Enabled = false;
-            SearchSalesTextBox.Enabled = false;
-            LoadSalesDatagrid(checkbox);
-            LoadComboBox();
+            //checkbox = Convert.ToInt16(radiobutton.today);
+            //DateTimePicker.Value = DateTime.Now;
+            //DateTimePicker.Enabled = false;
+            //YearlyCombobox.Enabled = false;
+            //MonthlymonthsComboBox.Enabled = false;
+            //MonthlyYearComboBox.Enabled = false;
+            //SearchSalesTextBox.Enabled = false;
+            //LoadSalesDatagrid(checkbox);
+            //LoadComboBox();
 
-            MonthlymonthsComboBox.SelectedIndex = 1;
-            MonthlyYearComboBox.SelectedIndex = 1;
-            YearlyCombobox.SelectedIndex=1;
-            Monthlymonth = MonthlymonthsComboBox.SelectedIndex;
-            SalesDataGridView.ClearSelection();
+            //MonthlymonthsComboBox.SelectedIndex = 1;
+            //MonthlyYearComboBox.SelectedIndex = 1;
+            //YearlyCombobox.SelectedIndex=1;
+            //Monthlymonth = MonthlymonthsComboBox.SelectedIndex;
+            //SalesDataGridView.ClearSelection();
 
 
         }
@@ -386,6 +386,23 @@ namespace WindowsFormsApp1
 
         private void Sale_Load(object sender, EventArgs e)
         {
+            dbclass = new dbclass();
+
+            checkbox = Convert.ToInt16(radiobutton.today);
+            DateTimePicker.Value = DateTime.Now;
+            DateTimePicker.Enabled = false;
+            YearlyCombobox.Enabled = false;
+            MonthlymonthsComboBox.Enabled = false;
+            MonthlyYearComboBox.Enabled = false;
+            SearchSalesTextBox.Enabled = false;
+            LoadSalesDatagrid(checkbox);
+            LoadComboBox();
+
+            MonthlymonthsComboBox.SelectedIndex = 1;
+            MonthlyYearComboBox.SelectedIndex = 1;
+            YearlyCombobox.SelectedIndex = 1;
+            Monthlymonth = MonthlymonthsComboBox.SelectedIndex;
+            SalesDataGridView.ClearSelection();
             SalesDataGridView.ClearSelection();
         }
 

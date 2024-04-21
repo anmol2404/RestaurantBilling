@@ -10,7 +10,7 @@ namespace WindowsFormsApp1
     public class dbclass
     {
         private string constring;
-        private static string dbPath = Application.StartupPath + "Tulip.db;";
+        private static readonly string dbPath = Application.StartupPath + "Tulip.db";
 
         public dbclass()
         {
@@ -19,9 +19,14 @@ namespace WindowsFormsApp1
         }
         public void CreateDatabaseAndFolder()
         {
-            if (!File.Exists("Tulip.db"))
+            //if (!File.Exists("Tulip.db"))
+            //{
+            //    SQLiteConnection.CreateFile("Tulip.db");
+            //}
+
+            if (!File.Exists(dbPath))
             {
-                SQLiteConnection.CreateFile("Tulip.db");
+                SQLiteConnection.CreateFile(dbPath);
             }
 
             SQLiteConnection connection = new SQLiteConnection(constring);

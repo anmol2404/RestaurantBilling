@@ -3032,7 +3032,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(2061, 1055);
+            this.ClientSize = new System.Drawing.Size(2082, 1055);
             this.Controls.Add(this.EnablePrint);
             this.Controls.Add(this.Table12groupBox);
             this.Controls.Add(this.Table11groupBox);
@@ -3056,6 +3056,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Billing";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Billing_Load);
             this.Table1Groupbox.ResumeLayout(false);
             this.Table1Groupbox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TableOneDatagrid)).EndInit();

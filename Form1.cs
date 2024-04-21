@@ -11,7 +11,7 @@ namespace WindowsFormsApp1
         public AddUpdateForm()
         {
             InitializeComponent();
-            dbclass = new dbclass();
+            //dbclass = new dbclass();
         }
 
         public void resettextbox() 
@@ -25,6 +25,7 @@ namespace WindowsFormsApp1
 
         private void AddUpdateForm_Load(object sender, EventArgs e)
         {
+            dbclass = new dbclass();
             LoadDatagrid();
             UpdateButton.Enabled = false;
         }

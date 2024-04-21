@@ -72,71 +72,70 @@ namespace WindowsFormsApp1
         private int table12fprice;
 
         private int x, y;
-
         public Billing()
         {
             InitializeComponent();
 
-            dbclass = new dbclass();
-            dbclass.CreateDatabaseAndFolder();
-            GetDefaultPrinterName();
+            //dbclass = new dbclass();
+            //dbclass.CreateDatabaseAndFolder();
+            //GetDefaultPrinterName();
 
-            Linkcombobox();
-            Table2Linkcombobox();
-            Table3Linkcombobox();
-            Table4Linkcombobox();
-            Table5Linkcombobox();
-            Table6Linkcombobox();
-            Table7Linkcombobox();
-            Table8Linkcombobox();
-            Table9Linkcombobox();
-            Table10Linkcombobox();
-            Table11Linkcombobox();
-            Table12Linkcombobox();
+            //Linkcombobox();
+            //Table2Linkcombobox();
+            //Table3Linkcombobox();
+            //Table4Linkcombobox();
+            //Table5Linkcombobox();
+            //Table6Linkcombobox();
+            //Table7Linkcombobox();
+            //Table8Linkcombobox();
+            //Table9Linkcombobox();
+            //Table10Linkcombobox();
+            //Table11Linkcombobox();
+            //Table12Linkcombobox();
 
 
-            TotalTextBox.Enabled = false;
-            Table2TotalTextBox.Enabled = false;
-            Table3TotalTextBox.Enabled = false;
-            Table4TotalTextBox.Enabled = false;
-            Table5TotalTextBox.Enabled = false;
-            Table6TotalTextBox.Enabled = false;
-            Table7TotalTextBox.Enabled = false;
-            Table8TotalTextBox.Enabled = false;
-            Table9TotalTextBox.Enabled = false;
-            Table10TotalTextBox.Enabled = false;
-            Table11TotalTextBox.Enabled = false;
-            Table12TotalTextBox.Enabled = false;
+            //TotalTextBox.Enabled = false;
+            //Table2TotalTextBox.Enabled = false;
+            //Table3TotalTextBox.Enabled = false;
+            //Table4TotalTextBox.Enabled = false;
+            //Table5TotalTextBox.Enabled = false;
+            //Table6TotalTextBox.Enabled = false;
+            //Table7TotalTextBox.Enabled = false;
+            //Table8TotalTextBox.Enabled = false;
+            //Table9TotalTextBox.Enabled = false;
+            //Table10TotalTextBox.Enabled = false;
+            //Table11TotalTextBox.Enabled = false;
+            //Table12TotalTextBox.Enabled = false;
 
-            RemoveItembutton.Enabled = false;
-            Table2RemoveButton.Enabled = false;
-            Table3RemoveButton.Enabled = false;
-            Table4RemoveButton.Enabled = false;
-            Table5RemoveButton.Enabled = false;
-            Table6RemoveButton.Enabled = false;
-            Table7RemoveButton.Enabled = false;
-            Table8RemoveButton.Enabled = false;
-            Table9RemoveButton.Enabled = false;
-            Table10RemoveButton.Enabled = false;
-            Table11RemoveButton.Enabled = false;
-            Table12RemoveButton.Enabled = false;
+            //RemoveItembutton.Enabled = false;
+            //Table2RemoveButton.Enabled = false;
+            //Table3RemoveButton.Enabled = false;
+            //Table4RemoveButton.Enabled = false;
+            //Table5RemoveButton.Enabled = false;
+            //Table6RemoveButton.Enabled = false;
+            //Table7RemoveButton.Enabled = false;
+            //Table8RemoveButton.Enabled = false;
+            //Table9RemoveButton.Enabled = false;
+            //Table10RemoveButton.Enabled = false;
+            //Table11RemoveButton.Enabled = false;
+            //Table12RemoveButton.Enabled = false;
 
-            SavePrintButton.Enabled = false;
-            Table2Savebutton.Enabled = false;
-            Table3SaveButton.Enabled = false;
-            Table4SaveButton.Enabled = false;
-            Table5SaveButton.Enabled = false;
-            Table6SaveButton.Enabled = false;
-            Table7SaveButton.Enabled = false;
-            Table8SaveButton.Enabled = false;
-            Table9SaveButton.Enabled = false;
-            Table10SaveButton.Enabled = false;
-            Table11SaveButton.Enabled = false;
-            Table12SaveButton.Enabled = false;
+            //SavePrintButton.Enabled = false;
+            //Table2Savebutton.Enabled = false;
+            //Table3SaveButton.Enabled = false;
+            //Table4SaveButton.Enabled = false;
+            //Table5SaveButton.Enabled = false;
+            //Table6SaveButton.Enabled = false;
+            //Table7SaveButton.Enabled = false;
+            //Table8SaveButton.Enabled = false;
+            //Table9SaveButton.Enabled = false;
+            //Table10SaveButton.Enabled = false;
+            //Table11SaveButton.Enabled = false;
+            //Table12SaveButton.Enabled = false;
 
-            EnablePrint.Checked = true;
+            //EnablePrint.Checked = true;
 
-            checkifdatatableemprtyornot();
+            //checkifdatatableemprtyornot();
         }
 
         private string GetDefaultPrinterName()
@@ -2048,6 +2047,8 @@ namespace WindowsFormsApp1
             Table12TotalTextBox.Text = string.Empty;
 
             checkifdatatableemprtyornot();
+
+            Billing_Load(sender, e);
         }
 
         private void printDocument1_PrintPage(object sender, PrintPageEventArgs e)
@@ -2986,6 +2987,71 @@ namespace WindowsFormsApp1
             {
                 Table12SaveButton.Enabled = false;
             }
+        }
+
+        private void Billing_Load(object sender, EventArgs e)
+        {
+
+            dbclass = new dbclass();
+            dbclass.CreateDatabaseAndFolder();
+            GetDefaultPrinterName();
+
+            Linkcombobox();
+            Table2Linkcombobox();
+            Table3Linkcombobox();
+            Table4Linkcombobox();
+            Table5Linkcombobox();
+            Table6Linkcombobox();
+            Table7Linkcombobox();
+            Table8Linkcombobox();
+            Table9Linkcombobox();
+            Table10Linkcombobox();
+            Table11Linkcombobox();
+            Table12Linkcombobox();
+
+
+            TotalTextBox.Enabled = false;
+            Table2TotalTextBox.Enabled = false;
+            Table3TotalTextBox.Enabled = false;
+            Table4TotalTextBox.Enabled = false;
+            Table5TotalTextBox.Enabled = false;
+            Table6TotalTextBox.Enabled = false;
+            Table7TotalTextBox.Enabled = false;
+            Table8TotalTextBox.Enabled = false;
+            Table9TotalTextBox.Enabled = false;
+            Table10TotalTextBox.Enabled = false;
+            Table11TotalTextBox.Enabled = false;
+            Table12TotalTextBox.Enabled = false;
+
+            RemoveItembutton.Enabled = false;
+            Table2RemoveButton.Enabled = false;
+            Table3RemoveButton.Enabled = false;
+            Table4RemoveButton.Enabled = false;
+            Table5RemoveButton.Enabled = false;
+            Table6RemoveButton.Enabled = false;
+            Table7RemoveButton.Enabled = false;
+            Table8RemoveButton.Enabled = false;
+            Table9RemoveButton.Enabled = false;
+            Table10RemoveButton.Enabled = false;
+            Table11RemoveButton.Enabled = false;
+            Table12RemoveButton.Enabled = false;
+
+            SavePrintButton.Enabled = false;
+            Table2Savebutton.Enabled = false;
+            Table3SaveButton.Enabled = false;
+            Table4SaveButton.Enabled = false;
+            Table5SaveButton.Enabled = false;
+            Table6SaveButton.Enabled = false;
+            Table7SaveButton.Enabled = false;
+            Table8SaveButton.Enabled = false;
+            Table9SaveButton.Enabled = false;
+            Table10SaveButton.Enabled = false;
+            Table11SaveButton.Enabled = false;
+            Table12SaveButton.Enabled = false;
+
+            EnablePrint.Checked = true;
+
+            checkifdatatableemprtyornot();
         }
 
         private void Table12SaveButton_Click(object sender, EventArgs e)
